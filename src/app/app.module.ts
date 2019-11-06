@@ -12,6 +12,10 @@ import { FrasesComponent } from './components/frases/frases.component';
 import { DispositivosComponent } from './components/dispositivos/dispositivos.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { BuscarComponent } from './components/buscar/buscar.component';
+import { PartidasAmistosasComponent } from './components/partidas-amistosas/partidas-amistosas.component';
+import { PartidaTringovFischerComponent } from './components/partida-tringov-fischer/partida-tringov-fischer.component';
+import { FuncionesComponent } from './components/funciones/funciones.component';
+import { NoticiasComponent } from './components/noticias/noticias.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { BuscarComponent } from './components/buscar/buscar.component';
     FrasesComponent,
     DispositivosComponent,
     ContactoComponent,
-    BuscarComponent
+    BuscarComponent,
+    PartidasAmistosasComponent,
+    PartidaTringovFischerComponent,
+    FuncionesComponent,
+    NoticiasComponent
   ],
   imports: [
     BrowserModule,

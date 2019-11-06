@@ -8,6 +8,10 @@ import { FrasesComponent } from './components/frases/frases.component';
 import { DispositivosComponent } from './components/dispositivos/dispositivos.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { BuscarComponent } from './components/buscar/buscar.component';
+import { PartidasAmistosasComponent } from './components/partidas-amistosas/partidas-amistosas.component';
+import { PartidaTringovFischerComponent } from './components/partida-tringov-fischer/partida-tringov-fischer.component';
+import { FuncionesComponent } from './components/funciones/funciones.component';
+import { NoticiasComponent } from './components/noticias/noticias.component';
 
 
 const routes: Routes = [
@@ -19,6 +23,10 @@ const routes: Routes = [
   { path: 'dispositivos', component: DispositivosComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'buscar', component: BuscarComponent },
+  { path: 'partidas-amistosas', component: PartidasAmistosasComponent},
+  { path: 'partida-tringov-fischer', component: PartidaTringovFischerComponent },
+  { path: 'funciones', component: FuncionesComponent },
+  { path: 'noticias', component: NoticiasComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
