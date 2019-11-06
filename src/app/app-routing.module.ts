@@ -12,6 +12,7 @@ import { PartidasAmistosasComponent } from './components/partidas-amistosas/part
 import { PartidaTringovFischerComponent } from './components/partida-tringov-fischer/partida-tringov-fischer.component';
 import { FuncionesComponent } from './components/funciones/funciones.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
+import { PoliticasDePrivacidadComponent } from './components/politicas-de-privacidad/politicas-de-privacidad.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'partida-tringov-fischer', component: PartidaTringovFischerComponent },
   { path: 'funciones', component: FuncionesComponent },
   { path: 'noticias', component: NoticiasComponent },
+  { path: 'politicas-de-privacidad', component: PoliticasDePrivacidadComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];

@@ -16,6 +16,8 @@ import { PartidasAmistosasComponent } from './components/partidas-amistosas/part
 import { PartidaTringovFischerComponent } from './components/partida-tringov-fischer/partida-tringov-fischer.component';
 import { FuncionesComponent } from './components/funciones/funciones.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
+import { PoliticasDePrivacidadComponent } from './components/politicas-de-privacidad/politicas-de-privacidad.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { NoticiasComponent } from './components/noticias/noticias.component';
     PartidasAmistosasComponent,
     PartidaTringovFischerComponent,
     FuncionesComponent,
-    NoticiasComponent
+    NoticiasComponent,
+    PoliticasDePrivacidadComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
