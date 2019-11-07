@@ -1,0 +1,22 @@
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/ZsDWw4Kw"]
+[Date "2017.10.31"]
+[Round "-"]
+[White "nazarenobastanzo"]
+[Black "Franiol"]
+[Result "1-0"]
+[UTCDate "2017.10.31"]
+[UTCTime "22:26:57"]
+[WhiteElo "1743"]
+[BlackElo "1718"]
+[WhiteRatingDiff "+10"]
+[BlackRatingDiff "-9"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: Chigorin Variation"]
+[Termination "Normal"]
+
+1. d4 d5 2. Nf3 Nc6 3. Nc3 e6 4. a3 b6 5. e4 Bb7 6. e5 Nge7 7. Bd3 Nf5 8. Bxf5 exf5 9. h3 h6 10. Bf4 g5 11. Bh2 f4 12. Qd3 Qe7 13. O-O-O Qd7 14. Rhe1 O-O-O 15. Nb5 Ba6 16. a4 Bxb5 17. axb5 Nb4 18. Qa3 Kb7 19. e6 fxe6 20. Ne5 Qg7 21. Nc6 Nxc6 22. Qa6+ Ka8 23. bxc6 Rb8 24. Rxe6 Bb4 25. c3 Ba5 26. b4 Qg8 27. Re7 Qc8 28. Qxc8 Rbxc8 29. bxa5 bxa5 30. Rde1 a6 31. Rd7 Ka7 32. g3 fxg3 33. Bxg3 Kb6 34. Ree7 Kxc6 35. Rxc7+ Rxc7 36. Rxc7+ Kb5 37. Rc5+ Ka4 38. Rxd5 Rb8 39. Bxb8 1-0
+
+

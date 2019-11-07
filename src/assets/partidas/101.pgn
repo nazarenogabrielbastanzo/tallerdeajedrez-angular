@@ -1,0 +1,22 @@
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/7vUBR7Ix"]
+[Date "2019.03.28"]
+[Round "-"]
+[White "alexwarnolf"]
+[Black "tallerdeajedrez"]
+[Result "1-0"]
+[UTCDate "2019.03.28"]
+[UTCTime "18:16:08"]
+[WhiteElo "1600"]
+[BlackElo "1606"]
+[WhiteRatingDiff "+11"]
+[BlackRatingDiff "-11"]
+[Variant "Standard"]
+[TimeControl "300+0"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Closed"]
+[Termination "Normal"]
+
+1. e4 c5 2. Nc3 e6 3. f4 d6 4. Nf3 Nc6 5. d4 cxd4 6. Nxd4 Bd7 7. Be3 a6 8. Bd3 Nf6 9. O-O Be7 10. f5 e5 11. Nf3 b5 12. Nd5 Nxd5 13. exd5 Nb4 14. Be4 Rc8 15. c3 Nxd5 16. Bxd5 Bxf5 17. Qb3 O-O 18. Nxe5 dxe5 19. Rxf5 Qe8 20. Raf1 a5 21. Bxf7+ Rxf7 22. Rxf7 a4 23. Qe6 Bc5 24. Rf8# 1-0
+
+

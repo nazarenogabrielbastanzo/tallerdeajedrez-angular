@@ -1,0 +1,22 @@
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/KKZQZe63"]
+[Date "2019.05.27"]
+[Round "-"]
+[White "parsa1995"]
+[Black "nazarenobastanzo"]
+[Result "0-1"]
+[UTCDate "2019.05.27"]
+[UTCTime "12:07:43"]
+[WhiteElo "1476"]
+[BlackElo "1468"]
+[WhiteRatingDiff "-10"]
+[BlackRatingDiff "+11"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B50"]
+[Opening "Sicilian Defense: Delayed Alapin"]
+[Termination "Normal"]
+
+1. e4 c5 2. Nf3 d6 3. c3 e6 4. d4 cxd4 5. cxd4 Nf6 6. e5 dxe5 7. dxe5 Qxd1+ 8. Kxd1 Ne4 9. Bd3 Nxf2+ 10. Ke2 Nxh1 11. Be3 Nc6 12. Nc3 Bd7 13. Rxh1 Bb4 14. Bb5 O-O 15. Bxc6 Bxc6 16. a3 Bxc3 17. bxc3 Bxf3+ 18. gxf3 Rac8 19. Bd4 Rfd8 20. h4 b5 21. h5 a5 22. Bb6 Rd7 23. Bxa5 Ra7 24. Bb4 h6 25. Ke3 Rd7 26. f4 Rc4 27. Ra1 f6 28. exf6 gxf6 29. Rg1+ Kf7 30. Rg6 e5 31. fxe5 fxe5 32. Rxh6 Rd1 33. Rh7+ Kg8 34. Re7 Re1+ 35. Kf2 Ree4 36. h6 Rh4 37. h7+ Rxh7 38. Rxh7 Kxh7 39. Ke3 e4 40. Kf4 Kg6 41. Kg4 Kf6 42. Kf4 Ke6 43. Ke3 Kd5 44. Kf4 Ke6 45. Ke3 Ke5 46. Ke2 Kf4 47. Kf2 e3+ 48. Ke2 Ke4 49. Ke1 Kf3 50. Kf1 e2+ 51. Ke1 Ke3 52. Ba5 Rf4 53. Bb6+ Kd3 54. Bf2 Rxf2 55. Kxf2 Kd2 0-1
+
+

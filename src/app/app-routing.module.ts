@@ -13,6 +13,7 @@ import { PartidaTringovFischerComponent } from './components/partida-tringov-fis
 import { FuncionesComponent } from './components/funciones/funciones.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { PoliticasDePrivacidadComponent } from './components/politicas-de-privacidad/politicas-de-privacidad.component';
+import { PartidaComponent } from './components/partida/partida.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'funciones', component: FuncionesComponent },
   { path: 'noticias', component: NoticiasComponent },
   { path: 'politicas-de-privacidad', component: PoliticasDePrivacidadComponent },
+  { path: 'partida/:id', component: PartidaComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];

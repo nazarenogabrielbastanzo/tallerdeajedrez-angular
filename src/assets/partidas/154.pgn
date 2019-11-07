@@ -1,0 +1,28 @@
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/NY98v19H"]
+[Date "2019.08.20"]
+[Round "-"]
+[White "nazarenobastanzo"]
+[Black "Okurek"]
+[Result "1-0"]
+[BlackElo "1692"]
+[BlackRatingDiff "-6"]
+[ChessCat "CHESSCAT 1.0"]
+[ECO "E00"]
+[Opening "Indian Game: East Indian Defense"]
+[PlyCount "33"]
+[Termination "Normal"]
+[TimeControl "600+0"]
+[UTCDate "2019.08.20"]
+[UTCTime "13:07:59"]
+[Variant "Standard"]
+[WhiteElo "1723"]
+[WhiteRatingDiff "+7"]
+
+1. d4 Nf6 2. c4 e6 3. a3 {Casi nunca juego a3, pero me pareció oportuna para
+que el Alfil negro no venga a b4} 3... d5 4. Nc3 Nc6 5. e3 Ne4 6. Nxe4 dxe4 7.
+f3 exf3 8. Nxf3 Bd6 9. Bd3 O-O 10. e4 Ne7 {Ce7 fue una mala jugada de mi
+adversario, ya que obstruye la retirada del alfil de d6, que ahora no tendrá
+escapatoria} 11. e5 Nf5 12. exd6 Qxd6 13. O-O Nxd4 {Otra jugada mala: Ahora la
+amenaza contra el rey negro es imparable} 14. Bxh7+ Kxh7 15. Ng5+ Kg8 16. Qh5
+f6 17. Qh7# 1-0

@@ -1,0 +1,20 @@
+[Event "Casual Rapid game"]
+[Site "https://lichess.org/CIdRcqjE"]
+[Date "2019.05.06"]
+[Round "-"]
+[White "mrcobbler"]
+[Black "jbastanzo"]
+[Result "0-1"]
+[UTCDate "2019.05.06"]
+[UTCTime "18:53:16"]
+[WhiteElo "1585"]
+[BlackElo "1653"]
+[Variant "Standard"]
+[TimeControl "600+5"]
+[ECO "B23"]
+[Opening "Sicilian Defense: Marshall Gambit"]
+[Termination "Normal"]
+
+1. e4 e6 2. d4 d5 3. Nc3 c5 4. Nf3 cxd4 5. Nxd4 a6 6. e5 Nc6 7. Nxc6 bxc6 8. Be2 Ne7 9. O-O Ng6 10. f4 Qb6+ 11. Kh1 Be7 12. Qd3 c5 13. b3 Bd7 14. a4 Qb7 15. Bf3 Bc6 16. Ne2 Nh4 17. Ng3 Nxf3 18. Rxf3 c4 19. Qe2 d4 20. Rf1 d3 21. cxd3 cxd3 22. Qd2 Bb4 23. Qxd3 Bxg2+ 24. Kg1 Bc5+ 25. Rf2 Bxf2+ 26. Kxf2 Rd8 27. Qc4 Qf3+ 28. Kg1 Rd1+ 29. Nf1 Rxf1+ 30. Qxf1 Qxf1# 0-1
+
+

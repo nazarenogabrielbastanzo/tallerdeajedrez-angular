@@ -1,0 +1,22 @@
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/H7Af9vFd"]
+[Date "2019.01.07"]
+[Round "-"]
+[White "neraslapula"]
+[Black "nazarenobastanzo"]
+[Result "0-1"]
+[UTCDate "2019.01.07"]
+[UTCTime "22:53:28"]
+[WhiteElo "1547"]
+[BlackElo "1573"]
+[WhiteRatingDiff "-10"]
+[BlackRatingDiff "+9"]
+[Variant "Standard"]
+[TimeControl "300+3"]
+[ECO "B90"]
+[Opening "Sicilian Defense: Najdorf, Lipnitsky Attack"]
+[Termination "Normal"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bc4 e6 7. Bb3 Nc6 8. O-O Be7 9. Bg5 O-O 10. Kh1 Qc7 11. Nxc6 bxc6 12. Qd3 a5 13. Qg3 Rd8 14. f4 d5 15. Bxf6 Bxf6 16. e5 Be7 17. Na4 Ba6 18. Rf3 c5 19. c3 c4 20. Bc2 g6 21. f5 exf5 22. Bxf5 Kh8 23. Raf1 gxf5 24. Rxf5 f6 25. exf6 Qxg3 26. hxg3 Bf8 27. f7 d4 28. Nb6 Rab8 29. Na4 d3 30. R1f4 d2 31. Rg4 d1=Q+ 32. Kh2 Qxg4 0-1
+
+

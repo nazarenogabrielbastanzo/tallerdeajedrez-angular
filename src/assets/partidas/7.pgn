@@ -1,0 +1,22 @@
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/virGpwfo"]
+[Date "2018.12.21"]
+[Round "-"]
+[White "nazarenobastanzo"]
+[Black "plenitude"]
+[Result "1-0"]
+[UTCDate "2018.12.21"]
+[UTCTime "12:43:51"]
+[WhiteElo "1512"]
+[BlackElo "1571"]
+[WhiteRatingDiff "+12"]
+[BlackRatingDiff "-12"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "D50"]
+[Opening "Queen's Gambit Declined: Modern Variation"]
+[Termination "Normal"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 h6 5. Bxf6 gxf6 6. g3 Bg7 7. Bg2 O-O 8. Nf3 b6 9. cxd5 exd5 10. O-O c6 11. e4 dxe4 12. Nxe4 Bb7 13. Re1 Re8 14. Qc2 c5 15. Rad1 cxd4 16. Rxd4 Qc8 17. Qb1 Nc6 18. Rd6 Ne5 19. Nxf6+ Bxf6 20. Rxf6 Nxf3+ 21. Bxf3 Rxe1+ 22. Qxe1 Qd8 23. Bxb7 Rb8 24. Rxh6 Rxb7 25. Qe5 Re7 26. Rh8# 1-0
+
+

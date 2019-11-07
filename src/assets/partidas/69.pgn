@@ -1,0 +1,22 @@
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/k4UVpWzT"]
+[Date "2018.07.08"]
+[Round "-"]
+[White "nazarenobastanzo"]
+[Black "fferer"]
+[Result "1-0"]
+[UTCDate "2018.07.08"]
+[UTCTime "00:39:18"]
+[WhiteElo "1416"]
+[BlackElo "1379"]
+[WhiteRatingDiff "+9"]
+[BlackRatingDiff "-9"]
+[Variant "Standard"]
+[TimeControl "300+0"]
+[ECO "D20"]
+[Opening "Queen's Gambit Accepted: Old Variation"]
+[Termination "Normal"]
+
+1. d4 d5 2. c4 dxc4 3. e3 e5 4. Ne2 exd4 5. Nxd4 c5 6. Nf3 Qxd1+ 7. Kxd1 b5 8. a4 Bd7 9. Nc3 b4 10. Nb5 Bxb5 11. axb5 c3 12. bxc3 bxc3 13. Ba3 Nd7 14. Kc2 Rb8 15. Bc4 Ne5 16. Kxc3 Nxc4 17. Kxc4 Be7 18. Ne5 Nf6 19. Bxc5 Bxc5 20. Kxc5 Rc8+ 21. Kb4 Nd5+ 22. Ka5 Rc5 23. Ka6 O-O 24. Nd7 Nc7+ 25. Kxa7 Ra8+ 26. Kb6 Rxa1 27. Nxc5 Rxh1 28. Kxc7 Rc1 29. b6 Rxc5+ 30. Kb8 Rb5 31. b7 Kf8 32. Kc8 Rc5+ 33. Kb8 Ra5 34. Kc8 Rb5 35. b8=Q Rxb8+ 36. Kxb8 Ke7 37. Kb7 Kd6 38. Kb6 f5 39. Kb5 Kd5 40. Kb4 g5 41. Kc3 Ke4 42. Kd2 f4 43. f3+ Kf5 44. e4+ Ke6 45. Kd3 Ke5 46. Kc4 h6 47. h3 h5 48. Kc5 h4 49. Kc4 Kd6 50. Kd4 Ke6 51. e5 Kf5 52. Kd5 Kg6 53. e6 Kf5 54. Kd6 g4 55. hxg4+ Kg5 56. e7 h3 57. gxh3 1-0
+
+

@@ -1,0 +1,27 @@
+[Event "Sub 1700"]
+[Site "Villa Carlos Paz, Córdoba, Argentina"]
+[Date "07/10/2018"]
+[Round "4"]
+[White "Lopez, Hector"]
+[Black "Bastanzo, Nazareno Gabriel"]
+[Result "1-0"]
+[BlackElo "1491"]
+[ECO "D43"]
+[Opening "Semi-Slav"]
+[Variation "Botvinnik, 5...Be7 6.e3 Nbd7 7.Bd3"]
+[WhiteElo "1600"]
+[TimeControl "300"]
+[Termination "abandoned"]
+[PlyCount "77"]
+[WhiteType "human"]
+[BlackType "human"]
+[Comment "Tablero 9"]
+
+1. d4 d5 2. c4 c6 3. Nc3 Nf6 4. Nf3 e6 5. Bg5 Be7 6. e3 Nbd7 7. Bd3 dxc4 8.
+Bxc4 b5 9. Bd3 a6 10. O-O O-O 11. Qc2 Bb7 12. Rad1 Re8 13. Rfe1 Qb6 14. e4
+Nf8 15. h3 Rad8 16. e5 Nd5 17. Nxd5 Rxd5 18. Bxe7 Rxe7 19. Be4 Rd8 20. Rd2
+Rc7 21. Rc1 Rdc8 22. b4 Ng6 23. Qc5 Qxc5 24. dxc5 Nf4 25. a3 Nd5 26. Bxd5
+cxd5 27. Nd4 Bc6 28. f4 Kf8 29. f5 Ke7 30. g4 Bd7 31. Rdc2 Bc6 32. Rf1 Bd7
+33. f6+ Kf8 34. Rcf2 g5 35. h4 gxh4 36. Rh2 Kg8 37. Rxh4 Kh8 38. Kf2 Rg8
+39. Rfh1 1-0
+

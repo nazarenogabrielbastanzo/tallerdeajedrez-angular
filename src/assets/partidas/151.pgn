@@ -1,0 +1,22 @@
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/tZKS2f8i"]
+[Date "2019.06.26"]
+[Round "-"]
+[White "nazarenobastanzo"]
+[Black "Trip5s"]
+[Result "1-0"]
+[UTCDate "2019.06.26"]
+[UTCTime "20:10:01"]
+[WhiteElo "1610"]
+[BlackElo "1612"]
+[WhiteRatingDiff "+10"]
+[BlackRatingDiff "-10"]
+[Variant "Standard"]
+[TimeControl "300+0"]
+[ECO "E10"]
+[Opening "Indian Game: Anti-Nimzo-Indian"]
+[Termination "Normal"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 d5 4. a3 c6 5. e3 Nbd7 6. c5 Be7 7. b4 O-O 8. Bd3 Qc7 9. Bb2 Re8 10. Nc3 Bf8 11. Qc2 g6 12. h4 Bg7 13. O-O-O e5 14. dxe5 Nxe5 15. Nxe5 Rxe5 16. Ne2 Re8 17. Nf4 Bg4 18. f3 Be6 19. h5 Nxh5 20. Nxh5 Bxb2+ 21. Qxb2 gxh5 22. Bxh7+ Kxh7 23. Rxh5+ Kg8 24. Qh8# 1-0
+
+

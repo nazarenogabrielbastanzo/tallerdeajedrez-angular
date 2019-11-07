@@ -1,0 +1,22 @@
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/UWmNmWgI"]
+[Date "2018.05.08"]
+[Round "-"]
+[White "nazarenobastanzo"]
+[Black "mocorongo"]
+[Result "1-0"]
+[UTCDate "2018.05.08"]
+[UTCTime "02:02:27"]
+[WhiteElo "1686"]
+[BlackElo "1864"]
+[WhiteRatingDiff "+14"]
+[BlackRatingDiff "-76"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "A51"]
+[Opening "Indian Game: Budapest Defense"]
+[Termination "Normal"]
+
+1. d4 Nf6 2. c4 e5 3. e3 exd4 4. exd4 Bb4+ 5. Bd2 Bxd2+ 6. Nxd2 O-O 7. Ngf3 Re8+ 8. Be2 Qe7 9. Rc1 Nc6 10. Rc3 d5 11. Re3 Be6 12. O-O Qd6 13. c5 Qd7 14. a3 a5 15. Re1 Bg4 16. Ne5 Nxe5 17. dxe5 Bxe2 18. Qxe2 Ng4 19. Rg3 Nh6 20. Qe3 Ra6 21. Qg5 Rg6 22. Qf4 Rxg3 23. fxg3 Qb5 24. Qd4 c6 25. Nf3 Nf5 26. Qc3 a4 27. g4 Nh6 28. g5 Nf5 29. g4 Ne7 30. Nd4 Qa6 31. e6 Ng6 32. exf7+ Kxf7 33. Qf3+ 1-0
+
+

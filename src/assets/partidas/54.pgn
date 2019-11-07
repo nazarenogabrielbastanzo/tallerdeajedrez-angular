@@ -1,0 +1,22 @@
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/r6OccqwT"]
+[Date "2018.04.17"]
+[Round "-"]
+[White "nazarenobastanzo"]
+[Black "tercoer"]
+[Result "1-0"]
+[UTCDate "2018.04.17"]
+[UTCTime "00:01:05"]
+[WhiteElo "1685"]
+[BlackElo "1603"]
+[WhiteRatingDiff "+8"]
+[BlackRatingDiff "-9"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "E91"]
+[Opening "King's Indian Defense: Orthodox Variation"]
+[Termination "Normal"]
+
+1. d4 Nf6 2. c4 g6 3. Nf3 Bg7 4. Nc3 O-O 5. e4 d6 6. Be2 c5 7. d5 a5 8. O-O Bg4 9. h3 Bxf3 10. Bxf3 Nbd7 11. Bf4 Ne5 12. Bxe5 dxe5 13. a3 Qb6 14. Rb1 Rfd8 15. Qd2 e6 16. g4 exd5 17. cxd5 c4 18. g5 Nh5 19. Bxh5 gxh5 20. Qe2 Qg6 21. h4 Rac8 22. Kh1 h6 23. Rg1 f5 24. gxf6 Qxf6 25. Qxh5 Qxf2 26. Rxg7+ Kxg7 27. Rg1+ Qxg1+ 28. Kxg1 Kh7 29. Qxe5 Rg8+ 30. Kf2 Rcf8+ 31. Ke3 Rg7 32. d6 Rfg8 33. Nd5 Rg3+ 34. Qxg3 Rxg3+ 35. Kf4 Rg8 36. Nf6+ Kg7 37. Nxg8 Kxg8 38. d7 Kf7 39. d8=Q Kg6 40. Qb6+ Kh5 41. Qxa5+ Kxh4 42. Qe1+ Kh3 43. Qg3# 1-0
+
+

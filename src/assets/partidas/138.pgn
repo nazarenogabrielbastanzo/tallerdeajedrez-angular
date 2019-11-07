@@ -1,0 +1,22 @@
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/fBvFOoh6"]
+[Date "2019.05.08"]
+[Round "-"]
+[White "jbastanzo"]
+[Black "jomanuell"]
+[Result "1-0"]
+[UTCDate "2019.05.08"]
+[UTCTime "17:42:06"]
+[WhiteElo "1660"]
+[BlackElo "1646"]
+[WhiteRatingDiff "+11"]
+[BlackRatingDiff "-10"]
+[Variant "Standard"]
+[TimeControl "900+6"]
+[ECO "D38"]
+[Opening "Queen's Gambit Declined: Ragozin Defense"]
+[Termination "Normal"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 d5 4. Nc3 Bb4 5. Bf4 g6 6. e3 Bf8 7. Rc1 Bg7 8. h3 O-O 9. cxd5 Nxd5 10. Bh2 c6 11. e4 Nxc3 12. bxc3 Nd7 13. e5 Nb6 14. Bd3 Nd5 15. O-O b5 16. a3 Bh6 17. Rc2 Bf4 18. c4 Bxh2+ 19. Kxh2 bxc4 20. Bxc4 a5 21. Qc1 Bb7 22. Qh6 Ne7 23. Ng5 Re8 24. Qxh7+ Kf8 25. Qxf7# 1-0
+
+

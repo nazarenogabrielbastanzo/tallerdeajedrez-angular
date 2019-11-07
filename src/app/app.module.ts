@@ -18,6 +18,9 @@ import { FuncionesComponent } from './components/funciones/funciones.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { PoliticasDePrivacidadComponent } from './components/politicas-de-privacidad/politicas-de-privacidad.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { PartidaComponent } from './components/partida/partida.component';
+
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     FuncionesComponent,
     NoticiasComponent,
     PoliticasDePrivacidadComponent,
-    FooterComponent
+    FooterComponent,
+    PartidaComponent,
+    DomseguroPipe
   ],
   imports: [
     BrowserModule,

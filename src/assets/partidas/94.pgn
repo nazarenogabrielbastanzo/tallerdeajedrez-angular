@@ -1,0 +1,22 @@
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/8zlaKAcc"]
+[Date "2019.02.23"]
+[Round "-"]
+[White "jbastanzo"]
+[Black "lechuzon"]
+[Result "1-0"]
+[UTCDate "2019.02.23"]
+[UTCTime "15:00:22"]
+[WhiteElo "1716"]
+[BlackElo "1724"]
+[WhiteRatingDiff "+12"]
+[BlackRatingDiff "-11"]
+[Variant "Standard"]
+[TimeControl "900+0"]
+[ECO "E85"]
+[Opening "King's Indian Defense: Sämisch Variation, Orthodox Variation"]
+[Termination "Normal"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Be3 e5 7. Qd2 Re8 8. d5 c6 9. g4 Nfd7 10. dxc6 bxc6 11. Qxd6 Bf8 12. Qd2 Bb4 13. Nge2 Qh4+ 14. Ng3 Nf8 15. O-O-O Bxc3 16. Qxc3 Nbd7 17. Be2 Qf6 18. g5 Qe6 19. h4 c5 20. h5 Ba6 21. hxg6 fxg6 22. Rd2 Rac8 23. Rhd1 Nb6 24. Rd6 Qh3 25. Bf2 Qg2 26. Be1 Qh3 27. Bf1 Qh4 28. Nf5 Qxg5+ 29. Bd2 Qh4 30. Nh6+ Kg7 31. Ng4 Rcd8 32. Bh6+ Kh8 33. Nxe5 Qxh6+ 34. Kb1 Rxd6 35. Nf7+ 1-0
+
+

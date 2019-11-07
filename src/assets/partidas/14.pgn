@@ -1,0 +1,22 @@
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/0PH9XWlr"]
+[Date "2018.12.20"]
+[Round "-"]
+[White "david-artiles"]
+[Black "nazarenobastanzo"]
+[Result "0-1"]
+[UTCDate "2018.12.20"]
+[UTCTime "22:31:15"]
+[WhiteElo "1495"]
+[BlackElo "1487"]
+[WhiteRatingDiff "-10"]
+[BlackRatingDiff "+10"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B20"]
+[Opening "Sicilian Defense: Bowdler Attack"]
+[Termination "Normal"]
+
+1. e4 c5 2. Bc4 e6 3. Nc3 a6 4. Nf3 b5 5. Be2 d6 6. d4 cxd4 7. Nxd4 Bb7 8. Bf4 e5 9. Bxe5 dxe5 10. Nf3 Nc6 11. O-O Nf6 12. Qd3 Nb4 13. Qd1 Qxd1 14. Bxd1 Nxe4 15. Nxe4 Bxe4 16. Nxe5 Bd6 17. Ng4 O-O 18. f3 Bxc2 19. Bxc2 Bc5+ 20. Kh1 Nxc2 21. Rac1 Ne3 22. Rfe1 Nxg4 23. Rxc5 Nf2+ 24. Kg1 Nd3 25. Rd1 Nxc5 26. Rd5 Ne6 27. g4 Rfd8 28. Re5 Rd1+ 29. Kg2 Rad8 30. Kg3 g6 31. h4 Rg1+ 32. Kf2 Rdd1 33. h5 Rdf1+ 34. Ke2 Re1+ 35. Kf2 Rxe5 36. Kxg1 gxh5 37. gxh5 Rxh5 38. Kg2 Rc5 39. b3 Rc2+ 0-1
+
+

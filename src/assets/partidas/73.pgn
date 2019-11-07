@@ -1,0 +1,22 @@
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/QMn1JRKX"]
+[Date "2018.09.16"]
+[Round "-"]
+[White "BEZYJMBLA"]
+[Black "tallerdeajedrez"]
+[Result "0-1"]
+[UTCDate "2018.09.16"]
+[UTCTime "19:00:14"]
+[WhiteElo "1547"]
+[BlackElo "1536"]
+[WhiteRatingDiff "-10"]
+[BlackRatingDiff "+14"]
+[Variant "Standard"]
+[TimeControl "300+0"]
+[ECO "D00"]
+[Opening "Queen's Pawn Opening: Veresov Attack, Irish Gambit"]
+[Termination "Normal"]
+
+1. d4 d5 2. Nc3 c5 3. Bf4 Nc6 4. Nb5 e5 5. Bd2 cxd4 6. e3 a6 7. Na3 Bxa3 8. bxa3 Nf6 9. Nf3 Qe7 10. Be2 O-O 11. Qb1 Bf5 12. Bb4 Nxb4 13. Qxb4 Qxb4+ 14. axb4 Bxc2 15. exd4 e4 16. Nd2 Rfe8 17. O-O Rac8 18. Rac1 Bd3 19. Rxc8 Rxc8 20. Bxd3 exd3 21. Nb3 Rc2 22. Rd1 Rb2 23. Rxd3 Rb1+ 0-1
+
+

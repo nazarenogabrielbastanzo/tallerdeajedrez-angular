@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PeticionesService } from '../../services/peticiones.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-partidas',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartidasComponent implements OnInit {
 
-  constructor() { }
+  partidas: any;
+
+  constructor(
+    private peticionesService: PeticionesService,
+    private router: Router
+  ) {
+    this.partidas = this.peticionesService.partidas;
+  }
 
   ngOnInit() {
+  }
+
+  verPartida(numero: number) {
+    console.log(numero);
+    this.router.navigate(['/partida', numero]);
   }
 
 }

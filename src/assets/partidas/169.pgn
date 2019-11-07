@@ -1,0 +1,22 @@
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/klqsShqm"]
+[Date "2019.10.14"]
+[Round "-"]
+[White "nazarenobastanzo"]
+[Black "furbino"]
+[Result "1-0"]
+[UTCDate "2019.10.14"]
+[UTCTime "22:34:24"]
+[WhiteElo "1756"]
+[BlackElo "1728"]
+[WhiteRatingDiff "+7"]
+[BlackRatingDiff "-6"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "D31"]
+[Opening "Queen's Gambit Declined: Queen's Knight Variation"]
+[Termination "Normal"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Ne7 4. Nf3 Ng6 5. g3 c6 6. Bg2 Bd6 7. c5 Bc7 8. h4 O-O 9. h5 Ne7 10. Bf4 Bxf4 11. gxf4 Nf5 12. Bh3 Qe7 13. Bxf5 exf5 14. Qd3 Na6 15. a3 Re8 16. O-O-O Nc7 17. Rdg1 Ne6 18. h6 g6 19. e3 b6 20. Ne5 bxc5 21. Nxc6 Qb7 22. Ne5 c4 23. Qe2 Rb8 24. Na4 Qb3 25. Nc5 Nxc5 26. dxc5 Qa2 27. Qc2 Qa1+ 28. Kd2 Qa2 29. Kc1 Rb3 30. c6 Qa1+ 31. Qb1 Qxb1+ 32. Kxb1 c3 33. Nd3 Ba6 34. Kc2 Rb6 35. Nb4 cxb2 36. Nxd5 Rxc6+ 37. Kxb2 Rb8+ 38. Ka1 Rc2 39. Rb1 Rxb1+ 40. Rxb1 Rc8 41. Ne7+ 1-0
+
+

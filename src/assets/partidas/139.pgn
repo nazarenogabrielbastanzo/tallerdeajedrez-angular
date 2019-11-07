@@ -1,0 +1,22 @@
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/u7zTxYQK"]
+[Date "2019.05.16"]
+[Round "-"]
+[White "c_or_cpp"]
+[Black "nazarenobastanzo"]
+[Result "0-1"]
+[UTCDate "2019.05.16"]
+[UTCTime "17:11:46"]
+[WhiteElo "1828"]
+[BlackElo "1722"]
+[WhiteRatingDiff "-15"]
+[BlackRatingDiff "+15"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "D30"]
+[Opening "Queen's Gambit Declined"]
+[Termination "Normal"]
+
+1. d4 d5 2. c4 e6 3. Nf3 Nc6 4. Bg5 Qd7 5. e3 f6 6. Bh4 Nh6 7. Bd3 g5 8. Bg3 Nf5 9. Bxf5 exf5 10. cxd5 Bb4+ 11. Nc3 Qxd5 12. Bxc7 g4 13. Nh4 Be6 14. a3 Bxc3+ 15. bxc3 Rc8 16. Bf4 Na5 17. Rc1 Nc4 18. f3 O-O 19. O-O h5 20. Qa4 a5 21. Ng6 Rf7 22. Bh6 b5 23. Qd1 Kh7 24. Nf4 Nxe3 25. Nxd5 Nxd1 26. Rcxd1 Kxh6 27. Nf4 Bc4 28. Rfe1 Rg8 29. fxg4 Rxg4 30. Nd3 Bd5 31. g3 h4 32. Nf4 Bf3 33. Rd3 Be4 34. Rde3 Rfg7 35. d5 Rxf4 0-1
+
+

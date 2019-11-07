@@ -1,0 +1,20 @@
+[Event "Casual Rapid game"]
+[Site "https://lichess.org/BBE8TOoI"]
+[Date "2017.11.04"]
+[Round "-"]
+[White "nazarenobastanzo"]
+[Black "gambit09"]
+[Result "1-0"]
+[UTCDate "2017.11.04"]
+[UTCTime "19:52:45"]
+[WhiteElo "1760"]
+[BlackElo "1516"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: Chigorin Variation"]
+[Termination "Normal"]
+
+1. d4 d5 2. Nf3 Nc6 3. Nc3 Nf6 4. Bg5 Bg4 5. Bxf6 Bxf3 6. gxf3 exf6 7. e3 f5 8. f4 Bb4 9. Qd3 O-O 10. a3 Bxc3+ 11. bxc3 Qd7 12. Rg1 g6 13. h4 Qe7 14. Qxf5 Qxh4 15. O-O-O Qe7 16. Kb2 Na5 17. Qxd5 c6 18. Qxa5 b5 19. c4 bxc4 20. Bxc4 Rab8+ 21. Bb3 Qf6 22. f3 Rfc8 23. Ka2 Rb5 24. Qxa7 Rd8 25. Rg5 Rxg5 26. fxg5 Qxf3 27. Rh1 Qxh1 28. Qxf7+ Kh8 29. Qf6# 1-0
+
+

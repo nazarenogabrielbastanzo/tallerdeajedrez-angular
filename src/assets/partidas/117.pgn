@@ -1,0 +1,22 @@
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/hkqgflZp"]
+[Date "2019.05.04"]
+[Round "-"]
+[White "nazarenobastanzo"]
+[Black "alfildetroya"]
+[Result "1-0"]
+[UTCDate "2019.05.04"]
+[UTCTime "19:44:47"]
+[WhiteElo "1700"]
+[BlackElo "1692"]
+[WhiteRatingDiff "+10"]
+[BlackRatingDiff "-10"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "D02"]
+[Opening "Queen's Pawn Game: Zukertort Variation"]
+[Termination "Time forfeit"]
+
+1. d4 d5 2. Nf3 Bf5 3. Nbd2 Nc6 4. e3 Nf6 5. c3 h6 6. h3 Qd6 7. g4 Be4 8. Nxe4 Nxe4 9. Bg2 e6 10. Bd2 O-O-O 11. Qc2 Na5 12. b3 g6 13. c4 Nc6 14. c5 Qd7 15. Ne5 Nxe5 16. dxe5 Nxd2 17. Qxd2 Bxc5 18. Rc1 Qe7 19. O-O h5 20. Qc3 Bb4 21. Qc2 hxg4 22. hxg4 c6 23. f4 Qh4 24. Bf3 Bc5 25. Rce1 Rh7 26. Rf2 Rdh8 27. Kf1 Qe7 28. g5 Bb4 29. Ra1 Bc5 30. Qd3 Rh2 31. Qe2 Rxf2+ 32. Qxf2 Qc7 33. a3 Rd8 34. b4 Bb6 35. a4 a6 36. Rc1 d4 37. b5 dxe3 38. Qe2 c5 39. bxa6 bxa6 40. Qxa6+ Kd7 41. Rd1+ Ke7 42. Rxd8 Qxd8 43. Qb7+ Kf8 44. Qa8 Qxa8 45. Bxa8 c4 46. Ke2 c3 47. Be4 Ke7 48. Kd3 Bd8 49. Kxe3 Bb6+ 50. Kd3 Ba5 51. Bc6 Kd8 52. Bb5 Kc7 53. Kc2 Kb6 54. Kd3 Kc5 55. Be8 Kb4 56. Bxf7 Kb3 57. Bxe6+ Kb2 58. f5 c2 59. fxg6 c1=Q 60. g7 Qc3+ 61. Ke4 Qc1 62. g8=Q Qc2+ 63. Kd4 1-0
+
+

@@ -1,0 +1,22 @@
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/0saC2T0P"]
+[Date "2019.05.16"]
+[Round "-"]
+[White "nazarenobastanzo"]
+[Black "Silver68"]
+[Result "1-0"]
+[UTCDate "2019.05.16"]
+[UTCTime "14:08:33"]
+[WhiteElo "1699"]
+[BlackElo "1919"]
+[WhiteRatingDiff "+17"]
+[BlackRatingDiff "-16"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "E12"]
+[Opening "Queen's Indian Defense: Kasparov Variation"]
+[Termination "Normal"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. Nc3 Bb7 5. Nd2 d5 6. e3 Bb4 7. a3 Be7 8. b4 O-O 9. Rb1 c5 10. bxc5 Nbd7 11. Qa4 dxc4 12. c6 b5 13. Qxb5 a6 14. Qxb7 Rb8 15. c7 Rxb7 16. cxd8=Q Rxb1 17. Ndxb1 1-0
+
+

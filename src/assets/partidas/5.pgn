@@ -1,0 +1,22 @@
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/cgmmrAv0"]
+[Date "2018.12.21"]
+[Round "-"]
+[White "desso2b"]
+[Black "nazarenobastanzo"]
+[Result "0-1"]
+[UTCDate "2018.12.21"]
+[UTCTime "13:09:32"]
+[WhiteElo "1510"]
+[BlackElo "1525"]
+[WhiteRatingDiff "-10"]
+[BlackRatingDiff "+9"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "B20"]
+[Opening "Sicilian Defense: Bowdler Attack"]
+[Termination "Normal"]
+
+1. e4 c5 2. Bc4 e6 3. Nf3 d6 4. d4 cxd4 5. Qxd4 Nc6 6. Bb5 Qa5+ 7. Nc3 Nf6 8. Bxc6+ bxc6 9. Bd2 Qb6 10. Qxb6 axb6 11. Bg5 Be7 12. e5 dxe5 13. Nxe5 Nd5 14. Bxe7 Nxe7 15. O-O O-O 16. Ne4 Ra5 17. Nc4 Ra4 18. b3 Ra7 19. Ned6 Ba6 20. Rfd1 Nd5 21. Ne5 f5 22. Nxc6 Rc7 23. Nd4 Rd7 24. Nc4 Nc3 25. Rd2 Rfd8 26. Rd3 Rxd4 27. Rxc3 Rd1+ 28. Rxd1 Rxd1# 0-1
+
+

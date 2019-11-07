@@ -1,0 +1,22 @@
+[Event "Rated Blitz game"]
+[Site "https://lichess.org/w3nkA2sy"]
+[Date "2019.01.07"]
+[Round "-"]
+[White "nazarenobastanzo"]
+[Black "DanielS7"]
+[Result "1-0"]
+[UTCDate "2019.01.07"]
+[UTCTime "17:58:25"]
+[WhiteElo "1566"]
+[BlackElo "1566"]
+[WhiteRatingDiff "+11"]
+[BlackRatingDiff "-10"]
+[Variant "Standard"]
+[TimeControl "180+0"]
+[ECO "A51"]
+[Opening "Indian Game: Budapest Defense"]
+[Termination "Normal"]
+
+1. d4 Nf6 2. c4 e5 3. e3 b6 4. Nf3 e4 5. Nfd2 Bb7 6. d5 c6 7. Nc3 cxd5 8. cxd5 Bb4 9. a3 Bxc3 10. bxc3 Bxd5 11. c4 Bb7 12. Bb2 O-O 13. g3 d5 14. cxd5 Bxd5 15. Bg2 Bb7 16. Bxf6 Qxf6 17. Nxe4 Qe7 18. Qd3 Rd8 19. Qc2 f5 20. Qc4+ Kh8 21. Ng5 Bxg2 22. Nf7+ Kg8 23. Nh6+ Kf8 24. Qg8# 1-0
+
+

@@ -1,0 +1,22 @@
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/PqdmoI0s"]
+[Date "2019.04.04"]
+[Round "-"]
+[White "nikola2202"]
+[Black "tallerdeajedrez"]
+[Result "0-1"]
+[UTCDate "2019.04.04"]
+[UTCTime "13:24:33"]
+[WhiteElo "1776"]
+[BlackElo "1607"]
+[WhiteRatingDiff "-15"]
+[BlackRatingDiff "+18"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "D30"]
+[Opening "Queen's Gambit Declined"]
+[Termination "Normal"]
+
+1. d4 d5 2. c4 e6 3. cxd5 exd5 4. e3 c6 5. Nf3 Bg4 6. Be2 Nd7 7. Nc3 Ngf6 8. Bd2 Be7 9. a3 a5 10. b4 axb4 11. axb4 Rxa1 12. Qxa1 Bxb4 13. Qb2 Qa5 14. O-O O-O 15. Ra1 Bxc3 16. Bxc3 Qc7 17. Ba5 b6 18. Bb4 c5 19. dxc5 bxc5 20. Bc3 Rb8 21. Qc2 Bxf3 22. Bxf3 d4 23. exd4 cxd4 24. Ra3 dxc3 25. Rxc3 Qxc3 26. Qxc3 Rb1+ 27. Qe1 Rxe1# 0-1
+
+

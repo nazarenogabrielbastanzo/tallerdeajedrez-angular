@@ -1,0 +1,22 @@
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/T7axDE2s"]
+[Date "2017.12.30"]
+[Round "-"]
+[White "djangofan"]
+[Black "nazarenobastanzo"]
+[Result "0-1"]
+[UTCDate "2017.12.30"]
+[UTCTime "22:45:34"]
+[WhiteElo "1554"]
+[BlackElo "1656"]
+[WhiteRatingDiff "-7"]
+[BlackRatingDiff "+7"]
+[Variant "Standard"]
+[TimeControl "900+0"]
+[ECO "D00"]
+[Opening "Queen's Pawn Game: Mason Attack"]
+[Termination "Normal"]
+
+1. d4 d5 2. Bf4 Nf6 3. e3 Bg4 4. Nf3 Ne4 5. h3 Bxf3 6. Qxf3 g5 7. Bh2 Nc6 8. Bd3 Nf6 9. O-O h5 10. c3 g4 11. hxg4 hxg4 12. Qf4 e5 13. dxe5 Nh5 14. Qxg4 Qe7 15. Bb5 Ng7 16. Bxc6+ bxc6 17. Nd2 Rh4 18. Qf3 Ne6 19. e4 d4 20. cxd4 Nxd4 21. Qf6 Ne2+ 22. Kh1 O-O-O 23. Qxe7 Bxe7 24. Rfd1 Rxh2+ 25. Kxh2 Rh8# 0-1
+
+

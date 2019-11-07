@@ -1,0 +1,22 @@
+[Event "Rated Rapid game"]
+[Site "https://lichess.org/IMzeM1qv"]
+[Date "2018.04.28"]
+[Round "-"]
+[White "marillo"]
+[Black "nazarenobastanzo"]
+[Result "0-1"]
+[UTCDate "2018.04.28"]
+[UTCTime "00:02:22"]
+[WhiteElo "1516"]
+[BlackElo "1697"]
+[WhiteRatingDiff "-6"]
+[BlackRatingDiff "+6"]
+[Variant "Standard"]
+[TimeControl "600+0"]
+[ECO "B50"]
+[Opening "Sicilian Defense"]
+[Termination "Normal"]
+
+1. e4 c5 2. Nf3 d6 3. b3 Nc6 4. c3 Nf6 5. Qc2 Qc7 6. Bc4 e6 7. d4 cxd4 8. cxd4 a6 9. e5 dxe5 10. dxe5 Nxe5 11. Nxe5 Qxe5+ 12. Be2 Bb4+ 13. Bd2 Qxa1 14. Bxb4 Qe5 15. O-O Bd7 16. Rc1 Nd5 17. Qc5 Qxe2 18. Nc3 Nxb4 19. Qxb4 Qd2 20. Rf1 Rc8 21. Qxb7 Qxc3 22. h3 O-O 23. Qxd7 Rfd8 24. Qa4 Rd4 25. Qxa6 Rcd8 26. Kh2 g6 27. f3 Rd2 28. Rg1 Qe5+ 29. Kh1 Qg3 30. a4 Rxg2 31. Rf1 Qh2# 0-1
+
+
