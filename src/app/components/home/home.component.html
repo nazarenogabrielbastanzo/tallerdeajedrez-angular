@@ -1,4 +1,6 @@
-<img src="assets/images/4-720x540.jpeg" class="img-fluid" alt="Responsive image" style="width: 100%;">
+<h1 class="display-4 text-center mb-5 animated fadeIn slow">Taller de Ajedrez</h1>
+
+<img src="assets/images/4-720x540.jpeg" class="img-fluid animated fadeIn slow" alt="Responsive image" style="width: 100%;">
 
 <div class="card-group my-5">
     <div class="card mx-3" *ngFor="let card of tarjetas">
@@ -7,21 +9,6 @@
             <h5 class="card-title"> {{ card.titulo }} </h5>
             <p class="card-text"> {{ card.texto }} </p>
             <button class="btn btn-outline-primary" [routerLink]="card.link">Mas...</button>
-        </div>
-    </div>
-</div>
-
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4 text-center">Taller de Ajedrez en redes sociales</h1>
-        <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
-        <div class="d-flex justify-content-center">
-            <a href="https://www.facebook.com/TallerDeAjedrez" rel="noopener" target="_blank">
-                <i class="fab fa-facebook-f fa-3x m-3" style="color: blue;"></i>
-            </a>
-            <a href="https://twitter.com/TallerDeAjedre2" rel="noopener" target="_blank">
-                <i class="fab fa-twitter fa-3x m-3" style="color: lightblue;"></i>
-            </a>
         </div>
     </div>
 </div>

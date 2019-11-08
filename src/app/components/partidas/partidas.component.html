@@ -1,33 +1,37 @@
-<div class="container-fluid">
-    <h4 class="text-center display-4">Partidas</h4>
-    <div class="table-responsive mt-5">
-        <table class="table table-bordered table-hover" style="zoom: 80%;">
-            <thead>
-                <tr>
-                    <th class="text-right">Blancas</th>
-                    <th class="text-center">Resultado</th>
-                    <th class="text-left">Negras</th>
-                    <th>Evento</th>
-                    <th>Fecha</th>
-                    <th>ID</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let partida of partidas;let i=index" style="cursor: pointer;" (click)="verPartida(i + 1)">
-                    <td class="text-right">
-                        {{ partida.blancas }}
-                    </td>
-                    <td class="text-center">
-                        {{ partida.resultado }}
-                    </td>
-                    <td class="text-left">
-                        {{ partida.negras }}
-                    </td>
-                    <td>evento</td>
-                    <td>fecha</td>
-                    <td>{{ partida.numero }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<h4 class="text-center display-4 animated fadeIn slow ">Partidas</h4>
+
+<div class="table-responsive mt-5 animated fadeIn slow">
+    <table class="table table-bordered table-hover" style="zoom: 80%;">
+        <thead>
+            <tr>
+                <th class="text-right">Blancas</th>
+
+                <th class="text-center">Resultado</th>
+
+                <th class="text-left">Negras</th>
+
+                <th>Evento</th>
+
+                <th>Fecha</th>
+
+                <th>ID</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let partida of partidas;let i=index" style="cursor: pointer;" (click)="verPartida(i + 1)">
+                <td class="text-right">{{ partida.blancas }}</td>
+
+                <td class="text-center">{{ partida.resultado }}</td>
+
+                <td class="text-left">{{ partida.negras }}</td>
+
+                <td>evento</td>
+
+                <td>fecha</td>
+
+                <td>{{ partida.numero }}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

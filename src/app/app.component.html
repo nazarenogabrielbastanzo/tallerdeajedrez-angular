@@ -1,7 +1,8 @@
 <app-navbar></app-navbar>
 
-<div class="container-fluid">
-  <router-outlet></router-outlet>
+<div class="container-fluid my-5">
+    <!-- https://stackoverflow.com/questions/48048299/angular-5-scroll-to-top-on-every-route-click/48048822 -->
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
 </div>
 
 <app-footer></app-footer>
