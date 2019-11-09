@@ -1,0 +1,8 @@
+<!-- scroll-top button -->
+<div *ngIf="didScroll">
+    <div #scroll class="d-flex justify-content-end animated fadeIn" style="position: fixed; bottom: 15px; right: 0">
+        <a (click)="scrollTop($event)" class="btn btn-outline-primary mr-3" style="cursor: pointer;">
+            <i class="fas fa-angle-up" style="color: blue;"></i>
+        </a>
+    </div>
+</div>
