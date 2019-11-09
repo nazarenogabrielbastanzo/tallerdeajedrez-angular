@@ -1,13 +1,15 @@
-<h4 class="text-center display-4 animated fadeIn slow">
-    Partida {{ partida.numero }}
+<div class="animated fadeIn slow">
+    <h4 class="text-center display-4">
+        Partida {{ partida.numero }}
 
-    <br>
+        <br>
 
-    <small>
-        {{ partida.blancas }} vs. {{ partida.negras }} ({{ partida.resultado }})
-    </small>
-</h4>
+        <small>
+            {{ partida.blancas }} vs. {{ partida.negras }} ({{ partida.resultado }})
+        </small>
+    </h4>
 
-<div class="d-flex justify-content-center my-5">
-    <iframe [src]="partida.id | domseguro:'https://lichess.org/embed/'" width="600" height="397" frameborder="0"></iframe>
+    <div class="d-flex justify-content-center my-5">
+        <iframe [src]="partida.id | domseguro:'https://lichess.org/embed/'" width="600" height="397" frameborder="0"></iframe>
+    </div>
 </div>

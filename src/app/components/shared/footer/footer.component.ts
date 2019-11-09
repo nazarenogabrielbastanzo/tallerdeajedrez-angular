@@ -20,7 +20,7 @@ export class FooterComponent implements OnInit {
         } else {
             window.clearInterval(scrollToTop);
         }
-    }, 16);
+    }, 10);
   }
 
 }
