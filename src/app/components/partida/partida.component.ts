@@ -9,15 +9,24 @@ import { PeticionesService } from '../../services/peticiones.service';
 })
 export class PartidaComponent implements OnInit {
 
-  partida: any;
+  id: number;
+  partidaId: string;
+  blancas: string;
+  negras: string;
+  resultado: string;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private peticionesService: PeticionesService
   ) {
-    this.activatedRoute.params.subscribe((data: any) => {
-      this.partida = this.peticionesService.partidas[data.id - 1];
-    });
+    this.id = Number(this.activatedRoute.snapshot.paramMap.get('id')) - 1;
+    this.peticionesService.getPartidas()
+      .subscribe((data: any) => {
+        this.partidaId = data[this.id].id;
+        this.blancas = data[this.id].blancas;
+        this.negras = data[this.id].negras;
+        this.resultado = data[this.id].resultado;
+      });
   }
 
   ngOnInit() {

@@ -1,15 +1,15 @@
 <div class="animated fadeIn slow">
     <h4 class="text-center display-4">
-        Partida {{ partida.numero }}
+        Partida {{ id +1 }}
 
         <br>
 
         <small>
-            {{ partida.blancas }} vs. {{ partida.negras }} ({{ partida.resultado }})
+            {{ blancas }} vs. {{ negras }} ({{ resultado }})
         </small>
     </h4>
 
     <div class="d-flex justify-content-center my-5">
-        <iframe [src]="partida.id | domseguro:'https://lichess.org/embed/'" width="600" height="397" frameborder="0"></iframe>
+        <iframe [src]="partidaId | domseguro:'https://lichess.org/embed/'" width="600" height="397" frameborder="0"></iframe>
     </div>
 </div>

@@ -15,7 +15,10 @@ export class PartidasComponent implements OnInit {
     private peticionesService: PeticionesService,
     private router: Router
   ) {
-    this.partidas = this.peticionesService.partidas;
+    this.peticionesService.getPartidas()
+      .subscribe((data: any) => {
+        this.partidas = data;
+      });
   }
 
   ngOnInit() {
