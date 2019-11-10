@@ -19,12 +19,6 @@ export class HomeComponent implements OnInit {
       titulo: 'Partida Tringov vs. Fischer',
       texto: 'Tringov vs. Fischer, Capablanca Memorial (1965): Esta partida . . .',
       link: '/partida-tringov-fischer'
-    },
-    {
-      img: 'assets/images/noticias.jpg',
-      titulo: 'Noticias',
-      texto: 'Últimas noticias de Ajedrez, de Chess24 . . .',
-      link: '/noticias'
     }
   ];
 
