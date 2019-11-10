@@ -10,7 +10,6 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { BuscarComponent } from './components/buscar/buscar.component';
 import { PartidasAmistosasComponent } from './components/partidas-amistosas/partidas-amistosas.component';
 import { PartidaTringovFischerComponent } from './components/partida-tringov-fischer/partida-tringov-fischer.component';
-import { FuncionesComponent } from './components/funciones/funciones.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { PoliticasDePrivacidadComponent } from './components/politicas-de-privacidad/politicas-de-privacidad.component';
 import { PartidaComponent } from './components/partida/partida.component';
@@ -27,7 +26,6 @@ const routes: Routes = [
   { path: 'buscar', component: BuscarComponent },
   { path: 'partidas-amistosas', component: PartidasAmistosasComponent},
   { path: 'partida-tringov-fischer', component: PartidaTringovFischerComponent },
-  { path: 'funciones', component: FuncionesComponent },
   { path: 'noticias', component: NoticiasComponent },
   { path: 'politicas-de-privacidad', component: PoliticasDePrivacidadComponent },
   { path: 'partida/:id', component: PartidaComponent },

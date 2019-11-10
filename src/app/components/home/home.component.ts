@@ -21,12 +21,6 @@ export class HomeComponent implements OnInit {
       link: '/partida-tringov-fischer'
     },
     {
-      img: 'assets/images/Ctrl_Z.jpg',
-      titulo: 'Funciones',
-      texto: 'Ahora se puede hacer, con el teclado, en cualquier página de este sitio . . .',
-      link: '/funciones'
-    },
-    {
       img: 'assets/images/noticias.jpg',
       titulo: 'Noticias',
       texto: 'Últimas noticias de Ajedrez, de Chess24 . . .',

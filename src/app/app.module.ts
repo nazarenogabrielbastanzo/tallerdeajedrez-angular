@@ -14,7 +14,6 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { BuscarComponent } from './components/buscar/buscar.component';
 import { PartidasAmistosasComponent } from './components/partidas-amistosas/partidas-amistosas.component';
 import { PartidaTringovFischerComponent } from './components/partida-tringov-fischer/partida-tringov-fischer.component';
-import { FuncionesComponent } from './components/funciones/funciones.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { PoliticasDePrivacidadComponent } from './components/politicas-de-privacidad/politicas-de-privacidad.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
@@ -37,7 +36,6 @@ import { ScrollTopComponent } from './components/shared/scroll-top/scroll-top.co
     BuscarComponent,
     PartidasAmistosasComponent,
     PartidaTringovFischerComponent,
-    FuncionesComponent,
     NoticiasComponent,
     PoliticasDePrivacidadComponent,
     FooterComponent,
