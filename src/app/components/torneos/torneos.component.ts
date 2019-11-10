@@ -7,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TorneosComponent implements OnInit {
 
-  constructor() { }
+  torneos: any = {};
+
+  constructor() {
+    this.torneos.nombre = '35th European Club Cup 2019';
+
+    this.torneos.url = this.torneos.nombre.toLowerCase().split(' ').join('-');
+    // Si lo anterior no funciona, intentar por ejemplo:
+    // this.torneos.url = 'url-del-torneo' + '/0';
+    this.torneos.url = `${this.torneos.url}/0`;
+  }
 
   ngOnInit() {
   }
