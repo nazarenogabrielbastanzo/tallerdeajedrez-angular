@@ -1,4 +1,6 @@
 <div class="animated fadeIn slow">
     <h1 class="display-4 text-center mb-5">Fotos del Álbum {{ id }}</h1>
-
+    <ul>
+        <li *ngFor="let foto of miArray; let i = index">Foto {{ i +1 }}</li>
+    </ul>
 </div>
