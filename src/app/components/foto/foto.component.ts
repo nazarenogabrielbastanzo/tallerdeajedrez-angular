@@ -12,6 +12,8 @@ export class FotoComponent implements OnInit {
   id: number;
   cantidadFotos: number;
   miArray = [];
+  primeraFoto: string;
+  fotos = [];
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -20,11 +22,19 @@ export class FotoComponent implements OnInit {
     this.id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
     this.peticionesService.getAlbumes()
       .subscribe((data: any) => {
-        this.cantidadFotos = data[this.id -1].cantFotos;
+        /* console.log(data); */
+        this.cantidadFotos = data[this.id - 1].cantidadFotos;
         for (let i = 1; i <= this.cantidadFotos; i++) {
           this.miArray.push(i);
         }
+        this.primeraFoto = 'assets/images/' + data[this.id - 1].vinculo + '(1).jpg';
+        // tslint:disable-next-line: prefer-for-of
+        for (let i = 1; i < this.miArray.length; i++) {
+          const foto = 'assets/images/' + data[this.id - 1].vinculo + '(' + (i + 1) + ').jpg';
+          this.fotos.push(foto);
+        }
       });
+    /* console.log(this.fotos); */
   }
 
   ngOnInit() {

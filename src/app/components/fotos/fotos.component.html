@@ -18,16 +18,16 @@
             </thead>
 
             <tbody>
-                <tr *ngFor="let album of albumes" style="cursor: pointer;" (click)="verAlbum(album.id)">
-                    <td>{{ album.id }}</td>
+                <tr *ngFor="let album of albumes" style="cursor: pointer;" (click)="verAlbum(album.album_id)">
+                    <td>{{ album.album_id }}</td>
 
-                    <td>{{ album.torneo }}</td>
+                    <td>{{ album.album }}</td>
 
                     <td>{{ album.lugar }}</td>
 
                     <td>{{album.fecha}}</td>
 
-                    <td>{{album.cantFotos}}</td>
+                    <td>{{album.cantidadFotos}}</td>
 
                 </tr>
             </tbody>

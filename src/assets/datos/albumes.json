@@ -1,15 +1,113 @@
 [{
-        "id": 1,
-        "torneo": "Día de los Maestros",
-        "lugar": "Almacén Cultural de Zárate, Buenos Aires, Argentina",
+        "album_id": 1,
+        "album": "Día de los Maestros",
+        "lugar": "Almacén Cultural de Zárate, Buenos Aires, Argentina.",
         "fecha": "11/09/2010",
-        "cantFotos": 19
+        "vinculo": "torneo_almacen_cultural_zarate_2010",
+        "cantidadFotos": 19
     },
     {
-        "id": 2,
-        "torneo": "Grand Prix en Zárate",
-        "lugar": "Zárate, Buenos Aires, Argentina",
+        "album_id": 2,
+        "album": "Grand Prix en Zárate",
+        "lugar": "Zárate, Buenos Aires, Argentina.",
         "fecha": "09/10/2010",
-        "cantFotos": 124
+        "vinculo": "torneo_grand_prix_zarate_2010",
+        "cantidadFotos": 124
+    },
+    {
+        "album_id": 3,
+        "album": "Torneo por Equipos",
+        "lugar": "Belén de Escobar, Buenos Aires, Argentina.",
+        "fecha": "21/11/2010",
+        "vinculo": "Torneo_Equipos_Escobar_21_nov_2010",
+        "cantidadFotos": 82
+    },
+    {
+        "album_id": 4,
+        "album": "LXI Torneo Abierto de Verano, 80 Aniversario. (1er. y 2da. rondas)",
+        "lugar": "Villa Ballester, Buenos Aires, Argentina.",
+        "fecha": "22\/01\/2011",
+        "vinculo": "LXI_Torneo_Abierto_Verano_2011_Villa_Ballester",
+        "cantidadFotos": 175
+    },
+    {
+        "album_id": 5,
+        "album": "LXI Torneo Abierto de Verano, 80 Aniversario. (3er. y 4ta. rondas)",
+        "lugar": "Villa Ballester, Buenos Aires, Argentina.",
+        "fecha": "23\/01\/2011",
+        "vinculo": "LXI_Torneo_de_Verano_3eray4ta",
+        "cantidadFotos": 89
+    },
+    {
+        "album_id": 6,
+        "album": "LXI Torneo Abierto de Verano, 80 Aniversario. (5ta. ronda)",
+        "lugar": "Villa Ballester, Buenos Aires, Argentina",
+        "fecha": "25\/01\/2011",
+        "vinculo": "LXI_Torneo_de_Verano_2011_5ta_ronda",
+        "cantidadFotos": 185
+    },
+    {
+        "album_id": 7,
+        "album": "LXI Torneo Abierto de Verano, 80 Aniversario. (6ta. ronda)",
+        "lugar": "Villa Ballester, Buenos Aires, Argentina",
+        "fecha": "26\/01\/2011",
+        "vinculo": "LXI_Torneo_Abierto_de_Verano_2011_6ta_ronda",
+        "cantidadFotos": 120
+    },
+    {
+        "album_id": 8,
+        "album": "LXI Torneo Abierto de Verano, 80 Aniversario. (7ma. ronda)",
+        "lugar": "Villa Ballester, Buenos Aires, Argentina",
+        "fecha": "28\/01\/2011",
+        "vinculo": "LXI_Torneo_Abierto_Verano_2011_7ma_ronda",
+        "cantidadFotos": 147
+    },
+    {
+        "album_id": 9,
+        "album": "LXI Torneo Abierto de Verano, 80 Aniversario. (8va. ronda)",
+        "lugar": "Villa Ballester, Buenos Aires, Argentina",
+        "fecha": "29\/01\/2011",
+        "vinculo": "LXI_Torneo_Abierto_Verano_2011_8va_ronda",
+        "cantidadFotos": 118
+    },
+    {
+        "album_id": 10,
+        "album": "LXI Torneo Abierto de Verano, 80 Aniversario. (9na. ronda)",
+        "lugar": "Villa Ballester, Buenos Aires, Argentina",
+        "fecha": "30\/01\/2011",
+        "vinculo": "LXI_Torneo_Abierto_Verano_2011_9na_ronda",
+        "cantidadFotos": 84
+    },
+    {
+        "album_id": 11,
+        "album": "IX Torneo Abierto en Memoria de Jorge Adelman (1er. ronda)",
+        "lugar": "Belén de Escobar, Buenos Aires, Argentina",
+        "fecha": "04/02/2011",
+        "vinculo": "1er_ronda_adelman_escobar_2011",
+        "cantidadFotos": 66
+    },
+    {
+        "album_id": 12,
+        "album": "IX Torneo Abierto en Memoria de Jorge Adelman (2da., 3er. y 4ta. rondas)",
+        "lugar": "Belén de Escobar, Buenos Aires, Argentina",
+        "fecha": "05/02/2011",
+        "vinculo": "torneo_adelman_escobar_2011",
+        "cantidadFotos": 158
+    },
+    {
+        "album_id": 13,
+        "album": "IX Torneo Abierto en Memoria de Jorge Adelman (5ta., 6ta. y 7ma. rondas)",
+        "lugar": "Belén de Escobar, Buenos Aires, Argentina",
+        "fecha": "06/02/2011",
+        "vinculo": "IX_Torneo_Abierto_Escobar_Jorge_Adelman_2011_5-6-7_rondas",
+        "cantidadFotos": 161
+    },
+    {
+        "album_id": 14,
+        "album": "Villa Martelli (Con la visita de Judith Polgar)",
+        "lugar": "Villa Martelli, Buenos Aires, Argentina",
+        "fecha": "11\/06\/2011",
+        "vinculo": "VillaMartelliConJudithPolgar",
+        "cantidadFotos": 8
     }
 ]
