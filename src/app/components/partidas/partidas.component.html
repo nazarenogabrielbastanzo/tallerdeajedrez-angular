@@ -1,7 +1,7 @@
 <div class="animated fadeIn slow">
-    <h4 class="text-center display-4">Partidas</h4>
+    <h4 class="text-center display-4 mb-5">Partidas</h4>
 
-    <div class="table-responsive mt-5">
+    <div class="table-responsive">
         <table class="table table-bordered table-hover" style="zoom: 80%;">
             <thead>
                 <tr>
@@ -20,7 +20,7 @@
             </thead>
 
             <tbody>
-                <tr *ngFor="let partida of partidas;let i=index" style="cursor: pointer;" (click)="verPartida(i + 1)">
+                <tr *ngFor="let partida of partidas" style="cursor: pointer;" (click)="verPartida(partida.numero)">
                     <td class="text-right">{{ partida.blancas }}</td>
 
                     <td class="text-center">{{ partida.resultado }}</td>

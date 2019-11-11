@@ -1,3 +1,36 @@
 <div class="animated fadeIn slow">
-    <h1 class="display-4 text-center">Fotos</h1>
+    <h1 class="display-4 text-center mb-5">Fotos</h1>
+    <div class="table-responsive mt-5">
+        <table class="table table-bordered table-hover" style="zoom: 80%;">
+            <thead>
+                <tr class="text-center">
+                    <th>ID</th>
+
+                    <th>Torneo</th>
+
+                    <th>Lugar</th>
+
+                    <th>Fecha</th>
+
+                    <th>Fotos</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let album of albumes" style="cursor: pointer;" (click)="verAlbum(album.id)">
+                    <td>{{ album.id }}</td>
+
+                    <td>{{ album.torneo }}</td>
+
+                    <td>{{ album.lugar }}</td>
+
+                    <td>{{album.fecha}}</td>
+
+                    <td>{{album.cantFotos}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

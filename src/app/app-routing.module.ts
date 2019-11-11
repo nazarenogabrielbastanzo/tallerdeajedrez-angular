@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PartidasComponent } from './components/partidas/partidas.component';
 import { TorneosComponent } from './components/torneos/torneos.component';
 import { FotosComponent } from './components/fotos/fotos.component';
+import { FotoComponent } from './components/foto/foto.component';
 import { FrasesComponent } from './components/frases/frases.component';
 import { DispositivosComponent } from './components/dispositivos/dispositivos.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'partidas', component: PartidasComponent },
   { path: 'torneos', component: TorneosComponent },
   { path: 'fotos', component: FotosComponent },
+  { path: 'foto/:id', component: FotoComponent },
   { path: 'frases', component: FrasesComponent },
   { path: 'dispositivos', component: DispositivosComponent },
   { path: 'contacto', component: ContactoComponent },

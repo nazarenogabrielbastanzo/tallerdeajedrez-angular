@@ -25,7 +25,7 @@ export class PartidasComponent implements OnInit {
   }
 
   verPartida(numero: number) {
-    console.log(numero);
+    /* console.log(numero); */
     this.router.navigate(['/partida', numero]);
   }
 

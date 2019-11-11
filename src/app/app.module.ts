@@ -21,6 +21,7 @@ import { PartidaComponent } from './components/partida/partida.component';
 
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { ScrollTopComponent } from './components/shared/scroll-top/scroll-top.component';
+import { FotoComponent } from './components/foto/foto.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ScrollTopComponent } from './components/shared/scroll-top/scroll-top.co
     FooterComponent,
     PartidaComponent,
     DomseguroPipe,
-    ScrollTopComponent
+    ScrollTopComponent,
+    FotoComponent
   ],
   imports: [
     BrowserModule,

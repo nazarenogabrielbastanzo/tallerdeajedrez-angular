@@ -1,0 +1,15 @@
+[{
+        "id": 1,
+        "torneo": "Día de los Maestros",
+        "lugar": "Almacén Cultural de Zárate, Buenos Aires, Argentina",
+        "fecha": "11/09/2010",
+        "cantFotos": 19
+    },
+    {
+        "id": 2,
+        "torneo": "Grand Prix en Zárate",
+        "lugar": "Zárate, Buenos Aires, Argentina",
+        "fecha": "09/10/2010",
+        "cantFotos": 124
+    }
+]

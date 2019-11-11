@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PeticionesService } from '../../services/peticiones.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-fotos',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FotosComponent implements OnInit {
 
-  constructor() { }
+  albumes: any;
+
+  constructor(
+    private peticionesServices: PeticionesService,
+    private router: Router
+  ) {
+    this.peticionesServices.getAlbumes()
+      .subscribe((data: any) => {
+        /* console.log(data); */
+        this.albumes = data;
+      });
+  }
 
   ngOnInit() {
+  }
+
+  verAlbum(numero: number) {
+    /* console.log(numero); */
+    this.router.navigate(['/foto', numero]);
   }
 
 }
