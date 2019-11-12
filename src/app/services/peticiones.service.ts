@@ -8,6 +8,7 @@ export class PeticionesService {
 
   urlPartidas = 'assets/datos/partidas.json';
   urlAlbumes = 'assets/datos/albumes.json';
+  urlFrases = 'assets/datos/frases.json';
 
   constructor(
     private httpClient: HttpClient
@@ -19,5 +20,9 @@ export class PeticionesService {
 
   getAlbumes() {
     return this.httpClient.get(this.urlAlbumes);
+  }
+
+  getFrases() {
+    return this.httpClient.get(this.urlFrases);
   }
 }

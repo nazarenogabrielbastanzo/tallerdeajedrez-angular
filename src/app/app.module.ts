@@ -12,8 +12,6 @@ import { TorneosComponent } from './components/torneos/torneos.component';
 import { FotosComponent } from './components/fotos/fotos.component';
 import { FrasesComponent } from './components/frases/frases.component';
 import { DispositivosComponent } from './components/dispositivos/dispositivos.component';
-import { ContactoComponent } from './components/contacto/contacto.component';
-import { BuscarComponent } from './components/buscar/buscar.component';
 import { PartidasAmistosasComponent } from './components/partidas-amistosas/partidas-amistosas.component';
 import { PartidaTringovFischerComponent } from './components/partida-tringov-fischer/partida-tringov-fischer.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
@@ -33,8 +31,6 @@ import { FotoComponent } from './components/foto/foto.component';
     FotosComponent,
     FrasesComponent,
     DispositivosComponent,
-    ContactoComponent,
-    BuscarComponent,
     PartidasAmistosasComponent,
     PartidaTringovFischerComponent,
     FooterComponent,
