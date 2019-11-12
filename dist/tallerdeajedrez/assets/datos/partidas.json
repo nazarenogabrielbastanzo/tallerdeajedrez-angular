@@ -1,0 +1,424 @@
+[{
+        "numero": 1,
+        "id": "eTxkUsdq",
+        "blancas": "Bastanzo, Jorge Raúl",
+        "negras": "?, Carlos",
+        "resultado": "1 - 0",
+        "evento": "Partida amistosa a 5 minutos.",
+        "fecha": "????.??.??"
+    },
+    {
+        "numero": 2,
+        "id": "I9vNgDWK",
+        "blancas": "Bastanzo, Jorge Raúl",
+        "negras": "?, ?",
+        "resultado": "1 - 0",
+        "evento": "Partida amistosa a 5 minutos.",
+        "fecha": "????.??.??"
+    },
+    {
+        "numero": 3,
+        "id": "G7khXdo1",
+        "blancas": "Jovana Rapport (2318)",
+        "negras": "Anna Muzychuk (2550)",
+        "resultado": "0 - 1",
+        "evento": "Chess Olympiad (Women)",
+        "fecha": "2016.09.06"
+    },
+    {
+        "numero": 4,
+        "id": "boRsWv2G",
+        "blancas": "Alexander Morozevich (2675)",
+        "negras": "Yifan Hou (2666)",
+        "resultado": "0 - 1",
+        "evento": "Biel",
+        "fecha": "2017.07.24"
+    },
+    {
+        "numero": 5,
+        "id": "5rLwYKya",
+        "blancas": "desso2b (1510)",
+        "negras": "nazarenobastanzo (1525)",
+        "resultado": "0 - 1",
+        "evento": "Rated Blitz game",
+        "fecha": "2018.12.21"
+    },
+    {
+        "numero": 6,
+        "id": "qJwKnkI0",
+        "blancas": "nazarenobastanzo (1525)",
+        "negras": "Hamidi1986 (1495)",
+        "resultado": "1 - 0",
+        "evento": "Rated Blitz game",
+        "fecha": "2018.12.21"
+    },
+    {
+        "numero": 7,
+        "id": "rL7HEVkE",
+        "blancas": "nazarenobastanzo (1512)",
+        "negras": "plenitude (1571)",
+        "resultado": "1 - 0",
+        "evento": "Rated Blitz game",
+        "fecha": "2018.12.21"
+    },
+    {
+        "numero": 8,
+        "id": "rU1xHVew",
+        "blancas": "Hikaru Nakamura (2792)",
+        "negras": "Garry Kasparov (2812)",
+        "resultado": "1/2 - 1/2",
+        "evento": "St. Louis Rapid & Blitz (Rapid)",
+        "fecha": "2017.08.14"
+    },
+    {
+        "numero": 9,
+        "id": "UAhU9WT3",
+        "blancas": "Garry Kasparov (2812)",
+        "negras": "Leinier Dominguez Perez (2739)",
+        "resultado": "1/2 - 1/2",
+        "evento": "St. Louis Rapid & Blitz (Rapid)",
+        "fecha": "2017.08.14"
+    },
+    {
+        "numero": 10,
+        "id": "827VbzLL",
+        "blancas": "Garry Kasparov (2812)",
+        "negras": "Sergey Karjakin (2773)",
+        "resultado": "1/2 - 1/2",
+        "evento": "St. Louis Rapid & Blitz (Rapid)",
+        "fecha": "2017.08.14"
+    },
+    {
+        "numero": 11,
+        "id": "bkeICn1S",
+        "blancas": "Johann Hjartarson",
+        "negras": "Garry Kasparov",
+        "resultado": "0 - 1",
+        "evento": "Interpolis 13th",
+        "fecha": "1989.09.30"
+    },
+    {
+        "numero": 12,
+        "id": "IJ7k9YCf",
+        "blancas": "Garry Kasparov",
+        "negras": "Johann Hjartarson",
+        "resultado": "1 - 0",
+        "evento": "Interpolis 13th",
+        "fecha": "1989.09.21"
+    },
+    {
+        "numero": 13,
+        "id": "hUF7fjAR",
+        "blancas": "Anatoly Karpov",
+        "negras": "Garry Kasparov",
+        "resultado": "0 - 1",
+        "evento": "Karpov - Kasparov World Championship Match",
+        "fecha": "1985.10.15"
+    },
+    {
+        "numero": 14,
+        "id": "buSOL1rw",
+        "blancas": "david-artiles (1495)",
+        "negras": "nazarenobastanzo (1487)",
+        "resultado": "0 - 1",
+        "evento": "Rated Blitz game",
+        "fecha": "2018.12.20"
+    },
+    {
+        "numero": 15,
+        "id": "IEx4qn2Q",
+        "blancas": "szurtos (1897)",
+        "negras": "nazarenobastanzo (1689)",
+        "resultado": "0 - 1",
+        "evento": "Rated Rapid game",
+        "fecha": "2017.01.07"
+    },
+    {
+        "numero": 16,
+        "id": "mlbrTDQc",
+        "blancas": "hyderho (1601)",
+        "negras": "nazarenobastanzo (1691)",
+        "resultado": "0 - 1",
+        "evento": "Rated Rapid game",
+        "fecha": "2017.01.07"
+    },
+    {
+        "numero": 17,
+        "id": "gZf9CGqX",
+        "blancas": "jbastanzo (1760)",
+        "negras": "MirekVeverka (1654)",
+        "resultado": "1 - 0",
+        "evento": "Rated Rapid game",
+        "fecha": "2017.01.07"
+    },
+    {
+        "numero": 18,
+        "id": "CKQngJKQ",
+        "blancas": "OliverOnion (1465)",
+        "negras": "nazarenobastanzo (1700)",
+        "resultado": "0 - 1",
+        "evento": "Rated Rapid game",
+        "fecha": "2017.01.08"
+    },
+    {
+        "numero": 19,
+        "id": "fjDjaeTd",
+        "blancas": "nazarenobastanzo (1705)",
+        "negras": "Spillpants (1941)",
+        "resultado": "1 - 0",
+        "evento": "Rated Rapid game",
+        "fecha": "2017.01.10"
+    },
+    {
+        "numero": 20,
+        "id": "",
+        "blancas": "",
+        "negras": "",
+        "resultado": "",
+        "evento": "",
+        "fecha": ""
+    },
+    {
+        "numero": 21,
+        "id": "liApJ93Y",
+        "blancas": "AfolabiS (1547)",
+        "negras": "nazarenobastanzo (1629)",
+        "resultado": "0 - 1",
+        "evento": "Rated Blitz game",
+        "fecha": "2017.02.17"
+    },
+    {
+        "numero": 22,
+        "id": "LELPJrhO",
+        "blancas": "nazarenobastanzo (1576)",
+        "negras": "TinasheEr (1747)",
+        "resultado": "1 - 0",
+        "evento": "Rated Blitz game",
+        "fecha": "2017.08.29"
+    },
+    {
+        "numero": 23,
+        "id": "iaw7Q4wC",
+        "blancas": "Adams, Michael (2505)",
+        "negras": "Psakhis, Lev (2565)",
+        "resultado": "1 - 0",
+        "evento": "GMA Baleares Open",
+        "fecha": "1989.??.??"
+    },
+    {
+        "numero": 24,
+        "id": "",
+        "blancas": "",
+        "negras": "",
+        "resultado": "",
+        "evento": "",
+        "fecha": ""
+    },
+    {
+        "numero": 25,
+        "id": "mzfDjPHD",
+        "blancas": "Adams, Mi (2740)",
+        "negras": "Psakhis, Lev (2545)",
+        "resultado": "1 - 0",
+        "evento": "EuChampionship Internet KO",
+        "fecha": "2004.11.07"
+    },
+    {
+        "numero": 26,
+        "id": "",
+        "blancas": "",
+        "negras": "",
+        "resultado": "",
+        "evento": "",
+        "fecha": ""
+    },
+    {
+        "numero": 27,
+        "id": "1dPNMKmG",
+        "blancas": "Adams, Mi (2740)",
+        "negras": "Adams, Mi (2740)",
+        "resultado": "1/2 - 1/2",
+        "evento": "EuChampionship Internet KO",
+        "fecha": "2004.11.07"
+    },
+    {
+        "numero": 28,
+        "id": "b6n0Rv8p",
+        "blancas": "Psakhis, Lev (2545)",
+        "negras": "Adams, Mi (2740)",
+        "resultado": "0 - 1",
+        "evento": "EuChampionship Internet KO",
+        "fecha": "2004.11.07"
+    },
+    {
+        "numero": 29,
+        "id": "RKby7zHD",
+        "blancas": "Akopian, Vladimir (2460)",
+        "negras": "Psakhis, Lev (2550)",
+        "resultado": "0 - 1",
+        "evento": "Yerevan",
+        "fecha": "1988.??.??"
+    },
+    {
+        "numero": 30,
+        "id": "uXl7Oxu2",
+        "blancas": "nazarenobastanzo (1743)",
+        "negras": "Franiol (1718)",
+        "resultado": "1 - 0",
+        "evento": "Rated Rapid game",
+        "fecha": "2017.10.31"
+    },
+    {
+        "numero": 31,
+        "id": "dZuVMgN5",
+        "blancas": "nazarenobastanzo (1760)",
+        "negras": "gambit09 (1516)",
+        "resultado": "1 - 0",
+        "evento": "Casual Rapid game",
+        "fecha": "2017.11.04"
+    },
+    {
+        "numero": 32,
+        "id": "LjLzxSmI",
+        "blancas": "Sergey Karjakin (2757)",
+        "negras": "Andrey Esipenko (2438)",
+        "resultado": "0 - 1",
+        "evento": "World Rapid Championship",
+        "fecha": "2017.12.27"
+    },
+    {
+        "numero": 33,
+        "id": "JkJuHZFi",
+        "blancas": "carevchess (1566)",
+        "negras": "nazarenobastanzo (1560)",
+        "resultado": "0 - 1",
+        "evento": "Rated Blitz game",
+        "fecha": "2017.12.30"
+    },
+    {
+        "numero": 34,
+        "id": "",
+        "blancas": "",
+        "negras": "",
+        "resultado": "",
+        "evento": "",
+        "fecha": ""
+    },
+    {
+        "numero": 35,
+        "id": "",
+        "blancas": "",
+        "negras": "",
+        "resultado": "",
+        "evento": "",
+        "fecha": ""
+    },
+    {
+        "numero": 36,
+        "id": "",
+        "blancas": "",
+        "negras": "",
+        "resultado": "",
+        "evento": "",
+        "fecha": ""
+    },
+    {
+        "numero": 37,
+        "id": "",
+        "blancas": "",
+        "negras": "",
+        "resultado": "",
+        "evento": "",
+        "fecha": ""
+    },
+    {
+        "numero": 38,
+        "id": "",
+        "blancas": "",
+        "negras": "",
+        "resultado": "",
+        "evento": "",
+        "fecha": ""
+    },
+    {
+        "numero": 39,
+        "id": "",
+        "blancas": "",
+        "negras": "",
+        "resultado": "",
+        "evento": "",
+        "fecha": ""
+    },
+    {
+        "numero": 40,
+        "id": "",
+        "blancas": "",
+        "negras": "",
+        "resultado": "",
+        "evento": "",
+        "fecha": ""
+    },
+    {
+        "numero": 41,
+        "id": "",
+        "blancas": "",
+        "negras": "",
+        "resultado": "",
+        "evento": "",
+        "fecha": ""
+    },
+    {
+        "numero": 42,
+        "id": "",
+        "blancas": "",
+        "negras": "",
+        "resultado": "",
+        "evento": "",
+        "fecha": ""
+    },
+    {
+        "numero": 43,
+        "id": "",
+        "blancas": "",
+        "negras": "",
+        "resultado": "",
+        "evento": "",
+        "fecha": ""
+    },
+    {
+        "numero": 44,
+        "id": "",
+        "blancas": "",
+        "negras": "",
+        "resultado": "",
+        "evento": "",
+        "fecha": ""
+    },
+    {
+        "numero": 45,
+        "id": "",
+        "blancas": "",
+        "negras": "",
+        "resultado": "",
+        "evento": "",
+        "fecha": ""
+    },
+    {
+        "numero": 46,
+        "id": "",
+        "blancas": "",
+        "negras": "",
+        "resultado": "",
+        "evento": "",
+        "fecha": ""
+    },
+    {
+        "numero": 47,
+        "id": "cVInrSCo",
+        "blancas": "Georgi Tringov",
+        "negras": "Robert James Fischer",
+        "resultado": "0 - 1",
+        "evento": "Havana",
+        "fecha": "1965.08.31"
+    }
+]
