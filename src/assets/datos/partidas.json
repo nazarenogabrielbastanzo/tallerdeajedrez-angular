@@ -171,15 +171,6 @@
     },
     {
         "numero": 20,
-        "id": "",
-        "blancas": "",
-        "negras": "",
-        "resultado": "",
-        "evento": "",
-        "fecha": ""
-    },
-    {
-        "numero": 21,
         "id": "liApJ93Y",
         "blancas": "AfolabiS (1547)",
         "negras": "nazarenobastanzo (1629)",
@@ -188,7 +179,7 @@
         "fecha": "2017.02.17"
     },
     {
-        "numero": 22,
+        "numero": 21,
         "id": "LELPJrhO",
         "blancas": "nazarenobastanzo (1576)",
         "negras": "TinasheEr (1747)",
@@ -197,7 +188,7 @@
         "fecha": "2017.08.29"
     },
     {
-        "numero": 23,
+        "numero": 22,
         "id": "iaw7Q4wC",
         "blancas": "Adams, Michael (2505)",
         "negras": "Psakhis, Lev (2565)",
@@ -206,16 +197,7 @@
         "fecha": "1989.??.??"
     },
     {
-        "numero": 24,
-        "id": "",
-        "blancas": "",
-        "negras": "",
-        "resultado": "",
-        "evento": "",
-        "fecha": ""
-    },
-    {
-        "numero": 25,
+        "numero": 23,
         "id": "mzfDjPHD",
         "blancas": "Adams, Mi (2740)",
         "negras": "Psakhis, Lev (2545)",
@@ -224,16 +206,7 @@
         "fecha": "2004.11.07"
     },
     {
-        "numero": 26,
-        "id": "",
-        "blancas": "",
-        "negras": "",
-        "resultado": "",
-        "evento": "",
-        "fecha": ""
-    },
-    {
-        "numero": 27,
+        "numero": 24,
         "id": "1dPNMKmG",
         "blancas": "Adams, Mi (2740)",
         "negras": "Adams, Mi (2740)",
@@ -242,7 +215,7 @@
         "fecha": "2004.11.07"
     },
     {
-        "numero": 28,
+        "numero": 25,
         "id": "b6n0Rv8p",
         "blancas": "Psakhis, Lev (2545)",
         "negras": "Adams, Mi (2740)",
@@ -251,7 +224,7 @@
         "fecha": "2004.11.07"
     },
     {
-        "numero": 29,
+        "numero": 26,
         "id": "RKby7zHD",
         "blancas": "Akopian, Vladimir (2460)",
         "negras": "Psakhis, Lev (2550)",
@@ -260,7 +233,7 @@
         "fecha": "1988.??.??"
     },
     {
-        "numero": 30,
+        "numero": 27,
         "id": "uXl7Oxu2",
         "blancas": "nazarenobastanzo (1743)",
         "negras": "Franiol (1718)",
@@ -269,7 +242,7 @@
         "fecha": "2017.10.31"
     },
     {
-        "numero": 31,
+        "numero": 28,
         "id": "dZuVMgN5",
         "blancas": "nazarenobastanzo (1760)",
         "negras": "gambit09 (1516)",
@@ -278,7 +251,7 @@
         "fecha": "2017.11.04"
     },
     {
-        "numero": 32,
+        "numero": 29,
         "id": "LjLzxSmI",
         "blancas": "Sergey Karjakin (2757)",
         "negras": "Andrey Esipenko (2438)",
@@ -287,7 +260,7 @@
         "fecha": "2017.12.27"
     },
     {
-        "numero": 33,
+        "numero": 30,
         "id": "JkJuHZFi",
         "blancas": "carevchess (1566)",
         "negras": "nazarenobastanzo (1560)",
@@ -296,124 +269,7 @@
         "fecha": "2017.12.30"
     },
     {
-        "numero": 34,
-        "id": "",
-        "blancas": "",
-        "negras": "",
-        "resultado": "",
-        "evento": "",
-        "fecha": ""
-    },
-    {
-        "numero": 35,
-        "id": "",
-        "blancas": "",
-        "negras": "",
-        "resultado": "",
-        "evento": "",
-        "fecha": ""
-    },
-    {
-        "numero": 36,
-        "id": "",
-        "blancas": "",
-        "negras": "",
-        "resultado": "",
-        "evento": "",
-        "fecha": ""
-    },
-    {
-        "numero": 37,
-        "id": "",
-        "blancas": "",
-        "negras": "",
-        "resultado": "",
-        "evento": "",
-        "fecha": ""
-    },
-    {
-        "numero": 38,
-        "id": "",
-        "blancas": "",
-        "negras": "",
-        "resultado": "",
-        "evento": "",
-        "fecha": ""
-    },
-    {
-        "numero": 39,
-        "id": "",
-        "blancas": "",
-        "negras": "",
-        "resultado": "",
-        "evento": "",
-        "fecha": ""
-    },
-    {
-        "numero": 40,
-        "id": "",
-        "blancas": "",
-        "negras": "",
-        "resultado": "",
-        "evento": "",
-        "fecha": ""
-    },
-    {
-        "numero": 41,
-        "id": "",
-        "blancas": "",
-        "negras": "",
-        "resultado": "",
-        "evento": "",
-        "fecha": ""
-    },
-    {
-        "numero": 42,
-        "id": "",
-        "blancas": "",
-        "negras": "",
-        "resultado": "",
-        "evento": "",
-        "fecha": ""
-    },
-    {
-        "numero": 43,
-        "id": "",
-        "blancas": "",
-        "negras": "",
-        "resultado": "",
-        "evento": "",
-        "fecha": ""
-    },
-    {
-        "numero": 44,
-        "id": "",
-        "blancas": "",
-        "negras": "",
-        "resultado": "",
-        "evento": "",
-        "fecha": ""
-    },
-    {
-        "numero": 45,
-        "id": "",
-        "blancas": "",
-        "negras": "",
-        "resultado": "",
-        "evento": "",
-        "fecha": ""
-    },
-    {
-        "numero": 46,
-        "id": "",
-        "blancas": "",
-        "negras": "",
-        "resultado": "",
-        "evento": "",
-        "fecha": ""
-    },
-    {
-        "numero": 47,
+        "numero": 31,
         "id": "cVInrSCo",
         "blancas": "Georgi Tringov",
         "negras": "Robert James Fischer",
