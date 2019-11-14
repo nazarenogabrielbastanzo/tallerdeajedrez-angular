@@ -10,7 +10,7 @@ import { DispositivosComponent } from './components/dispositivos/dispositivos.co
 import { PartidasAmistosasComponent } from './components/partidas-amistosas/partidas-amistosas.component';
 import { PartidaTringovFischerComponent } from './components/partida-tringov-fischer/partida-tringov-fischer.component';
 import { PartidaComponent } from './components/partida/partida.component';
-
+import { BuscadorComponent } from './components/buscador/buscador.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'partidas-amistosas', component: PartidasAmistosasComponent},
   { path: 'partida-tringov-fischer', component: PartidaTringovFischerComponent },
   { path: 'partida/:id', component: PartidaComponent },
+  { path: 'buscar/:termino', component: BuscadorComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];

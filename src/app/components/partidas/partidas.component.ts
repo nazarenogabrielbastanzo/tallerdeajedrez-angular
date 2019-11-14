@@ -29,4 +29,9 @@ export class PartidasComponent implements OnInit {
     this.router.navigate(['/partida', numero]);
   }
 
+  buscarPartida( termino: string ) {
+    console.log(termino);
+    this.router.navigate(['/buscar', termino]);
+  }
+
 }

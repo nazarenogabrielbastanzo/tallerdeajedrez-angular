@@ -1,10 +1,11 @@
 <div class="animated fadeIn slow">
-    <h4 class="text-center display-4 mb-5">Partidas</h4>
+    <h4 class="text-center display-4 mb-5">Buscador de Partidas</h4>
 
-    <div class="input-group mb-3">
-        <input (keyup.enter)="buscarPartida(buscarTexto.value)" type="text" class="form-control" placeholder="Buscar Partida..." aria-label="Buscar Partida..." aria-describedby="button-addon2" #buscarTexto>
-        <div class="input-group-append">
-            <button (click)="buscarPartida(buscarTexto.value)" class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+    <div class="row" *ngIf="partidas.length == 0">
+        <div class="col">
+            <div class="alert alert-info" role="alert">
+                No existen resultados con el término: {{ termino }}
+            </div>
         </div>
     </div>
 

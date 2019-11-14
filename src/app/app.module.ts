@@ -20,6 +20,7 @@ import { PartidaComponent } from './components/partida/partida.component';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { ScrollTopComponent } from './components/shared/scroll-top/scroll-top.component';
 import { FotoComponent } from './components/foto/foto.component';
+import { BuscadorComponent } from './components/buscador/buscador.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { FotoComponent } from './components/foto/foto.component';
     PartidaComponent,
     DomseguroPipe,
     ScrollTopComponent,
-    FotoComponent
+    FotoComponent,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,
