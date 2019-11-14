@@ -15,7 +15,7 @@ export class FrasesComponent implements OnInit {
   ) {
     this.peticionesServices.getFrases()
       .subscribe((data: any) => {
-        console.log(data);
+        /* console.log(data); */
         this.frases = data;
       });
   }

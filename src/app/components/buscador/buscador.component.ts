@@ -24,7 +24,7 @@ export class BuscadorComponent implements OnInit {
       /* o bien: *//* console.log( params['termino'] ); */
       this.termino = params.termino;
       this.partidas = this.peticionesService.buscarPartidas( params.termino );
-      console.log(this.partidas);
+      /* console.log(this.partidas); */
     });
   }
 
