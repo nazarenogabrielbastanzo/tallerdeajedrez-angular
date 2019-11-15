@@ -1,10 +1,18 @@
 <div class="animated fadeIn slow">
-    <h4 class="text-center display-4 mb-5">Buscador de Partidas</h4>
+    <h4 class="text-center display-4 mb-5">Buscar Partidas</h4>
+
+    <div class="row" *ngIf="partidas.length != 0">
+        <div class="col">
+            <div class="alert alert-success" role="alert">
+                Buscando partidas con el término: <b>{{ termino }}</b>
+            </div>
+        </div>
+    </div>
 
     <div class="row" *ngIf="partidas.length == 0">
         <div class="col">
             <div class="alert alert-info" role="alert">
-                No existen resultados con el término: {{ termino }}
+                No existen resultados con el término: <b>{{ termino }}</b>
             </div>
         </div>
     </div>
