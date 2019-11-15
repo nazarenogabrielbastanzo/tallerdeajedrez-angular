@@ -27,7 +27,7 @@ export class FotosComponent implements OnInit {
 
   verAlbum(numero: number) {
     /* console.log(numero); */
-    this.router.navigate(['/foto', numero]);
+    this.router.navigate(['/album', numero]);
   }
 
 }

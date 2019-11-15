@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'partidas', component: PartidasComponent },
   { path: 'torneos', component: TorneosComponent },
   { path: 'fotos', component: FotosComponent },
-  { path: 'foto/:id', component: FotoComponent },
+  { path: 'album/:id', component: FotoComponent },
   { path: 'frases', component: FrasesComponent },
   { path: 'dispositivos', component: DispositivosComponent },
   { path: 'partidas-amistosas', component: PartidasAmistosasComponent},
