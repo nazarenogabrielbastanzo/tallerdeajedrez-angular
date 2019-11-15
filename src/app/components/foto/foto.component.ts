@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PeticionesService } from '../../services/peticiones.service';
 
 @Component({
@@ -17,7 +17,8 @@ export class FotoComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private peticionesService: PeticionesService
+    private peticionesService: PeticionesService,
+    private router: Router
   ) {
     this.id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
     this.peticionesService.getAlbumes()
@@ -27,9 +28,9 @@ export class FotoComponent implements OnInit {
         for (let i = 1; i <= this.cantidadFotos; i++) {
           this.miArray.push(i);
         }
-        this.primeraFoto = 'assets/images/' + data[this.id - 1].vinculo + '(1).jpg';
+        /* this.primeraFoto = 'assets/images/' + data[this.id - 1].vinculo + '(1).jpg'; */
         // tslint:disable-next-line: prefer-for-of
-        for (let i = 1; i < this.miArray.length; i++) {
+        for (let i = 0; i < this.miArray.length; i++) {
           const foto = 'assets/images/' + data[this.id - 1].vinculo + '(' + (i + 1) + ').jpg';
           this.fotos.push(foto);
         }
@@ -38,6 +39,10 @@ export class FotoComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  verFoto(album: number, numero: number) {
+    this.router.navigate(['/foto', album, numero]);
   }
 
 }

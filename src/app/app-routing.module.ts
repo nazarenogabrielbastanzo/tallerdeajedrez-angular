@@ -11,6 +11,7 @@ import { PartidasAmistosasComponent } from './components/partidas-amistosas/part
 import { PartidaTringovFischerComponent } from './components/partida-tringov-fischer/partida-tringov-fischer.component';
 import { PartidaComponent } from './components/partida/partida.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
+import { FotoFullComponent } from './components/foto-full/foto-full.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'torneos', component: TorneosComponent },
   { path: 'fotos', component: FotosComponent },
   { path: 'album/:id', component: FotoComponent },
+  { path: 'foto/:album/:numero', component: FotoFullComponent },
   { path: 'frases', component: FrasesComponent },
   { path: 'dispositivos', component: DispositivosComponent },
   { path: 'partidas-amistosas', component: PartidasAmistosasComponent},

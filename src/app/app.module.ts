@@ -21,6 +21,7 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { ScrollTopComponent } from './components/shared/scroll-top/scroll-top.component';
 import { FotoComponent } from './components/foto/foto.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
+import { FotoFullComponent } from './components/foto-full/foto-full.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
     DomseguroPipe,
     ScrollTopComponent,
     FotoComponent,
-    BuscadorComponent
+    BuscadorComponent,
+    FotoFullComponent
   ],
   imports: [
     BrowserModule,
