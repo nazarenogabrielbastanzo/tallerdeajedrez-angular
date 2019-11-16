@@ -22,6 +22,7 @@ import { ScrollTopComponent } from './components/shared/scroll-top/scroll-top.co
 import { FotoComponent } from './components/foto/foto.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { FotoFullComponent } from './components/foto-full/foto-full.component';
+import { EstudioDavidGurgenidzeComponent } from './components/estudio-david-gurgenidze/estudio-david-gurgenidze.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FotoFullComponent } from './components/foto-full/foto-full.component';
     ScrollTopComponent,
     FotoComponent,
     BuscadorComponent,
-    FotoFullComponent
+    FotoFullComponent,
+    EstudioDavidGurgenidzeComponent
   ],
   imports: [
     BrowserModule,

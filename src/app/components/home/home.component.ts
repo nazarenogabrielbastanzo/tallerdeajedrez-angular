@@ -19,6 +19,12 @@ export class HomeComponent implements OnInit {
       titulo: 'Partida Tringov vs. Fischer',
       texto: 'Tringov vs. Fischer, Capablanca Memorial (1965): Esta partida . . .',
       link: '/partida-tringov-fischer'
+    },
+    {
+      img: 'assets/images/nuevas/estudio-david-gurgenidze.png',
+      titulo: 'Estudio de David Gurgenidze',
+      texto: 'Juegan las blancas y ganan la partida . . .',
+      link: '/estudio-david-gurgenidze/1'
     }
   ];
 
