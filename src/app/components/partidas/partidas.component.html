@@ -8,6 +8,14 @@
         </div>
     </div>
 
+    <div class="row" *ngIf="info">
+        <div class="col">
+            <div class="alert alert-danger" role="alert">
+                Ingrese algún texto para buscar . . .
+            </div>
+        </div>
+    </div>
+
     <div class="table-responsive">
         <table class="table table-bordered table-hover" style="zoom: 80%;">
             <thead>

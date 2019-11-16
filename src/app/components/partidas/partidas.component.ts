@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class PartidasComponent implements OnInit {
 
   partidas: any;
+  info: boolean;
 
   constructor(
     private peticionesService: PeticionesService,
@@ -19,6 +20,7 @@ export class PartidasComponent implements OnInit {
       .subscribe((data: any) => {
         this.partidas = data;
       });
+    this.info = false;
   }
 
   ngOnInit() {
@@ -33,6 +35,8 @@ export class PartidasComponent implements OnInit {
     // console.log(termino);
     if ( termino.trim().length ) {
       this.router.navigate(['/buscar', termino.trim()]);
+    } else {
+      this.info = true;
     }
   }
 
