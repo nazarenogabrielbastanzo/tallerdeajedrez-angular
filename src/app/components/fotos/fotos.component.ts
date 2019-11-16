@@ -31,7 +31,9 @@ export class FotosComponent implements OnInit {
   }
 
   buscarAlbum( termino: string ) {
-    this.router.navigate(['/buscar-album', termino]);
+    if ( termino.trim().length ) {
+      this.router.navigate(['/buscar-album', termino.trim()]);
+    }
   }
 
 }
