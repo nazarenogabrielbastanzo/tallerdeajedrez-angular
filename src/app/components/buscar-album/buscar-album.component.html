@@ -1,14 +1,23 @@
 <div class="animated fadeIn slow">
-    <h1 class="display-4 text-center mb-5">Fotos</h1>
+    <h1 class="display-4 text-center mb-5">Buscar Álbum</h1>
 
-    <div class="input-group mb-3">
-        <input (keyup.enter)="buscarAlbum(buscarTexto.value)" type="text" class="form-control" placeholder="Buscar Álbum . . ." aria-label="Buscar Álbum..." aria-describedby="button-addon2" #buscarTexto>
-        <div class="input-group-append">
-            <button (click)="buscarAlbum(buscarTexto.value)" class="btn btn-outline-primary" type="button" id="button-addon2">Buscar</button>
+    <div class="row" *ngIf="albumes.length != 0">
+        <div class="col">
+            <div class="alert alert-success" role="alert">
+                Buscando álbumes con el término: <b>{{ termino }}</b>
+            </div>
         </div>
     </div>
 
-    <div class="table-responsive mt-5">
+    <div class="row" *ngIf="albumes.length == 0">
+        <div class="col">
+            <div class="alert alert-info" role="alert">
+                No existen resultados con el término: <b>{{ termino }}</b>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive mt-5" *ngIf="albumes.length != 0">
         <table class="table table-bordered table-hover" style="zoom: 80%;">
             <thead>
                 <tr class="text-center">

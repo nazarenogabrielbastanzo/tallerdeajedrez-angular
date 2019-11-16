@@ -13,6 +13,7 @@ import { PartidaComponent } from './components/partida/partida.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { FotoFullComponent } from './components/foto-full/foto-full.component';
 import { EstudioDavidGurgenidzeComponent } from './components/estudio-david-gurgenidze/estudio-david-gurgenidze.component';
+import { BuscarAlbumComponent } from './components/buscar-album/buscar-album.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'fotos', component: FotosComponent },
   { path: 'album/:id', component: FotoComponent },
   { path: 'foto/:album/:numero', component: FotoFullComponent },
+  { path: 'buscar-album/:termino', component: BuscarAlbumComponent },
   { path: 'frases', component: FrasesComponent },
   { path: 'dispositivos', component: DispositivosComponent },
   { path: 'partidas-amistosas', component: PartidasAmistosasComponent},
