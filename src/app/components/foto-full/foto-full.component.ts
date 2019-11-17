@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PeticionesService } from '../../services/peticiones.service';
+/* import { Location } from '@angular/common'; */
 
 @Component({
   selector: 'app-foto-full',
@@ -9,13 +10,15 @@ import { PeticionesService } from '../../services/peticiones.service';
 })
 export class FotoFullComponent implements OnInit {
 
-  album: number;
-  numero: number;
+  album: number; // album_id
+  numero: number; // numero de foto
   foto: any;
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private peticionesService: PeticionesService
+    private peticionesService: PeticionesService,
+    /* private location: Location */
+    private router: Router
   ) {
     this.album = Number(this.activatedRoute.snapshot.paramMap.get('album'));
     this.numero = Number(this.activatedRoute.snapshot.paramMap.get('numero'));
@@ -28,6 +31,11 @@ export class FotoFullComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  goBack( albumId: number ): void {
+    /* this.location.back(); */
+    this.router.navigate(['/album', albumId]);
   }
 
 }
