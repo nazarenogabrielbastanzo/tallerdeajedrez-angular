@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class FotosComponent implements OnInit {
 
   albumes: any;
+  info: boolean;
 
   constructor(
     private peticionesServices: PeticionesService,
@@ -20,6 +21,7 @@ export class FotosComponent implements OnInit {
         /* console.log(data); */
         this.albumes = data;
       });
+    this.info = false;
   }
 
   ngOnInit() {
@@ -33,6 +35,8 @@ export class FotosComponent implements OnInit {
   buscarAlbum( termino: string ) {
     if ( termino.trim().length ) {
       this.router.navigate(['/buscar-album', termino.trim()]);
+    } else {
+      this.info = true;
     }
   }
 
