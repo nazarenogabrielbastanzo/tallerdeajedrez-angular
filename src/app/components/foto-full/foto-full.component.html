@@ -2,7 +2,10 @@
     <h1 class="display-4 text-center mb-5">
         Foto Nro. {{ numero }}, Álbum Nro. {{ album }}
     </h1>
-    <div class="d-flex justify-content-center">
-        <img [src]="foto" [alt]="numero">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+            <img [src]="foto" [alt]="numero" class="img-fluid">
+        </div>
     </div>
+
 </div>
