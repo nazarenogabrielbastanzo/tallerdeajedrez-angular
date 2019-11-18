@@ -1,10 +1,19 @@
 <div class="animated fadeIn slow">
     <h4 class="text-center display-4 mb-5">Buscar Partidas</h4>
 
+    <div class="d-flex justify-content-start m-3">
+        <button class="btn btn-outline-primary" (click)="goBack()">
+            <i class="fas fa-chevron-left fa-2x"></i> <span class="lead ml-2">Volver</span>
+        </button>
+    </div>
+
     <div class="row" *ngIf="partidas.length != 0">
         <div class="col">
-            <div class="alert alert-success" role="alert">
-                Buscando partidas con el término: <b>{{ termino }}</b>
+            <div class="alert alert-info" role="alert" *ngIf="partidas.length != 1">
+                Se encontraron <u>{{ partidas.length }} partidas</u> con el término: <b class="font-italic">{{ termino }}</b>
+            </div>
+            <div class="alert alert-info" role="alert" *ngIf="partidas.length == 1">
+                Se encontró <u>1 partida</u> con el término: <b class="font-italic">{{ termino }}</b>
             </div>
         </div>
     </div>
@@ -12,7 +21,7 @@
     <div class="row" *ngIf="partidas.length == 0">
         <div class="col">
             <div class="alert alert-info" role="alert">
-                No existen resultados con el término: <b>{{ termino }}</b>
+                No existen resultados con el término: <b class="font-italic">{{ termino }}</b>
             </div>
         </div>
     </div>

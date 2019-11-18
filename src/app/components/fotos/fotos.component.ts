@@ -11,6 +11,7 @@ export class FotosComponent implements OnInit {
 
   albumes: any;
   info: boolean;
+  infoMessage: string;
 
   constructor(
     private peticionesServices: PeticionesService,
@@ -22,6 +23,7 @@ export class FotosComponent implements OnInit {
         this.albumes = data;
       });
     this.info = false;
+    this.infoMessage = 'Ingrese un texto para buscar . . .';
   }
 
   ngOnInit() {
@@ -37,6 +39,9 @@ export class FotosComponent implements OnInit {
       this.router.navigate(['/buscar-album', termino.trim()]);
     } else {
       this.info = true;
+      setTimeout(() => {
+        this.info = false;
+      }, 4000);
     }
   }
 

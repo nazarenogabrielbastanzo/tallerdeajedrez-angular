@@ -32,4 +32,8 @@ export class BuscadorComponent implements OnInit {
     this.router.navigate(['/partida', numero]);
   }
 
+  goBack() {
+    this.router.navigate(['/partidas']);
+  }
+
 }

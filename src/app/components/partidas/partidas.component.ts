@@ -11,6 +11,7 @@ export class PartidasComponent implements OnInit {
 
   partidas: any;
   info: boolean;
+  infoMessage: string;
 
   constructor(
     private peticionesService: PeticionesService,
@@ -21,6 +22,7 @@ export class PartidasComponent implements OnInit {
         this.partidas = data;
       });
     this.info = false;
+    this.infoMessage = 'Ingrese un texto para buscar . . .';
   }
 
   ngOnInit() {
@@ -37,6 +39,9 @@ export class PartidasComponent implements OnInit {
       this.router.navigate(['/buscar', termino.trim()]);
     } else {
       this.info = true;
+      setTimeout(() => {
+        this.info = false;
+      }, 4000);
     }
   }
 

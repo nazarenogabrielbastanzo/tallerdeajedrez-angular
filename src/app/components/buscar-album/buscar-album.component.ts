@@ -32,4 +32,8 @@ export class BuscarAlbumComponent implements OnInit {
     this.router.navigate(['/album', numero]);
   }
 
+  goBack() {
+    this.router.navigate(['/fotos']);
+  }
+
 }
