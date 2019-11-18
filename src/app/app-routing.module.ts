@@ -16,7 +16,7 @@ import { EstudioDavidGurgenidzeComponent } from './components/estudio-david-gurg
 import { BuscarAlbumComponent } from './components/buscar-album/buscar-album.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'inicio', component: HomeComponent },
   { path: 'partidas', component: PartidasComponent },
   { path: 'torneos', component: TorneosComponent },
   { path: 'fotos', component: FotosComponent },
@@ -30,8 +30,8 @@ const routes: Routes = [
   { path: 'estudio-david-gurgenidze/1', component: EstudioDavidGurgenidzeComponent },
   { path: 'partida/:id', component: PartidaComponent },
   { path: 'buscar/:termino', component: BuscadorComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: '**', pathMatch: 'full', redirectTo: 'home' }
+  { path: '', pathMatch: 'full', redirectTo: 'inicio' },
+  { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 ];
 
 @NgModule({

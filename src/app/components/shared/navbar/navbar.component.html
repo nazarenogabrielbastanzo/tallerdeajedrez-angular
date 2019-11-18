@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <a class="navbar-brand" routerLink="/home">
+    <a class="navbar-brand" [routerLink]="['/inicio']" (click)="isMenuCollapsed = true">
         <img src="assets/images/logo2-50x65.png" width="30" height="30" class="d-inline-block align-top" alt="Taller de Ajedrez"> Taller de Ajedrez
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="isMenuCollapsed = !isMenuCollapsed">
@@ -9,22 +9,24 @@
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" routerLink="home" (click)="isMenuCollapsed = true">Home</a>
+                <a class="nav-link" [routerLink]="['/inicio']" (click)="isMenuCollapsed = true">
+                    <i class="fas fa-home"></i>
+                </a>
             </li>
             <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" routerLink="partidas" (click)="isMenuCollapsed = true">Partidas</a>
+                <a class="nav-link" [routerLink]="['/partidas']" (click)="isMenuCollapsed = true">Partidas</a>
             </li>
             <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" routerLink="torneos" (click)="isMenuCollapsed = true">Torneos</a>
+                <a class="nav-link" [routerLink]="['/torneos']" (click)="isMenuCollapsed = true">Torneos</a>
             </li>
             <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" routerLink="fotos" (click)="isMenuCollapsed = true">Fotos</a>
+                <a class="nav-link" [routerLink]="['/fotos']" (click)="isMenuCollapsed = true">Fotos</a>
             </li>
             <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" routerLink="frases" (click)="isMenuCollapsed = true">Frases</a>
+                <a class="nav-link" [routerLink]="['/frases']" (click)="isMenuCollapsed = true">Frases</a>
             </li>
             <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" routerLink="dispositivos" (click)="isMenuCollapsed = true">Dispositivos</a>
+                <a class="nav-link" [routerLink]="['/dispositivos']" (click)="isMenuCollapsed = true">Dispositivos</a>
             </li>
         </ul>
     </div>
