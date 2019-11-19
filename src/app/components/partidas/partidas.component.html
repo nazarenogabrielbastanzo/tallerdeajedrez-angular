@@ -29,7 +29,10 @@
             </thead>
 
             <tbody>
-                <tr *ngFor="let partida of partidas" style="cursor: pointer;" (click)="verPartida(partida.numero)">
+                <ng-template #tipContent>
+                    <img [src]="srcImgTooltip" alt="numero" class="img-thumbnail">
+                </ng-template>
+                <tr *ngFor="let partida of partidas" style="cursor: pointer;" (click)="verPartida(partida.numero)" (mouseover)="setSrcImgTooltip(partida.numero)" [ngbTooltip]="tipContent">
                     <td class="text-right">{{ partida.blancas }}</td>
 
                     <td class="text-center">{{ partida.resultado }}</td>
