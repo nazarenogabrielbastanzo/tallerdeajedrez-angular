@@ -20,6 +20,10 @@
 
                     <th class="text-left">Negras</th>
 
+                    <th>Ver Final</th>
+
+                    <th>Ver Partida</th>
+
                     <th>Evento</th>
 
                     <th>Fecha</th>
@@ -29,15 +33,19 @@
             </thead>
 
             <tbody>
-                <ng-template #tipContent>
-                    <img [src]="srcImgTooltip" alt="numero" class="img-thumbnail">
+                <ng-template #popContent>
+                    <img [src]="srcImgPop" alt="numero" class="img-thumbnail">
                 </ng-template>
-                <tr *ngFor="let partida of partidas" style="cursor: pointer;" (click)="verPartida(partida.numero)" (mouseover)="setSrcImgTooltip(partida.numero)" [ngbTooltip]="tipContent">
+                <tr *ngFor="let partida of partidas">
                     <td class="text-right">{{ partida.blancas }}</td>
 
                     <td class="text-center">{{ partida.resultado }}</td>
 
                     <td class="text-left">{{ partida.negras }}</td>
+
+                    <td><button type="button" class="btn btn-outline-info" (click)="setSrcImgPop(partida.numero)" [ngbPopover]="popContent">Ver Final</button></td>
+
+                    <td><button type="button" class="btn btn-outline-primary" (click)="verPartida(partida.numero)">Ver Partida</button></td>
 
                     <td>{{partida.evento}}</td>
 
