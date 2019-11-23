@@ -12,6 +12,7 @@ export class PartidasComponent implements OnInit {
   partidas: any;
   info: boolean;
   infoMessage: string;
+  srcImgPop: string;
 
   constructor(
     private peticionesService: PeticionesService,
@@ -43,6 +44,10 @@ export class PartidasComponent implements OnInit {
         this.info = false;
       }, 4000);
     }
+  }
+
+  setSrcImgPop(numero: number) {
+    this.srcImgPop = `assets/images/nuevas/tooltips/${ numero }.png`;
   }
 
 }
