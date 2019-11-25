@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  color = false;
+  nro: number;
+
   tarjetas = [
     {
       img: 'assets/images/jorgeraulbastanzo.jpg',

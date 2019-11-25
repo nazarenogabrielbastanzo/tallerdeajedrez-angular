@@ -4,9 +4,9 @@
     <img src="assets/images/4-720x540.jpeg" class="img-fluid" alt="Responsive image" style="width: 100%;">
 
     <div class="card-group m-5">
-        <div class="card shadow m-3" *ngFor="let card of tarjetas">
+        <div class="card shadow m-3" *ngFor="let card of tarjetas; let i = index" (mouseover)="color = true; nro = i">
             <img [src]="card.img" class="card-img-top">
-            <div class="card-body">
+            <div class="card-body" [ngClass]="{'color': color && nro == i}">
                 <h5 class="card-title"> {{ card.titulo }} </h5>
                 <p class="card-text"> {{ card.texto }} </p>
                 <button class="btn btn-outline-primary btn-block" [routerLink]="card.link">Mas...</button>
