@@ -1,10 +1,10 @@
 <div class="animated fadeIn slow">
-    <h1 class="display-4 text-center mb-5">Taller de Ajedrez</h1>
+    <h1 class="display-4 text-center m-5">Taller de Ajedrez</h1>
 
     <img src="assets/images/4-720x540.jpeg" class="img-fluid" alt="Responsive image" style="width: 100%;">
 
-    <div class="card-group my-5">
-        <div class="card mx-3" *ngFor="let card of tarjetas">
+    <div class="card-group m-5">
+        <div class="card shadow m-3" *ngFor="let card of tarjetas">
             <img [src]="card.img" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title"> {{ card.titulo }} </h5>

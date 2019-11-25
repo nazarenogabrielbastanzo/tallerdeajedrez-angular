@@ -14,6 +14,8 @@ export class FotoComponent implements OnInit {
   miArray = [];
   primeraFoto: string;
   fotos = [];
+  mouseEntro = false;
+  nro: number;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -43,6 +45,16 @@ export class FotoComponent implements OnInit {
 
   verFoto(album: number, numero: number) {
     this.router.navigate(['/foto', album, numero]);
+  }
+
+  mouseOver(indice: number) {
+    this.mouseEntro = true;
+    this.nro = indice;
+  }
+
+  mouseLeave(indice: number) {
+    this.mouseEntro = false;
+    this.nro = indice;
   }
 
 }
