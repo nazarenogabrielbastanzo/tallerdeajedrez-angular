@@ -3,7 +3,10 @@
         <img src="assets/images/logo2-50x65.png" width="30" height="30" class="d-inline-block align-top" alt="Taller de Ajedrez"> Taller de Ajedrez
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="isMenuCollapsed = !isMenuCollapsed">
-        <span class="navbar-toggler-icon"></span>
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        <i class="fas" [ngClass]="{'fa-bars': isMenuCollapsed, 'fa-times': !isMenuCollapsed}"></i>
+        <!-- <i class="fas fa-bars" *ngIf="isMenuCollapsed"></i> -->
+        <!-- <i class="fas fa-times" *ngIf="!isMenuCollapsed"></i> -->
     </button>
 
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarSupportedContent">

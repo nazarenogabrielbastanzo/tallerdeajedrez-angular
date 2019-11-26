@@ -9,3 +9,14 @@
 .active>.nav-link {
     color: #5cb3fd;
 }
+
+
+/* Cambiar color al hamburger icon */
+
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler i {
+    color: white;
+}
