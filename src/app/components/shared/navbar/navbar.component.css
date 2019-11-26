@@ -1,0 +1,11 @@
+.navbar-transparente {
+    background-color: rgba(52, 58, 64, .7);
+}
+
+.navbar-transparente a {
+    color: white;
+}
+
+.active>.nav-link {
+    color: #5cb3fd;
+}
