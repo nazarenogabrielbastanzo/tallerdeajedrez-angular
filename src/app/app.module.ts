@@ -26,6 +26,7 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
 import { FotoFullComponent } from './components/foto-full/foto-full.component';
 import { EstudioDavidGurgenidzeComponent } from './components/estudio-david-gurgenidze/estudio-david-gurgenidze.component';
 import { BuscarAlbumComponent } from './components/buscar-album/buscar-album.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { BuscarAlbumComponent } from './components/buscar-album/buscar-album.com
     BuscadorComponent,
     FotoFullComponent,
     EstudioDavidGurgenidzeComponent,
-    BuscarAlbumComponent
+    BuscarAlbumComponent,
+    ProfileComponent
   ],
   imports: [
     NgbModule,
