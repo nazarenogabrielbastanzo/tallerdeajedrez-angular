@@ -66,13 +66,12 @@
 
                     <div class="dropdown-header" *ngIf="profile">{{ profile.name }}</div>
 
-                    <a routerLink="/perfil" class="dropdown-item dropdown-profile" *ngIf="profile" style="color: black;">
+                    <a routerLink="/perfil" class="dropdown-item dropdown-profile" *ngIf="profile" style="color: black;" (click)="isMenuCollapsed = true">
                         <i class="fa fa-user"></i> Perfil
                     </a>
 
-                    <button (click)="auth.logout()" class="btn btn-link dropdown-item" id="qsLogoutBtn">
+                    <button (click)="isMenuCollapsed = true" class="btn btn-link dropdown-item" id="qsLogoutBtn">
                         <i class="fa fa-power-off"></i>
-
                         Log out
                     </button>
                 </div>
@@ -84,7 +83,7 @@
         <!-- Responsive login button: show if NOT authenticated -->
 
         <ul class="navbar-nav d-md-none" *ngIf="auth.loggedIn === false">
-            <button class="btn btn-primary btn-block" id="qsLoginBtn" (click)="auth.login()">Ingresar</button>
+            <button class="btn btn-outline-light btn-block" id="qsLoginBtn" (click)="auth.login()">Ingresar</button>
         </ul>
 
         <!-- /Responsive login button -->
@@ -108,16 +107,18 @@
                 </span>
             </li>
 
-            <li style="color: black;">
-                <i class="fa fa-user"></i>
+            <li style="color: white !important;">
+                <i class="fa fa-user"></i> &nbsp;
 
-                <a routerLink="/perfil">Perfil</a>
+                <a routerLink="/perfil" (click)="isMenuCollapsed = true">Perfil</a>
             </li>
 
-            <li>
-                <i class="fa fa-power-off"></i>
-
-                <button class="btn btn-link p-0" id="qsLogoutBtn" (click)="auth.logout()">Log out</button>
+            <li style="color: white !important;">
+                <button class="btn btn-outline-light btn-sm" id="qsLogoutBtn" (click)="auth.logout()">
+                    <i class="fa fa-power-off"></i>
+                    &nbsp;
+                    Log out
+                </button>
             </li>
         </ul>
     </div>
