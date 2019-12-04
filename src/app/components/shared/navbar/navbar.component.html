@@ -70,7 +70,7 @@
                         <i class="fa fa-user"></i> Perfil
                     </a>
 
-                    <button (click)="isMenuCollapsed = true" class="btn btn-link dropdown-item" id="qsLogoutBtn">
+                    <button (click)="isMenuCollapsed = true; auth.logout();" class="btn btn-link dropdown-item" id="qsLogoutBtn">
                         <i class="fa fa-power-off"></i>
                         Log out
                     </button>
