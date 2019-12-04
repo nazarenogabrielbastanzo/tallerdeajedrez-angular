@@ -15,4 +15,8 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
   }
 
+  salir() {
+    this.auth.logout();
+  }
+
 }

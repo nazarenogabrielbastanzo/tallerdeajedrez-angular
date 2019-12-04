@@ -1,13 +1,9 @@
-<div *ngIf="auth.userProfile$ | async as profile" class="container text-center">
-    <h1 class="display-4">
-        {{ profile.name }}
-    </h1>
+<div class="m-5">
+    <h1>Bienvenid@</h1>
     <p>
-        {{ profile.email }}
+        Próximamente estaré incluyendo nuevos materiales para los usuairos registrados.
     </p>
-    <img [src]="profile.picture" alt="Imagen del perfil" class="img-thumbnail">
-</div>
+    <hr>
 
-<!-- <pre *ngIf="auth.userProfile$ | async as profile">
-    <code>{{ profile | json }}</code>
-</pre> -->
+    <button class="btn btn-outline-danger" (click)="salir()">Salir</button>
+</div>
