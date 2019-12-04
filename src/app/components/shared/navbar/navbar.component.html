@@ -42,13 +42,83 @@
             <li class="nav-item" routerLinkActive="active">
                 <a class="nav-link" [routerLink]="['dispositivos']" (click)="isMenuCollapsed = true">Dispositivos</a>
             </li>
+        </ul>
 
-            <li class="nav-item" routerLinkActive="active">
-                <button class="btn btn-outline-light nav-link mr-3" [disabled]="auth.estaAutenticado()" [routerLink]="['ingresar']" (click)="isMenuCollapsed = true">Ingresar</button>
+        <ul class="navbar-nav d-none d-md-block">
+            <!-- Login button: show if NOT authenticated -->
+
+            <li class="nav-item" *ngIf="auth.loggedIn === false">
+                <button id="qsLoginBtn" class="btn btn-outline-light btn-margin" (click)="auth.login()">Ingresar</button>
             </li>
 
-            <li class="nav-item" routerLinkActive="active">
-                <button class="btn btn-outline-light nav-link" [disabled]="auth.estaAutenticado()" [routerLink]="['registro']" (click)="isMenuCollapsed = true">Registro</button>
+            <!-- / Login button -->
+            <!-- Fullsize dropdown: show if authenticated -->
+
+            <li class="nav-item dropdown" *ngIf="auth.userProfile$ | async as profile" ngbDropdown="ngbDropdown">
+                <a ngbDropdownToggle="ngbDropdownToggle" class="nav-link dropdown-toggle" id="profileDropDown" data-toggle="dropdown">
+                    <!-- Profile image should be set to the profile picture from the id token -->
+
+                    <img [src]="profile.picture" alt="Profile picture" class="nav-user-profile rounded-circle" style="width: 30px">
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-left" ngbDropdownMenu="ngbDropdownMenu">
+                    <!-- Show the user's full name from the id token here -->
+
+                    <div class="dropdown-header" *ngIf="profile">{{ profile.name }}</div>
+
+                    <a routerLink="/perfil" class="dropdown-item dropdown-profile" *ngIf="profile" style="color: black;" (click)="isMenuCollapsed = true">
+                        <i class="fa fa-user"></i> Perfil
+                    </a>
+
+                    <button (click)="isMenuCollapsed = true" class="btn btn-link dropdown-item" id="qsLogoutBtn">
+                        <i class="fa fa-power-off"></i>
+                        Log out
+                    </button>
+                </div>
+            </li>
+
+            <!-- /Fullsize dropdown -->
+        </ul>
+
+        <!-- Responsive login button: show if NOT authenticated -->
+
+        <ul class="navbar-nav d-md-none" *ngIf="auth.loggedIn === false">
+            <button class="btn btn-outline-light btn-block" id="qsLoginBtn" (click)="auth.login()">Ingresar</button>
+        </ul>
+
+        <!-- /Responsive login button -->
+        <!-- Responsive profile dropdown: show if authenticated -->
+
+        <ul class="navbar-nav d-md-none justify-content-between" *ngIf="auth.userProfile$ | async as profile" style="min-height: 170px">
+            <li class="nav-item">
+                <span class="user-info" *ngIf="profile">
+                    <!-- Profile image should be set to the profile picture from the id token -->
+
+                    <img
+                        alt="Profile picture"
+                        class="nav-user-profile d-inline-block rounded-circle mr-3"
+                        style="width: 30px"
+                        [src]="profile.picture"
+                    >
+
+                    <!-- Show the user's full name from the id token here -->
+
+                    <h6 class="d-inline-block">{{ profile.name }}</h6>
+                </span>
+            </li>
+
+            <li style="color: white !important;">
+                <i class="fa fa-user"></i> &nbsp;
+
+                <a routerLink="/perfil" (click)="isMenuCollapsed = true">Perfil</a>
+            </li>
+
+            <li style="color: white !important;">
+                <button class="btn btn-outline-light btn-sm" id="qsLogoutBtn" (click)="auth.logout()">
+                    <i class="fa fa-power-off"></i>
+                    &nbsp;
+                    Log out
+                </button>
             </li>
         </ul>
     </div>

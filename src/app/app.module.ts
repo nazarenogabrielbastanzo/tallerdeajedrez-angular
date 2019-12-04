@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -28,8 +27,6 @@ import { FotoFullComponent } from './components/foto-full/foto-full.component';
 import { EstudioDavidGurgenidzeComponent } from './components/estudio-david-gurgenidze/estudio-david-gurgenidze.component';
 import { BuscarAlbumComponent } from './components/buscar-album/buscar-album.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegistroComponent } from './components/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -52,16 +49,13 @@ import { RegistroComponent } from './components/registro/registro.component';
     FotoFullComponent,
     EstudioDavidGurgenidzeComponent,
     BuscarAlbumComponent,
-    ProfileComponent,
-    LoginComponent,
-    RegistroComponent
+    ProfileComponent
   ],
   imports: [
     NgbModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    FormsModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

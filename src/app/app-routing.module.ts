@@ -15,9 +15,7 @@ import { FotoFullComponent } from './components/foto-full/foto-full.component';
 import { EstudioDavidGurgenidzeComponent } from './components/estudio-david-gurgenidze/estudio-david-gurgenidze.component';
 import { BuscarAlbumComponent } from './components/buscar-album/buscar-album.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegistroComponent } from './components/registro/registro.component';
-import { AuthGuard } from './guards/auth.guard';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: 'inicio', component: HomeComponent },
@@ -34,8 +32,6 @@ const routes: Routes = [
   { path: 'estudio-david-gurgenidze/1', component: EstudioDavidGurgenidzeComponent },
   { path: 'partida/:id', component: PartidaComponent },
   { path: 'buscar/:termino', component: BuscadorComponent },
-  { path: 'ingresar', component: LoginComponent },
-  { path: 'registro', component: RegistroComponent },
   { path: 'perfil', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: '', pathMatch: 'full', redirectTo: 'inicio' },
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
