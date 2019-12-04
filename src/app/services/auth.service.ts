@@ -10,7 +10,7 @@ import { map, catchError } from 'rxjs/operators';
 export class AuthService {
 
   private url = 'https://identitytoolkit.googleapis.com/v1/accounts:';
-  private apikey = 'AIzaSyA0Ratgkb6-SARszea-lzHniNTRvxKK5Tg';
+  private apikey = 'mi_api_key';
 
   userToken: string;
   // Crear nuevo usuario
