@@ -6,8 +6,22 @@
 
         <img [src]="estudios[0].img" [alt]="estudios[0].titulo" class="rounded mx-auto d-block">
 
-        <button *ngIf="auth.loggedIn === false" class="btn btn-outline-primary mt-5" (click)="hacerTest()">Hacer el test</button>
+        <button *ngIf="auth.loggedIn === false" class="btn btn-outline-primary mt-5" (click)="verSolucion()">Ver Solución</button>
 
-        <!-- TODO: Escribir aquí la solución del problema de ajedrez planteado. -->
+    </div>
+    <div class="container mt-3" *ngIf="auth.loggedIn === true">
+        <div class="card">
+            <h5 class="card-header">Solución</h5>
+            <div class="card-body">
+                <p class="card-text">1. g7+ Rg8 2. Ch7 Ta5+ 3. Rb4 Ta4+ 4. Rb3 Ta3+ 5. Rb2 Ta2+ 6. Rc1 Tc2+ 7. Rb1 Tc1+ 8. Rb2 Tc2+ 9. Rb3 Tc3+ 10. Rb4 Tc4+ 11. Rb5 Tc5+ 12. Rb6 (1 - 0).</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h5 class="card-header mt-3">Fuente y explicación del estudio:</h5>
+            <div class="card-body">
+                <iframe width="560" height="315" [src]="id | domseguro: 'https://www.youtube-nocookie.com/embed/'" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 </div>

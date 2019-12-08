@@ -16,14 +16,18 @@ export class EstudioDavidGurgenidzeComponent implements OnInit {
     }
   ];
 
+  id: string;
+
   constructor(
     public auth: AuthService
-  ) { }
+  ) {
+    this.id = 'IzvwYriQ6Zs';
+  }
 
   ngOnInit() {
   }
 
-  hacerTest() {
+  verSolucion() {
     this.auth.login('estudio-david-gurgenidze/1');
   }
 
