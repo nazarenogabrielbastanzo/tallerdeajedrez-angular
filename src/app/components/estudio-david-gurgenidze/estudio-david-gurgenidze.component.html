@@ -6,6 +6,8 @@
 
         <img [src]="estudios[0].img" [alt]="estudios[0].titulo" class="rounded mx-auto d-block">
 
-        <button class="btn btn-outline-primary mt-5" disabled title="Próximamente . . .">Solución . . .</button>
+        <button *ngIf="auth.loggedIn === false" class="btn btn-outline-primary mt-5" (click)="verSolucion()">Solución . . .</button>
+
+        <!-- TODO: Escribir aquí la solución del problema de ajedrez planteado. -->
     </div>
 </div>

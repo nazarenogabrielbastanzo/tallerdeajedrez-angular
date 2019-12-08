@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-estudio-david-gurgenidze',
@@ -15,9 +16,15 @@ export class EstudioDavidGurgenidzeComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(
+    public auth: AuthService
+  ) { }
 
   ngOnInit() {
+  }
+
+  verSolucion() {
+    this.auth.login('estudio-david-gurgenidze/1');
   }
 
 }
