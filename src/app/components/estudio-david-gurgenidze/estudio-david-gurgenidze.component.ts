@@ -23,7 +23,7 @@ export class EstudioDavidGurgenidzeComponent implements OnInit {
   ngOnInit() {
   }
 
-  verSolucion() {
+  hacerTest() {
     this.auth.login('estudio-david-gurgenidze/1');
   }
 
