@@ -1,16 +1,18 @@
 <div class="animated fadeIn slow">
     <h4 class="text-center display-4">
         Partida {{ id +1 }}
-
-        <br>
-
-        <small>
-            {{ blancas }} vs. {{ negras }} ({{ resultado }})
-        </small>
     </h4>
 
-    <!-- TODO: Ver si está bien el zoom -->
-    <div class="d-flex justify-content-center my-5" style="zoom: 80%;">
-        <iframe [src]="partidaId | domseguro:'https://lichess.org/embed/'" width="600" height="397" frameborder="0"></iframe>
+    <div class="container">
+        <div class="card">
+            <div class="card-header text-center">
+                {{ blancas }} vs. {{ negras }} ({{ resultado }})
+            </div>
+            <div class="card-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" [src]="partidaId | domseguro:'https://lichess.org/embed/'" width="600" height="397" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
