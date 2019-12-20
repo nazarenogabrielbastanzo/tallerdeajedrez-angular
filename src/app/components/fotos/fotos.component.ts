@@ -12,6 +12,7 @@ export class FotosComponent implements OnInit {
   albumes: any;
   info: boolean;
   infoMessage: string;
+  terminoDeBusqueda = '';
 
   constructor(
     private peticionesServices: PeticionesService,
@@ -42,6 +43,8 @@ export class FotosComponent implements OnInit {
       setTimeout(() => {
         this.info = false;
       }, 4000);
+      this.terminoDeBusqueda = '';
+      return;
     }
   }
 

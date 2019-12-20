@@ -13,6 +13,7 @@ export class PartidasComponent implements OnInit {
   info: boolean;
   infoMessage: string;
   srcImgPop: string;
+  terminoDeBusqueda = '';
 
   constructor(
     private peticionesService: PeticionesService,
@@ -43,6 +44,8 @@ export class PartidasComponent implements OnInit {
       setTimeout(() => {
         this.info = false;
       }, 4000);
+      this.terminoDeBusqueda = '';
+      return;
     }
   }
 

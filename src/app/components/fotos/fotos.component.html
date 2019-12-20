@@ -2,7 +2,7 @@
     <h1 class="display-4 text-center mb-5">Fotos</h1>
 
     <div class="input-group mb-3">
-        <input (keyup.enter)="buscarAlbum(buscarTexto.value)" type="text" class="form-control" placeholder="Buscar Álbum . . ." aria-label="Buscar Álbum..." aria-describedby="button-addon2" #buscarTexto>
+        <input (keyup.enter)="buscarAlbum(buscarTexto.value)" type="text" class="form-control" placeholder="Buscar Álbum . . ." aria-label="Buscar Álbum..." aria-describedby="button-addon2" #buscarTexto [(ngModel)]="terminoDeBusqueda">
         <div class="input-group-append">
             <button (click)="buscarAlbum(buscarTexto.value)" class="btn btn-outline-primary" type="button" id="button-addon2">Buscar</button>
         </div>
