@@ -10,7 +10,7 @@ export class TorneosComponent implements OnInit {
   torneos: any = {};
 
   constructor() {
-    this.torneos.nombre = '11th LCC GCT Finals 2019';
+    this.torneos.nombre = 'FIDE WCC Rapid Open 2019';
 
     this.torneos.url = this.torneos.nombre.toLowerCase().split(' ').join('-');
     // Si lo anterior no funciona, intentar por ejemplo:
