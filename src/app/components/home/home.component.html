@@ -4,7 +4,7 @@
     <img src="assets/images/4-720x540.jpeg" class="img-fluid my-3" alt="Responsive image" style="width: 100%;">
 
     <div class="card-group">
-        <div class="card m-3" *ngFor="let card of tarjetas; let i = index" (mouseover)="color = true; nro = i" (mouseleave)="color = false; nro = undefined">
+        <div class="card m-3 shadow" *ngFor="let card of tarjetas; let i = index" (mouseover)="color = true; nro = i" (mouseleave)="color = false; nro = undefined">
             <img [src]="card.img" class="card-img-top">
             <div class="card-body" [ngClass]="{'color': color && nro == i}">
                 <h5 class="card-title"> {{ card.titulo }} </h5>
