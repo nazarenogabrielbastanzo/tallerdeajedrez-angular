@@ -1,5 +1,5 @@
-<div class="animated fadeIn slow">
-    <h1 class="display-4 text-center mb-5">Torneos</h1>
+<div class="container-fluid animated fadeIn slow">
+    <h1 class="display-4 text-center my-5">Torneos</h1>
     <h2 class="display-4 text-center mb-5">{{torneos.nombre}}</h2>
     <div class="d-flex justify-content-center">
         <iframe [src]="torneos.url | domseguro:'https://live.chessbase.com/pgn/'" width="900" height="600"></iframe>

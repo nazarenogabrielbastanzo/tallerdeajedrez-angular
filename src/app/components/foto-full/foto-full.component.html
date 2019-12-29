@@ -1,5 +1,5 @@
-<div class="animated fadeIn slow">
-    <div class="d-flex justify-content-start">
+<div class="container-fluid animated fadeIn slow">
+    <div class="d-flex justify-content-start my-5">
         <button class="btn btn-outline-primary" (click)="goBack( album )">
             <i class="fas fa-chevron-left fa-2x"></i> <span class="lead ml-2">Volver</span>
         </button>
@@ -7,7 +7,7 @@
     <h1 class="display-4 text-center mb-5">
         Foto Nro. {{ numero }}, Álbum Nro. {{ album }}
     </h1>
-    <div class="row">
+    <div class="row mb-5">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
             <img [src]="foto" [alt]="numero" class="img-fluid">
         </div>
