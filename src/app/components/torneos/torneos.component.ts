@@ -10,7 +10,7 @@ export class TorneosComponent implements OnInit {
   torneos: any = {};
 
   constructor() {
-    this.torneos.nombre = '82nd Tata Steel Masters 2020';
+    this.torneos.nombre = 'Gibraltar Masters 2020';
 
     this.torneos.url = this.torneos.nombre.toLowerCase().split(' ').join('-');
     // Si lo anterior no funciona, intentar por ejemplo:
