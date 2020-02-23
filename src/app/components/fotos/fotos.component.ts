@@ -21,7 +21,7 @@ export class FotosComponent implements OnInit {
     this.peticionesServices.getAlbumes()
       .subscribe((data: any) => {
         /* console.log(data); */
-        this.albumes = data;
+        this.albumes = data.reverse();
       });
     this.info = false;
     this.infoMessage = 'Ingrese un texto para buscar . . .';

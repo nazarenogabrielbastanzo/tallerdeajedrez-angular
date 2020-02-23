@@ -21,7 +21,7 @@ export class PartidasComponent implements OnInit {
   ) {
     this.peticionesService.getPartidas()
       .subscribe((data: any) => {
-        this.partidas = data;
+        this.partidas = data.reverse();
       });
     this.info = false;
     this.infoMessage = 'Ingrese un texto para buscar . . .';
