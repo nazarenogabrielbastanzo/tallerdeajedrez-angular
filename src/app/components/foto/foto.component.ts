@@ -30,10 +30,10 @@ export class FotoComponent implements OnInit {
         for (let i = 1; i <= this.cantidadFotos; i++) {
           this.miArray.push(i);
         }
-        /* this.primeraFoto = 'assets/images/' + data[this.id - 1].vinculo + '(1).jpg'; */
+        /* this.primeraFoto = 'assets/images/' + data[this.id - 1].vinculo + '(1).webp'; */
         // tslint:disable-next-line: prefer-for-of
         for (let i = 0; i < this.miArray.length; i++) {
-          const foto = 'assets/images/' + data[this.id - 1].vinculo + '(' + (i + 1) + ').jpg';
+          const foto = 'assets/images/' + data[this.id - 1].vinculo + '(' + (i + 1) + ').webp';
           this.fotos.push(foto);
         }
       });

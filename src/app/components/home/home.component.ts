@@ -12,19 +12,19 @@ export class HomeComponent implements OnInit {
 
   tarjetas = [
     {
-      img: 'assets/images/jorgeraulbastanzo.jpg',
+      img: 'assets/images/jorgeraulbastanzo.webp',
       titulo: 'Partidas Amistosas',
       texto: 'Muchas son las ocasiones en las que se pueden jugar partidas amistosas de ajedrez . . .',
       link: '/partidas-amistosas'
     },
     {
-      img: 'assets/images/Tringov_Fischer_Diagrama1.jpg',
+      img: 'assets/images/Tringov_Fischer_Diagrama1.webp',
       titulo: 'Partida Tringov vs. Fischer',
       texto: 'Tringov vs. Fischer, Capablanca Memorial (1965): Esta partida . . .',
       link: '/partida-tringov-fischer'
     },
     {
-      img: 'assets/images/nuevas/estudio-david-gurgenidze.png',
+      img: 'assets/images/nuevas/estudio-david-gurgenidze.webp',
       titulo: 'Estudio de David Gurgenidze',
       texto: 'Juegan las blancas y ganan la partida . . .',
       link: '/estudio-david-gurgenidze/1'

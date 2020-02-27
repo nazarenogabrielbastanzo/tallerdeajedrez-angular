@@ -38,7 +38,7 @@ export class BuscadorComponent implements OnInit {
   }
 
   setSrcImgPop(numero: number) {
-    this.srcImgPop = `assets/images/nuevas/tooltips/${ numero }.png`;
+    this.srcImgPop = `assets/images/nuevas/tooltips/${ numero }.webp`;
   }
 
 }

@@ -26,7 +26,7 @@ export class FotoFullComponent implements OnInit {
     this.peticionesService.getAlbumes()
       .subscribe((data: any) => {
         /* console.log(data); */
-        this.foto = `assets/images/${ data[this.album - 1].vinculo }(${ this.numero }).jpg`;
+        this.foto = `assets/images/${ data[this.album - 1].vinculo }(${ this.numero }).webp`;
       });
   }
 
