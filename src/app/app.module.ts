@@ -3,7 +3,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestore } from '@angular/fire/firestore';
+import 'firebase/firestore';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -26,6 +31,7 @@ import { FotoFullComponent } from './components/foto-full/foto-full.component';
 import { EstudioDavidGurgenidzeComponent } from './components/estudio-david-gurgenidze/estudio-david-gurgenidze.component';
 import { BuscarAlbumComponent } from './components/buscar-album/buscar-album.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -48,16 +54,21 @@ import { ProfileComponent } from './components/profile/profile.component';
     FotoFullComponent,
     EstudioDavidGurgenidzeComponent,
     BuscarAlbumComponent,
-    ProfileComponent
+    ProfileComponent,
+    AdminComponent
   ],
   imports: [
     NgbModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [],
+  providers: [
+    AngularFirestore
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

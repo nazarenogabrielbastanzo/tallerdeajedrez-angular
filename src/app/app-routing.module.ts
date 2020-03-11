@@ -16,6 +16,7 @@ import { EstudioDavidGurgenidzeComponent } from './components/estudio-david-gurg
 import { BuscarAlbumComponent } from './components/buscar-album/buscar-album.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AuthGuard } from './auth.guard';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   { path: 'inicio', component: HomeComponent },
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'partida/:id', component: PartidaComponent },
   { path: 'buscar/:termino', component: BuscadorComponent },
   { path: 'perfil', component: ProfileComponent, canActivate: [AuthGuard] },
+  { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
   { path: '', pathMatch: 'full', redirectTo: 'inicio' },
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 ];
