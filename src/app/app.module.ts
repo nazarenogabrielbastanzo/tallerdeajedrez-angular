@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { MiModuloModule } from './mi-modulo.module';
+
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestore } from '@angular/fire/firestore';
@@ -32,6 +34,7 @@ import { EstudioDavidGurgenidzeComponent } from './components/estudio-david-gurg
 import { BuscarAlbumComponent } from './components/buscar-album/buscar-album.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AdminComponent } from './admin/admin.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -64,7 +67,9 @@ import { AdminComponent } from './admin/admin.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    BrowserAnimationsModule,
+    MiModuloModule
   ],
   providers: [
     AngularFirestore
