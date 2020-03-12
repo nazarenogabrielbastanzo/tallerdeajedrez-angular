@@ -70,6 +70,7 @@ export class AdminComponent implements OnInit {
           evento: '',
           fecha: ''
         });
+        window.scroll(0, 0);
       }, (error) => {
         console.error(error);
       });
@@ -93,6 +94,7 @@ export class AdminComponent implements OnInit {
           fecha: ''
         });
         console.log('Documento editado exitósamente');
+        window.scroll(0, 0);
       }, (error) => {
         console.log(error);
       });
