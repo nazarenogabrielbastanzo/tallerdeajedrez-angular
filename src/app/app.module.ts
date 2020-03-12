@@ -25,6 +25,8 @@ import { PartidaTringovFischerComponent } from './components/partida-tringov-fis
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { PartidaComponent } from './components/partida/partida.component';
 
+import { SnackBarComponent } from './snack-bar/snack-bar.component';
+
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { ScrollTopComponent } from './components/shared/scroll-top/scroll-top.component';
 import { FotoComponent } from './components/foto/foto.component';
@@ -58,7 +60,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     EstudioDavidGurgenidzeComponent,
     BuscarAlbumComponent,
     ProfileComponent,
-    AdminComponent
+    AdminComponent,
+    SnackBarComponent
   ],
   imports: [
     NgbModule,
