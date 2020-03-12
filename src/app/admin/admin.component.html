@@ -1,34 +1,73 @@
 <div *ngIf="auth.loggedIn === true">
     <div *ngIf="auth.userProfile$ | async as profile">
         <div *ngIf="profile['https://tallerdeajedrez.com.ar/api'][0] === 'admin'">
-            <div class="container-fluid">
+            <div class="container-fluid bg-dark py-5" style="color: white;">
                 <div class="row">
                     <div class="col-4">
-                        <h1>Gatos</h1>
-                        <form (ngSubmit)="newCat(newCatForm.value)" [formGroup]="newCatForm">
-                            <input type="hidden" formControlName="id">
+                        <h1>Partidas</h1>
+                        <form (ngSubmit)="nuevaPartida(newForm.value)" [formGroup]="newForm">
                             <div class="form-group">
-                                <label for="nombre">Nombre</label>
-                                <input type="text" formControlName="nombre" class="form-control" id="nombre" name="nombre">
+                                <label for="id">ID</label>
+                                <input type="text" formControlName="id" class="form-control" id="id" name="id">
                             </div>
                             <div class="form-group">
-                                <label for="imagen">Imagen</label>
-                                <input type="url" formControlName="url" class="form-control" id="imagen" name="url_img">
+                                <label for="blancas">Blancas</label>
+                                <input type="text" formControlName="blancas" class="form-control" id="blancas" name="blancas">
                             </div>
-                            <button type="submit" class="btn btn-primary" [disabled]="!newCatForm.valid">Agregar</button>
-                            <button type="reset" class="btn btn-secondary">Cancelar</button>
+                            <div class="form-group">
+                                <label for="negras">Negras</label>
+                                <input type="text" formControlName="negras" class="form-control" id="negras" name="negras">
+                            </div>
+                            <div class="form-group">
+                                <label for="resultado">Resultado</label>
+                                <input type="text" formControlName="resultado" class="form-control" id="resultado" name="resultado">
+                            </div>
+                            <div class="form-group">
+                                <label for="evento">Evento</label>
+                                <input type="text" formControlName="evento" class="form-control" id="evento" name="evento">
+                            </div>
+                            <div class="form-group">
+                                <label for="fecha">Fecha</label>
+                                <input type="text" formControlName="fecha" class="form-control" id="fecha" name="fecha">
+                            </div>
+                            <button type="submit" class="btn btn-primary" [disabled]="!newForm.valid">
+                              <span *ngIf="currentStatus === 1">Agregar</span>
+                              <span *ngIf="currentStatus === 2">Editar</span>
+                            </button>
+                            <button type="reset" class="btn btn-secondary" (click)="currentStatus = 1">Cancelar</button>
                         </form>
                     </div>
-                    <div class="col-4">
-                        <div class="card" *ngFor="let cat of cats">
-                            <img [src]="cat.data.url" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p> {{ cat.data.nombre }} </p>
-                                <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-secondary" (click)="editCat(cat.id)">Editar</button>
-                                    <button type="button" class="btn btn-secondary" (click)="deleteCat(cat.id)">Eliminar</button>
-                                </div>
-                            </div>
+                    <div class="col-8">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover" style="zoom: 80%;color: white;">
+                                <thead>
+                                    <tr>
+                                        <th class="text-right">ID</th>
+                                        <th class="text-right">Blancas</th>
+                                        <th class="text-center">Resultado</th>
+                                        <th class="text-left">Negras</th>
+                                        <th>Evento</th>
+                                        <th>Fecha</th>
+                                        <th>Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let partida of partidas">
+                                        <td class="text-right">{{ partida.data.id }}</td>
+                                        <td class="text-right">{{ partida.data.blancas }}</td>
+                                        <td class="text-center">{{ partida.data.resultado }}</td>
+                                        <td class="text-left">{{ partida.data.negras }}</td>
+                                        <td>{{partida.data.evento}}</td>
+                                        <td>{{partida.data.fecha}}</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-secondary" (click)="editarPartida(partida.id)">Editar</button>
+                                                <button type="button" class="btn btn-secondary" (click)="eliminarPartida(partida.id)">Eliminar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>

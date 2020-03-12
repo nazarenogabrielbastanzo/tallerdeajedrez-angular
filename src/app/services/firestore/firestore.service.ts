@@ -11,24 +11,24 @@ export class FirestoreService {
     private firestore: AngularFirestore
   ) { }
 
-  // Crea un nuevo gato
-  public createCat(data: {nombre: string, url: string}) {
-    return this.firestore.collection('cats').add(data);
+  // Crea
+  public crearColeccion(data: any) {
+    return this.firestore.collection('mi_coleccion').add(data);
   }
-  // Obtiene un gato
-  public getCat(documentId: string) {
-    return this.firestore.collection('cats').doc(documentId).snapshotChanges();
+  // Obtiene
+  public getOne(documentId: string) {
+    return this.firestore.collection('mi_coleccion').doc(documentId).snapshotChanges();
   }
-  // Obtiene todos los gatos
-  public getCats() {
-    return this.firestore.collection('cats').snapshotChanges();
+  // Obtiene todos
+  public getAll() {
+    return this.firestore.collection('mi_coleccion').snapshotChanges();
   }
-  // Actualiza un gato
-  public updateCat(documentId: string, data: any) {
-    return this.firestore.collection('cats').doc(documentId).set(data);
+  // Actualiza uno
+  public updateOne(documentId: string, data: any) {
+    return this.firestore.collection('mi_coleccion').doc(documentId).set(data);
   }
-  // Elimina un gato
-  public deleteCat( documentId: string ) {
-    return this.firestore.collection('cats').doc(documentId).delete();
+  // Elimina uno
+  public deleteOne( documentId: string ) {
+    return this.firestore.collection('mi_coleccion').doc(documentId).delete();
   }
 }
