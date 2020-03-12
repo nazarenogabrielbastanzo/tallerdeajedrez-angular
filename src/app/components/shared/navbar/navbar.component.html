@@ -48,7 +48,7 @@
             <!-- Login button: show if NOT authenticated -->
 
             <li class="nav-item" *ngIf="auth.loggedIn === false">
-                <button id="qsLoginBtn" class="btn btn-outline-light btn-margin" (click)="auth.login()">Ingresar</button>
+                <button id="qsLoginBtn" class="btn btn-outline-light btn-margin" (click)="auth.login('perfil')">Ingresar</button>
             </li>
 
             <!-- / Login button -->
@@ -83,7 +83,7 @@
         <!-- Responsive login button: show if NOT authenticated -->
 
         <ul class="navbar-nav d-md-none" *ngIf="auth.loggedIn === false">
-            <button class="btn btn-outline-light btn-block" id="qsLoginBtn" (click)="auth.login()">Ingresar</button>
+            <button class="btn btn-outline-light btn-block" id="qsLoginBtn" (click)="auth.login('perfil')">Ingresar</button>
         </ul>
 
         <!-- /Responsive login button -->
