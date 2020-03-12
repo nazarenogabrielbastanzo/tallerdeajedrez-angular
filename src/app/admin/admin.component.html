@@ -3,7 +3,7 @@
         <div *ngIf="profile['https://tallerdeajedrez.com.ar/api'][0] === 'admin'">
             <div class="container-fluid bg-dark py-5" style="color: white;">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-3">
                         <h1>Partidas</h1>
                         <form (ngSubmit)="nuevaPartida(newForm.value)" [formGroup]="newForm">
                             <div class="form-group">
@@ -37,11 +37,12 @@
                             <button type="reset" class="btn btn-secondary" (click)="currentStatus = 1">Cancelar</button>
                         </form>
                     </div>
-                    <div class="col-8">
+                    <div class="col-9">
                         <div class="table-responsive">
                             <table class="table table-bordered" style="zoom: 80%;color: white;">
                                 <thead>
                                     <tr>
+                                        <th>#</th>
                                         <th class="text-right">ID</th>
                                         <th class="text-right">Blancas</th>
                                         <th class="text-center">Resultado</th>
@@ -52,7 +53,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr *ngFor="let partida of partidas">
+                                    <tr *ngFor="let partida of partidas;let i = index ">
+                                        <td>{{ i + 1 }}</td>
                                         <td class="text-right">{{ partida.data.id }}</td>
                                         <td class="text-right">{{ partida.data.blancas }}</td>
                                         <td class="text-center">{{ partida.data.resultado }}</td>
