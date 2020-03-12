@@ -6,6 +6,9 @@
         {{ profile.email }}
     </p>
     <img [src]="profile.picture" alt="Imagen del perfil" class="img-thumbnail">
+    <div *ngIf="profile['https://tallerdeajedrez.com.ar/api'][0] === 'admin'">
+        <a [routerLink]="['/admin']">Administrar sitio</a>
+    </div>
 </div>
 
 <!-- <pre *ngIf="auth.userProfile$ | async as profile">
