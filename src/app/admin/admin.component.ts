@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from '../services/firestore/firestore.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
-import {MatSnackBar} from '@angular/material/snack-bar';
-import { SnackBarComponent } from '../snack-bar/snack-bar.component';
+/* import {MatSnackBar} from '@angular/material/snack-bar';
+import { SnackBarComponent } from '../snack-bar/snack-bar.component'; */
 
 @Component({
   selector: 'app-admin',
@@ -28,7 +28,7 @@ export class AdminComponent implements OnInit {
   constructor(
     private firestoreService: FirestoreService,
     public auth: AuthService,
-    private snackBar: MatSnackBar
+    /* private snackBar: MatSnackBar */
   ) {
     this.newForm.setValue({
       id: '',
@@ -65,7 +65,7 @@ export class AdminComponent implements OnInit {
       };
       this.firestoreService.crearColeccion(data).then(() => {
         console.log('Documento creado exitósamente!');
-        this.openSnackBar();
+        /* this.openSnackBar(); */
         this.newForm.setValue({
           id: '',
           blancas: '',
@@ -134,10 +134,10 @@ export class AdminComponent implements OnInit {
       });
     }
   }
-
+/*
   openSnackBar() {
     this.snackBar.openFromComponent(SnackBarComponent, {
       duration: 3000,
     });
-  }
+  } */
 }

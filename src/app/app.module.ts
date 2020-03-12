@@ -25,7 +25,7 @@ import { PartidaTringovFischerComponent } from './components/partida-tringov-fis
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { PartidaComponent } from './components/partida/partida.component';
 
-import { SnackBarComponent } from './snack-bar/snack-bar.component';
+/* import { SnackBarComponent } from './snack-bar/snack-bar.component'; */
 
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { ScrollTopComponent } from './components/shared/scroll-top/scroll-top.component';
@@ -61,7 +61,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BuscarAlbumComponent,
     ProfileComponent,
     AdminComponent,
-    SnackBarComponent
+    /* SnackBarComponent */
   ],
   imports: [
     NgbModule,
