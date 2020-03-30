@@ -38,7 +38,10 @@
                         </form>
                     </div>
                     <div class="col-9">
-                        <div class="table-responsive">
+                        <div class="text-center my-5">
+                            <i class="fas fa-spinner fa-spin fa-5x" style="color: white;" *ngIf="cargando === true"></i>
+                        </div>
+                        <div class="table-responsive" *ngIf="cargando === false">
                             <table class="table table-bordered" style="zoom: 80%;color: white;">
                                 <thead>
                                     <tr>

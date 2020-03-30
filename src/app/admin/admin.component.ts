@@ -13,7 +13,7 @@ import { SnackBarComponent } from '../snack-bar/snack-bar.component'; */
 export class AdminComponent implements OnInit {
 
   public partidas = [];
-
+  public cargando = true;
   public documentId = null;
   public currentStatus = 1; // Inserción
   public newForm = new FormGroup({
@@ -48,6 +48,7 @@ export class AdminComponent implements OnInit {
           id: partidaData.payload.doc.id,
           data: partidaData.payload.doc.data()
         });
+        this.cargando = false;
       });
     });
   }
