@@ -10,8 +10,6 @@ export class HomeComponent implements OnInit {
 
   color = false;
   nro: number;
-  numero: number;
-  shadow = false;
 
   tarjetas = [
     {
@@ -40,6 +38,13 @@ export class HomeComponent implements OnInit {
 
   irAlLink( link: string ) {
     this.router.navigate([link]);
+  }
+
+  scrollDown() {
+    window.scrollTo({
+      top: 600,
+      behavior: 'smooth'
+    });
   }
 
 }

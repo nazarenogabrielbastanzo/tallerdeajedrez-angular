@@ -1,12 +1,15 @@
 <div class="animated fadeIn slow">
-    <div class="card">
+    <div class="card mb-3">
         <img src="assets/images/nuevas/banner.webp" class="card-img img-fluid mb-3" alt="Taller de Ajedrez" style="width: 100%;">
         <div class="card-img-overlay">
             <h1 class="card-title text-center m-3">Taller de Ajedrez</h1>
         </div>
     </div>
+    <div class="pointer text-center animated bounce slower infinite" (click)="scrollDown()">
+        <i class="fas fa-angle-double-down fa-3x"></i>
+    </div>
     <div class="card-columns">
-        <div class="card m-3" (click)="irAlLink( card.link )" [ngClass]="{'color': color && nro == i}" *ngFor="let card of tarjetas; let i = index" (mouseover)="color = true; nro = i" (mouseleave)="color = false; nro = undefined">
+        <div class="card m-3 pointer" (click)="irAlLink( card.link )" [ngClass]="{'color': color && nro == i}" *ngFor="let card of tarjetas; let i = index" (mouseover)="color = true; nro = i" (mouseleave)="color = false; nro = undefined">
             <img [src]="card.img" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title"> {{ card.titulo }} </h5>

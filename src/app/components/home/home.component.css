@@ -2,10 +2,14 @@
     background-color: rgba(146, 213, 218, .5);
 }
 
-.card.m-3 {
+.pointer {
     cursor: pointer;
 }
 
 h1 {
     font-weight: lighter;
+}
+
+.fa-angle-double-down {
+    color: #5eaff3;
 }
