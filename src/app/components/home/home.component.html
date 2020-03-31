@@ -1,29 +1,16 @@
 <div class="animated fadeIn slow">
-    <!-- <h1 class="display-4 text-center">Taller de Ajedrez</h1> -->
-
-    <img src="assets/images/nuevas/banner.webp" class="img-fluid mb-3" alt="Responsive image" style="width: 100%;">
-
-    <div class="card-group">
-        <div class="card m-3 shadow" *ngFor="let card of tarjetas; let i = index" (mouseover)="color = true; nro = i" (mouseleave)="color = false; nro = undefined">
+    <div class="card">
+        <img src="assets/images/nuevas/banner.webp" class="card-img img-fluid mb-3" alt="Taller de Ajedrez" style="width: 100%;">
+        <div class="card-img-overlay">
+            <h1 class="card-title text-center m-3">Taller de Ajedrez</h1>
+        </div>
+    </div>
+    <div class="card-columns">
+        <div class="card m-3" (click)="irAlLink( card.link )" [ngClass]="{'color': color && nro == i}" *ngFor="let card of tarjetas; let i = index" (mouseover)="color = true; nro = i" (mouseleave)="color = false; nro = undefined">
             <img [src]="card.img" class="card-img-top">
-            <div class="card-body" [ngClass]="{'color': color && nro == i}">
+            <div class="card-body">
                 <h5 class="card-title"> {{ card.titulo }} </h5>
-                <p class="card-text"> {{ card.texto }} </p>
-                <button class="btn btn-outline-primary btn-block" [routerLink]="card.link">Mas...</button>
             </div>
         </div>
     </div>
-    <!-- Aviso -->
-    <!-- <div class="d-flex justify-content-center my-5">
-        <div class="share" style="border: 3px solid rgb(51, 102, 153); text-align: center; width: 189px; padding: 4px;">
-            <div class="share-title" style="margin-bottom: 5px;">
-                <a href="https://campana.evisos.com.ar/creacion-de-sitios-web-id-1035049" target="_blank" style="color:#1935f9;font-size:12px;font-weight:bold;text-decoration:underline;font-family:Verdana, Arial, Helvetica, sans-serif;">
-            Creación de sitios web
-          </a>
-            </div>
-            <div style="color:#000;font-family:Verdana, Arial, Helvetica, sans-serif;font-size: 10px;" class="share-text">
-                Ofrezco crear sitios web utilizando PHP, MySQL y JavaScript
-            </div>
-        </div>
-    </div> -->
 </div>

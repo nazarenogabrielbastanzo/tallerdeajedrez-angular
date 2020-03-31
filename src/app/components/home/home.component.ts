@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,31 +10,36 @@ export class HomeComponent implements OnInit {
 
   color = false;
   nro: number;
+  numero: number;
+  shadow = false;
 
   tarjetas = [
     {
       img: 'assets/images/jorgeraulbastanzo.webp',
       titulo: 'Partidas Amistosas',
-      texto: 'Muchas son las ocasiones en las que se pueden jugar partidas amistosas de ajedrez . . .',
       link: '/partidas-amistosas'
     },
     {
       img: 'assets/images/Tringov_Fischer_Diagrama1.webp',
       titulo: 'Partida Tringov vs. Fischer',
-      texto: 'Tringov vs. Fischer, Capablanca Memorial (1965): Esta partida . . .',
       link: '/partida-tringov-fischer'
     },
     {
       img: 'assets/images/nuevas/estudio-david-gurgenidze.webp',
       titulo: 'Estudio de David Gurgenidze',
-      texto: 'Juegan las blancas y ganan la partida . . .',
       link: '/estudio-david-gurgenidze/1'
     }
   ];
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  irAlLink( link: string ) {
+    this.router.navigate([link]);
   }
 
 }
