@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
 
   color = false;
   nro: number;
+  movil = false;
 
   tarjetas = [
     {
@@ -34,6 +35,11 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    if (window.screen.width < 1024) {
+      this.movil = true;
+    } else {
+      this.movil = false;
+    }
   }
 
   irAlLink( link: string ) {
