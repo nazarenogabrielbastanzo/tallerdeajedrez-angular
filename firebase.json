@@ -1,6 +1,6 @@
 {
     "hosting": {
-        "public": "dist",
+        "public": "dist/tallerdeajedrez",
         "ignore": [
             "firebase.json",
             "**/.*",
@@ -8,7 +8,7 @@
         ],
         "rewrites": [{
             "source": "**",
-            "destination": "index.html"
+            "destination": "/index.html"
         }]
     }
 }
