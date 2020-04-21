@@ -330,5 +330,23 @@
         "resultado": "1 - 0",
         "evento": "Russian Championship Superfinal",
         "fecha": "18/12/2007"
+    },
+    {
+        "numero": 38,
+        "id": "59mg1sbP",
+        "blancas": "elpipi (1518)",
+        "negras": "jbastanzo (1671)",
+        "resultado": "0 - 1",
+        "evento": "Casual Classical Game",
+        "fecha": "21/04/2020"
+    },
+    {
+        "numero": 39,
+        "id": "g5UWxBza",
+        "blancas": "Lubomir Ftacnik",
+        "negras": "Ognjen Cvitan",
+        "resultado": "0 - 1",
+        "evento": "Bundesliga 1997/98",
+        "fecha": "??/??/1997"
     }
 ]
