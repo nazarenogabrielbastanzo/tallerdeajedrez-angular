@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
+/* import { AuthService } from '../../services/auth.service'; */
 
 @Component({
   selector: 'app-estudio-david-gurgenidze',
@@ -18,8 +18,10 @@ export class EstudioDavidGurgenidzeComponent implements OnInit {
 
   id: string;
 
+  show = false;
+
   constructor(
-    public auth: AuthService
+    /* public auth: AuthService */
   ) {
     this.id = 'IzvwYriQ6Zs';
   }
@@ -28,7 +30,8 @@ export class EstudioDavidGurgenidzeComponent implements OnInit {
   }
 
   verSolucion() {
-    this.auth.login('estudio-david-gurgenidze/1');
+    /* this.auth.login('estudio-david-gurgenidze/1'); */
+    this.show = !this.show;
   }
 
 }
