@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PeticionesService } from '../../services/peticiones.service';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-partidas',
   templateUrl: './partidas.component.html',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./partidas.component.css']
 })
 export class PartidasComponent implements OnInit {
@@ -14,8 +16,13 @@ export class PartidasComponent implements OnInit {
   infoMessage: string;
   srcImgPop: string;
   terminoDeBusqueda = '';
+  numero: number;
+  srcGIF: string;
+  gif: boolean;
+  webp: boolean;
 
   constructor(
+    private modalService: NgbModal,
     private peticionesService: PeticionesService,
     private router: Router
   ) {
@@ -28,6 +35,13 @@ export class PartidasComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  openLg(content: any, numero: number, tipo: string) {
+    /* this.modalService.open(content, { size: 'lg' }); */
+    this.modalService.open(content, { centered: true });
+    this.numero = numero;
+    this.setSrcImgPop(numero, tipo);
   }
 
   verPartida(numero: number) {
@@ -49,8 +63,16 @@ export class PartidasComponent implements OnInit {
     }
   }
 
-  setSrcImgPop(numero: number) {
-    this.srcImgPop = `assets/images/nuevas/tooltips/${ numero }.webp`;
+  setSrcImgPop(numero: number, tipo: string) {
+    if (tipo === 'final') {
+      this.gif = false;
+      this.webp = true;
+      this.srcImgPop = `assets/images/nuevas/tooltips/${ numero }.webp`;
+    } else {
+      this.webp = false;
+      this.gif = true;
+      this.srcGIF = `assets/images/nuevas/gifs/${ numero }.gif`;
+    }
   }
 
 }

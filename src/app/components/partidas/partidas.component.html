@@ -1,3 +1,21 @@
+<!-- ... -->
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" *ngIf="webp === true">Final de la Partida {{numero}}</h4>
+        <h4 class="modal-title" *ngIf="gif === true">Vista rápida de la Partida {{numero}}</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+        <img *ngIf="webp === true" [src]="srcImgPop" alt="Final de la partida {{numero}}" class="img-fluid" style="width: 100%;">
+        <img *ngIf="gif === true" [src]="srcGIF" alt="GIF de la partida {{numero}}" class="img-fluid" style="width: 100%;">
+    </div>
+    <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    </div> -->
+</ng-template>
+<!-- ... -->
 <div class="container-fluid animated fadeIn slow">
     <h4 class="text-center display-4 my-5">Partidas</h4>
 
@@ -22,6 +40,8 @@
 
                     <th>Ver Final</th>
 
+                    <th>Vista rápida (Nuevo)</th>
+
                     <th>Ver Partida</th>
 
                     <th>Evento</th>
@@ -33,9 +53,9 @@
             </thead>
 
             <tbody>
-                <ng-template #popContent>
+                <!-- <ng-template #popContent>
                     <img [src]="srcImgPop" alt="Foto del final" class="img-thumbnail">
-                </ng-template>
+                </ng-template> -->
                 <tr *ngFor="let partida of partidas">
                     <td class="text-right">{{ partida.blancas }}</td>
 
@@ -43,7 +63,10 @@
 
                     <td class="text-left">{{ partida.negras }}</td>
 
-                    <td><button type="button" class="btn btn-outline-info" (click)="setSrcImgPop(partida.numero)" [ngbPopover]="popContent">Ver Final</button></td>
+                    <!-- <td><button type="button" class="btn btn-outline-info" (click)="setSrcImgPop(partida.numero)" [ngbPopover]="popContent">Ver Final</button></td> -->
+                    <td><button type="button" class="btn btn-outline-info" (click)="openLg(content, partida.numero, 'final')">Ver Final</button></td>
+
+                    <td><button type="button" class="btn btn-outline-info" (click)="openLg(content, partida.numero, 'rapida')">Vista rápida</button></td>
 
                     <td><button type="button" class="btn btn-outline-primary" (click)="verPartida(partida.numero)">Ver Partida</button></td>
 
