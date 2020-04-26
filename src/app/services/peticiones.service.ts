@@ -44,14 +44,14 @@ export class PeticionesService {
         const resultado = partida.resultado;
         const evento = partida.evento.toLowerCase();
         const fecha = partida.fecha;
-        const numero = partida.numero.toString();
+        /* const numero = partida.numero.toString(); */
         if (
           blancas.indexOf( termino ) >= 0 ||
           negras.indexOf( termino ) >= 0 ||
           resultado.indexOf( termino ) >= 0 ||
           evento.indexOf( termino ) >= 0 ||
-          fecha.indexOf( termino ) >= 0 ||
-          numero.indexOf( termino ) >= 0
+          fecha.indexOf( termino ) >= 0 /* ||
+          numero.indexOf( termino ) >= 0 */
         ) { // lo encontro
             partidasArr.push( partida );
         }
