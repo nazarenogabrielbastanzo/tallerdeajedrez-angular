@@ -1,5 +1,4 @@
 [{
-        "numero": 1,
         "id": "eTxkUsdq",
         "blancas": "Bastanzo, Jorge Raúl",
         "negras": "?, Carlos",
@@ -8,7 +7,6 @@
         "fecha": "??/??/????"
     },
     {
-        "numero": 2,
         "id": "I9vNgDWK",
         "blancas": "Bastanzo, Jorge Raúl",
         "negras": "?, ?",
@@ -17,7 +15,6 @@
         "fecha": "??/??/????"
     },
     {
-        "numero": 3,
         "id": "G7khXdo1",
         "blancas": "Jovana Rapport (2318)",
         "negras": "Anna Muzychuk (2550)",
@@ -26,7 +23,6 @@
         "fecha": "06/09/2016"
     },
     {
-        "numero": 4,
         "id": "boRsWv2G",
         "blancas": "Alexander Morozevich (2675)",
         "negras": "Yifan Hou (2666)",
@@ -35,7 +31,6 @@
         "fecha": "24/07/2017"
     },
     {
-        "numero": 5,
         "id": "5rLwYKya",
         "blancas": "desso2b (1510)",
         "negras": "nazarenobastanzo (1525)",
@@ -44,7 +39,6 @@
         "fecha": "21/12/2018"
     },
     {
-        "numero": 6,
         "id": "qJwKnkI0",
         "blancas": "nazarenobastanzo (1525)",
         "negras": "Hamidi1986 (1495)",
@@ -53,7 +47,6 @@
         "fecha": "21/12/2018"
     },
     {
-        "numero": 7,
         "id": "rL7HEVkE",
         "blancas": "nazarenobastanzo (1512)",
         "negras": "plenitude (1571)",
@@ -62,7 +55,6 @@
         "fecha": "21/12/2018"
     },
     {
-        "numero": 8,
         "id": "rU1xHVew",
         "blancas": "Hikaru Nakamura (2792)",
         "negras": "Garry Kasparov (2812)",
@@ -71,7 +63,6 @@
         "fecha": "14/08/2017"
     },
     {
-        "numero": 9,
         "id": "UAhU9WT3",
         "blancas": "Garry Kasparov (2812)",
         "negras": "Leinier Dominguez Perez (2739)",
@@ -80,7 +71,6 @@
         "fecha": "14/08/2017"
     },
     {
-        "numero": 10,
         "id": "827VbzLL",
         "blancas": "Garry Kasparov (2812)",
         "negras": "Sergey Karjakin (2773)",
@@ -89,7 +79,6 @@
         "fecha": "14/08/2017"
     },
     {
-        "numero": 11,
         "id": "bkeICn1S",
         "blancas": "Johann Hjartarson",
         "negras": "Garry Kasparov",
@@ -98,7 +87,6 @@
         "fecha": "30/09/1989"
     },
     {
-        "numero": 12,
         "id": "IJ7k9YCf",
         "blancas": "Garry Kasparov",
         "negras": "Johann Hjartarson",
@@ -107,7 +95,6 @@
         "fecha": "21/09/1989"
     },
     {
-        "numero": 13,
         "id": "hUF7fjAR",
         "blancas": "Anatoly Karpov",
         "negras": "Garry Kasparov",
@@ -116,7 +103,6 @@
         "fecha": "15/10/1985"
     },
     {
-        "numero": 14,
         "id": "buSOL1rw",
         "blancas": "david-artiles (1495)",
         "negras": "nazarenobastanzo (1487)",
@@ -125,7 +111,6 @@
         "fecha": "20/12/2018"
     },
     {
-        "numero": 15,
         "id": "IEx4qn2Q",
         "blancas": "szurtos (1897)",
         "negras": "nazarenobastanzo (1689)",
@@ -134,7 +119,6 @@
         "fecha": "07/01/2017"
     },
     {
-        "numero": 16,
         "id": "mlbrTDQc",
         "blancas": "hyderho (1601)",
         "negras": "nazarenobastanzo (1691)",
@@ -143,7 +127,6 @@
         "fecha": "07/01/2017"
     },
     {
-        "numero": 17,
         "id": "gZf9CGqX",
         "blancas": "jbastanzo (1760)",
         "negras": "MirekVeverka (1654)",
@@ -152,7 +135,6 @@
         "fecha": "07/01/2017"
     },
     {
-        "numero": 18,
         "id": "CKQngJKQ",
         "blancas": "OliverOnion (1465)",
         "negras": "nazarenobastanzo (1700)",
@@ -161,7 +143,6 @@
         "fecha": "08/01/2017"
     },
     {
-        "numero": 19,
         "id": "fjDjaeTd",
         "blancas": "nazarenobastanzo (1705)",
         "negras": "Spillpants (1941)",
@@ -170,7 +151,6 @@
         "fecha": "10/01/2017"
     },
     {
-        "numero": 20,
         "id": "liApJ93Y",
         "blancas": "AfolabiS (1547)",
         "negras": "nazarenobastanzo (1629)",
@@ -179,7 +159,6 @@
         "fecha": "17/02/2017"
     },
     {
-        "numero": 21,
         "id": "LELPJrhO",
         "blancas": "nazarenobastanzo (1576)",
         "negras": "TinasheEr (1747)",
@@ -188,7 +167,6 @@
         "fecha": "29/08/2017"
     },
     {
-        "numero": 22,
         "id": "iaw7Q4wC",
         "blancas": "Adams, Michael (2505)",
         "negras": "Psakhis, Lev (2565)",
@@ -197,7 +175,6 @@
         "fecha": "??/??/1989"
     },
     {
-        "numero": 23,
         "id": "mzfDjPHD",
         "blancas": "Adams, Mi (2740)",
         "negras": "Psakhis, Lev (2545)",
@@ -206,7 +183,6 @@
         "fecha": "07/11/2004"
     },
     {
-        "numero": 24,
         "id": "1dPNMKmG",
         "blancas": "Adams, Mi (2740)",
         "negras": "Adams, Mi (2740)",
@@ -215,7 +191,6 @@
         "fecha": "07/11/2004"
     },
     {
-        "numero": 25,
         "id": "b6n0Rv8p",
         "blancas": "Psakhis, Lev (2545)",
         "negras": "Adams, Mi (2740)",
@@ -224,7 +199,6 @@
         "fecha": "07/11/2004"
     },
     {
-        "numero": 26,
         "id": "RKby7zHD",
         "blancas": "Akopian, Vladimir (2460)",
         "negras": "Psakhis, Lev (2550)",
@@ -233,7 +207,6 @@
         "fecha": "??/??/1988"
     },
     {
-        "numero": 27,
         "id": "uXl7Oxu2",
         "blancas": "nazarenobastanzo (1743)",
         "negras": "Franiol (1718)",
@@ -242,7 +215,6 @@
         "fecha": "31/10/2017"
     },
     {
-        "numero": 28,
         "id": "dZuVMgN5",
         "blancas": "nazarenobastanzo (1760)",
         "negras": "gambit09 (1516)",
@@ -251,7 +223,6 @@
         "fecha": "04/11/2017"
     },
     {
-        "numero": 29,
         "id": "LjLzxSmI",
         "blancas": "Sergey Karjakin (2757)",
         "negras": "Andrey Esipenko (2438)",
@@ -260,7 +231,6 @@
         "fecha": "27/12/2017"
     },
     {
-        "numero": 30,
         "id": "JkJuHZFi",
         "blancas": "carevchess (1566)",
         "negras": "nazarenobastanzo (1560)",
@@ -269,7 +239,6 @@
         "fecha": "30/12/2017"
     },
     {
-        "numero": 31,
         "id": "cVInrSCo",
         "blancas": "Georgi Tringov",
         "negras": "Robert James Fischer",
@@ -278,7 +247,6 @@
         "fecha": "31/08/1965"
     },
     {
-        "numero": 32,
         "id": "T7axDE2s",
         "blancas": "djangofan (1554)",
         "negras": "nazarenobastanzo (1656)",
@@ -287,7 +255,6 @@
         "fecha": "30/12/2017"
     },
     {
-        "numero": 33,
         "id": "RwQaWTtJ",
         "blancas": "nazarenobastanzo (1655)",
         "negras": "opxah27 (1594)",
@@ -296,7 +263,6 @@
         "fecha": "03/01/2018"
     },
     {
-        "numero": 34,
         "id": "R6VyXHXR",
         "blancas": "jbastanzo (1751)",
         "negras": "Theborg1149 (1661)",
@@ -305,7 +271,6 @@
         "fecha": "01/01/2018"
     },
     {
-        "numero": 35,
         "id": "9CH6quIJ",
         "blancas": "nazarenobastanzo (1638)",
         "negras": "Ruchka2 (1600)",
@@ -314,7 +279,6 @@
         "fecha": "03/01/2018"
     },
     {
-        "numero": 36,
         "id": "objK4Mka",
         "blancas": "Duda, Jan-Krzysztof (2755)",
         "negras": "Firouzja, Alireza (2726)",
@@ -323,7 +287,6 @@
         "fecha": "19/02/2020"
     },
     {
-        "numero": 37,
         "id": "UYOeaShc",
         "blancas": "Farrukh Amonatov (2637)",
         "negras": "Artyom Timofeev (2637)",
@@ -332,7 +295,6 @@
         "fecha": "18/12/2007"
     },
     {
-        "numero": 38,
         "id": "59mg1sbP",
         "blancas": "elpipi (1518)",
         "negras": "jbastanzo (1671)",
@@ -341,7 +303,6 @@
         "fecha": "21/04/2020"
     },
     {
-        "numero": 39,
         "id": "g5UWxBza",
         "blancas": "Lubomir Ftacnik",
         "negras": "Ognjen Cvitan",
