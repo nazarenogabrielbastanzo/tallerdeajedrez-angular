@@ -21,3 +21,7 @@ h1 {
 .screen {
     font-size: 50px;
 }
+
+.banner {
+    border: 0px!important;
+}

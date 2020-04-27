@@ -1,26 +1,10 @@
+/* Faltaría agregarla al hacer scroll */
+
 .navbar-transparente {
-    background-color: rgba(52, 58, 64, .7);
-}
-
-.navbar-transparente a {
-    color: white;
-}
-
-.active>.nav-link {
-    color: #5cb3fd;
-}
-
-
-/* Cambiar color al hamburger icon */
-
-.navbar-toggler {
-    border-color: white;
-}
-
-.navbar-toggler i {
-    color: white;
+    background-color: rgba(63, 81, 181, .7);
 }
 
 span.brand {
     color: white;
+    font-family: 'Quicksand', sans-serif!important;
 }

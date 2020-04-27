@@ -19,12 +19,16 @@
 <div class="container-fluid animated fadeIn slow">
     <h4 class="text-center display-4 my-5">Partidas</h4>
 
-    <div class="input-group mb-3">
+    <!-- <div class="input-group mb-3">
         <input (keyup.enter)="buscarPartida(buscarTexto.value)" type="text" class="form-control" placeholder="Buscar Partida . . ." aria-label="Buscar Partida..." aria-describedby="button-addon2" #buscarTexto [(ngModel)]="terminoDeBusqueda">
         <div class="input-group-append">
-            <button (click)="buscarPartida(buscarTexto.value)" class="btn btn-outline-primary" type="button" id="button-addon2">Buscar</button>
+            <button mat-raised-button color="primary" (click)="buscarPartida(buscarTexto.value)" type="button">Buscar</button>
         </div>
-    </div>
+    </div> -->
+    <mat-form-field class="full-width">
+        <mat-label>Buscar partida</mat-label>
+        <input matInput placeholder="Por ejemplo: kasparov" (keyup.enter)="buscarPartida(buscarTexto.value)" type="text" #buscarTexto [(ngModel)]="terminoDeBusqueda" autocomplete="off">
+    </mat-form-field>
 
     <ngb-alert *ngIf="info" type="danger" (close)="info = false" class="text-center animated fadeIn">{{ infoMessage }}</ngb-alert>
 
@@ -64,11 +68,12 @@
                     <td class="text-left">{{ partida.negras }}</td>
 
                     <!-- <td><button type="button" class="btn btn-outline-info" (click)="setSrcImgPop(partida.numero)" [ngbPopover]="popContent">Ver Final</button></td> -->
-                    <td><button type="button" class="btn btn-outline-info" (click)="openLg(content, partida.numero, 'final')">Ver Final</button></td>
+                    <!-- <td><button type="button" class="btn btn-outline-info" (click)="openLg(content, partida.numero, 'final')">Ver Final</button></td> -->
+                    <td><a mat-raised-button (click)="openLg(content, partida.numero, 'final')">Ver Final</a></td>
 
-                    <td><button type="button" class="btn btn-outline-info" (click)="openLg(content, partida.numero, 'rapida')">Vista rápida</button></td>
+                    <td><a mat-raised-button (click)="openLg(content, partida.numero, 'rapida')">Vista rápida</a></td>
 
-                    <td><button type="button" class="btn btn-outline-primary" (click)="verPartida(partida.numero)">Ver Partida</button></td>
+                    <td><a mat-raised-button (click)="verPartida(partida.numero)">Ver Partida</a></td>
 
                     <td>{{partida.evento}}</td>
 

@@ -7,8 +7,14 @@
         <img [src]="estudios[0].img" [alt]="estudios[0].titulo" class="rounded mx-auto d-block">
 
         <!-- <button *ngIf="auth.loggedIn === false" class="btn btn-outline-primary mt-5" (click)="verSolucion()">Ver Solución</button> -->
-        <button class="btn btn-outline-primary mt-5" (click)="verSolucion()" *ngIf="show === false">Ver Solución</button>
-        <button class="btn btn-outline-primary mt-5" (click)="verSolucion()" *ngIf="show === true">Ocultar Solución</button>
+        <!-- <button class="btn btn-outline-primary mt-5" (click)="verSolucion()" *ngIf="show === false">Ver Solución</button> -->
+        <!-- <button class="btn btn-outline-primary mt-5" (click)="verSolucion()" *ngIf="show === true">Ocultar Solución</button> -->
+        <!-- <button mat-raised-button color="primary" class="my-5" (click)="verSolucion()" *ngIf="show === false">Ver Solución</button>
+        <button mat-raised-button color="primary" class="my-5" (click)="verSolucion()" *ngIf="show === true">Ocultar Solución</button> -->
+
+        <mat-slide-toggle color="primary" (click)="verSolucion()" class="my-5">
+            <span>Mostrar solución</span>
+        </mat-slide-toggle>
 
     </div>
     <!-- <div class="container mt-3" *ngIf="auth.loggedIn === true"> -->
