@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class="text-center">
-        <i class="fas fa-angle-double-down fa-3x pointer" (click)="scrollDown()"></i>
+        <i class="fas fa-angle-double-down fa-3x pointer" (click)="scrollDown()" matTooltip="Bajar un poco..." matTooltipPosition="left"></i>
     </div>
     <div class="card-columns">
         <div class="card m-3 pointer" (click)="irAlLink( card.link )" [ngClass]="{'color': color && nro == i}" *ngFor="let card of tarjetas; let i = index" (mouseover)="color = true; nro = i" (mouseleave)="color = false; nro = undefined">

@@ -2,7 +2,7 @@
 <div *ngIf="didScroll">
     <div #scroll class="d-flex justify-content-end animated fadeIn" style="position: fixed; bottom: 15px; right: 0">
         <a (click)="scrollTop($event)" class="mr-3" style="cursor: pointer;">
-            <i class="fas fa-angle-double-up fa-3x" style="color: #3f51b5;"></i>
+            <i class="fas fa-angle-double-up fa-3x" style="color: #3f51b5;" matTooltip="Subir" matTooltipPosition="left"></i>
         </a>
     </div>
 </div>
