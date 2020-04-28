@@ -13,6 +13,7 @@ import { Subject } from 'rxjs';
 })
 export class PartidasComponent implements OnInit, OnDestroy {
 
+  cargando: boolean;
   partidas: any;
   info: boolean;
   infoMessage: string;
@@ -33,8 +34,10 @@ export class PartidasComponent implements OnInit, OnDestroy {
     private peticionesService: PeticionesService,
     private router: Router
   ) {
+    this.cargando = true;
     this.peticionesService.getPartidas()
       .subscribe((data: any) => {
+        this.cargando = false;
         this.partidas = data.reverse();
         this.dtTrigger.next();
       });

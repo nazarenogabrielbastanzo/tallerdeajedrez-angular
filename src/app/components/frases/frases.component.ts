@@ -8,14 +8,16 @@ import { PeticionesService } from '../../services/peticiones.service';
 })
 export class FrasesComponent implements OnInit {
 
+  cargando: boolean;
   frases: any;
 
   constructor(
     private peticionesServices: PeticionesService
   ) {
+    this.cargando = true;
     this.peticionesServices.getFrases()
       .subscribe((data: any) => {
-        /* console.log(data); */
+        this.cargando = false;
         this.frases = data;
       });
   }

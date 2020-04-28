@@ -1,3 +1,8 @@
+<div *ngIf="cargando" class="row align-items-center" style="height: 100vh;">
+    <div class="col text-center">
+        <i class="fas fa-spinner fa-spin fa-5x" style="color: #717579;"></i>
+    </div>
+</div>
 <ng-template #content let-modal>
     <div class="modal-header">
         <h4 class="modal-title" *ngIf="webp === true">Final de la Partida {{numero}}</h4>
@@ -22,38 +27,34 @@
 
     <ngb-alert *ngIf="info" type="danger" (close)="info = false" class="text-center animated fadeIn">{{ infoMessage }}</ngb-alert>
 
-    <div class="card shadow mb-4">
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th class="text-right">Blancas</th>
-                            <th class="text-center">Resultado</th>
-                            <th class="text-left">Negras</th>
-                            <th>Ver Final</th>
-                            <th>Vista rápida (Nuevo)</th>
-                            <th>Ver Partida</th>
-                            <th>Evento</th>
-                            <th>Fecha</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let partida of partidas">
-                            <td>{{ partida.numero }}</td>
-                            <td class="text-right">{{ partida.blancas }}</td>
-                            <td class="text-center">{{ partida.resultado }}</td>
-                            <td class="text-left">{{ partida.negras }}</td>
-                            <td><a mat-raised-button (click)="openLg(content, partida.numero, 'final')">Ver Final</a></td>
-                            <td class="text-center"><a mat-raised-button (click)="openLg(content, partida.numero, 'rapida')">Vista rápida</a></td>
-                            <td><a mat-raised-button (click)="verPartida(partida.numero)">Ver Partida</a></td>
-                            <td>{{partida.evento}}</td>
-                            <td>{{partida.fecha}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+    <div class="table-responsive mb-5">
+        <table class="table table-bordered table-hover" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th class="text-right">Blancas</th>
+                    <th class="text-center">Resultado</th>
+                    <th class="text-left">Negras</th>
+                    <th>Ver Final</th>
+                    <th>Vista rápida (Nuevo)</th>
+                    <th>Ver Partida</th>
+                    <th>Evento</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let partida of partidas">
+                    <td>{{ partida.numero }}</td>
+                    <td class="text-right">{{ partida.blancas }}</td>
+                    <td class="text-center">{{ partida.resultado }}</td>
+                    <td class="text-left">{{ partida.negras }}</td>
+                    <td><a mat-raised-button (click)="openLg(content, partida.numero, 'final')">Ver Final</a></td>
+                    <td class="text-center"><a mat-raised-button (click)="openLg(content, partida.numero, 'rapida')">Vista rápida</a></td>
+                    <td><a mat-raised-button (click)="verPartida(partida.numero)">Ver Partida</a></td>
+                    <td>{{partida.evento}}</td>
+                    <td>{{partida.fecha}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

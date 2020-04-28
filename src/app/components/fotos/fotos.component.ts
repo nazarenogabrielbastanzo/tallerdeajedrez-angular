@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class FotosComponent implements OnInit {
 
+  cargando: boolean;
   albumes: any;
   info: boolean;
   infoMessage: string;
@@ -18,9 +19,10 @@ export class FotosComponent implements OnInit {
     private peticionesServices: PeticionesService,
     private router: Router
   ) {
+    this.cargando = true;
     this.peticionesServices.getAlbumes()
       .subscribe((data: any) => {
-        /* console.log(data); */
+        this.cargando = false;
         this.albumes = data.reverse();
       });
     this.info = false;

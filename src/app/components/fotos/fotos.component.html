@@ -1,12 +1,10 @@
+<div *ngIf="cargando" class="row align-items-center" style="height: 100vh;">
+    <div class="col text-center">
+        <i class="fas fa-spinner fa-spin fa-5x" style="color: #717579;"></i>
+    </div>
+</div>
 <div class="container-fluid animated fadeIn slow">
     <h1 class="display-4 text-center my-5">Fotos</h1>
-
-    <!-- <div class="input-group mb-3">
-        <input (keyup.enter)="buscarAlbum(buscarTexto.value)" type="text" class="form-control" placeholder="Buscar Álbum . . ." aria-label="Buscar Álbum..." aria-describedby="button-addon2" #buscarTexto [(ngModel)]="terminoDeBusqueda">
-        <div class="input-group-append">
-            <button (click)="buscarAlbum(buscarTexto.value)" class="btn btn-outline-primary" type="button" id="button-addon2">Buscar</button>
-        </div>
-    </div> -->
 
     <mat-form-field class="full-width">
         <mat-label>Buscar álbum</mat-label>
@@ -20,30 +18,19 @@
             <thead>
                 <tr class="text-center">
                     <th>ID</th>
-
                     <th>Álbum</th>
-
                     <th>Lugar</th>
-
                     <th>Fecha</th>
-
                     <th>Fotos</th>
-
                 </tr>
             </thead>
-
             <tbody>
                 <tr *ngFor="let album of albumes" style="cursor: pointer;" (click)="verAlbum(album.album_id)">
                     <td>{{ album.album_id }}</td>
-
                     <td>{{ album.album }}</td>
-
                     <td>{{ album.lugar }}</td>
-
                     <td>{{ album.fecha }}</td>
-
                     <td>{{ album.cantidadFotos }}</td>
-
                 </tr>
             </tbody>
         </table>
