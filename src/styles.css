@@ -18,3 +18,8 @@ h5,
 h6 {
     font-family: 'Quicksand', sans-serif!important;
 }
+
+button.button-accent {
+    background-color: #FF2A81;
+    color: white;
+}
