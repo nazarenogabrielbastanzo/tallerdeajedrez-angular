@@ -1,84 +1,26 @@
-<!-- ... -->
 <ng-template #content let-modal>
     <div class="modal-header">
         <h4 class="modal-title" *ngIf="webp === true">Final de la Partida {{numero}}</h4>
         <h4 class="modal-title" *ngIf="gif === true">Vista rápida de la Partida {{numero}}</h4>
         <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
     <div class="modal-body">
         <img *ngIf="webp === true" [src]="srcImgPop" alt="Final de la partida {{numero}}" class="img-fluid" style="width: 100%;">
         <img *ngIf="gif === true" [src]="srcGIF" alt="GIF de la partida {{numero}}" class="img-fluid" style="width: 100%;">
     </div>
-    <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
-    </div> -->
 </ng-template>
-<!-- ... -->
-<div class="container-fluid animated fadeIn slow">
+
+<div class="container-fluid">
     <h4 class="text-center display-4 my-5">Partidas</h4>
 
-    <!-- <div class="input-group mb-3">
-        <input (keyup.enter)="buscarPartida(buscarTexto.value)" type="text" class="form-control" placeholder="Buscar Partida . . ." aria-label="Buscar Partida..." aria-describedby="button-addon2" #buscarTexto [(ngModel)]="terminoDeBusqueda">
-        <div class="input-group-append">
-            <button mat-raised-button color="primary" (click)="buscarPartida(buscarTexto.value)" type="button">Buscar</button>
-        </div>
-    </div> -->
     <mat-form-field class="full-width">
         <mat-label>Buscar partida</mat-label>
         <input matInput placeholder="Por ejemplo: kasparov" (keyup.enter)="buscarPartida(buscarTexto.value)" type="text" #buscarTexto [(ngModel)]="terminoDeBusqueda" autocomplete="off">
     </mat-form-field>
 
     <ngb-alert *ngIf="info" type="danger" (close)="info = false" class="text-center animated fadeIn">{{ infoMessage }}</ngb-alert>
-
-    <!-- <div class="table-responsive">
-        <table class="table table-bordered table-hover" style="zoom: 80%;">
-            <thead>
-                <tr>
-                    <th class="text-right">Blancas</th>
-
-                    <th class="text-center">Resultado</th>
-
-                    <th class="text-left">Negras</th>
-
-                    <th>Ver Final</th>
-
-                    <th>Vista rápida (Nuevo)</th>
-
-                    <th>Ver Partida</th>
-
-                    <th>Evento</th>
-
-                    <th>Fecha</th>
-
-                    <th>ID</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr *ngFor="let partida of partidas">
-                    <td class="text-right">{{ partida.blancas }}</td>
-
-                    <td class="text-center">{{ partida.resultado }}</td>
-
-                    <td class="text-left">{{ partida.negras }}</td>
-
-                    <td><a mat-raised-button (click)="openLg(content, partida.numero, 'final')">Ver Final</a></td>
-
-                    <td class="text-center"><a mat-raised-button (click)="openLg(content, partida.numero, 'rapida')">Vista rápida</a></td>
-
-                    <td><a mat-raised-button (click)="verPartida(partida.numero)">Ver Partida</a></td>
-
-                    <td>{{partida.evento}}</td>
-
-                    <td>{{partida.fecha}}</td>
-
-                    <td>{{ partida.numero }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div> -->
 
     <div class="card shadow mb-4">
         <div class="card-body">
@@ -88,47 +30,30 @@
                         <tr>
                             <th>ID</th>
                             <th class="text-right">Blancas</th>
-
                             <th class="text-center">Resultado</th>
-
                             <th class="text-left">Negras</th>
-
                             <th>Ver Final</th>
-
                             <th>Vista rápida (Nuevo)</th>
-
                             <th>Ver Partida</th>
-
                             <th>Evento</th>
-
                             <th>Fecha</th>
-
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let partida of partidas">
                             <td>{{ partida.numero }}</td>
                             <td class="text-right">{{ partida.blancas }}</td>
-
                             <td class="text-center">{{ partida.resultado }}</td>
-
                             <td class="text-left">{{ partida.negras }}</td>
-
                             <td><a mat-raised-button (click)="openLg(content, partida.numero, 'final')">Ver Final</a></td>
-
                             <td class="text-center"><a mat-raised-button (click)="openLg(content, partida.numero, 'rapida')">Vista rápida</a></td>
-
                             <td><a mat-raised-button (click)="verPartida(partida.numero)">Ver Partida</a></td>
-
                             <td>{{partida.evento}}</td>
-
                             <td>{{partida.fecha}}</td>
-
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-
 </div>

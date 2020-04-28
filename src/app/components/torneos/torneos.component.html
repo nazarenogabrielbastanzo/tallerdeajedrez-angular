@@ -2,7 +2,7 @@
     <h1 class="display-4 text-center my-5">Torneos <br>
         <small>{{torneos.nombre}}</small>
     </h1>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center mb-5">
         <iframe [src]="torneos.url | domseguro:'https://live.chessbase.com/pgn/'" width="900" height="600"></iframe>
     </div>
 </div>
