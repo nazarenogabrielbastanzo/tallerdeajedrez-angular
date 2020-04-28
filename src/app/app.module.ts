@@ -7,6 +7,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MiModuloModule } from './mi-modulo.module';
 
+import { DataTablesModule } from 'angular-datatables';
+
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestore } from '@angular/fire/firestore';
@@ -72,7 +74,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     BrowserAnimationsModule,
-    MiModuloModule
+    MiModuloModule,
+    DataTablesModule
   ],
   providers: [
     AngularFirestore

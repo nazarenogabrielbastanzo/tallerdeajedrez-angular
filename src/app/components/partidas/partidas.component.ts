@@ -1,7 +1,9 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ViewChild, OnDestroy } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PeticionesService } from '../../services/peticiones.service';
 import { Router } from '@angular/router';
+import { DataTableDirective } from 'angular-datatables';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-partidas',
@@ -9,7 +11,7 @@ import { Router } from '@angular/router';
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['./partidas.component.css']
 })
-export class PartidasComponent implements OnInit {
+export class PartidasComponent implements OnInit, OnDestroy {
 
   partidas: any;
   info: boolean;
@@ -21,6 +23,11 @@ export class PartidasComponent implements OnInit {
   gif: boolean;
   webp: boolean;
 
+  @ViewChild(DataTableDirective)
+  dtElement: DataTableDirective;
+  dtOptions: DataTables.Settings = {};
+  dtTrigger: Subject<any> = new Subject();
+
   constructor(
     private modalService: NgbModal,
     private peticionesService: PeticionesService,
@@ -29,28 +36,45 @@ export class PartidasComponent implements OnInit {
     this.peticionesService.getPartidas()
       .subscribe((data: any) => {
         this.partidas = data.reverse();
+        this.dtTrigger.next();
       });
     this.info = false;
-    this.infoMessage = 'Ingrese un texto para buscar . . .';
+    this.infoMessage = 'Ingrese un texto para buscar...';
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      ordering: false
+    };
+    this.rerender();
   }
+
+  ngOnDestroy(): void {
+    // Do not forget to unsubscribe the event
+    this.dtTrigger.unsubscribe();
+  }
+
+  rerender(): void {
+    this.dtElement.dtInstance.then((dtInstance: DataTables.Api) => {
+      // Destroy the table first
+      dtInstance.destroy();
+      // Call the dtTrigger to rerender again
+      this.dtTrigger.next();
+    });
+   }
 
   openLg(content: any, numero: number, tipo: string) {
-    /* this.modalService.open(content, { size: 'lg' }); */
     this.modalService.open(content, { centered: true });
     this.numero = numero;
     this.setSrcImgPop(numero, tipo);
   }
 
   verPartida(numero: number) {
-    /* console.log(numero); */
     this.router.navigate(['/partida', numero]);
   }
 
   buscarPartida( termino: string ) {
-    // console.log(termino);
     if ( termino.trim().length ) {
       this.router.navigate(['/buscar', termino.trim()]);
     } else {

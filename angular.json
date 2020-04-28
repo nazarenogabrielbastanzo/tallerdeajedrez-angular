@@ -29,9 +29,13 @@
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "src/assets/fontawesome/css/all.css",
                             "node_modules/animate.css/animate.min.css",
+                            "node_modules/datatables.net-dt/css/jquery.dataTables.min.css",
                             "src/styles.css"
                         ],
-                        "scripts": []
+                        "scripts": [
+                            "node_modules/jquery/dist/jquery.min.js",
+                            "node_modules/datatables.net/js/jquery.dataTables.min.js"
+                        ]
                     },
                     "configurations": {
                         "production": {
