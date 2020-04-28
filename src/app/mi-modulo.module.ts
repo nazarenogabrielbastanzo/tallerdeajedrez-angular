@@ -9,6 +9,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
 /* import {MatSnackBarModule} from '@angular/material/snack-bar'; */
 
 @NgModule({
@@ -22,7 +23,8 @@ import {MatInputModule} from '@angular/material/input';
     MatTooltipModule,
     MatSlideToggleModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule
     /* MatSnackBarModule */
   ],
   exports: [
@@ -33,7 +35,8 @@ import {MatInputModule} from '@angular/material/input';
     MatTooltipModule,
     MatSlideToggleModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule
     /* MatSnackBarModule */
   ]
 })
