@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   tarjetas = [
     {
-      img: 'assets/images/jorgeraulbastanzo.webp',
+      img: 'assets/images/jorgeraulbastanzo.jpg',
       titulo: 'Partidas Amistosas',
       link: '/partidas-amistosas',
       extracto: 'Muchas son las ocasiones en las que se pueden jugar partidas amistosas de ajedrez: entre ronda y ronda de un torneo, antes o después de un torneo, en casa, en la plaza, en el tren, y un largo etcétera...',
@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
       twitter: 'NazarenoGabrie2',
     },
     {
-      img: 'assets/images/Tringov_Fischer_Diagrama1.webp',
+      img: 'assets/images/Tringov_Fischer_Diagrama1.jpg',
       titulo: 'Partida Tringov vs. Fischer',
       link: '/partida-tringov-fischer',
       extracto: 'Tringov vs. Fischer, Capablanca Memorial (1965): Esta partida tiene una curiosa historia, se jugó por teletipo ya que las autoridades de Estados Unidos no le permitieron a Fischer viajar a La Habana a jugar el torneo...',
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
       twitter: 'TallerDeAjedre2'
     },
     {
-      img: 'assets/images/nuevas/estudio-david-gurgenidze.webp',
+      img: 'assets/images/nuevas/estudio-david-gurgenidze.jpg',
       titulo: 'Estudio de David Gurgenidze',
       link: '/estudio-david-gurgenidze/1',
       extracto: 'Juegan las blancas y ganan la partida',
