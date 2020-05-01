@@ -10,3 +10,8 @@ img {
     display: inline-block;
     margin-bottom: 20px;
 }
+
+.galeria {
+    width: 640px;
+    margin: auto;
+}

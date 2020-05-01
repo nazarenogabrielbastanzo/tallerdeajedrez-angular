@@ -18,47 +18,19 @@ export class FotoComponent implements OnInit {
   fotos = [];
   mouseEntro = false;
   nro: number;
-  gallery: any[] = [];
+  cargando: boolean;
 
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[] = [];
-  /* galleryImages: any[] = []; */
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private peticionesService: PeticionesService,
     private router: Router
-  ) {
-    this.id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
-    this.peticionesService.getAlbumes()
-      .subscribe((data: any) => {
-        /* console.log(data); */
-        this.cantidadFotos = data[this.id - 1].cantidadFotos;
-        for (let i = 1; i <= this.cantidadFotos; i++) {
-          this.miArray.push(i);
-        }
-        /* this.primeraFoto = 'assets/images/' + data[this.id - 1].vinculo + '(1).webp'; */
-        // tslint:disable-next-line: prefer-for-of
-        for (let i = 0; i < this.miArray.length; i++) {
-          // const foto = 'assets/images/' + data[this.id - 1].vinculo + '(' + (i + 1) + ').webp';
-          const foto = `assets/images/${data[this.id - 1].vinculo}(${i + 1}).webp`;
-          this.fotos.push(foto);
-        }
-        console.log(this.fotos);
+  ) { }
 
-        // tslint:disable-next-line: prefer-for-of
-        for (let i = 0; i < this.fotos.length; i++) {
-          /* const gallery = '{"small": "' + this.fotos[i] + '", "medium": "' + this.fotos[i] + '", "big": "' + this.fotos[i] + '"}'; */
-          const gallery = `{"small": "${this.fotos[i]}", "medium": "${this.fotos[i]}", "big": "${this.fotos[i]}"}`;
-          const myGallery = JSON.parse(gallery);
-          this.gallery.push(myGallery);
-        }
+  ngOnInit() {
 
-        /* this.galleryImages = this.gallery; */
-        /* console.log(this.galleryImages); */
-
-      });
-    /* this.galleryImages = this.gallery; */
     /* ... */
 
     this.galleryOptions = [
@@ -85,38 +57,33 @@ export class FotoComponent implements OnInit {
       }
     ];
 
-    /* ... */
-    
-    this.galleryImages = [
-      {
-        small: this.fotos[0],
-        medium: this.fotos[0],
-        big: this.fotos[0]
-      },
-      {
-        small: this.fotos[1],
-        medium: this.fotos[1],
-        big: this.fotos[1]
-      },
-      {
-        small: this.fotos[2],
-        medium: this.fotos[2],
-        big: this.fotos[2]
-      },
-      {
-        small: this.fotos[3],
-        medium: this.fotos[3],
-        big: this.fotos[3]
-      }
-    ]
-    console.log(this.galleryImages);
+    this.id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
+    this.cargando = true;
+    this.peticionesService.getAlbumes()
+      .subscribe((data: any) => {
+        this.cantidadFotos = data[this.id - 1].cantidadFotos;
+        for (let i = 1; i <= this.cantidadFotos; i++) {
+          this.miArray.push(i);
+        }
 
-  }
+        // tslint:disable-next-line: prefer-for-of
+        for (let i = 0; i < this.miArray.length; i++) {
+          const foto = `assets/images/${data[this.id - 1].vinculo}(${i + 1}).jpg`;
+          this.fotos.push(foto);
+        }
 
-  ngOnInit() {
+        // tslint:disable-next-line: prefer-for-of
+        for (let i = 0; i < this.fotos.length; i++) {
+          const gallery: NgxGalleryImage = {
+              small: this.fotos[i],
+              medium: this.fotos[i],
+              big: this.fotos[i]
+          };
+          this.galleryImages.push(gallery);
+        }
+        this.cargando = false;
+      });
 
-    
-    
   }
 
   verFoto(album: number, numero: number) {
