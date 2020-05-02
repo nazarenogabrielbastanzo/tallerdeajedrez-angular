@@ -37,12 +37,12 @@ import { ScrollTopComponent } from './components/shared/scroll-top/scroll-top.co
 import { FotoComponent } from './components/foto/foto.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { FotoFullComponent } from './components/foto-full/foto-full.component';
-import { EstudioDavidGurgenidzeComponent } from './components/estudio-david-gurgenidze/estudio-david-gurgenidze.component';
 import { BuscarAlbumComponent } from './components/buscar-album/buscar-album.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AdminComponent } from './admin/admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EstudioComponent } from './components/estudio/estudio.component';
+import { EstudiosComponent } from './components/estudios/estudios.component';
 
 @NgModule({
   declarations: [
@@ -63,11 +63,11 @@ import { EstudioComponent } from './components/estudio/estudio.component';
     FotoComponent,
     BuscadorComponent,
     FotoFullComponent,
-    EstudioDavidGurgenidzeComponent,
     BuscarAlbumComponent,
     ProfileComponent,
     AdminComponent,
     EstudioComponent,
+    EstudiosComponent,
     /* SnackBarComponent */
   ],
   imports: [

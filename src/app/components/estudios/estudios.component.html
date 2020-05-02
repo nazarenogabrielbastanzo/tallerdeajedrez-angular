@@ -1,0 +1,13 @@
+<h4 class="text-center display-4 my-5">Estudios</h4>
+<div class="card-columns">
+    <mat-card class="card m-3" *ngFor="let estudio of estudios; let i = index">
+        <mat-card-header>
+            <mat-card-title>{{estudio.titulo}}</mat-card-title>
+            <mat-card-subtitle>{{estudio.propuesta}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="estudio.img" [alt]="estudio.titulo">
+        <mat-card-actions class="text-center">
+            <button mat-raised-button (click)="irAlLink( estudio.id )" class="button-accent"><b>VER MÁS</b></button>
+        </mat-card-actions>
+    </mat-card>
+</div>

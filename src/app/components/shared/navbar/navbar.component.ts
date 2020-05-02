@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -11,10 +11,14 @@ export class NavbarComponent implements OnInit {
   public isMenuCollapsed = true;
 
   constructor(
-    public auth: AuthService
+    public router: Router
   ) { }
 
   ngOnInit() {
+  }
+
+  irAlLink(link: any[]) {
+    this.router.navigate(link);
   }
 
 }

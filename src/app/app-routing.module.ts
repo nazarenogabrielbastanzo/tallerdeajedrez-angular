@@ -12,12 +12,12 @@ import { PartidaTringovFischerComponent } from './components/partida-tringov-fis
 import { PartidaComponent } from './components/partida/partida.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { FotoFullComponent } from './components/foto-full/foto-full.component';
-import { EstudioDavidGurgenidzeComponent } from './components/estudio-david-gurgenidze/estudio-david-gurgenidze.component';
 import { BuscarAlbumComponent } from './components/buscar-album/buscar-album.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AuthGuard } from './auth.guard';
 import { AdminComponent } from './admin/admin.component';
 import { EstudioComponent } from './components/estudio/estudio.component';
+import { EstudiosComponent } from './components/estudios/estudios.component';
 
 const routes: Routes = [
   { path: 'inicio', component: HomeComponent },
@@ -31,7 +31,7 @@ const routes: Routes = [
   { path: 'dispositivos', component: DispositivosComponent },
   { path: 'partidas-amistosas', component: PartidasAmistosasComponent},
   { path: 'partida-tringov-fischer', component: PartidaTringovFischerComponent },
-  { path: 'estudio-david-gurgenidze/1', component: EstudioDavidGurgenidzeComponent },
+  { path: 'estudios', component: EstudiosComponent },
   { path: 'estudio/:nro', component: EstudioComponent },
   { path: 'partida/:id', component: PartidaComponent },
   { path: 'buscar/:termino', component: BuscadorComponent },

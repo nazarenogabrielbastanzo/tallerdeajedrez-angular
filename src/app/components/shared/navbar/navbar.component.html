@@ -10,13 +10,9 @@
         <button mat-menu-item [routerLink]="['inicio']">Inicio</button>
         <button mat-menu-item [routerLink]="['partidas']">Partidas</button>
         <button mat-menu-item [routerLink]="['torneos']">Torneos</button>
-        <button mat-menu-item [matMenuTriggerFor]="estudios">Estudios</button>
+        <button mat-menu-item [routerLink]="['estudios']">Estudios</button>
         <button mat-menu-item [routerLink]="['fotos']">Fotos</button>
         <button mat-menu-item [routerLink]="['frases']">Frases</button>
         <button mat-menu-item [routerLink]="['dispositivos']">Dispositivos</button>
-    </mat-menu>
-    <mat-menu #estudios="matMenu">
-        <button mat-menu-item [routerLink]="['estudio/1']">Estudio 1</button>
-        <button mat-menu-item [routerLink]="['estudio/2']">Estudio 2</button>
     </mat-menu>
 </mat-toolbar>

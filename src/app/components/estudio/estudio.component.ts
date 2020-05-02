@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-estudio',
@@ -10,26 +11,31 @@ export class EstudioComponent implements OnInit {
   estudios: any[] = [
     {
       titulo: 'Estudio de David Gurgenidze',
-      propuesta: 'Juegan las blancas y ganan la partida',
-      img: 'assets/images/nuevas/estudio-david-gurgenidze.jpg'
+      propuesta: 'Juegan las blancas y ganan',
+      img: 'assets/images/nuevas/estudio-david-gurgenidze.jpg',
+      id: 'IzvwYriQ6Zs'
+    },
+    {
+      titulo: 'Estudio de A. Senft',
+      propuesta: 'Juegan las blancas y ganan',
+      img: 'assets/images/nuevas/estudio-a-senft.jpg',
+      id: 'uK2unF7pFfY'
     }
   ];
 
-  id: string;
+  id: number;
 
   show = false;
 
   constructor(
-    /* public auth: AuthService */
-  ) {
-    this.id = 'IzvwYriQ6Zs';
-  }
+    public activatedRoute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+    this.id = Number(this.activatedRoute.snapshot.paramMap.get('nro'));
   }
 
   verSolucion() {
-    /* this.auth.login('estudio-david-gurgenidze/1'); */
     this.show = !this.show;
   }
 
