@@ -9,14 +9,14 @@ import { Router } from '@angular/router';
 export class EstudiosComponent implements OnInit {
   estudios: any[] = [
     {
-      id: ['estudio', '1'],
+      id: 1,
       titulo: 'Estudio de David Gurgenidze',
       propuesta: 'Juegan las blancas y ganan',
       img: 'assets/images/nuevas/estudio-david-gurgenidze.jpg',
       youtubeId: 'IzvwYriQ6Zs'
     },
     {
-      id: ['estudio', '2'],
+      id: 2,
       titulo: 'Estudio de A. Senft',
       propuesta: 'Juegan las blancas y ganan',
       img: 'assets/images/nuevas/estudio-a-senft.jpg',

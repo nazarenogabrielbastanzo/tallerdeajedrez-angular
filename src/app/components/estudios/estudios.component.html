@@ -7,7 +7,7 @@
         </mat-card-header>
         <img mat-card-image [src]="estudio.img" [alt]="estudio.titulo">
         <mat-card-actions class="text-center">
-            <button mat-raised-button (click)="irAlLink( estudio.id )" class="button-accent"><b>VER MÁS</b></button>
+            <button mat-raised-button (click)="irAlLink( ['estudio', estudio.id] )" class="button-accent"><b>VER MÁS</b></button>
         </mat-card-actions>
     </mat-card>
 </div>
