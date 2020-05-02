@@ -5,8 +5,11 @@
 </div>
 <div class="container-fluid animated fadeIn slow">
     <h1 class="display-4 text-center my-5">Fotos del Álbum {{ id }}</h1>
-    <p class="text-center">(Clic en la foto central para ver la foto más grande)</p>
-    <div class="galeria">
-        <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+    <mat-divider></mat-divider>
+    <div class="my-5">
+        <p class="text-center">(Clic en la foto central para ver la foto más grande)</p>
+        <div class="galeria">
+            <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+        </div>
     </div>
 </div>

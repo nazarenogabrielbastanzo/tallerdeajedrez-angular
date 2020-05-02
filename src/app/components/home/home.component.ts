@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
       img: 'assets/images/nuevas/estudio-david-gurgenidze.jpg',
       titulo: 'Estudio de David Gurgenidze',
       link: ['estudio', '1'],
-      extracto: 'Juegan las blancas y ganan la partida',
+      extracto: 'Juegan las blancas y ganan',
       autor: 'Jorge Raúl Bastanzo',
       twitter: 'jbastanzo'
     }

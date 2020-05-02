@@ -4,15 +4,18 @@
     </div>
 </div>
 <div class="animated fadeIn slow">
-    <div class="container">
+    <div class="container-fluid">
         <h1 class="display-4 text-center my-5">Frases</h1>
-        <div class="card shadow mb-5" *ngFor="let frase of frases">
-            <a [name]="frase.id"></a>
-            <div class="card-body">
-                <blockquote class="blockquote">
-                    <p class="mb-0"><i>"{{ frase.frase }}"</i></p>
-                    <footer class="blockquote-footer text-right">{{ frase.autor }}</footer>
-                </blockquote>
+        <mat-divider></mat-divider>
+        <div class="card-columns my-5">
+            <div class="card shadow" *ngFor="let frase of frases">
+                <a [name]="frase.id"></a>
+                <div class="card-body">
+                    <blockquote class="blockquote">
+                        <p class="mb-0"><i>"{{ frase.frase }}"</i></p>
+                        <footer class="blockquote-footer text-right">{{ frase.autor }}</footer>
+                    </blockquote>
+                </div>
             </div>
         </div>
     </div>

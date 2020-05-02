@@ -6,7 +6,9 @@
 <div class="container-fluid animated fadeIn slow">
     <h1 class="display-4 text-center my-5">Fotos</h1>
 
-    <mat-form-field class="full-width">
+    <mat-divider></mat-divider>
+
+    <mat-form-field class="full-width mt-5">
         <mat-label>Buscar álbum</mat-label>
         <input matInput placeholder="Por ejemplo: polgar" (keyup.enter)="buscarAlbum(buscarTexto.value)" type="text" #buscarTexto [(ngModel)]="terminoDeBusqueda" autocomplete="off">
     </mat-form-field>

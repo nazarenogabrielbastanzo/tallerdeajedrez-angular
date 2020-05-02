@@ -9,23 +9,27 @@
     <i class="fas fa-angle-double-down fa-3x pointer" (click)="scrollDown()" matTooltip="Bajar un poco..." matTooltipPosition="left"></i>
 </div>
 
-<div class="card-columns">
+<div class="card-deck m-3">
     <mat-card class="card m-3" *ngFor="let tarjeta of tarjetas; let i = index">
-        <mat-card-header>
+        <mat-card-header class="card-header">
             <div mat-card-avatar class="example-header-image">
                 <a href="https://twitter.com/{{tarjeta.twitter}}" rel="noopener" target="_blank">
                     <img src="../../../assets/images/nuevas/{{tarjeta.twitter}}.jpg" alt="Foto del perfil del autor en Twitter" mat-card-avatar [matTooltip]="tarjeta.autor" style="cursor: pointer;">
                 </a>
             </div>
-            <mat-card-title>{{tarjeta.titulo}}</mat-card-title>
-            <mat-card-subtitle>{{tarjeta.autor}}</mat-card-subtitle>
+            <mat-card-title class="card-title">{{tarjeta.titulo}}</mat-card-title>
+            <mat-card-subtitle class="card-subtitle">{{tarjeta.autor}}</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image [src]="tarjeta.img" [alt]="tarjeta.titulo">
-        <mat-card-content>
-            <p>{{tarjeta.extracto}}</p>
-        </mat-card-content>
-        <mat-card-actions class="text-center">
-            <button mat-raised-button (click)="irAlLink( tarjeta.link )" class="button-accent"><b>VER MÁS</b></button>
-        </mat-card-actions>
+        <div class="card-body">
+            <img mat-card-image [src]="tarjeta.img" [alt]="tarjeta.titulo" class="card-img">
+            <mat-card-content class="card-text">
+                <p>{{tarjeta.extracto}}</p>
+            </mat-card-content>
+        </div>
+        <div class="card-footer">
+            <mat-card-actions class="text-center">
+                <button mat-raised-button (click)="irAlLink( tarjeta.link )" class="button-accent"><b>VER MÁS</b></button>
+            </mat-card-actions>
+        </div>
     </mat-card>
 </div>

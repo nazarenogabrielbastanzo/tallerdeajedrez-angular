@@ -10,6 +10,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
 /* import {MatSnackBarModule} from '@angular/material/snack-bar'; */
 
 @NgModule({
@@ -24,7 +25,8 @@ import {MatCardModule} from '@angular/material/card';
     MatSlideToggleModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    MatDividerModule
     /* MatSnackBarModule */
   ],
   exports: [
@@ -36,7 +38,8 @@ import {MatCardModule} from '@angular/material/card';
     MatSlideToggleModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    MatDividerModule
     /* MatSnackBarModule */
   ]
 })
