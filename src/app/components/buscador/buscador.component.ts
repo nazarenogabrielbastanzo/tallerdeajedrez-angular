@@ -14,7 +14,7 @@ export class BuscadorComponent implements OnInit {
   partidas: any[] = []; // es arreglo porque pueden ser varias las coincidencias que aparezcan
   termino: string;
   srcImgPop: string;
-  webp: boolean;
+  jpg: boolean;
   gif: boolean;
   srcGIF: string;
   numero: number;
@@ -54,10 +54,10 @@ export class BuscadorComponent implements OnInit {
   setSrcImgPop(numero: number, tipo: string) {
     if (tipo === 'final') {
       this.gif = false;
-      this.webp = true;
-      this.srcImgPop = `assets/images/nuevas/tooltips/${ numero }.webp`;
+      this.jpg = true;
+      this.srcImgPop = `assets/images/nuevas/tooltips/${ numero }.jpg`;
     } else {
-      this.webp = false;
+      this.jpg = false;
       this.gif = true;
       this.srcGIF = `assets/images/nuevas/gifs/${ numero }.gif`;
     }

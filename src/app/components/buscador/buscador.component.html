@@ -1,14 +1,14 @@
 <!-- ... -->
 <ng-template #content let-modal>
     <div class="modal-header">
-        <h4 class="modal-title" *ngIf="webp === true">Final de la Partida {{numero}}</h4>
+        <h4 class="modal-title" *ngIf="jpg === true">Final de la Partida {{numero}}</h4>
         <h4 class="modal-title" *ngIf="gif === true">Vista rápida de la Partida {{numero}}</h4>
         <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
     <span aria-hidden="true">&times;</span>
   </button>
     </div>
     <div class="modal-body">
-        <img *ngIf="webp === true" [src]="srcImgPop" alt="Final de la partida {{numero}}" class="img-fluid" style="width: 100%;">
+        <img *ngIf="jpg === true" [src]="srcImgPop" alt="Final de la partida {{numero}}" class="img-fluid" style="width: 100%;">
         <img *ngIf="gif === true" [src]="srcGIF" alt="GIF de la partida {{numero}}" class="img-fluid" style="width: 100%;">
     </div>
     <!-- <div class="modal-footer">

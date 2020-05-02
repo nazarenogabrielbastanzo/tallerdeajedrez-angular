@@ -12,7 +12,7 @@ export class EstudioDavidGurgenidzeComponent implements OnInit {
     {
       titulo: 'Estudio de David Gurgenidze',
       propuesta: 'Juegan las blancas y ganan la partida',
-      img: 'assets/images/nuevas/estudio-david-gurgenidze.webp'
+      img: 'assets/images/nuevas/estudio-david-gurgenidze.jpg'
     }
   ];
 

@@ -22,7 +22,7 @@ export class PartidasComponent implements OnInit, OnDestroy {
   numero: number;
   srcGIF: string;
   gif: boolean;
-  webp: boolean;
+  jpg: boolean;
 
   @ViewChild(DataTableDirective)
   dtElement: DataTableDirective;
@@ -93,10 +93,10 @@ export class PartidasComponent implements OnInit, OnDestroy {
   setSrcImgPop(numero: number, tipo: string) {
     if (tipo === 'final') {
       this.gif = false;
-      this.webp = true;
-      this.srcImgPop = `assets/images/nuevas/tooltips/${ numero }.webp`;
+      this.jpg = true;
+      this.srcImgPop = `assets/images/nuevas/tooltips/${ numero }.jpg`;
     } else {
-      this.webp = false;
+      this.jpg = false;
       this.gif = true;
       this.srcGIF = `assets/images/nuevas/gifs/${ numero }.gif`;
     }
