@@ -42,6 +42,7 @@ import { BuscarAlbumComponent } from './components/buscar-album/buscar-album.com
 import { ProfileComponent } from './components/profile/profile.component';
 import { AdminComponent } from './admin/admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EstudioComponent } from './components/estudio/estudio.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BuscarAlbumComponent,
     ProfileComponent,
     AdminComponent,
+    EstudioComponent,
     /* SnackBarComponent */
   ],
   imports: [

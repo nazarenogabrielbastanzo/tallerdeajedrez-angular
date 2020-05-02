@@ -17,6 +17,7 @@ import { BuscarAlbumComponent } from './components/buscar-album/buscar-album.com
 import { ProfileComponent } from './components/profile/profile.component';
 import { AuthGuard } from './auth.guard';
 import { AdminComponent } from './admin/admin.component';
+import { EstudioComponent } from './components/estudio/estudio.component';
 
 const routes: Routes = [
   { path: 'inicio', component: HomeComponent },
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'partidas-amistosas', component: PartidasAmistosasComponent},
   { path: 'partida-tringov-fischer', component: PartidaTringovFischerComponent },
   { path: 'estudio-david-gurgenidze/1', component: EstudioDavidGurgenidzeComponent },
+  { path: 'estudio/:nro', component: EstudioComponent },
   { path: 'partida/:id', component: PartidaComponent },
   { path: 'buscar/:termino', component: BuscadorComponent },
   { path: 'perfil', component: ProfileComponent, canActivate: [AuthGuard] },
