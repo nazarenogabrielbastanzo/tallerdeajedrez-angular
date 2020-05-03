@@ -14,11 +14,15 @@ export class PartidaComponent implements OnInit {
   blancas: string;
   negras: string;
   resultado: string;
+  celular = (screen.width < 720) ? true : false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private peticionesService: PeticionesService
-  ) {
+  ) { }
+
+  ngOnInit(): void {
+
     this.id = Number(this.activatedRoute.snapshot.paramMap.get('id')) - 1;
     this.peticionesService.getPartidas()
       .subscribe((data: any) => {
@@ -27,9 +31,6 @@ export class PartidaComponent implements OnInit {
         this.negras = data[this.id].negras;
         this.resultado = data[this.id].resultado;
       });
-  }
-
-  ngOnInit() {
   }
 
 }

@@ -23,6 +23,8 @@ export class FotoComponent implements OnInit {
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[] = [];
 
+  celular = (screen.width < 800) ? true : false;
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private peticionesService: PeticionesService,
@@ -30,8 +32,6 @@ export class FotoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
-    /* ... */
 
     this.galleryOptions = [
       {

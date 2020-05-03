@@ -6,7 +6,14 @@
 <div class="container-fluid animated fadeIn slow">
     <h1 class="display-4 text-center my-5">Fotos del Álbum {{ id }}</h1>
     <mat-divider></mat-divider>
-    <div class="my-5">
+
+    <div class="row" *ngIf="celular === true">
+        <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2" *ngFor="let foto of fotos; let i = index">
+            <img [src]="foto" alt="Foto {i + 1}" class="img-thumbnail m-3" (click)="verFoto(id, i + 1)">
+        </div>
+    </div>
+
+    <div class="my-5" *ngIf="celular === false">
         <p class="text-center">(Clic en la foto central para ver la foto más grande)</p>
         <div class="galeria">
             <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
