@@ -1,14 +1,20 @@
 <h4 class="text-center display-4 my-5">Estudios</h4>
 <mat-divider></mat-divider>
-<div class="card-deck m-3">
-    <mat-card class="card m-3" *ngFor="let estudio of estudios; let i = index">
-        <mat-card-header>
-            <mat-card-title>{{estudio.titulo}}</mat-card-title>
-            <mat-card-subtitle>{{estudio.propuesta}}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image [src]="estudio.img" [alt]="estudio.titulo">
-        <mat-card-actions class="text-center">
-            <button mat-raised-button (click)="irAlLink( ['estudio', estudio.id] )" class="button-accent"><b>VER MÁS</b></button>
-        </mat-card-actions>
-    </mat-card>
+<!-- Cambiar a continuación, row-cols-md-[número de columnas deseado] y row-cols-lg-[número de columnas deseado] -->
+<!-- NOTA: Con 4 columnas se ve bien -->
+<div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 m-3">
+    <div class="col mb-4" *ngFor="let estudio of estudios; let i = index">
+        <div class="card h-100">
+            <mat-card class="card m-3">
+                <mat-card-header>
+                    <mat-card-title>{{estudio.titulo}}</mat-card-title>
+                    <mat-card-subtitle>{{estudio.propuesta}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image [src]="estudio.img" [alt]="estudio.titulo">
+                <mat-card-actions class="text-center">
+                    <button mat-raised-button (click)="irAlLink( ['estudio', estudio.id] )" class="button-accent"><b>VER MÁS</b></button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
 </div>
