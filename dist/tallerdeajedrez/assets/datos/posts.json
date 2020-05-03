@@ -19,7 +19,15 @@
         "titulo": "Estudio de David Gurgenidze",
         "link": ["estudio", "1"],
         "extracto": "Juegan las blancas y ganan",
-        "autor": "Jorge Raúl Bastanzo",
-        "twitter": "jbastanzo"
+        "autor": "Michael Rahal",
+        "twitter": "Rahal_Michael"
+    },
+    {
+        "img": "assets/images/nuevas/estudios.jpg",
+        "titulo": "Estudios",
+        "link": ["estudios"],
+        "extracto": "En Taller de Ajedrez decidimos colocar estos estudios, que explica muy bien Michael Rahal en su canal de Youtube. Creemos que son una parte muy bonita del ajedrez, la parte artística.",
+        "autor": "Taller de Ajedrez",
+        "twitter": "TallerDeAjedre2"
     }
 ]
