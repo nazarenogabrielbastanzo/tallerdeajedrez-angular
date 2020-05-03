@@ -10,18 +10,16 @@ export class PeticionesService {
   urlAlbumes = 'assets/datos/albumes.json';
   urlFrases = 'assets/datos/frases.json';
   urlPosts = 'assets/datos/posts.json';
+  urlEstudios = 'assets/datos/estudios.json';
   partidas: any;
   albumes: any;
 
   constructor(
     private httpClient: HttpClient
-  ) {
-    this.getPartidas().subscribe((data: any) => {
-      this.partidas = data;
-    });
-    this.getAlbumes().subscribe((data: any) => {
-      this.albumes = data;
-    });
+  ) { }
+
+  getEstudios() {
+    return this.httpClient.get(this.urlEstudios);
   }
 
   getPosts() {

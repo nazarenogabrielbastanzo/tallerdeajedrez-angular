@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { PeticionesService } from '../../services/peticiones.service';
 
 @Component({
   selector: 'app-estudio',
@@ -8,31 +9,23 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EstudioComponent implements OnInit {
 
-  estudios: any[] = [
-    {
-      titulo: 'Estudio de David Gurgenidze',
-      propuesta: 'Juegan las blancas y ganan',
-      img: 'assets/images/nuevas/estudio-david-gurgenidze.jpg',
-      id: 'IzvwYriQ6Zs'
-    },
-    {
-      titulo: 'Estudio de A. Senft',
-      propuesta: 'Juegan las blancas y ganan',
-      img: 'assets/images/nuevas/estudio-a-senft.jpg',
-      id: 'uK2unF7pFfY'
-    }
-  ];
 
   id: number;
 
   show = false;
+  estudios: any[];
 
   constructor(
-    public activatedRoute: ActivatedRoute
+    public activatedRoute: ActivatedRoute,
+    public peticionesService: PeticionesService
   ) { }
 
   ngOnInit(): void {
     this.id = Number(this.activatedRoute.snapshot.paramMap.get('nro'));
+    this.peticionesService.getEstudios()
+      .subscribe((estudios: any[]) => {
+        this.estudios = estudios;
+      });
   }
 
   verSolucion() {

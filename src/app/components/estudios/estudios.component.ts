@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PeticionesService } from '../../services/peticiones.service';
 
 @Component({
   selector: 'app-estudios',
@@ -7,28 +8,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./estudios.component.css']
 })
 export class EstudiosComponent implements OnInit {
-  estudios: any[] = [
-    {
-      id: 1,
-      titulo: 'Estudio de David Gurgenidze',
-      propuesta: 'Juegan las blancas y ganan',
-      img: 'assets/images/nuevas/estudio-david-gurgenidze.jpg',
-      youtubeId: 'IzvwYriQ6Zs'
-    },
-    {
-      id: 2,
-      titulo: 'Estudio de A. Senft',
-      propuesta: 'Juegan las blancas y ganan',
-      img: 'assets/images/nuevas/estudio-a-senft.jpg',
-      youtubeId: 'uK2unF7pFfY'
-    }
-  ];
+  estudios: any;
 
   constructor(
-    public router: Router
+    public router: Router,
+    public peticionesService: PeticionesService
   ) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.peticionesService.getEstudios()
+      .subscribe((estudios: any) => {
+        this.estudios = estudios;
+      });
+  }
 
   irAlLink(link: any[]) {
     this.router.navigate(link);
