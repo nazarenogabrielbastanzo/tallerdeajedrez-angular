@@ -1,0 +1,22 @@
+[{
+        "id": 1,
+        "titulo": "Estudio de David Gurgenidze",
+        "propuesta": "Juegan las blancas y ganan",
+        "img": "assets/images/nuevas/estudio-david-gurgenidze.jpg",
+        "youtubeId": "IzvwYriQ6Zs"
+    },
+    {
+        "id": 2,
+        "titulo": "Estudio de A. Senft",
+        "propuesta": "Juegan las blancas y ganan",
+        "img": "assets/images/nuevas/estudio-a-senft.jpg",
+        "youtubeId": "uK2unF7pFfY"
+    },
+    {
+        "id": 3,
+        "titulo": "Estudio de Aleksei Troitski",
+        "propuesta": "Juegan las blancas y consiguen empatar",
+        "img": "assets/images/nuevas/estudio-aleksei-troitski.jpg",
+        "youtubeId": "hRK0FFtCUAA"
+    }
+]
