@@ -9,6 +9,7 @@ export class PeticionesService {
   urlPartidas = 'assets/datos/partidas.json';
   urlAlbumes = 'assets/datos/albumes.json';
   urlFrases = 'assets/datos/frases.json';
+  urlPosts = 'assets/datos/posts.json';
   partidas: any;
   albumes: any;
 
@@ -21,6 +22,10 @@ export class PeticionesService {
     this.getAlbumes().subscribe((data: any) => {
       this.albumes = data;
     });
+  }
+
+  getPosts() {
+    return this.httpClient.get(this.urlPosts);
   }
 
   getPartidas() {
