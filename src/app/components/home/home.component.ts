@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
 
   scrollDown() {
     window.scrollTo({
-      top: 600,
+      top: window.scrollY + 600,
       behavior: 'smooth'
     });
   }
