@@ -9,6 +9,7 @@ import { PeticionesService } from '../../services/peticiones.service';
 })
 export class EstudiosComponent implements OnInit {
   estudios: any;
+  cargando: boolean;
 
   constructor(
     public router: Router,
@@ -16,9 +17,11 @@ export class EstudiosComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.cargando = true;
     this.peticionesService.getEstudios()
       .subscribe((estudios: any) => {
         this.estudios = estudios;
+        this.cargando = false;
       });
   }
 
