@@ -9,16 +9,12 @@ export class TorneosComponent implements OnInit {
 
   torneos: any = {};
 
-  constructor() {
-    this.torneos.nombre = 'FIDE Candidates 2020';
+  constructor() { }
 
-    this.torneos.url = this.torneos.nombre.toLowerCase().split(' ').join('-');
-    // Si lo anterior no funciona, intentar por ejemplo:
-    // this.torneos.url = 'url-del-torneo' + '/0';
-    this.torneos.url = `${this.torneos.url}/0`;
-  }
-
-  ngOnInit() {
+  ngOnInit(): void {
+    this.torneos.nombre = 'Magnus Carlsen Invitational 2020 Final4';
+    const url = this.torneos.nombre.toLowerCase().split(' ').join('-');
+    this.torneos.url = `${url}/0`;
   }
 
 }
