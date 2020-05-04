@@ -8,33 +8,35 @@
 
     <mat-divider></mat-divider>
 
-    <mat-form-field class="full-width mt-5">
-        <mat-label>Buscar álbum</mat-label>
-        <input matInput placeholder="Por ejemplo: polgar" (keyup.enter)="buscarAlbum(buscarTexto.value)" type="text" #buscarTexto [(ngModel)]="terminoDeBusqueda" autocomplete="off">
-    </mat-form-field>
+    <div class="container card my-5 shadow">
+        <mat-form-field class="full-width my-3">
+            <mat-label>Buscar álbum</mat-label>
+            <input matInput placeholder="Por ejemplo: polgar" (keyup.enter)="buscarAlbum(buscarTexto.value)" type="text" #buscarTexto [(ngModel)]="terminoDeBusqueda" autocomplete="off">
+        </mat-form-field>
 
-    <ngb-alert *ngIf="info" type="danger" (close)="info = false" class="text-center animated fadeIn">{{ infoMessage }}</ngb-alert>
+        <ngb-alert *ngIf="info" type="danger" (close)="info = false" class="text-center animated fadeIn">{{ infoMessage }}</ngb-alert>
 
-    <div class="table-responsive">
-        <table class="table table-bordered table-hover" style="zoom: 80%;">
-            <thead>
-                <tr class="text-center">
-                    <th>ID</th>
-                    <th>Álbum</th>
-                    <th>Lugar</th>
-                    <th>Fecha</th>
-                    <th>Fotos</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let album of albumes" style="cursor: pointer;" (click)="verAlbum(album.album_id)">
-                    <td>{{ album.album_id }}</td>
-                    <td>{{ album.album }}</td>
-                    <td>{{ album.lugar }}</td>
-                    <td>{{ album.fecha }}</td>
-                    <td>{{ album.cantidadFotos }}</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover" style="zoom: 80%;">
+                <thead>
+                    <tr class="text-center">
+                        <th>ID</th>
+                        <th>Álbum</th>
+                        <th>Lugar</th>
+                        <th>Fecha</th>
+                        <th>Fotos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let album of albumes" style="cursor: pointer;" (click)="verAlbum(album.album_id)">
+                        <td>{{ album.album_id }}</td>
+                        <td>{{ album.album }}</td>
+                        <td>{{ album.lugar }}</td>
+                        <td>{{ album.fecha }}</td>
+                        <td>{{ album.cantidadFotos }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
