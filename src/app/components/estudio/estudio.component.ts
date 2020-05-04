@@ -21,7 +21,7 @@ export class EstudioComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.id = Number(this.activatedRoute.snapshot.paramMap.get('nro'));
+    this.id = (Number(this.activatedRoute.snapshot.paramMap.get('nro'))) - 1;
     this.peticionesService.getEstudios()
       .subscribe((estudios: any[]) => {
         this.estudios = estudios;

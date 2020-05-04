@@ -1,10 +1,10 @@
 <div class="animated fadeIn slow">
     <div class="container-fluid text-center">
-        <h1 class="display-4 my-5">{{ estudios[id - 1].titulo }}</h1>
+        <h1 class="display-4 my-5">{{ estudios[id].titulo }}</h1>
         <mat-divider></mat-divider>
         <div class="container mt-5">
-            <p> {{ estudios[id - 1].propuesta }} </p>
-            <img [src]="estudios[id - 1].img" [alt]="estudios[id - 1].titulo" class="rounded mx-auto d-block">
+            <p> {{ estudios[id].propuesta }} </p>
+            <img [src]="estudios[id].img" [alt]="estudios[id].titulo" class="rounded mx-auto d-block">
             <mat-slide-toggle color="primary" (click)="verSolucion()" class="my-5">
                 <span>Mostrar solución</span>
             </mat-slide-toggle>
@@ -14,7 +14,7 @@
                 <h5 class="card-header mt-3">Fuente y explicación del estudio:</h5>
                 <div class="card-body">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" width="560" height="315" [src]="estudios[id - 1].youtubeId | domseguro: 'https://www.youtube-nocookie.com/embed/'" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" width="560" height="315" [src]="estudios[id].youtubeId | domseguro: 'https://www.youtube-nocookie.com/embed/'" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
