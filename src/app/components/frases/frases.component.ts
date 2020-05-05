@@ -13,16 +13,15 @@ export class FrasesComponent implements OnInit {
 
   constructor(
     private peticionesServices: PeticionesService
-  ) {
+  ) { }
+
+  ngOnInit(): void {
     this.cargando = true;
     this.peticionesServices.getFrases()
       .subscribe((data: any) => {
         this.cargando = false;
         this.frases = data;
       });
-  }
-
-  ngOnInit() {
   }
 
 }

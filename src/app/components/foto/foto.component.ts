@@ -32,6 +32,7 @@ export class FotoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.cargando = true;
 
     this.galleryOptions = [
       {
@@ -58,7 +59,6 @@ export class FotoComponent implements OnInit {
     ];
 
     this.id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
-    this.cargando = true;
     this.peticionesService.getAlbumes()
       .subscribe((data: any) => {
         this.cantidadFotos = data[this.id - 1].cantidadFotos;
@@ -81,8 +81,8 @@ export class FotoComponent implements OnInit {
           };
           this.galleryImages.push(gallery);
         }
-        this.cargando = false;
       });
+    this.cargando = false;
 
   }
 
