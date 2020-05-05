@@ -11,7 +11,7 @@ import { PeticionesService } from '../../services/peticiones.service';
 })
 export class BuscadorComponent implements OnInit {
 
-  partidas: any[] = []; // es arreglo porque pueden ser varias las coincidencias que aparezcan
+  partidas: any[] = [];
   termino: string;
   srcImgPop: string;
   jpg: boolean;
@@ -24,17 +24,14 @@ export class BuscadorComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private peticionesService: PeticionesService,
     private router: Router
-  ) {
+  ) { }
+
+  ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: any) => {
-      /* console.log( params.termino ); */
-      /* o bien: *//* console.log( params['termino'] ); */
       this.termino = params.termino;
       this.partidas = this.peticionesService.buscarPartidas( params.termino );
-      /* console.log(this.partidas); */
     });
   }
-
-  ngOnInit() {}
 
   openLg(content: any, numero: number, tipo: string) {
     /* this.modalService.open(content, { size: 'lg' }); */

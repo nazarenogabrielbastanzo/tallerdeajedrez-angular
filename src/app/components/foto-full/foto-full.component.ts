@@ -19,18 +19,16 @@ export class FotoFullComponent implements OnInit {
     private peticionesService: PeticionesService,
     /* private location: Location */
     private router: Router
-  ) {
+  ) { }
+
+  ngOnInit(): void {
     this.album = Number(this.activatedRoute.snapshot.paramMap.get('album'));
     this.numero = Number(this.activatedRoute.snapshot.paramMap.get('numero'));
 
     this.peticionesService.getAlbumes()
       .subscribe((data: any) => {
-        /* console.log(data); */
         this.foto = `assets/images/${ data[this.album - 1].vinculo }(${ this.numero }).jpg`;
       });
-  }
-
-  ngOnInit() {
   }
 
   goBack( albumId: number ): void {

@@ -16,7 +16,14 @@ export class PeticionesService {
 
   constructor(
     private httpClient: HttpClient
-  ) { }
+  ) {
+    this.getPartidas().subscribe((data: any) => {
+      this.partidas = data;
+    });
+    this.getAlbumes().subscribe((data: any) => {
+      this.albumes = data;
+    });
+  }
 
   getEstudios() {
     return this.httpClient.get(this.urlEstudios);

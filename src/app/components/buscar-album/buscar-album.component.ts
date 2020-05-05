@@ -9,7 +9,7 @@ import { PeticionesService } from '../../services/peticiones.service';
 })
 export class BuscarAlbumComponent implements OnInit {
 
-  albumes: any[] = []; // es arreglo porque pueden ser varias las coincidencias que aparezcan
+  albumes: any[] = [];
   termino: string;
 
   constructor(
@@ -18,13 +18,10 @@ export class BuscarAlbumComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: any) => {
-      /* console.log( params.termino ); */
-      /* o bien: *//* console.log( params['termino'] ); */
       this.termino = params.termino;
       this.albumes = this.peticionesService.buscarAlbumes( params.termino );
-      /* console.log(this.partidas); */
     });
   }
 

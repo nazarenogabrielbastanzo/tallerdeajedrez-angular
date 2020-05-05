@@ -18,7 +18,9 @@ export class FotosComponent implements OnInit {
   constructor(
     private peticionesServices: PeticionesService,
     private router: Router
-  ) {
+  ) { }
+
+  ngOnInit(): void {
     this.cargando = true;
     this.peticionesServices.getAlbumes()
       .subscribe((data: any) => {
@@ -29,11 +31,7 @@ export class FotosComponent implements OnInit {
     this.infoMessage = 'Ingrese un texto para buscar . . .';
   }
 
-  ngOnInit() {
-  }
-
   verAlbum(numero: number) {
-    /* console.log(numero); */
     this.router.navigate(['/album', numero]);
   }
 
