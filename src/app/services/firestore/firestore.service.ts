@@ -12,23 +12,23 @@ export class FirestoreService {
   ) { }
 
   // Crea
-  public crearColeccion(data: any) {
-    return this.firestore.collection('mi_coleccion').add(data);
+  public crearPartida(data: any) {
+    return this.firestore.collection('partidas').add(data);
   }
   // Obtiene
-  public getOne(documentId: string) {
-    return this.firestore.collection('mi_coleccion').doc(documentId).snapshotChanges();
+  public getPartida(documentId: string) {
+    return this.firestore.collection('partidas').doc(documentId).snapshotChanges();
   }
   // Obtiene todos
-  public getAll() {
-    return this.firestore.collection('mi_coleccion').snapshotChanges();
+  public getPartidas() {
+    return this.firestore.collection('partidas').snapshotChanges();
   }
   // Actualiza uno
-  public updateOne(documentId: string, data: any) {
-    return this.firestore.collection('mi_coleccion').doc(documentId).set(data);
+  public updatePartida(documentId: string, data: any) {
+    return this.firestore.collection('partidas').doc(documentId).set(data);
   }
   // Elimina uno
-  public deleteOne( documentId: string ) {
-    return this.firestore.collection('mi_coleccion').doc(documentId).delete();
+  public deletePartida( documentId: string ) {
+    return this.firestore.collection('partidas').doc(documentId).delete();
   }
 }

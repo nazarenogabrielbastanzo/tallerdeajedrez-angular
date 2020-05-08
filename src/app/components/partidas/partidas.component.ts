@@ -4,6 +4,7 @@ import { PeticionesService } from '../../services/peticiones.service';
 import { Router } from '@angular/router';
 import { DataTableDirective } from 'angular-datatables';
 import { Subject } from 'rxjs';
+import { FirestoreService } from '../../services/firestore/firestore.service';
 
 @Component({
   selector: 'app-partidas',
@@ -32,25 +33,33 @@ export class PartidasComponent implements OnInit, OnDestroy {
   constructor(
     private modalService: NgbModal,
     private peticionesService: PeticionesService,
-    private router: Router
+    private router: Router,
+    private firestoreService: FirestoreService
   ) {
     this.cargando = true;
-    this.peticionesService.getPartidas()
-      .subscribe((data: any) => {
+    this.firestoreService.getPartidas().subscribe((partidasSnapshot) => {
+      this.partidas = [];
+      partidasSnapshot.forEach((partidaData: any) => {
+        this.partidas.push({
+          id: partidaData.payload.doc.id,
+          data: partidaData.payload.doc.data()
+        });
         this.cargando = false;
-        this.partidas = data.reverse();
-        this.dtTrigger.next();
       });
+      this.dtTrigger.next();
+    });
     this.info = false;
     this.infoMessage = 'Ingrese un texto para buscar...';
   }
 
   ngOnInit(): void {
+
     this.dtOptions = {
       pagingType: 'full_numbers',
-      ordering: false
+      ordering: true
     };
     this.rerender();
+
   }
 
   ngOnDestroy(): void {

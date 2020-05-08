@@ -23,7 +23,7 @@
     <mat-divider></mat-divider>
 
     <div class="table-responsive my-5">
-        <table class="table table-bordered table-hover" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+        <table class="table table-bordered table-hover" id="datatable" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -38,16 +38,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let partida of partidas">
-                    <td>{{ partida.numero }}</td>
-                    <td class="text-right">{{ partida.blancas }}</td>
-                    <td class="text-center">{{ partida.resultado }}</td>
-                    <td class="text-left">{{ partida.negras }}</td>
-                    <td><a mat-raised-button (click)="openLg(content, partida.numero, 'final')">Ver Final</a></td>
-                    <td class="text-center"><a mat-raised-button (click)="openLg(content, partida.numero, 'rapida')">Vista rápida</a></td>
-                    <td><a mat-raised-button (click)="verPartida(partida.numero)">Ver Partida</a></td>
-                    <td>{{partida.evento}}</td>
-                    <td>{{partida.fecha}}</td>
+                <tr *ngFor="let partida of partidas; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td class="text-right">{{ partida.data.blancas }}</td>
+                    <td class="text-center">{{ partida.data.resultado }}</td>
+                    <td class="text-left">{{ partida.data.negras }}</td>
+                    <td><a mat-raised-button (click)="openLg(content, i + 1, 'final')">Ver Final</a></td>
+                    <td class="text-center"><a mat-raised-button (click)="openLg(content, i + 1, 'rapida')">Vista rápida</a></td>
+                    <td><a mat-raised-button (click)="verPartida(i + 1)">Ver Partida</a></td>
+                    <td>{{partida.data.evento}}</td>
+                    <td>{{partida.data.fecha}}</td>
                 </tr>
             </tbody>
         </table>

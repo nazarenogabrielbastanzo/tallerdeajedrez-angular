@@ -41,7 +41,7 @@ export class AdminComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.firestoreService.getAll().subscribe((partidasSnapshot) => {
+    this.firestoreService.getPartidas().subscribe((partidasSnapshot) => {
       this.partidas = [];
       partidasSnapshot.forEach((partidaData: any) => {
         this.partidas.push({
@@ -64,7 +64,7 @@ export class AdminComponent implements OnInit {
         evento: form.evento,
         fecha: form.fecha
       };
-      this.firestoreService.crearColeccion(data).then(() => {
+      this.firestoreService.crearPartida(data).then(() => {
         console.log('Documento creado exitósamente!');
         /* this.openSnackBar(); */
         this.newForm.setValue({
@@ -88,7 +88,7 @@ export class AdminComponent implements OnInit {
         evento: form.evento,
         fecha: form.fecha
       };
-      this.firestoreService.updateOne(documentId, data).then(() => {
+      this.firestoreService.updatePartida(documentId, data).then(() => {
         this.currentStatus = 1;
         this.newForm.setValue({
           partidaId: '',
@@ -107,7 +107,7 @@ export class AdminComponent implements OnInit {
   }
 
   public editarPartida(documentId: string) {
-    const editSubscribe = this.firestoreService.getOne(documentId)
+    const editSubscribe = this.firestoreService.getPartida(documentId)
       .subscribe((partida: any) => {
       this.currentStatus = 2; // Edición
       this.documentId = documentId;
@@ -127,7 +127,7 @@ export class AdminComponent implements OnInit {
     if ( !confirm('¿Seguro de eliminar la partida?') ) {
       return;
     } else {
-      this.firestoreService.deleteOne(documentId)
+      this.firestoreService.deletePartida(documentId)
       .then(() => {
         console.log('Documento eliminado!');
       }, (error) => {
