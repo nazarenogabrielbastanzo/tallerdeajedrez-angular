@@ -17,7 +17,7 @@ export class AdminComponent implements OnInit {
   public documentId = null;
   public currentStatus = 1; // Inserción
   public newForm = new FormGroup({
-    id: new FormControl('', Validators.required),
+    partidaId: new FormControl('', Validators.required),
     blancas: new FormControl('', Validators.required),
     negras: new FormControl('', Validators.required),
     resultado: new FormControl('', Validators.required),
@@ -31,7 +31,7 @@ export class AdminComponent implements OnInit {
     /* private snackBar: MatSnackBar */
   ) {
     this.newForm.setValue({
-      id: '',
+      partidaId: '',
       blancas: '',
       negras: '',
       resultado: '',
@@ -57,7 +57,7 @@ export class AdminComponent implements OnInit {
     console.log(`Status: ${this.currentStatus}`);
     if (this.currentStatus === 1) {
       const data = {
-        id: form.id,
+        partidaId: form.partidaId,
         blancas: form.blancas,
         negras: form.negras,
         resultado: form.resultado,
@@ -68,7 +68,7 @@ export class AdminComponent implements OnInit {
         console.log('Documento creado exitósamente!');
         /* this.openSnackBar(); */
         this.newForm.setValue({
-          id: '',
+          partidaId: '',
           blancas: '',
           negras: '',
           resultado: '',
@@ -81,7 +81,7 @@ export class AdminComponent implements OnInit {
       });
     } else {
       const data = {
-        id: form.id,
+        partidaId: form.partidaId,
         blancas: form.blancas,
         negras: form.negras,
         resultado: form.resultado,
@@ -91,7 +91,7 @@ export class AdminComponent implements OnInit {
       this.firestoreService.updateOne(documentId, data).then(() => {
         this.currentStatus = 1;
         this.newForm.setValue({
-          id: '',
+          partidaId: '',
           blancas: '',
           negras: '',
           resultado: '',
@@ -112,7 +112,7 @@ export class AdminComponent implements OnInit {
       this.currentStatus = 2; // Edición
       this.documentId = documentId;
       this.newForm.setValue({
-        id: partida.payload.data().id,
+        partidaId: partida.payload.data().partidaId,
         blancas: partida.payload.data().blancas,
         negras: partida.payload.data().negras,
         resultado: partida.payload.data().resultado,
