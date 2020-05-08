@@ -42,7 +42,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let partida of partidas; let i = index">
+                <tr *ngFor="let partida of partidas | sortBy:'desc':'data.nro'; let i = index">
                     <td>{{ partida.data.nro }}</td>
                     <td class="text-right">{{ partida.data.blancas }}</td>
                     <td class="text-center">{{ partida.data.resultado }}</td>

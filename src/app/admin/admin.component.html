@@ -64,7 +64,7 @@
                                     <div *ngIf="partidas.length === 0" class="text-center">
                                         Aún no hay partidas en la base de datos.
                                     </div>
-                                    <tr *ngFor="let partida of partidas;let i = index ">
+                                    <tr *ngFor="let partida of partidas | sortBy:'desc':'data.nro';let i = index ">
                                         <td>{{ partida.data.nro }}</td>
                                         <td class="text-right">{{ partida.data.partidaId }}</td>
                                         <td class="text-right">{{ partida.data.blancas }}</td>

@@ -13,6 +13,9 @@ import { MiModuloModule } from './mi-modulo.module';
 import { DataTablesModule } from 'angular-datatables';
 
 import { AngularFireModule } from '@angular/fire';
+
+import { NgpSortModule } from 'ngp-sort-pipe';
+
 import { environment } from '../environments/environment';
 import { AngularFirestore } from '@angular/fire/firestore';
 import 'firebase/firestore';
@@ -81,7 +84,8 @@ import { EstudiosComponent } from './components/estudios/estudios.component';
     AngularFireModule.initializeApp(environment.firebase),
     BrowserAnimationsModule,
     MiModuloModule,
-    DataTablesModule
+    DataTablesModule,
+    NgpSortModule
   ],
   providers: [
     AngularFirestore
