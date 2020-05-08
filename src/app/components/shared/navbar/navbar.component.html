@@ -14,5 +14,6 @@
         <button mat-menu-item [routerLink]="['fotos']">Fotos</button>
         <button mat-menu-item [routerLink]="['frases']">Frases</button>
         <button mat-menu-item [routerLink]="['dispositivos']">Dispositivos</button>
+        <button mat-menu-item (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
     </mat-menu>
 </mat-toolbar>
