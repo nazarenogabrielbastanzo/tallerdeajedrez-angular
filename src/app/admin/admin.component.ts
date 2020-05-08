@@ -17,6 +17,7 @@ export class AdminComponent implements OnInit {
   public documentId = null;
   public currentStatus = 1; // Inserción
   public newForm = new FormGroup({
+    nro: new FormControl('', Validators.required),
     partidaId: new FormControl('', Validators.required),
     blancas: new FormControl('', Validators.required),
     negras: new FormControl('', Validators.required),
@@ -31,6 +32,7 @@ export class AdminComponent implements OnInit {
     /* private snackBar: MatSnackBar */
   ) {
     this.newForm.setValue({
+      nro: '',
       partidaId: '',
       blancas: '',
       negras: '',
@@ -57,6 +59,7 @@ export class AdminComponent implements OnInit {
     console.log(`Status: ${this.currentStatus}`);
     if (this.currentStatus === 1) {
       const data = {
+        nro: form.nro,
         partidaId: form.partidaId,
         blancas: form.blancas,
         negras: form.negras,
@@ -68,6 +71,7 @@ export class AdminComponent implements OnInit {
         console.log('Documento creado exitósamente!');
         /* this.openSnackBar(); */
         this.newForm.setValue({
+          nro: '',
           partidaId: '',
           blancas: '',
           negras: '',
@@ -81,6 +85,7 @@ export class AdminComponent implements OnInit {
       });
     } else {
       const data = {
+        nro: form.nro,
         partidaId: form.partidaId,
         blancas: form.blancas,
         negras: form.negras,
@@ -91,6 +96,7 @@ export class AdminComponent implements OnInit {
       this.firestoreService.updatePartida(documentId, data).then(() => {
         this.currentStatus = 1;
         this.newForm.setValue({
+          nro: '',
           partidaId: '',
           blancas: '',
           negras: '',
@@ -112,6 +118,7 @@ export class AdminComponent implements OnInit {
       this.currentStatus = 2; // Edición
       this.documentId = documentId;
       this.newForm.setValue({
+        nro: partida.payload.data().nro,
         partidaId: partida.payload.data().partidaId,
         blancas: partida.payload.data().blancas,
         negras: partida.payload.data().negras,

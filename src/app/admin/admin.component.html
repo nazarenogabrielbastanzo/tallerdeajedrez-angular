@@ -8,6 +8,10 @@
                         <form (ngSubmit)="nuevaPartida(newForm.value)" [formGroup]="newForm">
                             <input type="hidden" name="id">
                             <div class="form-group">
+                                <label for="nro">#</label>
+                                <input type="text" formControlName="nro" class="form-control" id="nro" name="nro">
+                            </div>
+                            <div class="form-group">
                                 <label for="partidaId">ID</label>
                                 <input type="text" formControlName="partidaId" class="form-control" id="partidaId" name="partidaId">
                             </div>
@@ -61,7 +65,7 @@
                                         Aún no hay partidas en la base de datos.
                                     </div>
                                     <tr *ngFor="let partida of partidas;let i = index ">
-                                        <td>{{ i + 1 }}</td>
+                                        <td>{{ partida.data.nro }}</td>
                                         <td class="text-right">{{ partida.data.partidaId }}</td>
                                         <td class="text-right">{{ partida.data.blancas }}</td>
                                         <td class="text-center">{{ partida.data.resultado }}</td>
