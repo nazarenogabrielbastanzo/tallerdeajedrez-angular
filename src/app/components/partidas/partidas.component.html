@@ -17,6 +17,20 @@
     </div>
 </ng-template>
 
+<ng-template #content2 let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" *ngIf="verCompleta === true">Vista completa de la partida {{numero}}</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" [src]="id | domseguro:'https://lichess.org/embed/'" width="600" height="397" frameborder="0"></iframe>
+        </div>
+    </div>
+</ng-template>
+
 <div class="container-fluid">
     <h4 class="text-center display-4 my-5">Partidas</h4>
 
@@ -49,7 +63,8 @@
                     <td class="text-left">{{ partida.data.negras }}</td>
                     <td><a mat-raised-button (click)="openLg(content, partida.data.nro, 'final')">Ver Final</a></td>
                     <td class="text-center"><a mat-raised-button (click)="openLg(content, partida.data.nro, 'rapida')">Vista rápida</a></td>
-                    <td><a mat-raised-button (click)="verPartida(partida.data.nro)">Ver Partida</a></td>
+                    <!-- <td><a mat-raised-button (click)="verPartida(partida.data.nro)">Ver Partida</a></td> -->
+                    <td><a mat-raised-button (click)="openLg2(content2, partida.id, true)">Ver Partida</a></td>
                     <td>{{partida.data.evento}}</td>
                     <td>{{partida.data.fecha}}</td>
                 </tr>

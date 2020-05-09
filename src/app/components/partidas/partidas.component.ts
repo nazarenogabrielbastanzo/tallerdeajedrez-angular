@@ -29,6 +29,9 @@ export class PartidasComponent implements OnInit, OnDestroy {
   dtElement: DataTableDirective;
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject();
+  id: string;
+  partida: any;
+  verCompleta: boolean;
 
   constructor(
     private modalService: NgbModal,
@@ -80,6 +83,20 @@ export class PartidasComponent implements OnInit, OnDestroy {
     this.modalService.open(content, { centered: true });
     this.numero = numero;
     this.setSrcImgPop(numero, tipo);
+  }
+
+  openLg2(content: any, id: string, verCompleta: boolean) {
+    this.verCompleta = verCompleta;
+    this.modalService.open(content, { centered: true });
+    this.obtenerPartida(id);
+  }
+
+  obtenerPartida(id: string) {
+    const partidaObtenida = this.firestoreService.getPartida(id)
+      .subscribe((partida: any) => {
+        this.id = partida.payload.data().partidaId;
+        this.numero = partida.payload.data().nro;
+      });
   }
 
   verPartida(numero: number) {
