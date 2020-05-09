@@ -1,4 +1,3 @@
-<!-- ... -->
 <ng-template #content let-modal>
     <div class="modal-header">
         <h4 class="modal-title" *ngIf="jpg === true">Final de la Partida {{numero}}</h4>
@@ -11,11 +10,7 @@
         <img *ngIf="jpg === true" [src]="srcImgPop" alt="Final de la partida {{numero}}" class="img-fluid" style="width: 100%;">
         <img *ngIf="gif === true" [src]="srcGIF" alt="GIF de la partida {{numero}}" class="img-fluid" style="width: 100%;">
     </div>
-    <!-- <div class="modal-footer">
-      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
-  </div> -->
 </ng-template>
-<!-- ... -->
 <div class="container-fluid animated fadeIn slow">
     <h4 class="text-center display-4 my-5">Buscar Partidas</h4>
 
@@ -24,7 +19,6 @@
             <i class="fas fa-chevron-left fa-2x"></i> <span class="lead ml-2">Volver</span>
         </button>
     </div>
-
     <div class="row" *ngIf="partidas.length != 0">
         <div class="col">
             <div class="alert alert-info" role="alert" *ngIf="partidas.length != 1">
@@ -35,7 +29,6 @@
             </div>
         </div>
     </div>
-
     <div class="row" *ngIf="partidas.length == 0">
         <div class="col">
             <div class="alert alert-info" role="alert">
@@ -43,53 +36,35 @@
             </div>
         </div>
     </div>
-
     <div class="table-responsive" *ngIf="partidas.length != 0">
         <table class="table table-bordered table-hover" style="zoom: 80%;">
             <thead>
                 <tr>
                     <th class="text-right">Blancas</th>
-
                     <th class="text-center">Resultado</th>
-
                     <th class="text-left">Negras</th>
-
                     <th>Ver Final</th>
-
                     <th>Vista rápida (Nuevo)</th>
-
                     <th>Ver Partida</th>
-
                     <th>Evento</th>
-
                     <th>Fecha</th>
-
                     <th>ID</th>
                 </tr>
             </thead>
-
             <tbody>
                 <ng-template #popContent>
                     <img [src]="srcImgPop" alt="numero" class="img-thumbnail">
                 </ng-template>
                 <tr *ngFor="let partida of partidas">
                     <td class="text-right">{{ partida.blancas }}</td>
-
                     <td class="text-center">{{ partida.resultado }}</td>
-
                     <td class="text-left">{{ partida.negras }}</td>
-
                     <!-- <td><button type="button" class="btn btn-outline-info" (click)="setSrcImgPop(partida.numero)" [ngbPopover]="popContent">Ver Final</button></td> -->
                     <td><button type="button" class="btn btn-outline-info" (click)="openLg(content, partida.numero, 'final')">Ver Final</button></td>
-
                     <td><button type="button" class="btn btn-outline-info" (click)="openLg(content, partida.numero, 'rapida')">Vista rápida</button></td>
-
                     <td><button type="button" class="btn btn-outline-primary" (click)="verPartida(partida.numero)">Ver Partida</button></td>
-
                     <td>{{partida.evento}}</td>
-
                     <td>{{partida.fecha}}</td>
-
                     <td>{{ partida.numero }}</td>
                 </tr>
             </tbody>
