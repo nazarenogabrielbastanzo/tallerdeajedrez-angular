@@ -80,19 +80,19 @@ export class PartidasComponent implements OnInit, OnDestroy {
    }
 
   openLg(content: any, numero: number, tipo: string) {
-    this.modalService.open(content, { centered: true });
+    this.modalService.open(content, { centered: true, backdropClass: 'light-blue-backdrop' });
     this.numero = numero;
     this.setSrcImgPop(numero, tipo);
   }
 
   openLg2(content: any, id: string, verCompleta: boolean) {
     this.verCompleta = verCompleta;
-    this.modalService.open(content, { centered: true });
+    this.modalService.open(content, { centered: true, size: 'lg', backdropClass: 'light-blue-backdrop' });
     this.obtenerPartida(id);
   }
 
   obtenerPartida(id: string) {
-    const partidaObtenida = this.firestoreService.getPartida(id)
+    this.firestoreService.getPartida(id)
       .subscribe((partida: any) => {
         this.id = partida.payload.data().partidaId;
         this.numero = partida.payload.data().nro;
