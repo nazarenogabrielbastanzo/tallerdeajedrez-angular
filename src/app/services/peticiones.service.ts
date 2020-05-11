@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { FirestoreService } from './firestore/firestore.service';
 
 @Injectable({
   providedIn: 'root'
@@ -15,10 +16,17 @@ export class PeticionesService {
   albumes: any;
 
   constructor(
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private firestoreService: FirestoreService
   ) {
-    this.getPartidas().subscribe((data: any) => {
-      this.partidas = data;
+    this.firestoreService.getPartidas().subscribe((partidasSnapshot) => {
+      this.partidas = [];
+      partidasSnapshot.forEach((partidaData: any) => {
+        this.partidas.push({
+          id: partidaData.payload.doc.id,
+          data: partidaData.payload.doc.data()
+        });
+      });
     });
     this.getAlbumes().subscribe((data: any) => {
       this.albumes = data;
@@ -49,12 +57,12 @@ export class PeticionesService {
     const partidasArr: any[] = [];
     termino = termino.toLowerCase();
     for (const partida of this.partidas) {
-        const blancas = partida.blancas.toLowerCase();
-        const negras = partida.negras.toLowerCase();
-        const resultado = partida.resultado;
-        const evento = partida.evento.toLowerCase();
-        const fecha = partida.fecha;
-        const numero = partida.numero.toString();
+        const blancas = partida.data.blancas.toLowerCase();
+        const negras = partida.data.negras.toLowerCase();
+        const resultado = partida.data.resultado;
+        const evento = partida.data.evento.toLowerCase();
+        const fecha = partida.data.fecha;
+        const numero = partida.data.nro.toString();
         if (
           blancas.indexOf( termino ) >= 0 ||
           negras.indexOf( termino ) >= 0 ||

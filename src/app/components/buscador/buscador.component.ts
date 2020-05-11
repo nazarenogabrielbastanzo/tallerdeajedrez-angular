@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PeticionesService } from '../../services/peticiones.service';
+import { FirestoreService } from '../../services/firestore/firestore.service';
 
 @Component({
   selector: 'app-buscador',
@@ -18,12 +19,15 @@ export class BuscadorComponent implements OnInit {
   gif: boolean;
   srcGIF: string;
   numero: number;
+  verCompleta: boolean;
+  id: string;
 
   constructor(
     private modalService: NgbModal,
     private activatedRoute: ActivatedRoute,
     private peticionesService: PeticionesService,
-    private router: Router
+    private router: Router,
+    private firestoreService: FirestoreService
   ) { }
 
   ngOnInit(): void {
@@ -35,9 +39,23 @@ export class BuscadorComponent implements OnInit {
 
   openLg(content: any, numero: number, tipo: string) {
     /* this.modalService.open(content, { size: 'lg' }); */
-    this.modalService.open(content, { centered: true });
+    this.modalService.open(content, { centered: true, backdropClass: 'light-blue-backdrop' });
     this.numero = numero;
     this.setSrcImgPop(numero, tipo);
+  }
+
+  openLg2(content: any, id: string, verCompleta: boolean) {
+    this.verCompleta = verCompleta;
+    this.modalService.open(content, { centered: true, size: 'lg', backdropClass: 'light-blue-backdrop' });
+    this.obtenerPartida(id);
+  }
+
+  obtenerPartida(id: string) {
+    this.firestoreService.getPartida(id)
+      .subscribe((partida: any) => {
+        this.id = partida.payload.data().partidaId;
+        this.numero = partida.payload.data().nro;
+      });
   }
 
   verPartida( numero: number ) {
