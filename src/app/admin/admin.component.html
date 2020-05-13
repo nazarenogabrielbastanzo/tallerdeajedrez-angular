@@ -39,7 +39,7 @@
                             <div class="form-group">
                                 <label for="fecha">Subir archivos a Cloud Storage</label>
                                 <input type="file" class="form-control" name="resume" formControlName="archivo" (change)="cambioArchivo($event)">
-                                <!-- <p *ngIf="finalizado">URL de descarga: <a [href]="URLPublica" target="_blank">Descargar</a></p> -->
+                                <p *ngIf="finalizado">URL de descarga: <a [href]="URLPublica" target="_blank">Descargar</a></p>
                                 <span *ngIf="mensajeArchivo === 'No hay un archivo seleccionado'">
                                   Elegir un archivo…
                                 </span>

@@ -4,7 +4,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 /* import {MatSnackBar} from '@angular/material/snack-bar';
 import { SnackBarComponent } from '../snack-bar/snack-bar.component'; */
-import { FirebaseStorageService } from './../firebase-storage.service';
+import { FirebaseStorageService } from '../firebase-storage.service';
+import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-admin',
@@ -187,7 +189,8 @@ export class AdminComponent implements OnInit {
   // Sube el archivo a Cloud Storage
   public subirArchivo() {
     const archivo = this.datosFormulario.get('archivo');
-    /* const referencia = this.firebaseStorage.referenciaCloudStorage(this.nombreArchivo); */
+    const nombreArchivo = `gs://${environment.firebase.storageBucket}/${this.nombreArchivo}`;
+    const referencia = this.firebaseStorage.referenciaCloudStorage(nombreArchivo);
     const tarea = this.firebaseStorage.tareaCloudStorage(this.nombreArchivo, archivo);
 
     // Cambia el porcentaje
@@ -198,8 +201,9 @@ export class AdminComponent implements OnInit {
       }
     });
 
-    /* referencia.getDownloadURL().subscribe((URL) => {
+    referencia.getDownloadURL().then((URL) => {
       this.URLPublica = URL;
-    }); */
+      console.log(URL);
+    });
   }
 }

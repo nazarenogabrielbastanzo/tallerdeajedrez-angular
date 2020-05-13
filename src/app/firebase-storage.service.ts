@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
+import firebase from 'firebase';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,7 @@ export class FirebaseStorageService {
 
   // Referencia del archivo
   public referenciaCloudStorage(nombreArchivo: string) {
-    return this.storage.ref(nombreArchivo);
+    const storage = firebase.storage();
+    return storage.refFromURL(nombreArchivo);
   }
 }
