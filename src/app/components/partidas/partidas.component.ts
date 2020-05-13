@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { DataTableDirective } from 'angular-datatables';
 import { Subject } from 'rxjs';
 import { FirestoreService } from '../../services/firestore/firestore.service';
+import { FirebaseStorageService } from '../../firebase-storage.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-partidas',
@@ -37,7 +39,8 @@ export class PartidasComponent implements OnInit, OnDestroy {
     private modalService: NgbModal,
     private peticionesService: PeticionesService,
     private router: Router,
-    private firestoreService: FirestoreService
+    private firestoreService: FirestoreService,
+    private firebaseStorage: FirebaseStorageService
   ) {
     this.cargando = true;
     this.firestoreService.getPartidas().subscribe((partidasSnapshot) => {
@@ -120,11 +123,23 @@ export class PartidasComponent implements OnInit, OnDestroy {
     if (tipo === 'final') {
       this.gif = false;
       this.jpg = true;
-      this.srcImgPop = `assets/images/nuevas/tooltips/${ numero }.jpg`;
+      /* this.srcImgPop = `assets/images/nuevas/tooltips/${ numero }.jpg`; */
+      const nombreArchivo = `gs://${environment.firebase.storageBucket}/${numero}.jpg`;
+      const referencia = this.firebaseStorage.referenciaCloudStorage(nombreArchivo);
+      referencia.getDownloadURL().then((URL) => {
+        this.srcImgPop = URL;
+        console.log(URL);
+      });
     } else {
       this.jpg = false;
       this.gif = true;
-      this.srcGIF = `assets/images/nuevas/gifs/${ numero }.gif`;
+      /* this.srcGIF = `assets/images/nuevas/gifs/${ numero }.gif`; */
+      const nombreArchivo = `gs://${environment.firebase.storageBucket}/${numero}.gif`;
+      const referencia = this.firebaseStorage.referenciaCloudStorage(nombreArchivo);
+      referencia.getDownloadURL().then((URL) => {
+        this.srcGIF = URL;
+        console.log(URL);
+      });
     }
   }
 
