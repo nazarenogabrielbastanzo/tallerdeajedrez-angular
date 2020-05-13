@@ -4,6 +4,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 /* import {MatSnackBar} from '@angular/material/snack-bar';
 import { SnackBarComponent } from '../snack-bar/snack-bar.component'; */
+import { FirebaseStorageService } from './../firebase-storage.service';
 
 @Component({
   selector: 'app-admin',
@@ -23,13 +24,23 @@ export class AdminComponent implements OnInit {
     negras: new FormControl('', Validators.required),
     resultado: new FormControl('', Validators.required),
     evento: new FormControl('', Validators.required),
-    fecha: new FormControl('', Validators.required)
+    fecha: new FormControl('', Validators.required),
+    archivo: new FormControl(null, Validators.required)
   });
+
+  public mensajeArchivo = 'No hay un archivo seleccionado';
+  public datosFormulario = new FormData();
+
+  public nombreArchivo = '';
+  public URLPublica = '';
+  public porcentaje = 0;
+  public finalizado = false;
 
   constructor(
     private firestoreService: FirestoreService,
     public auth: AuthService,
     /* private snackBar: MatSnackBar */
+    private firebaseStorage: FirebaseStorageService
   ) {
     this.newForm.setValue({
       nro: '',
@@ -38,7 +49,8 @@ export class AdminComponent implements OnInit {
       negras: '',
       resultado: '',
       evento: '',
-      fecha: ''
+      fecha: '',
+      archivo: ''
     });
   }
 
@@ -65,10 +77,12 @@ export class AdminComponent implements OnInit {
         negras: form.negras,
         resultado: form.resultado,
         evento: form.evento,
-        fecha: form.fecha
+        fecha: form.fecha,
+        archivo: form.archivo
       };
       this.firestoreService.crearPartida(data).then(() => {
         console.log('Documento creado exitósamente!');
+        this.subirArchivo();
         /* this.openSnackBar(); */
         this.newForm.setValue({
           nro: '',
@@ -77,7 +91,8 @@ export class AdminComponent implements OnInit {
           negras: '',
           resultado: '',
           evento: '',
-          fecha: ''
+          fecha: '',
+          archivo: ''
         });
         window.scroll(0, 0);
       }, (error) => {
@@ -91,7 +106,8 @@ export class AdminComponent implements OnInit {
         negras: form.negras,
         resultado: form.resultado,
         evento: form.evento,
-        fecha: form.fecha
+        fecha: form.fecha,
+        archivo: form.archivo
       };
       this.firestoreService.updatePartida(documentId, data).then(() => {
         this.currentStatus = 1;
@@ -102,7 +118,8 @@ export class AdminComponent implements OnInit {
           negras: '',
           resultado: '',
           evento: '',
-          fecha: ''
+          fecha: '',
+          archivo: ''
         });
         console.log('Documento editado exitósamente');
         window.scroll(0, 0);
@@ -124,7 +141,8 @@ export class AdminComponent implements OnInit {
         negras: partida.payload.data().negras,
         resultado: partida.payload.data().resultado,
         evento: partida.payload.data().evento,
-        fecha: partida.payload.data().fecha
+        fecha: partida.payload.data().fecha,
+        archivo: partida.payload.data().archivo
       });
       editSubscribe.unsubscribe();
     });
@@ -148,4 +166,40 @@ export class AdminComponent implements OnInit {
       duration: 3000,
     });
   } */
+
+  // 12052020_1:
+
+  // Evento que se gatilla cuando el input de tipo archivo cambia
+  public cambioArchivo(event) {
+    if (event.target.files.length > 0) {
+      // tslint:disable-next-line: prefer-for-of
+      for (let i = 0; i < event.target.files.length; i++) {
+        this.mensajeArchivo = `Archivo preparado: ${event.target.files[i].name}`;
+        this.nombreArchivo = event.target.files[i].name;
+        this.datosFormulario.delete('archivo');
+        this.datosFormulario.append('archivo', event.target.files[i], event.target.files[i].name);
+      }
+    } else {
+      this.mensajeArchivo = 'No hay un archivo seleccionado';
+    }
+  }
+
+  // Sube el archivo a Cloud Storage
+  public subirArchivo() {
+    const archivo = this.datosFormulario.get('archivo');
+    /* const referencia = this.firebaseStorage.referenciaCloudStorage(this.nombreArchivo); */
+    const tarea = this.firebaseStorage.tareaCloudStorage(this.nombreArchivo, archivo);
+
+    // Cambia el porcentaje
+    tarea.percentageChanges().subscribe((porcentaje) => {
+      this.porcentaje = Math.round(porcentaje);
+      if (this.porcentaje === 100) {
+        this.finalizado = true;
+      }
+    });
+
+    /* referencia.getDownloadURL().subscribe((URL) => {
+      this.URLPublica = URL;
+    }); */
+  }
 }

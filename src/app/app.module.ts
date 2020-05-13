@@ -14,11 +14,15 @@ import { DataTablesModule } from 'angular-datatables';
 
 import { AngularFireModule } from '@angular/fire';
 
-import { NgpSortModule } from 'ngp-sort-pipe';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 import { environment } from '../environments/environment';
+
 import { AngularFirestore } from '@angular/fire/firestore';
+
 import 'firebase/firestore';
+
+import { NgpSortModule } from 'ngp-sort-pipe';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -82,6 +86,7 @@ import { EstudiosComponent } from './components/estudios/estudios.component';
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule,
     BrowserAnimationsModule,
     MiModuloModule,
     DataTablesModule,
