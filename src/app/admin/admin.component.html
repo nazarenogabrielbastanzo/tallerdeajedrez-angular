@@ -37,9 +37,9 @@
                             </div>
                             <!-- 12052020_1 -->
                             <div class="form-group">
-                                <label for="fecha">Subir archivos a Cloud Storage</label>
-                                <input type="file" class="form-control" name="resume" formControlName="archivo" (change)="cambioArchivo($event)">
-                                <p *ngIf="finalizado">URL de descarga: <a [href]="URLPublica" target="_blank">Descargar</a></p>
+                                <label for="archivo">Subir foto del final</label>
+                                <input type="file" class="form-control" name="resume1" formControlName="archivo" (change)="cambioArchivo($event)">
+                                <!-- <p *ngIf="finalizado">URL de descarga: <a [href]="URLPublica" target="_blank">Descargar</a></p> -->
                                 <span *ngIf="mensajeArchivo === 'No hay un archivo seleccionado'">
                                   Elegir un archivo…
                                 </span>
@@ -48,6 +48,19 @@
                                 </span>
                             </div>
                             <!-- /12052020_1 -->
+                            <!-- 13052020_3 -->
+                            <div class="form-group">
+                                <label for="archivo1">Subir GIF</label>
+                                <input type="file" class="form-control" name="resume2" formControlName="archivo1" (change)="cambioArchivo1($event)">
+                                <!-- <p *ngIf="finalizado">URL de descarga: <a [href]="URLPublica" target="_blank">Descargar</a></p> -->
+                                <span *ngIf="mensajeArchivo1 === 'No hay un archivo seleccionado'">
+                                Elegir un archivo…
+                              </span>
+                                <span>
+                                {{ mensajeArchivo1 }}
+                              </span>
+                            </div>
+                            <!-- /13052020_3 -->
                             <button type="submit" class="btn btn-primary" [disabled]="!newForm.valid">
                               <span *ngIf="currentStatus === 1">Agregar</span>
                               <span *ngIf="currentStatus === 2">Editar</span>
