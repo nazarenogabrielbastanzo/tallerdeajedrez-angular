@@ -12,7 +12,7 @@ export class TorneosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.torneos.nombre = 'Magnus Carlsen Invitational 2020 Final4';
+    this.torneos.nombre = 'FIDE Chesscom Online Nations Cup';
     const url = this.torneos.nombre.toLowerCase().split(' ').join('-');
     this.torneos.url = `${url}/0`;
   }
