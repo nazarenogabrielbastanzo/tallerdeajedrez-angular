@@ -12,14 +12,12 @@ import { MiModuloModule } from './mi-modulo.module';
 
 import { DataTablesModule } from 'angular-datatables';
 
+// Firebase
 import { AngularFireModule } from '@angular/fire';
-
-import { AngularFireStorageModule } from '@angular/fire/storage';
-
 import { environment } from '../environments/environment';
-
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFirestore } from '@angular/fire/firestore';
-
 import 'firebase/firestore';
 
 import { NgpSortModule } from 'ngp-sort-pipe';
@@ -50,6 +48,7 @@ import { AdminComponent } from './admin/admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EstudioComponent } from './components/estudio/estudio.component';
 import { EstudiosComponent } from './components/estudios/estudios.component';
+import { AuthComponent } from './components/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +74,7 @@ import { EstudiosComponent } from './components/estudios/estudios.component';
     AdminComponent,
     EstudioComponent,
     EstudiosComponent,
+    AuthComponent,
     /* SnackBarComponent */
   ],
   imports: [
@@ -93,7 +93,8 @@ import { EstudiosComponent } from './components/estudios/estudios.component';
     NgpSortModule
   ],
   providers: [
-    AngularFirestore
+    AngularFirestore,
+    AngularFireAuth
   ],
   bootstrap: [AppComponent]
 })

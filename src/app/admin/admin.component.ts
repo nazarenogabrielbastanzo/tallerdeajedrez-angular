@@ -122,6 +122,8 @@ export class AdminComponent implements OnInit {
       };
       this.firestoreService.updatePartida(documentId, data).then(() => {
         this.currentStatus = 1;
+        this.subirArchivo();
+        this.subirArchivo1();
         this.newForm.setValue({
           nro: '',
           partidaId: '',

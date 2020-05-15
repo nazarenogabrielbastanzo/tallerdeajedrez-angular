@@ -1,0 +1,49 @@
+<div class="row mt-3">
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Registro</h5>
+
+                <form [formGroup]="formSignUp" novalidate (ngSubmit)="singUp()">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email" formControlName="emailSingUp">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Contraseña" formControlName="passwordSingUp">
+                    </div>
+                    <button type="submit" class="btn btn-primary" [disabled]="!formSignUp.valid">Registro</button>
+                </form>
+
+            </div>
+            <!-- End card-body -->
+        </div>
+        <!-- End card -->
+    </div>
+    <!-- End col-6 -->
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Ingresar</h5>
+
+                <form [formGroup]="formLogin" novalidate (ngSubmit)="singIn()">
+                    <div class="form-group">
+                        <input type="email" class="form-control" formControlName="emailLogin" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Contraseña" formControlName="passwordLogin">
+                    </div>
+                    <button type="submit" class="btn btn-primary" [disabled]="!formLogin.valid">Ingresar</button>
+                </form>
+
+            </div>
+            <!-- End card-body -->
+        </div>
+        <!-- End card -->
+
+    </div>
+    <!-- End col-6 -->
+
+</div>
+<!-- End row -->
