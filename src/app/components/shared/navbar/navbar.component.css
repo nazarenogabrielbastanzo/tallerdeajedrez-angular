@@ -8,3 +8,11 @@ span.brand {
     color: white;
     font-family: 'Quicksand', sans-serif!important;
 }
+
+.menu {
+    padding: 0 14px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}

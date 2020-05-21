@@ -1,11 +1,14 @@
 <!-- <mat-toolbar color="primary" class="sticky-top"> -->
 <mat-toolbar color="primary">
-    <a class="navbar-brand" [routerLink]="['inicio']" matTooltip="Inicio">
-        <img src="assets/images/logo2-50x65.jpg" width="30" height="30" class="d-inline-block align-top" alt="Logo de Taller de Ajedrez"><span class="brand ml-3">Taller de Ajedrez</span>
-    </a>
-    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menú" matTooltip="Menú">
-      <mat-icon>menu</mat-icon>
-    </button>
+    <mat-toolbar-row>
+        <a class="navbar-brand" [routerLink]="['inicio']" matTooltip="Inicio">
+            <img src="assets/images/logo2-50x65.jpg" width="30" height="30" class="d-inline-block align-top" alt="Logo de Taller de Ajedrez"><span class="brand ml-3">Taller de Ajedrez</span>
+        </a>
+        <span class="spacer"></span>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menú" matTooltip="Menú">
+          <mat-icon class="menu">menu</mat-icon>
+        </button>
+    </mat-toolbar-row>
     <mat-menu #menu="matMenu">
         <button mat-menu-item [routerLink]="['inicio']">Inicio</button>
         <button mat-menu-item [routerLink]="['partidas']">Partidas</button>
