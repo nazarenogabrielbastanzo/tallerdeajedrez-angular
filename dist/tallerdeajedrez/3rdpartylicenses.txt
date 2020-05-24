@@ -121,6 +121,9 @@ MIT
 @angular/router
 MIT
 
+@angular/service-worker
+MIT
+
 @auth0/auth0-spa-js
 MIT
 The MIT License (MIT)

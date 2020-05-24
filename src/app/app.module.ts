@@ -49,6 +49,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EstudioComponent } from './components/estudio/estudio.component';
 import { EstudiosComponent } from './components/estudios/estudios.component';
 import { AuthComponent } from './components/auth/auth.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -90,7 +91,8 @@ import { AuthComponent } from './components/auth/auth.component';
     BrowserAnimationsModule,
     MiModuloModule,
     DataTablesModule,
-    NgpSortModule
+    NgpSortModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     AngularFirestore,
