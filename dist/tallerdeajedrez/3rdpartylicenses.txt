@@ -62,7 +62,11 @@ MIT
 
 @angular/fire/auth
 
+@angular/fire/database
+
 @angular/fire/firestore
+
+@angular/fire/messaging
 
 @angular/fire/storage
 
@@ -574,7 +578,13 @@ Apache-2.0
 
 firebase/app
 
+firebase/auth
+
+firebase/database
+
 firebase/firestore
+
+firebase/messaging
 
 firebase/storage
 
