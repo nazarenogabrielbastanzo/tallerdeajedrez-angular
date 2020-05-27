@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1590582290072,
+  "timestamp": 1590610833238,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -2974,6 +2974,7 @@
         "/assets/images/nuevas/estudio-aleksei-troitski.jpg",
         "/assets/images/nuevas/estudio-alois-wotawa.jpg",
         "/assets/images/nuevas/estudio-david-gurgenidze.jpg",
+        "/assets/images/nuevas/estudio-leonid-kubbel.jpg",
         "/assets/images/nuevas/estudios.jpg",
         "/assets/images/nuevas/jbastanzo.jpg",
         "/assets/images/paste.jpg",
@@ -3324,7 +3325,7 @@
     "/5-es2015.ac87ff46a5abebe3ea19.js": "184f6c64b99826effaf864e1aca54d82c8986f1b",
     "/5-es5.ac87ff46a5abebe3ea19.js": "184f6c64b99826effaf864e1aca54d82c8986f1b",
     "/assets/datos/albumes.json": "eabc10cddffa9700701009db9eea8cff3ec7ac37",
-    "/assets/datos/estudios.json": "034dbec8a58ca45bd9e20bc99e9a30a3176785c1",
+    "/assets/datos/estudios.json": "305d152270bd8bf205aa8bb06204ae18e12fada0",
     "/assets/datos/frases.json": "76d9938d03622a9e0827580e75fc3407ca21fa87",
     "/assets/datos/partidas.json": "fc3d80c1109dc794b1e7fb3c5b0d22b406734e9c",
     "/assets/datos/posts.json": "94a257ed0fb8dbaf9b2a2c22fff313bf0793b10a",
@@ -6267,6 +6268,7 @@
     "/assets/images/nuevas/estudio-aleksei-troitski.jpg": "319b1a28363a1b5aecb7b61d2dc8e467eb347a32",
     "/assets/images/nuevas/estudio-alois-wotawa.jpg": "e08ce4ac0e53912406440c6673181b44a892a180",
     "/assets/images/nuevas/estudio-david-gurgenidze.jpg": "341092428f78f643ac236bc1b5f3ab9a3f983725",
+    "/assets/images/nuevas/estudio-leonid-kubbel.jpg": "fbe60b70c0da1c177d2c791896f6eea8e51024c0",
     "/assets/images/nuevas/estudios.jpg": "89fd8a4398e47d93abbcc2d0568b39a3f8b0ffef",
     "/assets/images/nuevas/jbastanzo.jpg": "d9b614da494c6df924f5c3fa715a1ab088720d4f",
     "/assets/images/paste.jpg": "54f286e4c8ad9697247a94dbc4e10ab2561a1372",
