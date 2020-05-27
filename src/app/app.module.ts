@@ -15,6 +15,9 @@ import { DataTablesModule } from 'angular-datatables';
 // Firebase
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireMessagingModule } from '@angular/fire/messaging';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFirestore } from '@angular/fire/firestore';
@@ -50,6 +53,7 @@ import { EstudioComponent } from './components/estudio/estudio.component';
 import { EstudiosComponent } from './components/estudios/estudios.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { MessagingService } from './shared/messaging.service';
 
 @NgModule({
   declarations: [
@@ -87,6 +91,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireMessagingModule,
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
     AngularFireStorageModule,
     BrowserAnimationsModule,
     MiModuloModule,
@@ -96,7 +103,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
   ],
   providers: [
     AngularFirestore,
-    AngularFireAuth
+    AngularFireAuth,
+    MessagingService
   ],
   bootstrap: [AppComponent]
 })
