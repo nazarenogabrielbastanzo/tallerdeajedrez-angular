@@ -12,7 +12,7 @@ export class EstudioComponent implements OnInit {
   id: number;
 
   show = false;
-  estudios: any[];
+  estudios: any[] = [];
 
   constructor(
     public activatedRoute: ActivatedRoute,

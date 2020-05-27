@@ -8,7 +8,7 @@ import { PeticionesService } from '../../services/peticiones.service';
   styleUrls: ['./estudios.component.css']
 })
 export class EstudiosComponent implements OnInit {
-  estudios: any;
+  estudios: any[] = [];
   cargando: boolean;
 
   constructor(
@@ -19,7 +19,7 @@ export class EstudiosComponent implements OnInit {
   ngOnInit(): void {
     this.cargando = true;
     this.peticionesService.getEstudios()
-      .subscribe((estudios: any) => {
+      .subscribe((estudios: any[]) => {
         this.estudios = estudios;
         this.cargando = false;
       });
