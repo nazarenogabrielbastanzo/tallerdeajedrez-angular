@@ -9,7 +9,6 @@ import { PeticionesService } from '../../services/peticiones.service';
 })
 export class EstudioComponent implements OnInit {
 
-
   id: number;
 
   show = false;

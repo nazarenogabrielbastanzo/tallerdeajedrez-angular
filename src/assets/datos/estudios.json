@@ -25,5 +25,12 @@
         "propuesta": "Juegan las blancas y ganan o logran empatar",
         "img": "assets/images/nuevas/estudio-alois-wotawa.jpg",
         "youtubeId": "IOTe_PpoZXg"
+    },
+    {
+        "id": 5,
+        "titulo": "Estudio de Leonid Kubbel",
+        "propuesta": "Juegan las blancas y ganan",
+        "img": "assets/images/nuevas/estudio-leonid-kubbel.jpg",
+        "youtubeId": "evmh5FR30W4"
     }
 ]
