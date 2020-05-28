@@ -42,6 +42,7 @@ yarn-error.log
 testem.log
 /typings
 /src/environments
+/src/firebase-messaging-sw.js
 
 # System Files
 .DS_Store
