@@ -3,6 +3,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PeticionesService } from '../../services/peticiones.service';
 import { FirestoreService } from '../../services/firestore/firestore.service';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { FirebaseStorageService } from '../../firebase-storage.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-buscador',
@@ -21,19 +24,40 @@ export class BuscadorComponent implements OnInit {
   numero: number;
   verCompleta: boolean;
   id: string;
+  isAnonymous: boolean;
+  uid: string;
 
   constructor(
     private modalService: NgbModal,
     private activatedRoute: ActivatedRoute,
     private peticionesService: PeticionesService,
     private router: Router,
-    private firestoreService: FirestoreService
+    private firestoreService: FirestoreService,
+    private angularFireAuth: AngularFireAuth,
+    private firebaseStorage: FirebaseStorageService
   ) { }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe((params: any) => {
-      this.termino = params.termino;
-      this.partidas = this.peticionesService.buscarPartidas( params.termino );
+    this.angularFireAuth.auth.signInAnonymously()
+      .catch((error) => {
+        console.log(error.code);
+        console.log(error.message);
+      });
+
+    this.angularFireAuth.auth.onAuthStateChanged((user) => {
+      if (user) {
+        // User is signed in.
+        this.isAnonymous = user.isAnonymous;
+        this.uid = user.uid;
+        // ...
+        this.activatedRoute.params.subscribe((params: any) => {
+          this.termino = params.termino;
+          this.partidas = this.peticionesService.buscarPartidas( params.termino );
+        });
+      } else {
+        // User is signed out.
+        // ...
+      }
     });
   }
 
@@ -70,11 +94,23 @@ export class BuscadorComponent implements OnInit {
     if (tipo === 'final') {
       this.gif = false;
       this.jpg = true;
-      this.srcImgPop = `assets/images/nuevas/tooltips/${ numero }.jpg`;
+      /* this.srcImgPop = `assets/images/nuevas/tooltips/${ numero }.jpg`; */
+      const nombreArchivo = `gs://${environment.firebase.storageBucket}/${numero}.jpg`;
+      const referencia = this.firebaseStorage.referenciaCloudStorage(nombreArchivo);
+      referencia.getDownloadURL().then((URL) => {
+        this.srcImgPop = URL;
+        /* console.log(URL); */
+      });
     } else {
       this.jpg = false;
       this.gif = true;
-      this.srcGIF = `assets/images/nuevas/gifs/${ numero }.gif`;
+      /* this.srcGIF = `assets/images/nuevas/gifs/${ numero }.gif`; */
+      const nombreArchivo = `gs://${environment.firebase.storageBucket}/${numero}.gif`;
+      const referencia = this.firebaseStorage.referenciaCloudStorage(nombreArchivo);
+      referencia.getDownloadURL().then((URL) => {
+        this.srcGIF = URL;
+        /* console.log(URL); */
+      });
     }
   }
 
