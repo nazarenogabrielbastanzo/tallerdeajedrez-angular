@@ -1,12 +1,14 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild, OnDestroy } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { PeticionesService } from '../../services/peticiones.service';
+/* import { PeticionesService } from '../../services/peticiones.service'; */
 import { Router } from '@angular/router';
-import { DataTableDirective } from 'angular-datatables';
-import { Subject } from 'rxjs';
+/* import { DataTableDirective } from 'angular-datatables';
+import { Subject } from 'rxjs'; */
 import { FirestoreService } from '../../services/firestore/firestore.service';
 import { FirebaseStorageService } from '../../firebase-storage.service';
 import { environment } from 'src/environments/environment';
+import { MessagingService } from '../../shared/messaging.service';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-partidas',
@@ -27,60 +29,88 @@ export class PartidasComponent implements OnInit, OnDestroy {
   gif: boolean;
   jpg: boolean;
 
-  @ViewChild(DataTableDirective)
+  /* @ViewChild(DataTableDirective)
   dtElement: DataTableDirective;
   dtOptions: DataTables.Settings = {};
-  dtTrigger: Subject<any> = new Subject();
+  dtTrigger: Subject<any> = new Subject(); */
   id: string;
   partida: any;
   verCompleta: boolean;
+  isAnonymous: boolean;
+  uid: string;
+  message: any;
 
   constructor(
     private modalService: NgbModal,
-    private peticionesService: PeticionesService,
+    /* private peticionesService: PeticionesService, */
     private router: Router,
     private firestoreService: FirestoreService,
-    private firebaseStorage: FirebaseStorageService
-  ) {
-    this.cargando = true;
-    this.firestoreService.getPartidas().subscribe((partidasSnapshot) => {
-      this.partidas = [];
-      partidasSnapshot.forEach((partidaData: any) => {
-        this.partidas.push({
-          id: partidaData.payload.doc.id,
-          data: partidaData.payload.doc.data()
-        });
-        this.cargando = false;
-      });
-      this.dtTrigger.next();
-    });
-    this.info = false;
-    this.infoMessage = 'Ingrese un texto para buscar...';
-  }
+    private firebaseStorage: FirebaseStorageService,
+    private messagingService: MessagingService,
+    private angularFireAuth: AngularFireAuth
+  ) { }
 
   ngOnInit(): void {
 
-    this.dtOptions = {
+    this.angularFireAuth.auth.signInAnonymously()
+      .catch((error) => {
+        console.log(error.code);
+        console.log(error.message);
+      });
+
+    this.angularFireAuth.auth.onAuthStateChanged((user) => {
+      if (user) {
+        // User is signed in.
+        this.isAnonymous = user.isAnonymous;
+        this.uid = user.uid;
+        // ...
+        /* const userId = 'user001'; */
+        this.messagingService.requestPermission(this.uid);
+        this.messagingService.receiveMessage();
+        this.message = this.messagingService.currentMessage;
+
+        this.cargando = true;
+        this.firestoreService.getPartidas().subscribe((partidasSnapshot) => {
+          this.partidas = [];
+          partidasSnapshot.forEach((partidaData: any) => {
+              this.partidas.push({
+                id: partidaData.payload.doc.id,
+                data: partidaData.payload.doc.data()
+              });
+              this.cargando = false;
+          });
+          /* this.dtTrigger.next(); */
+        });
+        this.info = false;
+        this.infoMessage = 'Ingrese un texto para buscar...';
+      } else {
+        // User is signed out.
+        // ...
+      }
+      // ...
+    });
+
+    /* this.dtOptions = {
       pagingType: 'full_numbers',
       ordering: true
     };
-    this.rerender();
+    this.rerender(); */
 
   }
 
   ngOnDestroy(): void {
     // Do not forget to unsubscribe the event
-    this.dtTrigger.unsubscribe();
+    /* this.dtTrigger.unsubscribe(); */
   }
 
-  rerender(): void {
+  /* rerender(): void {
     this.dtElement.dtInstance.then((dtInstance: DataTables.Api) => {
       // Destroy the table first
       dtInstance.destroy();
       // Call the dtTrigger to rerender again
       this.dtTrigger.next();
     });
-   }
+  } */
 
   openLg(content: any, numero: number, tipo: string) {
     this.modalService.open(content, { centered: true, backdropClass: 'light-blue-backdrop' });
