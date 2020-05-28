@@ -158,7 +158,7 @@ export class PartidasComponent implements OnInit, OnDestroy {
       const referencia = this.firebaseStorage.referenciaCloudStorage(nombreArchivo);
       referencia.getDownloadURL().then((URL) => {
         this.srcImgPop = URL;
-        console.log(URL);
+        /* console.log(URL); */
       });
     } else {
       this.jpg = false;
@@ -168,7 +168,7 @@ export class PartidasComponent implements OnInit, OnDestroy {
       const referencia = this.firebaseStorage.referenciaCloudStorage(nombreArchivo);
       referencia.getDownloadURL().then((URL) => {
         this.srcGIF = URL;
-        console.log(URL);
+        /* console.log(URL); */
       });
     }
   }
