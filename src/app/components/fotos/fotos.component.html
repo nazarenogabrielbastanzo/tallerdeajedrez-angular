@@ -18,9 +18,9 @@
         <ngb-alert *ngIf="info" type="danger" (close)="info = false" class="text-center animated fadeIn">{{ infoMessage }}</ngb-alert>
 
         <div class="table-responsive">
-            <table class="table table-bordered table-hover" style="zoom: 80%;">
+            <table class="table table-bordered table-striped" style="zoom: 80%;">
                 <thead>
-                    <tr class="text-center">
+                    <tr class="text-center table-primary">
                         <th>ID</th>
                         <th>Álbum</th>
                         <th>Lugar</th>
@@ -30,7 +30,7 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let album of albumes" style="cursor: pointer;" (click)="verAlbum(album.album_id)">
-                        <td>{{ album.album_id }}</td>
+                        <td class="table-primary">{{ album.album_id }}</td>
                         <td>{{ album.album }}</td>
                         <td>{{ album.lugar }}</td>
                         <td>{{ album.fecha }}</td>

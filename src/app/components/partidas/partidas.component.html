@@ -41,32 +41,33 @@
 
     <mat-divider></mat-divider>
 
-    <mat-form-field class="full-width my-3">
-        <mat-label>Buscar partida...</mat-label>
-        <input matInput placeholder="Por ejemplo: kasparov" (keyup.enter)="buscarPartida(buscarTexto.value)" type="text" #buscarTexto [(ngModel)]="terminoDeBusqueda" autocomplete="off">
-    </mat-form-field>
+    <div class="container card shadow mt-5">
+        <mat-form-field class="full-width my-3">
+            <mat-label>Buscar partida...</mat-label>
+            <input matInput placeholder="Por ejemplo: kasparov" (keyup.enter)="buscarPartida(buscarTexto.value)" type="text" #buscarTexto [(ngModel)]="terminoDeBusqueda" autocomplete="off">
+        </mat-form-field>
 
-    <ngb-alert *ngIf="info" type="danger" (close)="info = false" class="text-center animated fadeIn">{{ infoMessage }}</ngb-alert>
-
+        <ngb-alert *ngIf="info" type="danger" (close)="info = false" class="text-center animated fadeIn">{{ infoMessage }}</ngb-alert>
+    </div>
 
     <div class="table-responsive my-5">
-        <table class="table table-bordered table-hover" id="datatable">
+        <table class="table table-bordered table-striped table-sm" id="datatable">
             <thead>
-                <tr>
-                    <th>ID</th>
-                    <th class="text-right">Blancas</th>
+                <tr class="table-primary">
+                    <th class="text-center">ID</th>
+                    <th class="text-center">Blancas</th>
                     <th class="text-center">Resultado</th>
-                    <th class="text-left">Negras</th>
-                    <th>Ver Final</th>
-                    <th>Vista rápida</th>
-                    <th>Ver Partida</th>
-                    <th>Evento</th>
-                    <th>Fecha</th>
+                    <th class="text-center">Negras</th>
+                    <th class="text-center">Ver Final</th>
+                    <th class="text-center">Vista rápida</th>
+                    <th class="text-center">Ver Partida</th>
+                    <th class="text-center">Evento</th>
+                    <th class="text-center">Fecha</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let partida of partidas | sortBy:'desc':'data.nro'; let i = index">
-                    <td>{{ partida.data.nro }}</td>
+                    <td class="table-primary">{{ partida.data.nro }}</td>
                     <td class="text-right">{{ partida.data.blancas }}</td>
                     <td class="text-center">{{ partida.data.resultado }}</td>
                     <td class="text-left">{{ partida.data.negras }}</td>
