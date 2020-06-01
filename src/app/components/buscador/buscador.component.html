@@ -30,34 +30,34 @@
     <h4 class="text-center display-4 my-5">Buscar Partidas</h4>
 
     <div class="d-flex justify-content-start m-3">
-        <button class="btn btn-outline-primary" (click)="goBack()">
-            <i class="fas fa-chevron-left fa-2x"></i> <span class="lead ml-2">Volver</span>
+        <button mat-raised-button color="primary" (click)="goBack()">
+            <i class="fas fa-chevron-left"></i> <span class="ml-2">Volver</span>
         </button>
     </div>
     <div class="row" *ngIf="partidas.length != 0">
         <div class="col">
-            <div class="alert alert-info" role="alert" *ngIf="partidas.length != 1">
+            <div class="alert alert-primary text-center" role="alert" *ngIf="partidas.length != 1">
                 Se encontraron <u>{{ partidas.length }} partidas</u> con el término: <b class="font-italic">{{ termino }}</b>
             </div>
-            <div class="alert alert-info" role="alert" *ngIf="partidas.length == 1">
+            <div class="alert alert-primary text-center" role="alert" *ngIf="partidas.length == 1">
                 Se encontró <u>1 partida</u> con el término: <b class="font-italic">{{ termino }}</b>
             </div>
         </div>
     </div>
     <div class="row" *ngIf="partidas.length == 0">
         <div class="col">
-            <div class="alert alert-info" role="alert">
+            <div class="alert alert-warning text-center" role="alert">
                 No existen resultados con el término: <b class="font-italic">{{ termino }}</b>
             </div>
         </div>
     </div>
     <div class="table-responsive" *ngIf="partidas.length != 0">
-        <table class="table table-bordered table-hover" style="zoom: 80%;">
+        <table class="table table-bordered table-striped table-sm">
             <thead>
-                <tr>
-                    <th class="text-right">Blancas</th>
-                    <th class="text-center">Resultado</th>
-                    <th class="text-left">Negras</th>
+                <tr class="text-center table-primary">
+                    <th>Blancas</th>
+                    <th>Resultado</th>
+                    <th>Negras</th>
                     <th>Ver Final</th>
                     <th>Vista rápida</th>
                     <th>Ver Partida</th>
@@ -71,16 +71,16 @@
                     <img [src]="srcImgPop" alt="numero" class="img-thumbnail">
                 </ng-template>
                 <tr *ngFor="let partida of partidas">
+                    <td class="text-center table-primary">{{ partida.data.nro }}</td>
                     <td class="text-right">{{ partida.data.blancas }}</td>
                     <td class="text-center">{{ partida.data.resultado }}</td>
                     <td class="text-left">{{ partida.data.negras }}</td>
                     <!-- <td><button type="button" class="btn btn-outline-info" (click)="setSrcImgPop(partida.numero)" [ngbPopover]="popContent">Ver Final</button></td> -->
-                    <td><button type="button" class="btn btn-outline-info" (click)="openLg(content, partida.data.nro, 'final')">Ver Final</button></td>
-                    <td><button type="button" class="btn btn-outline-info" (click)="openLg(content, partida.data.nro, 'rapida')">Vista rápida</button></td>
-                    <td><button type="button" class="btn btn-outline-primary" (click)="openLg2(content2, partida.id, true)">Ver Partida</button></td>
-                    <td>{{partida.data.evento}}</td>
-                    <td>{{partida.data.fecha}}</td>
-                    <td>{{ partida.data.nro }}</td>
+                    <td class="text-center"><button type="button" mat-raised-button (click)="openLg(content, partida.data.nro, 'final')">Ver Final</button></td>
+                    <td class="text-center"><button type="button" mat-raised-button (click)="openLg(content, partida.data.nro, 'rapida')">Vista rápida</button></td>
+                    <td class="text-center"><button type="button" mat-raised-button (click)="openLg2(content2, partida.id, true)">Ver Partida</button></td>
+                    <td class="text-left">{{partida.data.evento}}</td>
+                    <td class="text-center">{{partida.data.fecha}}</td>
                 </tr>
             </tbody>
         </table>
