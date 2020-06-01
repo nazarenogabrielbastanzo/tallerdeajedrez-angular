@@ -1,9 +1,6 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild, OnDestroy } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-/* import { PeticionesService } from '../../services/peticiones.service'; */
 import { Router } from '@angular/router';
-/* import { DataTableDirective } from 'angular-datatables';
-import { Subject } from 'rxjs'; */
 import { FirestoreService } from '../../services/firestore/firestore.service';
 import { FirebaseStorageService } from '../../firebase-storage.service';
 import { environment } from 'src/environments/environment';
@@ -28,11 +25,6 @@ export class PartidasComponent implements OnInit, OnDestroy {
   srcGIF: string;
   gif: boolean;
   jpg: boolean;
-
-  /* @ViewChild(DataTableDirective)
-  dtElement: DataTableDirective;
-  dtOptions: DataTables.Settings = {};
-  dtTrigger: Subject<any> = new Subject(); */
   id: string;
   partida: any;
   verCompleta: boolean;
@@ -42,7 +34,6 @@ export class PartidasComponent implements OnInit, OnDestroy {
 
   constructor(
     private modalService: NgbModal,
-    /* private peticionesService: PeticionesService, */
     private router: Router,
     private firestoreService: FirestoreService,
     private firebaseStorage: FirebaseStorageService,
@@ -89,28 +80,9 @@ export class PartidasComponent implements OnInit, OnDestroy {
       }
       // ...
     });
-
-    /* this.dtOptions = {
-      pagingType: 'full_numbers',
-      ordering: true
-    };
-    this.rerender(); */
-
   }
 
-  ngOnDestroy(): void {
-    // Do not forget to unsubscribe the event
-    /* this.dtTrigger.unsubscribe(); */
-  }
-
-  /* rerender(): void {
-    this.dtElement.dtInstance.then((dtInstance: DataTables.Api) => {
-      // Destroy the table first
-      dtInstance.destroy();
-      // Call the dtTrigger to rerender again
-      this.dtTrigger.next();
-    });
-  } */
+  ngOnDestroy(): void { }
 
   openLg(content: any, numero: number, tipo: string) {
     this.modalService.open(content, { centered: true, backdropClass: 'light-blue-backdrop' });
@@ -132,9 +104,9 @@ export class PartidasComponent implements OnInit, OnDestroy {
       });
   }
 
-  verPartida(numero: number) {
+  /* verPartida(numero: number) {
     this.router.navigate(['/partida', numero]);
-  }
+  } */
 
   buscarPartida( termino: string ) {
     if ( termino.trim().length ) {
@@ -153,7 +125,6 @@ export class PartidasComponent implements OnInit, OnDestroy {
     if (tipo === 'final') {
       this.gif = false;
       this.jpg = true;
-      /* this.srcImgPop = `assets/images/nuevas/tooltips/${ numero }.jpg`; */
       const nombreArchivo = `gs://${environment.firebase.storageBucket}/${numero}.jpg`;
       const referencia = this.firebaseStorage.referenciaCloudStorage(nombreArchivo);
       referencia.getDownloadURL().then((URL) => {
@@ -163,7 +134,6 @@ export class PartidasComponent implements OnInit, OnDestroy {
     } else {
       this.jpg = false;
       this.gif = true;
-      /* this.srcGIF = `assets/images/nuevas/gifs/${ numero }.gif`; */
       const nombreArchivo = `gs://${environment.firebase.storageBucket}/${numero}.gif`;
       const referencia = this.firebaseStorage.referenciaCloudStorage(nombreArchivo);
       referencia.getDownloadURL().then((URL) => {
