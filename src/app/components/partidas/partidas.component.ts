@@ -104,10 +104,6 @@ export class PartidasComponent implements OnInit, OnDestroy {
       });
   }
 
-  /* verPartida(numero: number) {
-    this.router.navigate(['/partida', numero]);
-  } */
-
   buscarPartida( termino: string ) {
     if ( termino.trim().length ) {
       this.router.navigate(['/buscar', termino.trim()]);
