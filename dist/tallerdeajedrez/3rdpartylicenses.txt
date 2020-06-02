@@ -111,8 +111,6 @@ THE SOFTWARE.
 
 @angular/material/icon
 
-@angular/material/menu
-
 @angular/material/slide-toggle
 
 @angular/material/toolbar
