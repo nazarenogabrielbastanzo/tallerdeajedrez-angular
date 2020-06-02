@@ -1,43 +1,46 @@
-<div class="card banner">
-    <img src="assets/images/nuevas/banner.jpg" class="card-img img-fluid mb-3" alt="Taller de Ajedrez" style="width: 100%;">
-    <div class="card-img-overlay">
-        <h1 class="card-title text-center" [ngClass]="{'m-5 screen': movil == false, 'm-0 movil': movil == true}">Taller de Ajedrez</h1>
+<div class="animated fadeIn slow">
+    <div class="card banner">
+        <img src="assets/images/nuevas/banner.jpg" class="card-img img-fluid mb-3" alt="Taller de Ajedrez" style="width: 100%;">
+        <div class="card-img-overlay">
+            <h1 class="card-title text-center" [ngClass]="{'m-5 screen': movil == false, 'm-0 movil': movil == true}">Taller de Ajedrez</h1>
+        </div>
     </div>
-</div>
 
-<div class="text-center my-2">
-    <i class="fas fa-angle-double-down fa-3x pointer" (click)="scrollDown()" matTooltip="Bajar un poco..." matTooltipPosition="left"></i>
-</div>
+    <div class="text-center my-2">
+        <i class="fas fa-angle-double-down fa-3x pointer" (click)="scrollDown()" matTooltip="Bajar un poco..." matTooltipPosition="left"></i>
+    </div>
 
-<!-- Cambiar a continuación, row-cols-md-[número de columnas deseado] y row-cols-lg-[número de columnas deseado] -->
-<!-- NOTA: Con 4 columnas se ve bien -->
-<div class="row row-cols-1 row-cols-md-4 row-cols-lg-4 row-cols-xl-4 m-3">
-    <div class="col mb-4" *ngFor="let post of posts; let i = index">
-        <mat-card class="card h-100">
-            <mat-card-header class="card-header">
-                <div mat-card-avatar class="example-header-image">
-                    <a href="https://twitter.com/{{post.twitter}}" rel="noopener" target="_blank">
-                        <img src="../../../assets/images/nuevas/{{post.twitter}}.jpg" alt="Foto del perfil del autor en Twitter" mat-card-avatar [matTooltip]="post.autor" style="cursor: pointer;">
-                    </a>
+    <!-- Cambiar a continuación, row-cols-md-[número de columnas deseado] y row-cols-lg-[número de columnas deseado] -->
+    <!-- NOTA: Con 4 columnas se ve bien -->
+    <div class="row row-cols-1 row-cols-md-4 row-cols-lg-4 row-cols-xl-4 m-3">
+        <div class="col mb-4" *ngFor="let post of posts; let i = index">
+            <mat-card class="card h-100">
+                <mat-card-header class="card-header">
+                    <div mat-card-avatar class="example-header-image">
+                        <a href="https://twitter.com/{{post.twitter}}" rel="noopener" target="_blank">
+                            <img src="../../../assets/images/nuevas/{{post.twitter}}.jpg" alt="Foto del perfil del autor en Twitter" mat-card-avatar [matTooltip]="post.autor" style="cursor: pointer;">
+                        </a>
+                    </div>
+                    <mat-card-title class="card-title">{{post.titulo}}</mat-card-title>
+                    <mat-card-subtitle class="card-subtitle">{{post.autor}}</mat-card-subtitle>
+                </mat-card-header>
+                <div class="card-body">
+                    <img mat-card-image [src]="post.img" [alt]="post.titulo" class="card-img">
+                    <mat-card-content class="card-text">
+                        <p>{{post.extracto}}</p>
+                    </mat-card-content>
                 </div>
-                <mat-card-title class="card-title">{{post.titulo}}</mat-card-title>
-                <mat-card-subtitle class="card-subtitle">{{post.autor}}</mat-card-subtitle>
-            </mat-card-header>
-            <div class="card-body">
-                <img mat-card-image [src]="post.img" [alt]="post.titulo" class="card-img">
-                <mat-card-content class="card-text">
-                    <p>{{post.extracto}}</p>
-                </mat-card-content>
-            </div>
-            <div class="card-footer">
-                <mat-card-actions class="text-center">
-                    <button mat-raised-button (click)="irAlLink( post.link )" class="button-accent"><b>VER MÁS</b></button>
-                </mat-card-actions>
-            </div>
-        </mat-card>
+                <div class="card-footer">
+                    <mat-card-actions class="text-center">
+                        <button mat-raised-button (click)="irAlLink( post.link )" class="button-accent"><b>VER MÁS</b></button>
+                    </mat-card-actions>
+                </div>
+            </mat-card>
+        </div>
     </div>
-</div>
 
-<div class="text-center my-2">
-    <i class="fas fa-angle-double-down fa-3x pointer" (click)="scrollDown()" matTooltip="Bajar un poco..." matTooltipPosition="left"></i>
+    <div class="text-center my-2">
+        <i class="fas fa-angle-double-down fa-3x pointer" (click)="scrollDown()" matTooltip="Bajar un poco..." matTooltipPosition="left"></i>
+    </div>
+
 </div>
