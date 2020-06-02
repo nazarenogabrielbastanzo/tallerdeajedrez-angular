@@ -1,9 +1,9 @@
 <div *ngIf="cargando" class="row align-items-center" style="height: 100vh;">
     <div class="col text-center">
-        <p><img src="assets/images/Logo2.jpg"></p>
         <p><img src="assets/images/loading1.gif"></p>
     </div>
 </div>
+
 <ng-template #content let-modal>
     <div class="modal-header">
         <h4 class="modal-title" *ngIf="jpg === true">Final de la Partida {{numero}}</h4>
