@@ -10,6 +10,7 @@ import { AuthService } from '../../../services/auth.service';
 export class NavbarComponent implements OnInit {
 
   public isMenuCollapsed = true;
+  open: boolean;
 
   constructor(
     public router: Router,
@@ -17,6 +18,14 @@ export class NavbarComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+  }
+
+  openNav() {
+    this.open = true;
+  }
+
+  closeNav() {
+    this.open = false;
   }
 
   irAlLink(link: any[]) {

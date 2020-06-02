@@ -5,18 +5,29 @@
             <img src="assets/images/logo2-50x65.jpg" width="30" height="30" class="d-inline-block align-top" alt="Logo de Taller de Ajedrez"><span class="brand ml-3">Taller de Ajedrez</span>
         </a>
         <span class="spacer"></span>
-        <button class="menu" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menú" matTooltip="Menú">
+        <button class="menu" mat-icon-button aria-label="Menú" matTooltip="Menú" (click)="openNav()">
           <mat-icon>menu</mat-icon>
         </button>
     </mat-toolbar-row>
-    <mat-menu #menu="matMenu">
-        <button mat-menu-item [routerLink]="['inicio']">Inicio</button>
-        <button mat-menu-item [routerLink]="['partidas']">Partidas</button>
-        <button mat-menu-item [routerLink]="['torneos']">Torneos</button>
-        <button mat-menu-item [routerLink]="['estudios']">Estudios</button>
-        <button mat-menu-item [routerLink]="['fotos']">Fotos</button>
-        <button mat-menu-item [routerLink]="['frases']">Frases</button>
-        <button mat-menu-item [routerLink]="['dispositivos']">Dispositivos</button>
-        <button mat-menu-item (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
-    </mat-menu>
+    <div id="mySidenav" class="sidenav" [ngClass]="{'opened': open === true, 'closed': open === false}">
+        <!-- <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a> -->
+        <button class="closebtn" mat-icon-button aria-label="Cerrar Menú" matTooltip="Cerrar Menú" (click)="closeNav()">
+          <mat-icon>close</mat-icon>
+        </button>
+        <a mat-flat-button color="primary" routerLink="inicio" (click)="closeNav()" class="text-left">Inicio</a>
+        <mat-divider></mat-divider>
+        <a mat-flat-button color="primary" routerLink="partidas" (click)="closeNav()" class="text-left">Partidas</a>
+        <mat-divider></mat-divider>
+        <a mat-flat-button color="primary" routerLink="torneos" (click)="closeNav()" class="text-left">Torneos</a>
+        <mat-divider></mat-divider>
+        <a mat-flat-button color="primary" routerLink="estudios" (click)="closeNav()" class="text-left">Estudios</a>
+        <mat-divider></mat-divider>
+        <a mat-flat-button color="primary" routerLink="fotos" (click)="closeNav()" class="text-left">Fotos</a>
+        <mat-divider></mat-divider>
+        <a mat-flat-button color="primary" routerLink="frases" (click)="closeNav()" class="text-left">Frases</a>
+        <mat-divider></mat-divider>
+        <a mat-flat-button color="primary" routerLink="dispositivos" (click)="closeNav()" class="text-left">Dispositivos</a>
+        <mat-divider *ngIf="auth.loggedIn"></mat-divider>
+        <a mat-flat-button color="primary" (click)="auth.logout()" *ngIf="auth.loggedIn" class="text-left">Log Out</a>
+    </div>
 </mat-toolbar>
