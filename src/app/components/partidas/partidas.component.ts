@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, ViewChild, OnDestroy } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ViewChild, OnDestroy, HostListener } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 import { FirestoreService } from '../../services/firestore/firestore.service';
@@ -40,6 +40,10 @@ export class PartidasComponent implements OnInit, OnDestroy {
     private messagingService: MessagingService,
     private angularFireAuth: AngularFireAuth
   ) { }
+
+  @HostListener('window:keyup.esc', ['$event']) onMouseEnter(event: KeyboardEvent) {
+    this.modalService.dismissAll();
+  }
 
   ngOnInit(): void {
 
