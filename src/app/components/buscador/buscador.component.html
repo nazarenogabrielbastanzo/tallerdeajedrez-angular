@@ -70,12 +70,11 @@
                 <ng-template #popContent>
                     <img [src]="srcImgPop" alt="numero" class="img-thumbnail">
                 </ng-template>
-                <tr *ngFor="let partida of partidas">
+                <tr *ngFor="let partida of partidas | sortBy:'desc':'data.nro'">
                     <td class="text-center table-primary">{{ partida.data.nro }}</td>
                     <td class="text-right">{{ partida.data.blancas }}</td>
                     <td class="text-center">{{ partida.data.resultado }}</td>
                     <td class="text-left">{{ partida.data.negras }}</td>
-                    <!-- <td><button type="button" class="btn btn-outline-info" (click)="setSrcImgPop(partida.numero)" [ngbPopover]="popContent">Ver Final</button></td> -->
                     <td class="text-center"><button type="button" mat-raised-button (click)="openLg(content, partida.data.nro, 'final')">Ver Final</button></td>
                     <td class="text-center"><button type="button" mat-raised-button (click)="openLg(content, partida.data.nro, 'rapida')">Vista rápida</button></td>
                     <td class="text-center"><button type="button" mat-raised-button (click)="openLg2(content2, partida.id, true)">Ver Partida</button></td>

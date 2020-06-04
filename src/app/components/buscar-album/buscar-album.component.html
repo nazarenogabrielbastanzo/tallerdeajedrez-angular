@@ -41,7 +41,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let album of albumes" style="cursor: pointer;" (click)="verAlbum(album.album_id)">
+                    <tr *ngFor="let album of albumes | sortBy:'desc':'album_id'" style="cursor: pointer;" (click)="verAlbum(album.album_id)">
                         <td class="table-primary">{{ album.album_id }}</td>
                         <td>{{ album.album }}</td>
                         <td>{{ album.lugar }}</td>

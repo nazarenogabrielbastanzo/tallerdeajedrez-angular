@@ -66,14 +66,13 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let partida of partidas | sortBy:'desc':'data.nro'; let i = index">
+                <tr *ngFor="let partida of partidas | sortBy:'desc':'data.nro'">
                     <td class="table-primary">{{ partida.data.nro }}</td>
                     <td class="text-right">{{ partida.data.blancas }}</td>
                     <td class="text-center">{{ partida.data.resultado }}</td>
                     <td class="text-left">{{ partida.data.negras }}</td>
                     <td><a mat-raised-button (click)="openLg(content, partida.data.nro, 'final')">Ver Final</a></td>
                     <td class="text-center"><a mat-raised-button (click)="openLg(content, partida.data.nro, 'rapida')">Vista rápida</a></td>
-                    <!-- <td><a mat-raised-button (click)="verPartida(partida.data.nro)">Ver Partida</a></td> -->
                     <td><a mat-raised-button (click)="openLg2(content2, partida.id, true)">Ver Partida</a></td>
                     <td>{{partida.data.evento}}</td>
                     <td>{{partida.data.fecha}}</td>
