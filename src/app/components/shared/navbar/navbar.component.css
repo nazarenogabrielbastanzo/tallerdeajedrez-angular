@@ -36,7 +36,8 @@ span.brand {
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 18px;
+    /* 25 */
     font-weight: lighter;
     color: white;
     display: block;
@@ -51,7 +52,8 @@ span.brand {
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 36px;
+    font-size: 29px;
+    /* 36 */
     margin-left: 50px;
 }
 
@@ -60,7 +62,8 @@ span.brand {
         padding-top: 15px;
     }
     .sidenav a {
-        font-size: 18px;
+        font-size: 11px;
+        /* 18 */
     }
 }
 
