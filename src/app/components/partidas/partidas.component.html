@@ -32,7 +32,7 @@
     </div>
 </ng-template>
 
-<div class="container-fluid animated fadeIn slow">
+<div class="container-fluid animated fadeIn slow" *ngIf="partidas">
     <h4 class="text-center display-4 my-5">Partidas</h4>
 
     <div class="alert alert-primary" role="alert" *ngIf="partidas.length < 39">
