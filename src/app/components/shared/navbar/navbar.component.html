@@ -7,24 +7,24 @@
     <button class="menu" mat-icon-button aria-label="Menú" matTooltip="Menú" (click)="openNav()">
       <mat-icon>menu</mat-icon>
     </button>
+    <div id="mySidenav" class="sidenav" [ngClass]="{'opened': open === true, 'closed': open === false}">
+        <button class="closebtn" mat-icon-button aria-label="Cerrar Menú" matTooltip="Cerrar Menú" (click)="closeNav()">
+                <mat-icon>close</mat-icon>
+              </button>
+        <a mat-flat-button color="primary" routerLink="inicio" (click)="closeNav()" class="text-left">Inicio</a>
+        <mat-divider></mat-divider>
+        <a mat-flat-button color="primary" routerLink="partidas" (click)="closeNav()" class="text-left">Partidas</a>
+        <mat-divider></mat-divider>
+        <a mat-flat-button color="primary" routerLink="torneos" (click)="closeNav()" class="text-left">Torneos</a>
+        <mat-divider></mat-divider>
+        <a mat-flat-button color="primary" routerLink="estudios" (click)="closeNav()" class="text-left">Estudios</a>
+        <mat-divider></mat-divider>
+        <a mat-flat-button color="primary" routerLink="fotos" (click)="closeNav()" class="text-left">Fotos</a>
+        <mat-divider></mat-divider>
+        <a mat-flat-button color="primary" routerLink="frases" (click)="closeNav()" class="text-left">Frases</a>
+        <mat-divider></mat-divider>
+        <a mat-flat-button color="primary" routerLink="dispositivos" (click)="closeNav()" class="text-left">Dispositivos</a>
+        <mat-divider *ngIf="auth.loggedIn"></mat-divider>
+        <a mat-flat-button color="primary" (click)="auth.logout()" *ngIf="auth.loggedIn" class="text-left">Log Out</a>
+    </div>
 </mat-toolbar>
-<div id="mySidenav" class="sidenav" [ngClass]="{'opened': open === true, 'closed': open === false}">
-    <button class="closebtn" mat-icon-button aria-label="Cerrar Menú" matTooltip="Cerrar Menú" (click)="closeNav()">
-            <mat-icon>close</mat-icon>
-          </button>
-    <a mat-flat-button color="primary" routerLink="inicio" (click)="closeNav()" class="text-left">Inicio</a>
-    <mat-divider></mat-divider>
-    <a mat-flat-button color="primary" routerLink="partidas" (click)="closeNav()" class="text-left">Partidas</a>
-    <mat-divider></mat-divider>
-    <a mat-flat-button color="primary" routerLink="torneos" (click)="closeNav()" class="text-left">Torneos</a>
-    <mat-divider></mat-divider>
-    <a mat-flat-button color="primary" routerLink="estudios" (click)="closeNav()" class="text-left">Estudios</a>
-    <mat-divider></mat-divider>
-    <a mat-flat-button color="primary" routerLink="fotos" (click)="closeNav()" class="text-left">Fotos</a>
-    <mat-divider></mat-divider>
-    <a mat-flat-button color="primary" routerLink="frases" (click)="closeNav()" class="text-left">Frases</a>
-    <mat-divider></mat-divider>
-    <a mat-flat-button color="primary" routerLink="dispositivos" (click)="closeNav()" class="text-left">Dispositivos</a>
-    <mat-divider *ngIf="auth.loggedIn"></mat-divider>
-    <a mat-flat-button color="primary" (click)="auth.logout()" *ngIf="auth.loggedIn" class="text-left">Log Out</a>
-</div>
