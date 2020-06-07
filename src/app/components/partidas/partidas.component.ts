@@ -31,6 +31,7 @@ export class PartidasComponent implements OnInit, OnDestroy {
   isAnonymous: boolean;
   uid: string;
   message: any;
+  maxlength = 50;
 
   constructor(
     private modalService: NgbModal,

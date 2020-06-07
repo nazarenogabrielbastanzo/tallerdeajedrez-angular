@@ -42,9 +42,12 @@
     <mat-divider></mat-divider>
 
     <div class="container card shadow mt-5">
-        <mat-form-field class="full-width my-3">
-            <mat-label>Buscar partida...</mat-label>
-            <input matInput placeholder="Por ejemplo: kasparov" (keyup.enter)="buscarPartida(buscarTexto.value)" type="text" #buscarTexto [(ngModel)]="terminoDeBusqueda" autocomplete="off">
+        <mat-form-field appearance="outline" class="full-width my-3">
+            <mat-label>Buscar partida</mat-label>
+            <input matInput placeholder="Por ejemplo: kasparov" [maxlength]="maxlength" (keyup.enter)="buscarPartida(buscarTexto.value)" type="text" #buscarTexto [(ngModel)]="terminoDeBusqueda" autocomplete="off">
+            <mat-icon matSuffix>search</mat-icon>
+            <mat-hint align="start">Máximo {{maxlength}} caracteres</mat-hint>
+            <mat-hint align="end">{{buscarTexto.value?.length || 0}}/{{maxlength}}</mat-hint>
         </mat-form-field>
 
         <ngb-alert *ngIf="info" type="danger" (close)="info = false" class="text-center animated fadeIn">{{ infoMessage }}</ngb-alert>
