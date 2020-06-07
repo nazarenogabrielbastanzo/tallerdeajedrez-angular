@@ -14,6 +14,7 @@ export class FotosComponent implements OnInit {
   info: boolean;
   infoMessage: string;
   terminoDeBusqueda = '';
+  maxlength = 50;
 
   constructor(
     private peticionesServices: PeticionesService,
