@@ -14,6 +14,7 @@
         <a mat-flat-button color="primary" routerLink="inicio" (click)="closeNav()" class="text-left">Inicio</a>
         <mat-divider></mat-divider>
         <a mat-flat-button color="primary" routerLink="partidas" (click)="closeNav()" class="text-left" *ngIf="partidas">Partidas&nbsp;<span [matBadge]="partidas.length" matBadgeColor="accent">&nbsp;</span></a>
+        <a mat-flat-button color="primary" class="text-left" *ngIf="!partidas">Espere...</a>
         <mat-divider></mat-divider>
         <a mat-flat-button color="primary" routerLink="torneos" (click)="closeNav()" class="text-left">Torneos</a>
         <mat-divider></mat-divider>
