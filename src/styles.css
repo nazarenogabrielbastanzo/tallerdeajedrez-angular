@@ -37,7 +37,8 @@ button.button-accent {
 }
 
 #style-1::-webkit-scrollbar-thumb {
-    background-color: #3f51b5;
+    background-color: black;
+    /* #3f51b5 */
 }
 
 #style-1::-webkit-scrollbar-track {
