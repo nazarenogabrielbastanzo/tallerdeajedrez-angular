@@ -13,16 +13,15 @@
               </button>
         <a mat-flat-button color="primary" routerLink="inicio" (click)="closeNav()" class="text-left">Inicio</a>
         <mat-divider></mat-divider>
-        <a mat-flat-button color="primary" routerLink="partidas" (click)="closeNav()" class="text-left" *ngIf="partidas">Partidas&nbsp;<span [matBadge]="partidas.length" matBadgeColor="accent">&nbsp;</span></a>
-        <a mat-flat-button color="primary" class="text-left" *ngIf="!partidas">Espere...</a>
+        <a mat-flat-button color="primary" routerLink="partidas" (click)="closeNav()" class="text-left">Partidas&nbsp;&nbsp;<span *ngIf="partidas && partidas.length > 0" [matBadge]="partidas.length" matBadgeColor="accent">&nbsp;</span></a>
         <mat-divider></mat-divider>
         <a mat-flat-button color="primary" routerLink="torneos" (click)="closeNav()" class="text-left">Torneos</a>
         <mat-divider></mat-divider>
-        <a mat-flat-button color="primary" routerLink="estudios" (click)="closeNav()" class="text-left">Estudios&nbsp;<span matBadge="5" matBadgeColor="accent">&nbsp;</span></a>
+        <a mat-flat-button color="primary" routerLink="estudios" (click)="closeNav()" class="text-left">Estudios&nbsp;&nbsp;<span *ngIf="estudios && estudios.length > 0" [matBadge]="estudios.length" matBadgeColor="accent">&nbsp;</span></a>
         <mat-divider></mat-divider>
-        <a mat-flat-button color="primary" routerLink="fotos" (click)="closeNav()" class="text-left">Fotos&nbsp;<span matBadge="1k+" matBadgeColor="accent">&nbsp;</span></a>
+        <a mat-flat-button color="primary" routerLink="fotos" (click)="closeNav()" class="text-left">Fotos&nbsp;&nbsp;<span matBadge="99+" matBadgeColor="accent">&nbsp;</span></a>
         <mat-divider></mat-divider>
-        <a mat-flat-button color="primary" routerLink="frases" (click)="closeNav()" class="text-left">Frases&nbsp;<span matBadge="11" matBadgeColor="accent">&nbsp;</span></a>
+        <a mat-flat-button color="primary" routerLink="frases" (click)="closeNav()" class="text-left">Frases&nbsp;&nbsp;<span *ngIf="frases && frases.length > 0" [matBadge]="frases.length" matBadgeColor="accent">&nbsp;</span></a>
         <mat-divider></mat-divider>
         <a mat-flat-button color="primary" routerLink="dispositivos" (click)="closeNav()" class="text-left">Dispositivos</a>
         <mat-divider *ngIf="auth.loggedIn"></mat-divider>

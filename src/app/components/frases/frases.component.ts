@@ -12,12 +12,12 @@ export class FrasesComponent implements OnInit {
   frases: any;
 
   constructor(
-    private peticionesServices: PeticionesService
+    private peticionesService: PeticionesService
   ) { }
 
   ngOnInit(): void {
     this.cargando = true;
-    this.peticionesServices.getFrases()
+    this.peticionesService.getFrases()
       .subscribe((data: any) => {
         this.cargando = false;
         this.frases = data;

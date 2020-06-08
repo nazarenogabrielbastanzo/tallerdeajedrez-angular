@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../../services/auth.service'; // el authservice de auth0
 import { AngularFireAuth } from '@angular/fire/auth';
 import { FirestoreService } from '../../../services/firestore/firestore.service';
+import { PeticionesService } from '../../../services/peticiones.service';
 
 @Component({
   selector: 'app-navbar',
@@ -16,12 +17,15 @@ export class NavbarComponent implements OnInit {
   isAnonymous: boolean;
   uid: string;
   partidas: any;
+  estudios: any[];
+  frases: any;
 
   constructor(
     public router: Router,
     public auth: AuthService,
     private angularFireAuth: AngularFireAuth,
     private firestoreService: FirestoreService,
+    public peticionesService: PeticionesService
   ) { }
 
   ngOnInit() {
@@ -37,6 +41,7 @@ export class NavbarComponent implements OnInit {
         this.isAnonymous = user.isAnonymous;
         this.uid = user.uid;
         // ...
+        // Partidas
         this.firestoreService.getPartidas().subscribe((partidasSnapshot) => {
           this.partidas = [];
           partidasSnapshot.forEach((partidaData: any) => {
@@ -46,6 +51,14 @@ export class NavbarComponent implements OnInit {
               });
           });
         });
+        this.peticionesService.getEstudios()
+          .subscribe((estudios: any[]) => {
+            this.estudios = estudios;
+          });
+        this.peticionesService.getFrases()
+          .subscribe((data: any) => {
+            this.frases = data;
+          });
       } else {
         // User is signed out.
         // ...
