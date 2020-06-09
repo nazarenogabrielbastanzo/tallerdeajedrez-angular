@@ -89,6 +89,12 @@ export class PartidasComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void { }
 
+  cerrarModal1() {
+    this.modalService.dismissAll();
+    this.srcImgPop = '';
+    this.srcGIF = '';
+  }
+
   openLg(content: any, numero: number, tipo: string) {
     this.modalService.open(content, { centered: true, backdropClass: 'light-blue-backdrop' });
     this.numero = numero;

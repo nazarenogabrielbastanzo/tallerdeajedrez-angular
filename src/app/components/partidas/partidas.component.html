@@ -8,20 +8,22 @@
     <div class="modal-header">
         <h4 class="modal-title" *ngIf="jpg === true">Final de la Partida {{numero}}</h4>
         <h4 class="modal-title" *ngIf="gif === true">Vista rápida de la Partida {{numero}}</h4>
-        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <button type="button" class="close" aria-label="Close" (click)="cerrarModal1()">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    <div class="modal-body">
-        <img *ngIf="jpg === true" [src]="srcImgPop" alt="Final de la partida {{numero}}" class="img-fluid" style="width: 100%;">
-        <img *ngIf="gif === true" [src]="srcGIF" alt="GIF de la partida {{numero}}" class="img-fluid" style="width: 100%;">
+    <div class="modal-body text-center">
+        <img *ngIf="jpg === true && srcImgPop" [src]="srcImgPop" alt="Final de la partida {{numero}}" class="img-fluid" style="width: 100%;">
+        <img *ngIf="jpg === true && !srcImgPop" class="my-5" src="assets/images/loading1.gif">
+        <img *ngIf="gif === true && srcGIF" [src]="srcGIF" alt="GIF de la partida {{numero}}" class="img-fluid" style="width: 100%;">
+        <img *ngIf="gif === true && !srcGIF" class="my-5" src="assets/images/loading1.gif">
     </div>
 </ng-template>
 
 <ng-template #content2 let-modal>
     <div class="modal-header">
         <h4 class="modal-title" *ngIf="verCompleta === true">Vista completa de la partida {{numero}}</h4>
-        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
