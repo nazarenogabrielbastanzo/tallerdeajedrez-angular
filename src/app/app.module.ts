@@ -54,6 +54,7 @@ import { EstudiosComponent } from './components/estudios/estudios.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { MessagingService } from './shared/messaging.service';
+import { SidenavComponent } from './components/shared/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import { MessagingService } from './shared/messaging.service';
     EstudioComponent,
     EstudiosComponent,
     AuthComponent,
+    SidenavComponent,
     /* SnackBarComponent */
   ],
   imports: [
