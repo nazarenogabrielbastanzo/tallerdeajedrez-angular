@@ -33,16 +33,19 @@
 
 mat-sidenav {
     /* Mobile 1st.: */
-    width: 50%;
-    background-color: #3f51b5;
+    width: 100%;
+    background-color: rgba(63, 81, 181, 0);
 }
 
-@media screen and (min-width: 450px) {
-    /* For desktop: */
+
+/* For desktop: */
+
+
+/* @media screen and (min-width: 450px) {
     mat-sidenav {
         width: 20%;
     }
-}
+} */
 
 
 /* mat-icon.menu-icon {
@@ -66,7 +69,6 @@ span.brand {
 }
 
 .aNav {
-    margin-left: 8px;
     color: white;
 }
 
