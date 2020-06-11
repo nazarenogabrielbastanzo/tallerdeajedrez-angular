@@ -13,12 +13,14 @@ import { PeticionesService } from '../../../services/peticiones.service';
 export class NavbarComponent implements OnInit {
 
   public isMenuCollapsed = true;
-  open: boolean;
+  open = false;
   isAnonymous: boolean;
   uid: string;
   partidas: any;
   estudios: any[];
   frases: any;
+  opened = false;
+  ariaExpanded: string;
 
   constructor(
     public router: Router,
@@ -65,6 +67,12 @@ export class NavbarComponent implements OnInit {
       }
       // ...
     });
+  }
+
+  toggleNav() {
+    this.opened = !this.opened;
+    // this.ariaExpanded = 'aria-expanded';
+    this.open = !this.open;
   }
 
   openNav() {

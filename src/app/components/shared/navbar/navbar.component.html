@@ -4,26 +4,27 @@
         <img src="assets/images/logo2-50x65.jpg" width="30" height="30" class="d-inline-block align-top" alt="Logo de Taller de Ajedrez"><span class="brand ml-3">Taller de Ajedrez</span>
     </a>
     <span class="spacer"></span>
-    <button class="menu" mat-icon-button aria-label="Menú" matTooltip="Menú" (click)="openNav()">
-      <mat-icon>menu</mat-icon>
+    <button class="menu" aria-label="Menú" matTooltip="Menú" (click)="toggleNav()" [ngClass]="{'opened1': opened}">
+        <svg width="33" height="33" viewBox="0 0 100 100">
+            <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+            <path class="line line2" d="M 20,50 H 80" />
+            <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+        </svg>
     </button>
     <div id="mySidenav" class="sidenav" [ngClass]="{'opened': open === true, 'closed': open === false}">
-        <button class="closebtn" mat-icon-button aria-label="Cerrar Menú" matTooltip="Cerrar Menú" (click)="closeNav()">
-                <mat-icon>close</mat-icon>
-              </button>
-        <a mat-flat-button color="primary" routerLink="inicio" (click)="closeNav()" class="text-left">Inicio</a>
+        <a mat-flat-button color="primary" routerLink="inicio" (click)="toggleNav()" class="text-left">Inicio</a>
         <mat-divider></mat-divider>
-        <a mat-flat-button color="primary" routerLink="partidas" (click)="closeNav()" class="text-left">Partidas&nbsp;&nbsp;<span *ngIf="partidas && partidas.length > 0" [matBadge]="partidas.length" matBadgeColor="accent">&nbsp;</span></a>
+        <a mat-flat-button color="primary" routerLink="partidas" (click)="toggleNav()" class="text-left">Partidas&nbsp;&nbsp;<span *ngIf="partidas && partidas.length > 0" [matBadge]="partidas.length" matBadgeColor="accent">&nbsp;</span></a>
         <mat-divider></mat-divider>
-        <a mat-flat-button color="primary" routerLink="torneos" (click)="closeNav()" class="text-left">Torneos</a>
+        <a mat-flat-button color="primary" routerLink="torneos" (click)="toggleNav()" class="text-left">Torneos</a>
         <mat-divider></mat-divider>
-        <a mat-flat-button color="primary" routerLink="estudios" (click)="closeNav()" class="text-left">Estudios&nbsp;&nbsp;<span *ngIf="estudios && estudios.length > 0" [matBadge]="estudios.length" matBadgeColor="accent">&nbsp;</span></a>
+        <a mat-flat-button color="primary" routerLink="estudios" (click)="toggleNav()" class="text-left">Estudios&nbsp;&nbsp;<span *ngIf="estudios && estudios.length > 0" [matBadge]="estudios.length" matBadgeColor="accent">&nbsp;</span></a>
         <mat-divider></mat-divider>
-        <a mat-flat-button color="primary" routerLink="fotos" (click)="closeNav()" class="text-left">Fotos&nbsp;&nbsp;<span matBadge="99+" matBadgeColor="accent">&nbsp;</span></a>
+        <a mat-flat-button color="primary" routerLink="fotos" (click)="toggleNav()" class="text-left">Fotos&nbsp;&nbsp;<span matBadge="99+" matBadgeColor="accent">&nbsp;</span></a>
         <mat-divider></mat-divider>
-        <a mat-flat-button color="primary" routerLink="frases" (click)="closeNav()" class="text-left">Frases&nbsp;&nbsp;<span *ngIf="frases && frases.length > 0" [matBadge]="frases.length" matBadgeColor="accent">&nbsp;</span></a>
+        <a mat-flat-button color="primary" routerLink="frases" (click)="toggleNav()" class="text-left">Frases&nbsp;&nbsp;<span *ngIf="frases && frases.length > 0" [matBadge]="frases.length" matBadgeColor="accent">&nbsp;</span></a>
         <mat-divider></mat-divider>
-        <a mat-flat-button color="primary" routerLink="dispositivos" (click)="closeNav()" class="text-left">Dispositivos</a>
+        <a mat-flat-button color="primary" routerLink="dispositivos" (click)="toggleNav()" class="text-left">Dispositivos</a>
         <mat-divider *ngIf="auth.loggedIn"></mat-divider>
         <a mat-flat-button color="primary" (click)="auth.logout()" *ngIf="auth.loggedIn" class="text-left">Log Out</a>
     </div>
