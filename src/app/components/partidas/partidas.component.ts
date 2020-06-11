@@ -1,10 +1,9 @@
-import { Component, OnInit, ViewEncapsulation, ViewChild, OnDestroy, HostListener } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, HostListener } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 import { FirestoreService } from '../../services/firestore/firestore.service';
 import { FirebaseStorageService } from '../../firebase-storage.service';
 import { environment } from 'src/environments/environment';
-import { MessagingService } from '../../shared/messaging.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
@@ -13,7 +12,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['./partidas.component.css']
 })
-export class PartidasComponent implements OnInit, OnDestroy {
+export class PartidasComponent implements OnInit {
 
   cargando: boolean;
   partidas: any;
@@ -38,7 +37,6 @@ export class PartidasComponent implements OnInit, OnDestroy {
     private router: Router,
     private firestoreService: FirestoreService,
     private firebaseStorage: FirebaseStorageService,
-    private messagingService: MessagingService,
     private angularFireAuth: AngularFireAuth
   ) { }
 
@@ -56,14 +54,6 @@ export class PartidasComponent implements OnInit, OnDestroy {
 
     this.angularFireAuth.auth.onAuthStateChanged((user) => {
       if (user) {
-        // User is signed in.
-        this.isAnonymous = user.isAnonymous;
-        this.uid = user.uid;
-        // ...
-        /* const userId = 'user001'; */
-        this.messagingService.requestPermission(this.uid);
-        this.messagingService.receiveMessage();
-        this.message = this.messagingService.currentMessage;
 
         this.cargando = true;
         this.firestoreService.getPartidas().subscribe((partidasSnapshot) => {
@@ -86,8 +76,6 @@ export class PartidasComponent implements OnInit, OnDestroy {
       // ...
     });
   }
-
-  ngOnDestroy(): void { }
 
   cerrarModal1() {
     this.modalService.dismissAll();
