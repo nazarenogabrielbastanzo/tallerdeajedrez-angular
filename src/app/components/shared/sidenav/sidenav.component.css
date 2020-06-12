@@ -34,18 +34,17 @@
 mat-sidenav {
     /* Mobile 1st.: */
     width: 100%;
-    background-color: rgba(63, 81, 181, 0);
+    background-color: rgba(0, 0, 0, .9);
 }
 
 
 /* For desktop: */
 
-
-/* @media screen and (min-width: 450px) {
+@media screen and (min-width: 450px) {
     mat-sidenav {
-        width: 20%;
+        width: 50%;
     }
-} */
+}
 
 
 /* mat-icon.menu-icon {
