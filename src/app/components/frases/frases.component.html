@@ -1,10 +1,10 @@
-<div *ngIf="cargando" class="row align-items-center" style="height: 100vh;">
+<div *ngIf="!frases || !frases.length || cargando" class="row align-items-center" style="height: 100vh;">
     <div class="col text-center">
         <p><img src="assets/images/loading1.gif"></p>
     </div>
 </div>
 
-<div class="animated fadeIn slow">
+<div class="animated fadeIn slow" *ngIf="frases && frases.length && !cargando">
     <div class="container-fluid">
         <h1 class="display-4 text-center my-5">Frases</h1>
         <mat-divider></mat-divider>

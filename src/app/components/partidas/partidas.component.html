@@ -1,4 +1,4 @@
-<div *ngIf="!partidas || cargando" class="row align-items-center" style="height: 100vh;">
+<div *ngIf="!partidas || !partidas.length  || cargando" class="row align-items-center" style="height: 100vh;">
     <div class="col text-center">
         <p><img src="assets/images/loading1.gif"></p>
     </div>
@@ -34,7 +34,7 @@
     </div>
 </ng-template>
 
-<div class="container-fluid animated fadeIn slow" *ngIf="partidas && partidas.length">
+<div class="container-fluid animated fadeIn slow" *ngIf="partidas && partidas.length && !cargando">
     <h4 class="text-center display-4 my-5">Partidas</h4>
 
     <mat-divider></mat-divider>

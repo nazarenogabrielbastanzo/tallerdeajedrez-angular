@@ -1,4 +1,10 @@
-<div class="animated fadeIn slow">
+<div *ngIf="!posts || !posts.length" class="row align-items-center" style="height: 100vh;">
+    <div class="col text-center">
+        <p><img src="assets/images/loading1.gif"></p>
+    </div>
+</div>
+
+<div class="animated fadeIn slow" *ngIf="posts && posts.length">
     <div class="card banner">
         <img src="assets/images/nuevas/banner.jpg" class="card-img img-fluid mb-3" alt="Taller de Ajedrez" style="width: 100%;">
         <div class="card-img-overlay">
