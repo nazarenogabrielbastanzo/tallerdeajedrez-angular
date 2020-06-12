@@ -34,7 +34,8 @@
 mat-sidenav {
     /* Mobile 1st.: */
     width: 100%;
-    background-color: rgba(0, 0, 0, .9);
+    /* background-color: rgba(63, 81, 181, 1); */
+    background-color: black;
 }
 
 
