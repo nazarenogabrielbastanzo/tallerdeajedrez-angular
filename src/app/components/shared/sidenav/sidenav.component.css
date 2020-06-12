@@ -40,11 +40,12 @@ mat-sidenav {
 
 /* For desktop: */
 
-@media screen and (min-width: 450px) {
+
+/* @media screen and (min-width: 450px) {
     mat-sidenav {
         width: 50%;
     }
-}
+} */
 
 
 /* mat-icon.menu-icon {
