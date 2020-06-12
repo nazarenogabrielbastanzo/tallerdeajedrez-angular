@@ -1,9 +1,9 @@
-<div *ngIf="cargando" class="row align-items-center" style="height: 100vh;">
+<div *ngIf="!estudios || cargando" class="row align-items-center" style="height: 100vh;">
     <div class="col text-center">
         <p><img src="assets/images/loading1.gif"></p>
     </div>
 </div>
-<div class="animated fadeIn slow">
+<div class="animated fadeIn slow" *ngIf="estudios && estudios.length">
     <h4 class="text-center display-4 my-5">Estudios</h4>
     <mat-divider></mat-divider>
     <!-- Cambiar a continuación, row-cols-md-[número de columnas deseado] y row-cols-lg-[número de columnas deseado] -->
