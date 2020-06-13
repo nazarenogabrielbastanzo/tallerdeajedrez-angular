@@ -20,13 +20,13 @@
     <!-- NOTA: Con 4 columnas se ve bien -->
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 m-0 my-3">
         <div class="col mb-4" *ngFor="let post of posts; let i = index">
-            <mat-card class="card h-100">
+            <mat-card class="card h-100" (click)="irAlLink(post.link)" style="cursor: pointer;" matRipple>
                 <mat-card-header class="card-header">
-                    <div mat-card-avatar class="example-header-image">
+                    <!-- <div mat-card-avatar class="example-header-image">
                         <a href="https://twitter.com/{{post.twitter}}" rel="noopener" target="_blank">
                             <img src="../../../assets/images/nuevas/{{post.twitter}}.jpg" alt="Foto del perfil del autor en Twitter" mat-card-avatar [matTooltip]="post.autor" style="cursor: pointer;">
                         </a>
-                    </div>
+                    </div> -->
                     <mat-card-title class="card-title">{{post.titulo}}</mat-card-title>
                     <mat-card-subtitle class="card-subtitle">{{post.autor}}</mat-card-subtitle>
                 </mat-card-header>
@@ -36,11 +36,11 @@
                         <p>{{post.extracto}}</p>
                     </mat-card-content>
                 </div>
-                <div class="card-footer">
+                <!-- <div class="card-footer">
                     <mat-card-actions class="text-center">
                         <button mat-raised-button (click)="irAlLink( post.link )" class="button-accent"><b>VER MÁS</b></button>
                     </mat-card-actions>
-                </div>
+                </div> -->
             </mat-card>
         </div>
     </div>

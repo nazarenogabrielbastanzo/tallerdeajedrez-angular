@@ -58,8 +58,8 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  irAlLink( link: any[] ) {
-    this.router.navigate(link);
+  irAlLink( link: string ) {
+    this.router.navigate([link]);
   }
 
   scrollDown() {
