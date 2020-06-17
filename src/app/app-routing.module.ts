@@ -19,6 +19,7 @@ import { AdminComponent } from './admin/admin.component';
 import { EstudioComponent } from './components/estudio/estudio.component';
 import { EstudiosComponent } from './components/estudios/estudios.component';
 import { AuthComponent } from './components/auth/auth.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 const routes: Routes = [
   { path: 'inicio', component: HomeComponent },
@@ -39,6 +40,7 @@ const routes: Routes = [
   { path: 'perfil', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
   { path: 'login', component: AuthComponent },
+  { path: 'logout', component: LogoutComponent, canActivate: [AuthGuard] },
   { path: '', pathMatch: 'full', redirectTo: 'inicio' },
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 ];

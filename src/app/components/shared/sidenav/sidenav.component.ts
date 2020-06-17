@@ -47,6 +47,9 @@ export class SidenavComponent implements OnInit, OnDestroy {
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     // tslint:disable-next-line: deprecation
     this.mobileQuery.addListener(this._mobileQueryListener);
+    if (this.auth.loggedIn) {
+      this.fillerNav.push({name: 'Logout', route: 'logout'});
+    }
   }
   ngOnInit(): void {
     this.angularFireAuth.auth.signInAnonymously()
