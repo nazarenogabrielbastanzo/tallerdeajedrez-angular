@@ -50,10 +50,6 @@ export class SidenavComponent implements OnInit, OnDestroy {
   }
   ngOnInit(): void {
 
-    if (this.auth.loggedIn) {
-      this.fillerNav.push({name: 'Logout', route: 'logout'});
-    }
-
     this.angularFireAuth.auth.signInAnonymously()
       .catch((error) => {
         console.log(error.code);

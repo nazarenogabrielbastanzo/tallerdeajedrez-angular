@@ -27,7 +27,6 @@ import { NgpSortModule } from 'ngp-sort-pipe';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { PartidasComponent } from './components/partidas/partidas.component';
 import { TorneosComponent } from './components/torneos/torneos.component';
 import { FotosComponent } from './components/fotos/fotos.component';
@@ -55,13 +54,11 @@ import { AuthComponent } from './components/auth/auth.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { MessagingService } from './shared/messaging.service';
 import { SidenavComponent } from './components/shared/sidenav/sidenav.component';
-import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent,
     PartidasComponent,
     TorneosComponent,
     FotosComponent,
@@ -83,7 +80,6 @@ import { LogoutComponent } from './components/logout/logout.component';
     EstudiosComponent,
     AuthComponent,
     SidenavComponent,
-    LogoutComponent,
     /* SnackBarComponent */
   ],
   imports: [
