@@ -22,7 +22,7 @@ export class SidenavComponent implements OnInit, OnDestroy {
     {name: 'Estudios', route: 'estudios'},
     {name: 'Fotos', route: 'fotos'},
     {name: 'Frases', route: 'frases'},
-    {name: 'Dispositivos', route: 'dispositivos'},
+    {name: 'Dispositivos', route: 'dispositivos'}
   ];
 
   // tslint:disable-next-line: variable-name
@@ -47,11 +47,13 @@ export class SidenavComponent implements OnInit, OnDestroy {
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     // tslint:disable-next-line: deprecation
     this.mobileQuery.addListener(this._mobileQueryListener);
+  }
+  ngOnInit(): void {
+
     if (this.auth.loggedIn) {
       this.fillerNav.push({name: 'Logout', route: 'logout'});
     }
-  }
-  ngOnInit(): void {
+
     this.angularFireAuth.auth.signInAnonymously()
       .catch((error) => {
         console.log(error.code);
