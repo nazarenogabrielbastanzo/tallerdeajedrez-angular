@@ -39,5 +39,12 @@
         "propuesta": "Juegan las blancas y ganan",
         "img": "assets/images/nuevas/estudio-ernest-pogosiants.jpg",
         "youtubeId": "ajjUalwuJzE"
+    },
+    {
+        "id": 7,
+        "titulo": "Estudio Richard Reti",
+        "propuesta": "Juegan las blancas y consiguen empatar",
+        "img": "assets/images/nuevas/estudio-richard-reti.jpg",
+        "youtubeId": "FU0-st-RN8o"
     }
 ]
