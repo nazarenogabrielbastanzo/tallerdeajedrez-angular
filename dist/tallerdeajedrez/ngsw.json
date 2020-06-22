@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1592854183124,
+  "timestamp": 1592854522868,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -3327,7 +3327,7 @@
     "/5-es2015.ac87ff46a5abebe3ea19.js": "184f6c64b99826effaf864e1aca54d82c8986f1b",
     "/5-es5.ac87ff46a5abebe3ea19.js": "184f6c64b99826effaf864e1aca54d82c8986f1b",
     "/assets/datos/albumes.json": "eabc10cddffa9700701009db9eea8cff3ec7ac37",
-    "/assets/datos/estudios.json": "f06b9fa7061033fe0ed86518f134eeb00ddaa74a",
+    "/assets/datos/estudios.json": "1a22c0c1d4971ff3ee39251b687956ed64f5d63a",
     "/assets/datos/frases.json": "76d9938d03622a9e0827580e75fc3407ca21fa87",
     "/assets/datos/partidas.json": "fc3d80c1109dc794b1e7fb3c5b0d22b406734e9c",
     "/assets/datos/posts.json": "7d44995d0f124bad10ff86da46ccd6c98449791b",
