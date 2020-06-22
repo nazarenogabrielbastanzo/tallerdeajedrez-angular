@@ -32,5 +32,12 @@
         "propuesta": "Juegan las blancas y ganan",
         "img": "assets/images/nuevas/estudio-leonid-kubbel.jpg",
         "youtubeId": "evmh5FR30W4"
+    },
+    {
+        "id": 6,
+        "titulo": "Estudio Ernest Pogosiants",
+        "propuesta": "Juegan las blancas y ganan",
+        "img": "assets/images/nuevas/estudio-ernest-pogosiants.jpg",
+        "youtubeId": "ajjUalwuJzE"
     }
 ]
