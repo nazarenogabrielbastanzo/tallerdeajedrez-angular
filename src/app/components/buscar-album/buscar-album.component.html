@@ -5,9 +5,9 @@
 
     <div class="container card my-5 shadow">
         <div class="d-flex justify-content-start m-3">
-            <button mat-raised-button color="primary" (click)="goBack()">
-          <i class="fas fa-chevron-left"></i> <span class="ml-2">Volver</span>
-        </button>
+            <a mat-raised-button (click)="goBack()">
+                <i class="fas fa-chevron-left"></i> <span class="ml-2">Volver</span>
+            </a>
         </div>
 
         <div class="row" *ngIf="albumes.length">

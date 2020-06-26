@@ -30,9 +30,9 @@
     <h4 class="text-center display-4 my-5">Buscar Partidas</h4>
 
     <div class="d-flex justify-content-start m-3">
-        <button mat-raised-button color="primary" (click)="goBack()">
+        <a mat-raised-button (click)="goBack()">
             <i class="fas fa-chevron-left"></i> <span class="ml-2">Volver</span>
-        </button>
+        </a>
     </div>
     <div class="row" *ngIf="partidas.length != 0">
         <div class="col">
@@ -59,9 +59,9 @@
                     <th>Blancas</th>
                     <th>Resultado</th>
                     <th>Negras</th>
-                    <th>Ver Final</th>
+                    <th>Final</th>
                     <th>Vista rápida</th>
-                    <th>Ver Partida</th>
+                    <th>Partida</th>
                     <th>Evento</th>
                     <th>Fecha</th>
                 </tr>
@@ -75,9 +75,9 @@
                     <td class="text-right">{{ partida.data.blancas }}</td>
                     <td class="text-center">{{ partida.data.resultado }}</td>
                     <td class="text-left">{{ partida.data.negras }}</td>
-                    <td class="text-center"><button type="button" mat-raised-button (click)="openLg(content, partida.data.nro, 'final')">Ver Final</button></td>
-                    <td class="text-center"><button type="button" mat-raised-button (click)="openLg(content, partida.data.nro, 'rapida')">Vista rápida</button></td>
-                    <td class="text-center"><button type="button" mat-raised-button (click)="openLg2(content2, partida.id, true)">Ver Partida</button></td>
+                    <td class="text-center"><a mat-raised-button (click)="openLg(content, partida.data.nro, 'final')" matTooltip="Ver Final de la Partida"><i class="fas fa-fast-forward"></i></a></td>
+                    <td class="text-center"><a mat-raised-button (click)="openLg(content, partida.data.nro, 'rapida')" matTooltip="Vista Rápida de la Partida"><i class="fas fa-bolt"></i></a></td>
+                    <td class="text-center"><a mat-raised-button (click)="openLg2(content2, partida.id, true)" matTooltip="Vista Completa de la Partida"><i class="fas fa-eye"></i></a></td>
                     <td class="text-left">{{partida.data.evento}}</td>
                     <td class="text-center">{{partida.data.fecha}}</td>
                 </tr>

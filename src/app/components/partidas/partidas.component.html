@@ -54,14 +54,14 @@
     <div class="table-responsive my-5">
         <table class="table table-bordered table-striped table-sm" id="datatable">
             <thead>
-                <tr class="table-primary" style="font-style: italic;">
+                <tr class="table-primary">
                     <th class="text-center">ID</th>
                     <th class="text-center">Blancas</th>
                     <th class="text-center">Resultado</th>
                     <th class="text-center">Negras</th>
-                    <th class="text-center">Ver Final</th>
+                    <th class="text-center">Final</th>
                     <th class="text-center">Vista rápida</th>
-                    <th class="text-center">Ver Partida</th>
+                    <th class="text-center">Partida</th>
                     <th class="text-center">Evento</th>
                     <th class="text-center">Fecha</th>
                 </tr>
@@ -72,9 +72,9 @@
                     <td class="text-right">{{ partida.data.blancas }}</td>
                     <td class="text-center">{{ partida.data.resultado }}</td>
                     <td class="text-left">{{ partida.data.negras }}</td>
-                    <td><a mat-raised-button (click)="openLg(content, partida.data.nro, 'final')">Ver Final</a></td>
-                    <td class="text-center"><a mat-raised-button (click)="openLg(content, partida.data.nro, 'rapida')">Vista rápida</a></td>
-                    <td><a mat-raised-button (click)="openLg2(content2, partida.id, true)">Ver Partida</a></td>
+                    <td><a mat-raised-button (click)="openLg(content, partida.data.nro, 'final')" matTooltip="Ver Final de la Partida"><i class="fas fa-fast-forward"></i></a></td>
+                    <td class="text-center"><a mat-raised-button (click)="openLg(content, partida.data.nro, 'rapida')" matTooltip="Vista Rápida de la Partida"><i class="fas fa-bolt"></i></a></td>
+                    <td><a mat-raised-button (click)="openLg2(content2, partida.id, true)" matTooltip="Vista Completa de la Partida"><i class="fas fa-eye"></i></a></td>
                     <td>{{partida.data.evento}}</td>
                     <td>{{partida.data.fecha}}</td>
                 </tr>
