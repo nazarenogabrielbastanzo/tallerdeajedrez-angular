@@ -12,7 +12,7 @@ export class TorneosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.torneos.nombre = 'FIDE Chesscom Online Nations Cup';
+    this.torneos.nombre = 'Chess24 Legends of Chess';
     const url = this.torneos.nombre.toLowerCase().split(' ').join('-');
     this.torneos.url = `${url}/0`;
   }
