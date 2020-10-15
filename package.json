@@ -1,7 +1,10 @@
 {
     "name": "tallerdeajedrez",
+    "homepage": "https://nazarenogabrielbastanzo.github.io/tallerdeajedrez-angular",
     "version": "0.0.0",
     "scripts": {
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build",
         "ng": "ng",
         "start": "ng serve --port=3000 -o",
         "build": "ng build",
