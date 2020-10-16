@@ -43,6 +43,7 @@ testem.log
 /typings
 /src/environments
 /src/firebase-messaging-sw.js
+pasos-para-subir-cambios-en-el-codigo.txt
 
 # System Files
 .DS_Store

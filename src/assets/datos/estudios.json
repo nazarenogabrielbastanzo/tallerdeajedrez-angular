@@ -46,5 +46,12 @@
         "propuesta": "Juegan las blancas y consiguen empatar",
         "img": "assets/images/nuevas/estudio-richard-reti.jpg",
         "youtubeId": "FU0-st-RN8o"
+    },
+    {
+      "id": 8,
+      "titulo": "Estudio de Orrin Frink",
+      "propuesta":"Juegan las blancas y ganan",
+      "img": "assets/images/nuevas/estudio-orrin-frink.jpg",
+      "youtubeId": "-D31DdklBYo"
     }
 ]
