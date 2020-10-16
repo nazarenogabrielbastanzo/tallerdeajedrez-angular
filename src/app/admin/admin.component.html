@@ -2,10 +2,24 @@
     <div *ngIf="auth.userProfile$ | async as profile">
         <div *ngIf="profile['https://tallerdeajedrez.com.ar/api'][0] === 'admin'">
             <div class="container-fluid bg-dark py-5" style="color: white;">
-                <div class="row">
-                    <div class="col-3">
-                        <h1>Partidas</h1>
-                        <form (ngSubmit)="nuevaPartida(newForm.value)" [formGroup]="newForm">
+              <p>
+                <button mat-raised-button color="primary" (click)="auth.logout()">Logout <i class="fas fa-power-off"></i></button>
+              </p>
+              <!-- PARTIDAS -->
+              <p>
+                <button type="button" class="btn btn-outline-primary" (click)="isCollapsedPartidas = !isCollapsedPartidas"
+                        [attr.aria-expanded]="!isCollapsedPartidas" aria-controls="collapseExample">
+                  Partidas
+                </button>
+              </p>
+              <div id="collapseExample" [ngbCollapse]="isCollapsedPartidas">
+                <div class="card my-5">
+                  <div class="card-body bg-dark">
+                    <div class="row">
+                      <div class="col-3">
+                          <h1>Partidas</h1>
+                          <!-- Partidas -->
+                          <form (ngSubmit)="nuevaPartida(newForm.value)" [formGroup]="newForm">
                             <input type="hidden" name="id">
                             <div class="form-group">
                                 <label for="nro">#</label>
@@ -67,13 +81,14 @@
                             </button>
                             <button type="reset" class="btn btn-secondary" (click)="currentStatus = 1">Cancelar</button>
                         </form>
-                        <button mat-raised-button color="primary" (click)="auth.logout()">Logout</button>
-                    </div>
-                    <div class="col-9">
-                        <div class="text-center my-5">
-                            <i class="fas fa-spinner fa-spin fa-5x" style="color: white;" *ngIf="cargando === true"></i>
-                        </div>
-                        <div class="table-responsive" *ngIf="cargando === false">
+                          <!-- EndPartidas -->
+                      </div>
+                      <div class="col-9">
+                          <div class="text-center my-5">
+                              <i class="fas fa-spinner fa-spin fa-5x" style="color: white;" *ngIf="cargando === true"></i>
+                          </div>
+                          <!-- TablaPartidas -->
+                          <div class="table-responsive" *ngIf="cargando === false">
                             <table class="table table-bordered" style="zoom: 80%;color: white;">
                                 <thead>
                                     <tr>
@@ -107,11 +122,32 @@
                                         </td>
                                     </tr>
                                 </tbody>
-                            </table>
-                        </div>
-                    </div>
+                              </table>
+                          </div>
+                          <!-- EndTablaPartidas -->
+                      </div>
+                  </div>
+              </div>
+                  </div>
                 </div>
-            </div>
+                <!-- END_PARTIDAS -->
+                <!-- ESTUDIOS -->
+                <p>
+                  <button type="button" class="btn btn-outline-primary" (click)="isCollapsedEstudios = !isCollapsedEstudios"
+                          [attr.aria-expanded]="!isCollapsedEstudios" aria-controls="collapseExample">
+                    Estudios
+                  </button>
+                </p>
+                <div id="collapseExample" [ngbCollapse]="isCollapsedEstudios">
+                  <div class="card my-5">
+                    <div class="card-body bg-dark">
+                      <!--  -->
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti natus magnam consequuntur! Nisi, ipsum repudiandae. Expedita, consectetur. Omnis beatae officia maiores impedit obcaecati quae porro ipsum voluptas accusantium vero!
+                    </div>
+                  </div>
+                </div>
+                <!-- END_ESTUDIOS -->
+              </div>
         </div>
         <div *ngIf="profile['https://tallerdeajedrez.com.ar/api'][0] === 'user'">
             <h1 class="text-center">Acceso denegado.</h1>

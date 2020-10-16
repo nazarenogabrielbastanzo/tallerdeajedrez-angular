@@ -15,6 +15,8 @@ import { environment } from 'src/environments/environment';
 })
 export class AdminComponent implements OnInit {
 
+  public isCollapsedEstudios = true;
+  public isCollapsedPartidas = true;
   public partidas = [];
   public cargando = true;
   public documentId = null;
