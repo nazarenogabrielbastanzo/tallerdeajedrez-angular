@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { PartidasComponent } from './components/partidas/partidas.component';
-import { TorneosComponent } from './components/torneos/torneos.component';
+/* import { TorneosComponent } from './components/torneos/torneos.component'; */
 import { FotosComponent } from './components/fotos/fotos.component';
 import { FotoComponent } from './components/foto/foto.component';
 import { FrasesComponent } from './components/frases/frases.component';
@@ -23,7 +23,7 @@ import { AuthComponent } from './components/auth/auth.component';
 const routes: Routes = [
   { path: 'inicio', component: HomeComponent },
   { path: 'partidas', component: PartidasComponent },
-  { path: 'torneos', component: TorneosComponent },
+  /* { path: 'torneos', component: TorneosComponent }, */
   { path: 'fotos', component: FotosComponent },
   { path: 'album/:id', component: FotoComponent },
   { path: 'foto/:album/:numero', component: FotoFullComponent },

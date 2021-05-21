@@ -18,7 +18,7 @@ export class SidenavComponent implements OnInit, OnDestroy {
   fillerNav = [
     {name: 'Inicio', route: 'inicio'},
     {name: 'Partidas', route: 'partidas'},
-    {name: 'Torneos', route: 'torneos'},
+    /* {name: 'Torneos', route: 'torneos'}, */
     {name: 'Estudios', route: 'estudios'},
     {name: 'Fotos', route: 'fotos'},
     {name: 'Frases', route: 'frases'},
