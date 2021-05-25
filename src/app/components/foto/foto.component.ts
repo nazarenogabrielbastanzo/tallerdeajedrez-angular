@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PeticionesService } from '../../services/peticiones.service';
 
@@ -7,6 +8,7 @@ import {NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation} from '@kolkov/n
 @Component({
   selector: 'app-foto',
   templateUrl: './foto.component.html',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./foto.component.css']
 })
 export class FotoComponent implements OnInit {
@@ -19,6 +21,7 @@ export class FotoComponent implements OnInit {
   mouseEntro = false;
   nro: number;
   cargando: boolean;
+  laFoto: any;
 
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[] = [];
@@ -26,10 +29,11 @@ export class FotoComponent implements OnInit {
   celular = (screen.width < 800) ? true : false;
 
   constructor(
+    private modalService: NgbModal,
     private activatedRoute: ActivatedRoute,
     private peticionesService: PeticionesService,
     private router: Router
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.cargando = true;
@@ -86,9 +90,9 @@ export class FotoComponent implements OnInit {
 
   }
 
-  verFoto(album: number, numero: number) {
+  /* verFoto(album: number, numero: number) {
     this.router.navigate(['/foto', album, numero]);
-  }
+  } */
 
   mouseOver(indice: number) {
     this.mouseEntro = true;
@@ -98,6 +102,15 @@ export class FotoComponent implements OnInit {
   mouseLeave(indice: number) {
     this.mouseEntro = false;
     this.nro = indice;
+  }
+
+  openModalXL(content: any, foto: any) {
+    this.modalService.open(content, { size: 'xl', backdropClass: 'light-blue-backdrop' });
+    this.laFoto = foto;
+  }
+
+  cerrarModal() {
+    this.modalService.dismissAll();
   }
 
 }

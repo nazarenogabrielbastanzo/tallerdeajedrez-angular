@@ -1,4 +1,4 @@
-img {
+.img-thumbnail {
     cursor: pointer;
 }
 
@@ -14,4 +14,8 @@ img {
 .galeria {
     width: 640px;
     margin: auto;
+}
+
+.light-blue-backdrop {
+  background-color: #5cb3fd;
 }
