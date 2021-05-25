@@ -117,4 +117,18 @@ export class FotoComponent implements OnInit {
     this.modalService.dismissAll();
   }
 
+  siguiente(nroFoto: number, cantFotos: number) {
+    if (nroFoto < cantFotos) {
+      this.laFoto = this.fotos[nroFoto +1];
+      this.nroFoto = nroFoto +1;
+    }
+  }
+
+  anterior(nroFoto: number, cantFotos: number) {
+    if (nroFoto > 0) {
+      this.laFoto = this.fotos[nroFoto -1];
+      this.nroFoto = nroFoto -1;
+    }
+  }
+
 }

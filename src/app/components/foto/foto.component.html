@@ -1,6 +1,6 @@
 <ng-template #content let-modal>
   <div class="modal-header">
-    <h4 class="modal-title">Foto {{ nroFoto }} de {{ cantFotos }}</h4>
+    <h4 class="modal-title">Foto {{ nroFoto +1 }} de {{ cantFotos }}</h4>
     <button type="button" class="close" aria-label="Close" (click)="cerrarModal()">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -8,9 +8,13 @@
   <div class="modal-body">
     <div class="row mb-5">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-        <img [src]="laFoto" alt="Foto {{ nroFoto }}" class="img-fluid">
+        <img [src]="laFoto" alt="Foto {{ nroFoto +1 }}" class="img-fluid">
       </div>
     </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-info" (click)="anterior(nroFoto, cantFotos)" [disabled]="nroFoto === 0">Anterior</button>
+    <button type="button" class="btn btn-info" (click)="siguiente(nroFoto, cantFotos)" [disabled]="nroFoto+1 === cantFotos">Siguiente</button>
   </div>
 </ng-template>
 
@@ -27,7 +31,7 @@
 
     <div class="row">
       <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2" *ngFor="let foto of fotos; let i = index">
-          <img [src]="foto" alt="Foto {i + 1}" class="img-thumbnail m-3" (click)="openModalXL(content, foto, i+1, fotos.length)">
+          <img [src]="foto" alt="Foto {i + 1}" class="img-thumbnail m-3" (click)="openModalXL(content, foto, i, fotos.length)" matTooltip="Clic para ampliar">
       </div>
     </div>
 
