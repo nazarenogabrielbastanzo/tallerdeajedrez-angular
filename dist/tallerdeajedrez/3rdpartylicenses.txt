@@ -592,6 +592,9 @@ firebase/messaging
 
 firebase/storage
 
+font-awesome
+(OFL-1.1 AND MIT)
+
 hammerjs
 MIT
 The MIT License (MIT)
