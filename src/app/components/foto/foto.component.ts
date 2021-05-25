@@ -22,11 +22,13 @@ export class FotoComponent implements OnInit {
   nro: number;
   cargando: boolean;
   laFoto: any;
+  nroFoto: number;
+  cantFotos: number;
 
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[] = [];
 
-  celular = (screen.width < 800) ? true : false;
+  /* celular = (screen.width < 800) ? true : false; */
 
   constructor(
     private modalService: NgbModal,
@@ -104,9 +106,11 @@ export class FotoComponent implements OnInit {
     this.nro = indice;
   }
 
-  openModalXL(content: any, foto: any) {
+  openModalXL(content: any, foto: any, nroFoto: number, cantFotos: number) {
     this.modalService.open(content, { size: 'xl', backdropClass: 'light-blue-backdrop' });
     this.laFoto = foto;
+    this.nroFoto = nroFoto;
+    this.cantFotos = cantFotos;
   }
 
   cerrarModal() {
