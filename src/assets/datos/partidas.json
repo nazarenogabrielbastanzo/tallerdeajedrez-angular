@@ -348,5 +348,221 @@
         "resultado": "0 - 1",
         "evento": "Bundesliga 1997/98",
         "fecha": "??/??/1997"
+    },
+    {
+      "numero":40,
+      "id":"mfnwpxPQ",
+      "blancas":"boemastadon",
+      "negras": "jbastanzo",
+      "resultado": "1/2 - 1/2",
+      "evento": "7+8 • Amistosa • Rápida",
+      "fecha":"9/mayo/2020"
+    },
+    {
+      "numero": 41,
+      "id":"ys0EeCGd",
+      "blancas": "tallerdeajedrez",
+      "negras":"Roosters94",
+      "resultado":"1 - 0",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"12/mayo/2020"
+    },
+    {
+      "numero":42,
+      "id":"FAsTEkpE",
+      "blancas":"zasada239",
+      "negras":"tallerdeajedrez",
+      "resultado":"0 - 1",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"12/mayo/2020"
+    },
+    {
+      "numero":43,
+      "id":"OkAPQ0s9",
+      "blancas":"tallerdeajedrez",
+      "negras":"Wonders",
+      "resultado": "1/2 - 1/2",
+      "evento": "10+0 • Por puntos • Rápida",
+      "fecha":"13/mayo/2020"
+    },
+    {
+      "numero":44,
+      "id":"qndAtD5Z",
+      "blancas":"Tuaba420",
+      "negras":"tallerdeajedrez",
+      "resultado":"0 - 1",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"14/mayo/2020"
+    },
+    {
+      "numero":45,
+      "id":"Gh7tkao0",
+      "blancas": "tallerdeajedrez",
+      "negras":"Humberto10",
+      "resultado":"1 - 0",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"15/mayo/2020"
+    },
+    {
+      "numero":46,
+      "id":"EsRxX9dp",
+      "blancas":"tallerdeajedrez",
+      "negras":"counteredpoint",
+      "resultado":"1 - 0",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"16/mayo/2020"
+    },
+    {
+      "numero":47,
+      "id":"BCeLOvt6",
+      "blancas":"nvlachos",
+      "negras":"tallerdeajedrez",
+      "resultado":"0 - 1",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"16/mayo/2020"
+    },
+    {
+      "numero":48,
+      "id":"sHKGlsLg",
+      "blancas":"Thank1",
+      "negras":"tallerdeajedrez",
+      "resultado":"0 - 1",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"16/mayo/2020"
+    },
+    {
+      "numero":49,
+      "id":"Edess82D",
+      "blancas":"tallerdeajedrez",
+      "negras":"Yrisple_solpe",
+      "resultado":"1 - 0",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"25/mayo/2020"
+    },
+    {
+      "numero":50,
+      "id":"NXQR4pAm",
+      "blancas":"tallerdeajedrez",
+      "negras": "juandcr",
+      "resultado": "1 - 0",
+      "evento": "5+0 • Por puntos • Rápida",
+      "fecha":"26/mayo/2020"
+    },
+    {
+      "numero":51,
+      "id":"jwoSeDs0",
+      "blancas":"C_Spaceman",
+      "negras":"tallerdeajedrez",
+      "resultado":"0 - 1",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"24/mayo/2020"
+    },
+    {
+      "numero":52,
+      "id":"JXlwljVa",
+      "blancas":"jbastanzo",
+      "negras":"babbage",
+      "resultado":"1 - 0",
+      "evento": "10+5 • Amistosa • Rápida",
+      "fecha":"25/mayo/2020"
+    },
+    {
+      "numero":53,
+      "id":"Xgljlm30",
+      "blancas":"said122",
+      "negras":"jbastanzo",
+      "resultado":"0 - 1",
+      "evento":"20+0 • Amistosa • Rápida",
+      "fecha":"26/mayo/2020"
+    },
+    {
+      "numero":54,
+      "id":"DuBOdu32",
+      "blancas":"tallerdeajedrez",
+      "negras":"Questionablemoves",
+      "resultado":"1 - 0",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"26/mayo/2020"
+    },
+    {
+      "numero":55,
+      "id":"X7zY3pJs",
+      "blancas":"Judit Polgar (2676)",
+      "negras":"Nguyen Huynh Minh Huy (2507)",
+      "resultado":"1 - 0",
+      "evento":"Chess Olympiad (2014)",
+      "fecha":"8/agosto/2014"
+    },
+    {
+      "numero":56,
+      "id":"JXePBkQK",
+      "blancas":"Magnus Carlsen (2863)",
+      "negras":"Hikaru Nakamura (2736)",
+      "resultado":"1 - 0",
+      "evento":"Lindores Abbey Rapid Challenge",
+      "fecha":"23/mayo/2020"
+    },
+    {
+      "numero":57,
+      "id":"OV4sDnzB",
+      "blancas":"Magnus Carlsen (2882)",
+      "negras":"Ding Liren (2805)",
+      "resultado":"0 - 1",
+      "evento":"Sinquefield Cup Tiebreaks",
+      "fecha":"29/agosto/2019"
+    },
+    {
+      "numero":58,
+      "id":"ip4TnMeh",
+      "blancas": "Ding Liren",
+      "negras":"Fabiano Caruana",
+      "resultado":"1 - 0",
+      "evento":"Sinquefield Cup",
+      "fecha":"26/agosto/2019"
+    },
+    {
+      "numero":59,
+      "id":"OUAanFg4",
+      "blancas":"nazarenobastanzo",
+      "negras":"Jeanneton",
+      "resultado":"1 - 0",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"3/junio/2020"
+    },
+    {
+      "numero":60,
+      "id":"VPsdbWtq",
+      "blancas":"nazarenobastanzo",
+      "negras":"na0798922198",
+      "resultado":"1 - 0",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"4/junio/2020"
+    },
+    {
+      "numero":61,
+      "id":"bPQNILBP",
+      "blancas":"Alexandradreev169",
+      "negras":"nazarenobastanzo",
+      "resultado":"0 - 1",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"4/junio/2020"
+    },
+    {
+      "numero":62,
+      "id":"K81lecGB",
+      "blancas":"DEN1971",
+      "negras":"jbastanzo",
+      "resultado":"1/2 - 1/2",
+      "evento":"10+15 • Amistosa • Rápida",
+      "fecha":"4/junio/2020"
+    },
+    {
+      "numero":63,
+      "id":"wqgn6zPa",
+      "blancas":"nazarenobastanzo",
+      "negras":"Rogov49",
+      "resultado":"1 - 0",
+      "evento":"15+0 • Por puntos • Rápida",
+      "fecha":"6/junio/2020"
     }
 ]
