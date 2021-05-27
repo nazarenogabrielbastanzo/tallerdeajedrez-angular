@@ -717,5 +717,59 @@
       "resultado":"1 - 0",
       "evento":"15+15 • Por puntos • Clásica",
       "fecha":"15/octubre/2020"
+    },
+    {
+      "numero":81,
+      "id":"BIJA5dkU",
+      "blancas":"jbastanzo",
+      "negras":"SamruddhiManager",
+      "resultado":"1 - 0",
+      "evento":"15+10 • Amistosa • Rápida",
+      "fecha":"25/octubre/2020"
+    },
+    {
+      "numero":82,
+      "id":"lVqf4tlC",
+      "blancas":"jbastanzo",
+      "negras":"Max_Bonang",
+      "resultado":"1 - 0",
+      "evento":"10+10 • Amistosa • Rápida",
+      "fecha":"24/octubre/2020"
+    },
+    {
+      "numero":83,
+      "id":"iZfE0G5P",
+      "blancas":"tallerdeajedrez",
+      "negras":"shailesh12",
+      "resultado":"1 - 0",
+      "evento":"15+0 • Amistosa • Rápida",
+      "fecha":"26/octubre/2020"
+    },
+    {
+      "numero":84,
+      "id":"xdIKCpmq",
+      "blancas":"vevo57",
+      "negras":"tallerdeajedrez",
+      "resultado":"0 - 1",
+      "evento":"15+0 • Amistosa • Rápida",
+      "fecha":"9/noviembre/2020"
+    },
+    {
+      "numero":85,
+      "id":"yVyEh0sD",
+      "blancas":"Lantiee",
+      "negras":"tallerdeajedrez",
+      "resultado":"0 - 1",
+      "evento":"15+0 • Por puntos • Rápida",
+      "fecha":"28/noviembre/2020"
+    },
+    {
+      "numero":86,
+      "id":"m0JYy6H1",
+      "blancas":"Jemijanga",
+      "negras":"nazarenobastanzo",
+      "resultado":"0 - 1",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"8/enero/2021"
     }
 ]
