@@ -564,5 +564,158 @@
       "resultado":"1 - 0",
       "evento":"15+0 • Por puntos • Rápida",
       "fecha":"6/junio/2020"
+    },
+    {
+      "numero":64,
+      "id":"EYpvCmrU",
+      "blancas":"nazarenobastanzo",
+      "negras":"MUSERNST",
+      "resultado":"1 - 0",
+      "evento":"20+0 • Por puntos • Rápida",
+      "fecha":"7/junio/2020"
+    },
+    {
+      "numero":65,
+      "id":"rNkOYDsJ",
+      "blancas":"Chookcha",
+      "negras":"nazarenobastanzo",
+      "resultado":"0 - 1",
+      "evento":"20+0 • Por puntos • Rápida",
+      "fecha":"7/junio/2020"
+    },
+    {
+      "numero":66,
+      "id":"0hO34TB6",
+      "blancas":"uri-_1965",
+      "negras":"nazarenobastanzo",
+      "resultado":"1/2 - 1/2",
+      "evento":"5+2 • Por puntos • Blitz",
+      "fecha":"8/junio/2020"
+    },
+    {
+      "numero":67,
+      "id":"gJzMxiZO",
+      "blancas":"Erik van den Doel (2594)",
+      "negras":"Lev Psakhis (2588)",
+      "resultado":"0 - 1",
+      "evento":"Bled Olympiad",
+      "fecha":"10/noviembre/2002"
+    },
+    {
+      "numero":68,
+      "id":"UWxI6sas",
+      "blancas":"Alexandra Kosteniuk (2469)",
+      "negras":"Psakhis, Lev (2572)",
+      "resultado":"0 - 1",
+      "evento":"Aeroflot Open",
+      "fecha":"5/febrero/2002"
+    },
+    {
+      "numero":69,
+      "id":"2tU1wb1F",
+      "blancas":"Mkyadav",
+      "negras":"nazarenobastanzo",
+      "resultado":"0 - 1",
+      "evento":"5+3 • Por puntos • Blitz",
+      "fecha":"8/mayo/2020"
+    },
+    {
+      "numero":70,
+      "id":"nfpzrn2A",
+      "blancas":"henbra",
+      "negras":"nazarenobastanzo",
+      "resultado":"0 - 1",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"16/junio/2020"
+    },
+    {
+      "numero":71,
+      "id":"offKb9AW",
+      "blancas":"nazarenobastanzo",
+      "negras":"tarmujigiwenk",
+      "resultado":"1 - 0",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"17/junio/2020"
+    },
+    {
+      "numero":72,
+      "id":"FAbi10Tv",
+      "blancas":"Kamcs",
+      "negras":"nazarenobastanzo",
+      "resultado":"0 - 1",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"17/junio/2020"
+    },
+    {
+      "numero":73,
+      "id":"IqSiizZy",
+      "blancas":"nazarenobastanzo",
+      "negras":"enocuk",
+      "resultado":"1 - 0",
+      "evento":"10+5 • Por puntos • Rápida",
+      "fecha":"17/junio/2020"
+    },
+    {
+      "numero":74,
+      "id":"7b2T67On",
+      "blancas":"nazarenobastanzo",
+      "negras":"kraljevicmarko",
+      "resultado":"1 - 0",
+      "evento":"5+0 • Por puntos • Blitz",
+      "fecha":"26/junio/2020"
+    },
+    {
+      "numero":75,
+      "id":"i1arJH77",
+      "blancas":"Jotransporter",
+      "negras":"nazarenobastanzo",
+      "resultado":"0 - 1",
+      "evento":"15+0 • Por puntos • Rápida",
+      "fecha":"27/junio/2020"
+    },
+    {
+      "numero":76,
+      "id":"lXVfnGdq",
+      "blancas":"nazarenobastanzo",
+      "negras":"khacquyettkd",
+      "resultado":"1 - 0",
+      "evento":"10+0 • Por puntos • Rápida",
+      "fecha":"30/junio/2020"
+    },
+    {
+      "numero":77,
+      "id":"MP7RtTTJ",
+      "blancas":"Magnus Carlsen (2881)",
+      "negras":"Giri,Anish (2731)",
+      "resultado":"1 - 0",
+      "evento":"Chessable Masters by chess24-KO",
+      "fecha":"3/julio/2020"
+    },
+    {
+      "numero":78,
+      "id":"11T9MqrM",
+      "blancas":"jbastanzo",
+      "negras":"santofam5",
+      "resultado":"1 - 0",
+      "evento":"20+0 • Amistosa • Rápida",
+      "fecha":"6/octubre/2020"
+    },
+    {
+      "numero":79,
+      "id":"UEOIdYfH",
+      "blancas":"jorgebastanzo",
+      "negras":"TalgarOOI",
+      "resultado":"1 - 0",
+      "evento":"Partida a 15 min en Chess.com",
+      "fecha":"22/junio/2020"
+    },
+    {
+      "numero":80,
+      "id":"LfqSZJJk",
+      "blancas":"tallerdeajedrez",
+      "negras":"Gustavo_sciu",
+      "resultado":"1 - 0",
+      "evento":"15+15 • Por puntos • Clásica",
+      "fecha":"15/octubre/2020"
     }
 ]
