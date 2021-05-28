@@ -138,4 +138,9 @@ export class PartidasComponent implements OnInit {
     }
   }
 
+  openTheGame(numero: any) {
+    numero = +(numero);
+    this.router.navigate(['/partida', numero]);
+  }
+
 }
