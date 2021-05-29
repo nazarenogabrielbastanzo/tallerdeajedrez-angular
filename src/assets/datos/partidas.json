@@ -979,5 +979,14 @@
       "resultado":"1 - 0",
       "evento":"European Championship (Women)",
       "fecha":"2003.06.12"
+    },
+    {
+      "numero": 110,
+      "id":"g2Dn8RBX",
+      "blancas":"Alisa Galliamova (2438)",
+      "negras":"Alina Kashlinskaya (2494)",
+      "resultado":"0 - 1",
+      "evento":"Russian Championship Superfinal (Women)",
+      "fecha":"2020.12.12"
     }
 ]
