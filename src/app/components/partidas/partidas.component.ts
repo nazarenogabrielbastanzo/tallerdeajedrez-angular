@@ -31,6 +31,8 @@ export class PartidasComponent implements OnInit {
   uid: string;
   message: any;
   maxlength = 50;
+  pagina = 1;
+  rango = 10;
 
   constructor(
     private modalService: NgbModal,

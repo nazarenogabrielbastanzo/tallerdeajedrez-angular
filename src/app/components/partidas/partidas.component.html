@@ -39,7 +39,7 @@
 
     <mat-divider></mat-divider>
 
-    <div class="container card shadow mt-5">
+    <div class="container card shadow my-5">
         <mat-form-field appearance="outline" class="full-width my-3">
             <mat-label>Buscar partida</mat-label>
             <input matInput placeholder="Por ejemplo: kasparov" [maxlength]="maxlength" (keyup.enter)="buscarPartida(buscarTexto.value)" type="text" #buscarTexto [(ngModel)]="terminoDeBusqueda" autocomplete="off">
@@ -51,7 +51,11 @@
         <ngb-alert *ngIf="info" type="danger" (close)="info = false" class="text-center animated fadeIn">{{ infoMessage }}</ngb-alert>
     </div>
 
-    <div class="table-responsive my-5">
+    <div class="d-flex justify-content-center my-3">
+      <ngb-pagination [collectionSize]="partidas.length" [(page)]="pagina" [boundaryLinks]="true" size="lg"></ngb-pagination>
+    </div>
+
+    <div class="table-responsive mb-5">
         <table class="table table-bordered table-striped table-sm" id="datatable">
             <thead>
                 <tr class="table-primary">
@@ -67,7 +71,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let partida of partidas | sortBy:'desc':'data.nro'">
+                <tr *ngFor="let partida of partidas | sortBy:'desc':'data.nro' | slice: (pagina-1) * rango : pagina * rango">
                     <td class="table-primary">{{ partida.data.nro }}</td>
                     <td class="text-right">{{ partida.data.blancas }}</td>
                     <td class="text-center">{{ partida.data.resultado }}</td>
@@ -82,4 +86,9 @@
             </tbody>
         </table>
     </div>
+
+    <div class="d-flex justify-content-center my-3">
+      <ngb-pagination [collectionSize]="partidas.length" [(page)]="pagina" [boundaryLinks]="true" size="lg"></ngb-pagination>
+    </div>
+
 </div>
