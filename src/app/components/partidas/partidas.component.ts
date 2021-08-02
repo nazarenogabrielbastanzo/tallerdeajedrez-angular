@@ -16,7 +16,7 @@ export class PartidasComponent implements OnInit {
 
   cargando: boolean = true;
   partidas: any;
-  info: boolean = true;
+  info: boolean = false;
   infoMessage: string = '';
   srcImgPop: string = '';
   terminoDeBusqueda = '';
