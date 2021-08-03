@@ -1,1 +1,48 @@
-<p>fotos works!</p>
+<div *ngIf="cargando" class="row align-items-center" style="height: 100vh;">
+  <div class="col text-center">
+      <p><img src="assets/images/loading1.gif"></p>
+  </div>
+</div>
+
+<div class="container-fluid animated fadeIn slow">
+  <h1 class="display-4 text-center my-5">Fotos</h1>
+
+  <mat-divider></mat-divider>
+
+  <div class="container card my-5 shadow">
+      <mat-form-field appearance="outline" class="full-width my-3">
+          <mat-label>Buscar álbum</mat-label>
+          <input matInput placeholder="Por ejemplo: polgar" [maxlength]="maxlength" (keyup.enter)="buscarAlbum(buscarTexto.value)" type="text" #buscarTexto [(ngModel)]="terminoDeBusqueda" autocomplete="off">
+          <mat-icon matSuffix>search</mat-icon>
+          <mat-hint align="start">Máximo {{maxlength}} caracteres</mat-hint>
+          <mat-hint align="end">{{buscarTexto.value?.length || 0}}/{{maxlength}}</mat-hint>
+      </mat-form-field>
+
+      <ngb-alert *ngIf="info" type="danger" (close)="info = false" class="text-center animated fadeIn">{{ infoMessage }}</ngb-alert>
+
+      <div class="table-responsive">
+          <table class="table table-bordered table-striped" style="zoom: 80%;">
+              <thead>
+                  <tr class="text-center table-primary">
+                      <th>ID</th>
+                      <th>Álbum</th>
+                      <th>Lugar</th>
+                      <th>Fecha</th>
+                      <th>Fotos</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let album of albumes" style="cursor: pointer;" (click)="verAlbum(album.album_id)">
+                      <td class="table-primary">{{ album.album_id }}</td>
+                      <td>{{ album.album }}</td>
+                      <td>{{ album.lugar }}</td>
+                      <td>{{ album.fecha }}</td>
+                      <td class="text-center">
+                          <h5><span class="badge badge-primary">{{ album.cantidadFotos }}</span></h5>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

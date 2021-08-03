@@ -1,1 +1,26 @@
-<p>frases works!</p>
+<div *ngIf="!frases || !frases.length || cargando" class="row align-items-center" style="height: 100vh;">
+  <div class="col text-center">
+      <p><img src="assets/images/loading1.gif"></p>
+  </div>
+</div>
+
+<div class="animated fadeIn slow" *ngIf="frases && frases.length && !cargando">
+  <div class="container-fluid">
+      <h1 class="display-4 text-center my-5">Frases</h1>
+      <mat-divider></mat-divider>
+      <!-- <div class="card-columns my-5"> -->
+      <div class="container">
+          <div class="card shadow my-5" *ngFor="let frase of frases" style="border: 1px dashed black;">
+              <a [name]="frase.id"></a>
+              <div class="card-body">
+                  <blockquote class="blockquote">
+                      <p class="mb-0"><i>"{{ frase.frase }}"</i></p>
+                      <br>
+                      <footer class="blockquote-footer text-center">{{ frase.autor }}</footer>
+                  </blockquote>
+              </div>
+          </div>
+      </div>
+<!-- </div> -->
+  </div>
+</div>

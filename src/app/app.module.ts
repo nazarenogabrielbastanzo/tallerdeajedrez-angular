@@ -27,6 +27,15 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { OrderbyPipe } from './pipes/orderby.pipe';
 
 import { MessagingService } from './services/messaging.service';
+import { DispositivosComponent } from './components/dispositivos/dispositivos.component';
+import { ScrollTopComponent } from './components/shared/scroll-top/scroll-top.component';
+import { PartidasAmistosasComponent } from './components/articles/partidas-amistosas/partidas-amistosas.component';
+import { PartidaTringovFischerComponent } from './components/articles/partida-tringov-fischer/partida-tringov-fischer.component';
+import { EstudioComponent } from './components/estudio/estudio.component';
+import { PartidaComponent } from './components/partida/partida.component';
+import { FotoComponent } from './components/foto/foto.component';
+import { BuscadorComponent } from './components/seekers/buscador/buscador.component';
+import { BuscarAlbumComponent } from './components/seekers/buscar-album/buscar-album.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +48,16 @@ import { MessagingService } from './services/messaging.service';
     FotosComponent,
     FrasesComponent,
     DomseguroPipe,
-    OrderbyPipe
+    OrderbyPipe,
+    DispositivosComponent,
+    ScrollTopComponent,
+    PartidasAmistosasComponent,
+    PartidaTringovFischerComponent,
+    EstudioComponent,
+    PartidaComponent,
+    FotoComponent,
+    BuscadorComponent,
+    BuscarAlbumComponent
   ],
   imports: [
     BrowserModule,

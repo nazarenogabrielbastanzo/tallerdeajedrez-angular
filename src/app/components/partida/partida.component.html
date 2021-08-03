@@ -1,0 +1,22 @@
+<div class="container-fluid animated fadeIn slow">
+  <h4 class="text-center display-4 my-5">
+      Partida {{ id +1 }}
+  </h4>
+
+  <mat-divider></mat-divider>
+
+  <p class="text-center" *ngIf="celular === true">(Voltee su dispositivo para visualizar mejor la partida)</p>
+
+  <div class="container my-5">
+      <div class="card">
+          <div class="card-header text-center">
+              {{ blancas }} vs. {{ negras }} ({{ resultado }})
+          </div>
+          <div class="card-body">
+              <div class="embed-responsive embed-responsive-21by9 text-center">
+                  <iframe class="embed-responsive-item" [src]="partidaId | domseguro:'https://lichess.org/embed/'" width="600" height="397" frameborder="0"></iframe>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

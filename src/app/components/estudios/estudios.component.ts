@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { PeticionesService } from '../../services/peticiones.service';
 
 @Component({
   selector: 'app-estudios',
@@ -6,10 +8,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./estudios.component.css']
 })
 export class EstudiosComponent implements OnInit {
+  estudios: any[] = [];
+  cargando: boolean = true;
 
-  constructor() { }
+  constructor(
+    public router: Router,
+    public peticionesService: PeticionesService
+  ) { }
 
   ngOnInit(): void {
+    this.cargando = true;
+    this.peticionesService.getEstudios()
+      .subscribe((estudios: any) => {
+        this.estudios = estudios;
+        this.cargando = false;
+      });
   }
 
+  irAlLink(link: any[]) {
+    this.router.navigate(link);
+  }
 }

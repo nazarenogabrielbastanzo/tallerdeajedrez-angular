@@ -1,0 +1,57 @@
+<div class="container-fluid animated fadeIn slow">
+  <h1 class="display-4 text-center my-5">Buscar Álbum</h1>
+
+  <mat-divider></mat-divider>
+
+  <div class="container card my-5 shadow">
+      <div class="d-flex justify-content-start m-3">
+          <a mat-raised-button (click)="goBack()">
+              <i class="fas fa-chevron-left"></i> <span class="ml-2">Volver</span>
+          </a>
+      </div>
+
+      <div class="row" *ngIf="albumes.length">
+          <div class="col">
+              <div class="alert alert-primary text-center" role="alert" *ngIf="albumes.length != 1">
+                  Se encontraron <u>{{ albumes.length }} álbumes</u> con el término: <b class="font-italic">{{ termino }}</b>
+              </div>
+              <div class="alert alert-primary text-center" role="alert" *ngIf="albumes.length == 1">
+                  Se encontró <u>1 álbum</u> con el término: <b class="font-italic">{{ termino }}</b>
+              </div>
+          </div>
+      </div>
+
+      <div class="row" *ngIf="albumes.length == 0">
+          <div class="col">
+              <div class="alert alert-warning text-center" role="alert">
+                  No existen resultados con el término: <b class="font-italic">{{ termino }}</b>
+              </div>
+          </div>
+      </div>
+
+      <div class="table-responsive" *ngIf="albumes.length != 0">
+          <table class="table table-bordered table-striped" style="zoom: 80%;">
+              <thead>
+                  <tr class="text-center table-primary">
+                      <th>ID</th>
+                      <th>Álbum</th>
+                      <th>Lugar</th>
+                      <th>Fecha</th>
+                      <th>Fotos</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let album of albumes | orderby:'album_id':true" style="cursor: pointer;" (click)="verAlbum(album.album_id)">
+                      <td class="table-primary">{{ album.album_id }}</td>
+                      <td>{{ album.album }}</td>
+                      <td>{{ album.lugar }}</td>
+                      <td>{{ album.fecha }}</td>
+                      <td class="text-center">
+                          <h5><span class="badge badge-primary">{{ album.cantidadFotos }}</span></h5>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

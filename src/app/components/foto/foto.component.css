@@ -1,0 +1,21 @@
+.img-thumbnail {
+  cursor: pointer;
+}
+
+.card-img-overlay {
+  background-color: rgba(255, 255, 255, .4);
+}
+
+.ngx-gallery {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.galeria {
+  width: 640px;
+  margin: auto;
+}
+
+.light-blue-backdrop {
+background-color: #5cb3fd;
+}
