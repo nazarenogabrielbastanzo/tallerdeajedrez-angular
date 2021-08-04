@@ -77,7 +77,8 @@
                   <td class="text-left">{{ partida.data.negras }}</td>
                   <td class="text-center"><a mat-raised-button (click)="openLg(content, partida.data.nro, 'final')" matTooltip="Ver Final de la Partida"><i class="fas fa-fast-forward"></i></a></td>
                   <td class="text-center"><a mat-raised-button (click)="openLg(content, partida.data.nro, 'rapida')" matTooltip="Vista Rápida de la Partida"><i class="fas fa-bolt"></i></a></td>
-                  <td class="text-center"><a mat-raised-button (click)="openLg2(content2, partida.id, true)" matTooltip="Vista Completa de la Partida"><i class="fas fa-eye"></i></a></td>
+                  <td class="text-center"><a mat-raised-button (click)="verPartida(partida.data.nro)" matTooltip="Vista Completa de la Partida"><i class="fas fa-eye"></i></a></td>
+                  <!-- <td class="text-center"><a mat-raised-button (click)="openLg2(content2, partida.id, true)" matTooltip="Vista Completa de la Partida"><i class="fas fa-eye"></i></a></td> -->
                   <td class="text-left">{{partida.data.evento}}</td>
                   <td class="text-center">{{partida.data.fecha}}</td>
               </tr>

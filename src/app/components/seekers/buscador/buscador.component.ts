@@ -83,7 +83,7 @@ export class BuscadorComponent implements OnInit {
   }
 
   verPartida( numero: number ) {
-    this.router.navigate(['/partida', numero]);
+    this.router.navigate(['/partida', +numero]);
   }
 
   goBack() {
