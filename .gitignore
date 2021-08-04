@@ -41,7 +41,8 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-/src/environments
+/src/environments/environments.ts
+/src/environments/environments.prod.ts
 /src/firebase-messaging-sw.js
 pasos-para-subir-cambios-en-el-codigo.txt
 
