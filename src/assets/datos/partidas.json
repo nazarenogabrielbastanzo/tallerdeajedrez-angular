@@ -997,5 +997,14 @@
       "resultado":"0 - 1",
       "evento":"5+3 • Por puntos • Blitz",
       "fecha": "31/mayo/2021"
+    },
+    {
+      "numero": 112,
+      "id": "XeuxrK6G",
+      "blancas": "tallerdeajedrez",
+      "negras": "VRichardJP",
+      "resultado": "1 - 0",
+      "evento": "10+5 • Por puntos • Rápida",
+      "fecha": "29/julio/2021"
     }
 ]
