@@ -60,15 +60,20 @@ export class SidenavComponent implements OnInit, OnDestroy {
         this.uid = user.uid;
         // ...
         // Partidas
-        this.firestoreService.getPartidas().subscribe((partidasSnapshot) => {
-          this.partidas = [];
-          partidasSnapshot.forEach((partidaData: any) => {
-              this.partidas.push({
-                id: partidaData.payload.doc.id,
-                data: partidaData.payload.doc.data()
-              });
+        // this.firestoreService.getPartidas().subscribe((partidasSnapshot) => {
+        //   this.partidas = [];
+        //   partidasSnapshot.forEach((partidaData: any) => {
+        //       this.partidas.push({
+        //         id: partidaData.payload.doc.id,
+        //         data: partidaData.payload.doc.data()
+        //       });
+        //   });
+        // });
+        this.peticionesService.getPartidas()
+          .subscribe((partidas: any) => {
+            this.partidas = partidas;
           });
-        });
+
         this.peticionesService.getEstudios()
           .subscribe((estudios: any) => {
             this.estudios = estudios;

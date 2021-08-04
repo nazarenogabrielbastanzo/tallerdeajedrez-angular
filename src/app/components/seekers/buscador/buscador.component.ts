@@ -2,10 +2,10 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PeticionesService } from '../../../services/peticiones.service';
-import { FirestoreService } from '../../../services/firestore.service';
+// import { FirestoreService } from '../../../services/firestore.service';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { FirebaseStorageService } from '../../../services/firebase-storage.service';
-import { environment } from 'src/environments/environment';
+// import { FirebaseStorageService } from '../../../services/firebase-storage.service';
+// import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-buscador',
@@ -32,9 +32,9 @@ export class BuscadorComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private peticionesService: PeticionesService,
     private router: Router,
-    private firestoreService: FirestoreService,
+    // private firestoreService: FirestoreService,
     private angularFireAuth: AngularFireAuth,
-    private firebaseStorage: FirebaseStorageService
+    // private firebaseStorage: FirebaseStorageService
   ) { }
 
   ngOnInit(): void {
@@ -68,21 +68,21 @@ export class BuscadorComponent implements OnInit {
     this.setSrcImgPop(numero, tipo);
   }
 
-  openLg2(content: any, id: string, verCompleta: boolean) {
-    this.verCompleta = verCompleta;
-    this.modalService.open(content, { centered: true, size: 'lg', backdropClass: 'light-blue-backdrop' });
-    this.obtenerPartida(id);
-  }
+  // openLg2(content: any, id: string, verCompleta: boolean) {
+  //   this.verCompleta = verCompleta;
+  //   this.modalService.open(content, { centered: true, size: 'lg', backdropClass: 'light-blue-backdrop' });
+  //   this.obtenerPartida(id);
+  // }
 
-  obtenerPartida(id: string) {
-    this.firestoreService.getPartida(id)
-      .subscribe((partida: any) => {
-        this.id = partida.payload.data().partidaId;
-        this.numero = partida.payload.data().nro;
-      });
-  }
+  // obtenerPartida(id: string) {
+  //   this.firestoreService.getPartida(id)
+  //     .subscribe((partida: any) => {
+  //       this.id = partida.payload.data().partidaId;
+  //       this.numero = partida.payload.data().nro;
+  //     });
+  // }
 
-  verPartida( numero: number ) {
+  verPartida( numero: any ) {
     this.router.navigate(['/partida', +numero]);
   }
 
@@ -90,27 +90,37 @@ export class BuscadorComponent implements OnInit {
     this.router.navigate(['/partidas']);
   }
 
-  setSrcImgPop(numero: number, tipo: string) {
+  setSrcImgPop(numero: any, tipo: string) {
+    numero = +numero;
+    if (numero < 10) {
+      numero = `000${numero}`;
+    } else if (numero < 100) {
+      numero = `00${numero}`;
+    } else {
+      numero = `0${numero}`;
+    }
     if (tipo === 'final') {
       this.gif = false;
       this.jpg = true;
       /* this.srcImgPop = `assets/images/nuevas/tooltips/${ numero }.jpg`; */
-      const nombreArchivo = `gs://${environment.firebaseConfig.storageBucket}/${numero}.jpg`;
-      const referencia = this.firebaseStorage.referenciaCloudStorage(nombreArchivo);
-      referencia.getDownloadURL().then((URL) => {
-        this.srcImgPop = URL;
-        /* console.log(URL); */
-      });
+      // const nombreArchivo = `gs://${environment.firebaseConfig.storageBucket}/${numero}.jpg`;
+      // const referencia = this.firebaseStorage.referenciaCloudStorage(nombreArchivo);
+      // referencia.getDownloadURL().then((URL) => {
+      //   this.srcImgPop = URL;
+      //   /* console.log(URL); */
+      // });
+      this.srcImgPop = `assets/images/nuevas/tooltips/${numero}.jpg`;
     } else {
       this.jpg = false;
       this.gif = true;
       /* this.srcGIF = `assets/images/nuevas/gifs/${ numero }.gif`; */
-      const nombreArchivo = `gs://${environment.firebaseConfig.storageBucket}/${numero}.gif`;
-      const referencia = this.firebaseStorage.referenciaCloudStorage(nombreArchivo);
-      referencia.getDownloadURL().then((URL) => {
-        this.srcGIF = URL;
-        /* console.log(URL); */
-      });
+      // const nombreArchivo = `gs://${environment.firebaseConfig.storageBucket}/${numero}.gif`;
+      // const referencia = this.firebaseStorage.referenciaCloudStorage(nombreArchivo);
+      // referencia.getDownloadURL().then((URL) => {
+      //   this.srcGIF = URL;
+      //   /* console.log(URL); */
+      // });
+      this.srcGIF = `assets/images/nuevas/gifs/${numero}.gif`;
     }
   }
 
