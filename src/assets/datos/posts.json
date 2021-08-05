@@ -15,19 +15,19 @@
         "twitter": "TallerDeAjedre2"
     },
     {
-        "img": "assets/images/nuevas/estudio-david-gurgenidze.jpg",
-        "titulo": "Estudio de David Gurgenidze",
-        "link": "estudio/1",
-        "extracto": "Juegan las blancas y ganan",
-        "autor": "Michael Rahal",
-        "twitter": "Rahal_Michael"
-    },
-    {
         "img": "assets/images/nuevas/estudios.jpg",
         "titulo": "Estudios",
         "link": "estudios",
         "extracto": "En Taller de Ajedrez decidimos colocar estos estudios, que explica muy bien Michael Rahal en su canal de Youtube. Creemos que son una parte muy bonita del ajedrez, la parte artística.",
         "autor": "Jorge Raúl Bastanzo",
         "twitter": "jbastanzo"
+    },
+    {
+      "img": "assets/images/nuevas/ataques-directos-al-rey.jpg",
+      "titulo": "Ataques Directos Al Rey",
+      "link": "ataques-directos-al-rey",
+      "extracto": "",
+      "autor": "Jorge Raúl Bastanzo",
+      "twitter": "jbastanzo"
     }
 ]
