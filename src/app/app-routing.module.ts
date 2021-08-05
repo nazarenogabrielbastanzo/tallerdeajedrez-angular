@@ -13,6 +13,7 @@ import { PartidaComponent } from './components/partida/partida.component';
 import { FotoComponent } from './components/foto/foto.component';
 import { BuscadorComponent } from './components/seekers/buscador/buscador.component';
 import { BuscarAlbumComponent } from './components/seekers/buscar-album/buscar-album.component';
+import { AtaquesDirectosAlReyComponent } from './components/articles/ataques-directos-al-rey/ataques-directos-al-rey.component';
 
 const routes: Routes = [
   { path: 'inicio', component: HomeComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'album/:id', component: FotoComponent },
   { path: 'buscar/:termino', component: BuscadorComponent },
   { path: 'buscar-album/:termino', component: BuscarAlbumComponent },
+  { path: 'ataques-directos-al-rey', component: AtaquesDirectosAlReyComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' },
 ];
 
