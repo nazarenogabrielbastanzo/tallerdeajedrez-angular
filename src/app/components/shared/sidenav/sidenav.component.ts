@@ -20,7 +20,8 @@ export class SidenavComponent implements OnInit, OnDestroy {
     {name: 'Estudios', route: 'estudios'},
     {name: 'Fotos', route: 'fotos'},
     {name: 'Frases', route: 'frases'},
-    {name: 'Dispositivos', route: 'dispositivos'}
+    {name: 'Dispositivos', route: 'dispositivos'},
+    {name: 'Live', route: 'live'}
   ];
 
   // tslint:disable-next-line: variable-name

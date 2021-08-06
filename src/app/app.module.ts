@@ -37,6 +37,7 @@ import { FotoComponent } from './components/foto/foto.component';
 import { BuscadorComponent } from './components/seekers/buscador/buscador.component';
 import { BuscarAlbumComponent } from './components/seekers/buscar-album/buscar-album.component';
 import { AtaquesDirectosAlReyComponent } from './components/articles/ataques-directos-al-rey/ataques-directos-al-rey.component';
+import { LiveComponent } from './components/live/live.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { AtaquesDirectosAlReyComponent } from './components/articles/ataques-dir
     FotoComponent,
     BuscadorComponent,
     BuscarAlbumComponent,
-    AtaquesDirectosAlReyComponent
+    AtaquesDirectosAlReyComponent,
+    LiveComponent
   ],
   imports: [
     BrowserModule,
