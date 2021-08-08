@@ -45,6 +45,7 @@ src/environments/*
 /src/firebase-messaging-sw.js
 pasos-para-subir-cambios-en-el-codigo.txt
 manifest.webmanifest
+.firebaserc
 
 # System Files
 .DS_Store
