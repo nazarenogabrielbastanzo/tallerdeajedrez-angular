@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PeticionesService } from '../../services/peticiones.service';
 
@@ -15,11 +15,15 @@ export class PartidaComponent implements OnInit {
   negras: string = '';
   resultado: string = '';
   celular = (screen.width < 720) ? true : false;
+  screenHeight: number = 0;
+  screenWidth: number = 0;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private peticionesService: PeticionesService
-  ) { }
+  ) {
+    this.getScreenSize();
+  }
 
   ngOnInit(): void {
 
@@ -31,6 +35,14 @@ export class PartidaComponent implements OnInit {
         this.negras = data[this.id].negras;
         this.resultado = data[this.id].resultado;
       });
+  }
+
+  @HostListener('window:resize', ['$event'])
+  getScreenSize(event?: any) {
+     this.screenHeight = window.innerHeight;
+     this.screenWidth = window.innerWidth;
+    //  console.log(this.screenWidth, this.screenHeight);
+
   }
 
 }
