@@ -52,5 +52,10 @@
         "id": 11,
         "frase": "Las personas que desean mejorar deben tomar sus derrotas como lecciones, y tratar de aprender qué evitar en el futuro. También debes tener el coraje de tus convicciones. Si crees que tu movimiento es bueno, hazlo.",
         "autor": "José Raúl Capablanca"
+    },
+    {
+      "id": 12,
+      "frase": "Enroca porque quieres o porque debes, pero no porque puedes.",
+      "autor": "Harry Nelson Pillsbury"
     }
 ]
