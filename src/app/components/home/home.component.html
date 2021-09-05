@@ -1,9 +1,4 @@
-<div *ngIf="showLoading" class="row align-items-center" style="height: 100vh;">
-  <div class="col text-center">
-      <!-- <p><img src="assets/images/loading1.gif"></p> -->
-      <mat-spinner style="margin: 0 auto;"></mat-spinner>
-  </div>
-</div>
+<app-loading *ngIf="showLoading"></app-loading>
 
 <div class="animated fadeIn slow" *ngIf="posts && posts.length">
   <div class="card banner">

@@ -10,6 +10,7 @@ import { PeticionesService } from '../../services/peticiones.service';
 export class EstudiosComponent implements OnInit {
   estudios: any[] = [];
   cargando: boolean = true;
+  showLoading: boolean = true;
 
   constructor(
     public router: Router,
@@ -17,6 +18,9 @@ export class EstudiosComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.showLoading = false;
+    }, 2000);
     this.cargando = true;
     this.peticionesService.getEstudios()
       .subscribe((estudios: any) => {

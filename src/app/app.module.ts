@@ -38,6 +38,7 @@ import { BuscadorComponent } from './components/seekers/buscador/buscador.compon
 import { BuscarAlbumComponent } from './components/seekers/buscar-album/buscar-album.component';
 import { AtaquesDirectosAlReyComponent } from './components/articles/ataques-directos-al-rey/ataques-directos-al-rey.component';
 import { LiveComponent } from './components/live/live.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { LiveComponent } from './components/live/live.component';
     BuscadorComponent,
     BuscarAlbumComponent,
     AtaquesDirectosAlReyComponent,
-    LiveComponent
+    LiveComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

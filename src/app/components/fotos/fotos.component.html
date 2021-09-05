@@ -1,9 +1,4 @@
-<div *ngIf="cargando" class="row align-items-center" style="height: 100vh;">
-  <div class="col text-center">
-      <!-- <p><img src="assets/images/loading1.gif"></p> -->
-      <mat-spinner style="margin: 0 auto;"></mat-spinner>
-  </div>
-</div>
+<app-loading *ngIf="showLoading"></app-loading>
 
 <div class="container-fluid animated fadeIn slow">
   <h1 class="display-4 text-center my-5">Fotos</h1>

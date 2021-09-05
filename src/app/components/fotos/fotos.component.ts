@@ -15,6 +15,7 @@ export class FotosComponent implements OnInit {
   infoMessage: string = '';
   terminoDeBusqueda = '';
   maxlength = 50;
+  showLoading: boolean = true;
 
   constructor(
     private peticionesServices: PeticionesService,
@@ -22,6 +23,9 @@ export class FotosComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.showLoading = false;
+    }, 2000);
     this.cargando = true;
     this.peticionesServices.getAlbumes()
       .subscribe((data: any) => {

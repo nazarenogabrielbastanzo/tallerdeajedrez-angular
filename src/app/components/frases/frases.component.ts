@@ -10,12 +10,16 @@ export class FrasesComponent implements OnInit {
 
   cargando: boolean = true;
   frases: any;
+  showLoading: boolean = true;
 
   constructor(
     private peticionesService: PeticionesService
   ) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.showLoading = false;
+    }, 2000);
     this.cargando = true;
     this.peticionesService.getFrases()
       .subscribe((data: any) => {

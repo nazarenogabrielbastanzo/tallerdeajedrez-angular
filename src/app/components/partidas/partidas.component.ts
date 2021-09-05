@@ -34,6 +34,7 @@ export class PartidasComponent implements OnInit {
   maxlength = 50;
   pagina = 1;
   rango = 10;
+  showLoading: boolean = true;
 
   constructor(
     private modalService: NgbModal,
@@ -49,6 +50,10 @@ export class PartidasComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    setTimeout(() => {
+      this.showLoading = false;
+    }, 2000);
 
     this.angularFireAuth.signInAnonymously()
       .catch((error) => {
