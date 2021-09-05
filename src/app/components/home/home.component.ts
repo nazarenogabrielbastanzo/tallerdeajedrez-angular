@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   isAnonymous: boolean = false;
   uid: string = '';
   message: any;
+  showLoading: boolean = true;
 
   constructor(
     private router: Router,
@@ -32,6 +33,10 @@ export class HomeComponent implements OnInit {
     } else {
       this.movil = false;
     }
+
+    setTimeout(() => {
+      this.showLoading = false;
+    }, 2000);
 
     this.angularFireAuth.signInAnonymously()
       .catch((error) => {
