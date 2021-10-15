@@ -5,8 +5,8 @@ import { NgMaterialModule } from './modules/ng-material/ng-material.module';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AuthModule } from '@auth0/auth0-angular';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -18,29 +18,21 @@ import { HomeComponent } from './components/home/home.component';
 import { SidenavComponent } from './components/shared/sidenav/sidenav.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 
-import { OrderbyPipe } from './pipes/orderby.pipe';
-import { DomseguroPipe } from './pipes/domseguro.pipe';
+// import { OrderbyPipe } from './pipes/orderby.pipe';
+// import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 import { MessagingService } from './services/messaging.service';
 import { ScrollTopComponent } from './components/shared/scroll-top/scroll-top.component';
-import { PartidasAmistosasComponent } from './components/articles/partidas-amistosas/partidas-amistosas.component';
-import { PartidaTringovFischerComponent } from './components/articles/partida-tringov-fischer/partida-tringov-fischer.component';
-import { AtaquesDirectosAlReyComponent } from './components/articles/ataques-directos-al-rey/ataques-directos-al-rey.component';
-import { LoadingComponent } from './components/shared/loading/loading.component';
 
 @NgModule({
   declarations: [
-    OrderbyPipe,
-    DomseguroPipe,
+    // OrderbyPipe,
+    // DomseguroPipe,
     AppComponent,
     SidenavComponent,
     HomeComponent,
     FooterComponent,
     ScrollTopComponent,
-    PartidasAmistosasComponent,
-    PartidaTringovFischerComponent,
-    AtaquesDirectosAlReyComponent,
-    LoadingComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,13 +46,13 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
       domain: environment.auth0Config.domain,
       clientId: environment.auth0Config.clientId
     }),
-    NgbModule,
-    NgbPaginationModule,
-    NgbAlertModule,
+    // NgbModule,
+    // NgbPaginationModule,
+    // NgbAlertModule,
   ],
   exports: [
-    OrderbyPipe,
-    DomseguroPipe
+    // OrderbyPipe,
+    // DomseguroPipe,
   ],
   providers: [
     AngularFirestore,

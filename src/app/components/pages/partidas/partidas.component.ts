@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 // import { FirestoreService } from '../../services/firestore.service';
 import { PeticionesService } from '../../../services/peticiones.service';
+import { Partida } from '../partida.interface';
 
 @Component({
   selector: 'app-partidas',
@@ -16,7 +17,7 @@ import { PeticionesService } from '../../../services/peticiones.service';
 export class PartidasComponent implements OnInit {
 
   cargando: boolean = true;
-  partidas: any;
+  partidas: Partida[] = [];
   info: boolean = false;
   infoMessage: string = '';
   srcImgPop: string = '';
@@ -80,7 +81,7 @@ export class PartidasComponent implements OnInit {
         // });
 
         this.peticionesService.getPartidas()
-          .subscribe((data) => {
+          .subscribe((data: any) => {
             // console.log(data);
             this.partidas = data;
             this.cargando = false;

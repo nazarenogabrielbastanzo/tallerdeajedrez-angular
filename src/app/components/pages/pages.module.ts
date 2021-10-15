@@ -17,6 +17,8 @@ import { NgMaterialModule } from 'src/app/modules/ng-material/ng-material.module
 import { FormsModule } from '@angular/forms';
 import { BuscadorComponent } from './components/seekers/buscador/buscador.component';
 import { BuscarAlbumComponent } from './components/seekers/buscar-album/buscar-album.component';
+import { LoadingComponent } from '../shared/loading/loading.component';
+import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { BuscarAlbumComponent } from './components/seekers/buscar-album/buscar-a
     PartidasComponent,
     PartidaComponent,
     BuscadorComponent,
-    BuscarAlbumComponent
+    BuscarAlbumComponent,
+    LoadingComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +43,8 @@ import { BuscarAlbumComponent } from './components/seekers/buscar-album/buscar-a
     NgbModule,
     NgbPaginationModule,
     NgbAlertModule,
-    FormsModule
+    FormsModule,
+    PipesModule
   ]
 })
 export class PagesModule { }
