@@ -16,12 +16,12 @@ export class SidenavComponent implements OnInit, OnDestroy {
 
   fillerNav = [
     {name: 'Inicio', route: 'inicio'},
-    {name: 'Partidas', route: 'partidas'},
-    {name: 'Estudios', route: 'estudios'},
-    {name: 'Fotos', route: 'fotos'},
-    {name: 'Frases', route: 'frases'},
-    {name: 'Dispositivos', route: 'dispositivos'},
-    {name: 'Live', route: 'live'}
+    {name: 'Partidas', route: 'pages/partidas'},
+    {name: 'Estudios', route: 'pages/estudios'},
+    {name: 'Fotos', route: 'pages/fotos'},
+    {name: 'Frases', route: 'pages/frases'},
+    {name: 'Dispositivos', route: 'pages/dispositivos'},
+    {name: 'Live', route: 'pages/live'}
   ];
 
   // tslint:disable-next-line: variable-name

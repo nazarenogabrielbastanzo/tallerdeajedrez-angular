@@ -1,11 +1,11 @@
 import { Component, OnInit, ViewEncapsulation, HostListener } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
-import { FirebaseStorageService } from '../../services/firebase-storage.service';
+// import { FirebaseStorageService } from '../../services/firebase-storage.service';
 // import { environment } from 'src/environments/environment';
 import { AngularFireAuth } from '@angular/fire/auth';
 // import { FirestoreService } from '../../services/firestore.service';
-import { PeticionesService } from '../../services/peticiones.service';
+import { PeticionesService } from '../../../services/peticiones.service';
 
 @Component({
   selector: 'app-partidas',

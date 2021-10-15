@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PeticionesService } from '../../../services/peticiones.service';
+import { PeticionesService } from '../../../../../services/peticiones.service';
 // import { FirestoreService } from '../../../services/firestore.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 // import { FirebaseStorageService } from '../../../services/firebase-storage.service';

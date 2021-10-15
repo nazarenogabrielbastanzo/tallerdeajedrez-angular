@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PeticionesService } from '../../services/peticiones.service';
+import { PeticionesService } from '../../../services/peticiones.service';
 
 @Component({
   selector: 'app-foto',

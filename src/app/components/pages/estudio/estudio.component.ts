@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PeticionesService } from '../../services/peticiones.service';
+import { PeticionesService } from '../../../services/peticiones.service';
 
 @Component({
   selector: 'app-estudio',
