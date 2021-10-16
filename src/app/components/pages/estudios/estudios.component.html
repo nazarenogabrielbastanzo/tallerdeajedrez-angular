@@ -7,7 +7,7 @@
   <!-- NOTA: Con 4 columnas se ve bien -->
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 m-0 my-5">
       <div class="col mb-4" *ngFor="let estudio of estudios; let i = index">
-          <mat-card class="card h-100" matRipple (click)="irAlLink(['estudio', estudio.id])" style="cursor: pointer;">
+          <mat-card class="card h-100" matRipple (click)="irAlLink(['pages/estudio', estudio.id])" style="cursor: pointer;">
               <mat-card-header>
                   <mat-card-title>{{estudio.titulo}}</mat-card-title>
                   <mat-card-subtitle>{{estudio.propuesta}}</mat-card-subtitle>

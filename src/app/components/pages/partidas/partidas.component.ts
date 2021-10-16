@@ -125,7 +125,7 @@ export class PartidasComponent implements OnInit {
 
   buscarPartida( termino: string ) {
     if ( termino.trim().length ) {
-      this.router.navigate(['/buscar', termino.trim()]);
+      this.router.navigate(['pages/buscar', termino.trim()]);
     } else {
       this.info = true;
       setTimeout(() => {
@@ -169,7 +169,7 @@ export class PartidasComponent implements OnInit {
 
   openTheGame(numero: any) {
     numero = +(numero);
-    this.router.navigate(['/partida', numero]);
+    this.router.navigate(['pages/partida', numero]);
   }
 
 }

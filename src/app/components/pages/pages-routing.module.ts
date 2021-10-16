@@ -12,12 +12,12 @@ import { FotoComponent } from './foto/foto.component';
 import { FotosComponent } from './fotos/fotos.component';
 import { FrasesComponent } from './frases/frases.component';
 import { LiveComponent } from './live/live.component';
-import { PagesComponent } from './pages.component';
+// import { PagesComponent } from './pages.component';
 import { PartidaComponent } from './partida/partida.component';
 import { PartidasComponent } from './partidas/partidas.component';
 
 const routes: Routes = [
-  { path: '', component: PagesComponent },
+  // { path: '', component: PagesComponent },
   { path: 'partidas', component: PartidasComponent },
   { path: 'estudios', component: EstudiosComponent },
   { path: 'fotos', component: FotosComponent },

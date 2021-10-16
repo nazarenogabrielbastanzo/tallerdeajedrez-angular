@@ -16,7 +16,7 @@ export class PartidasAmistosasComponent implements OnInit {
   }
 
   verPartida() {
-    this.router.navigate(['/partida', 1]);
+    this.router.navigate(['pages/partida', 1]);
   }
 
 }

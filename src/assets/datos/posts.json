@@ -17,7 +17,7 @@
     {
         "img": "assets/images/nuevas/estudios.jpg",
         "titulo": "Estudios",
-        "link": "estudios",
+        "link": "pages/estudios",
         "extracto": "En Taller de Ajedrez decidimos colocar estos estudios, que explica muy bien Michael Rahal en su canal de Youtube. Creemos que son una parte muy bonita del ajedrez, la parte artística.",
         "autor": "Jorge Raúl Bastanzo",
         "twitter": "jbastanzo"
