@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PagesRoutingModule } from './pages-routing.module';
-import { PagesComponent } from './pages.component';
 import { DispositivosComponent } from './dispositivos/dispositivos.component';
 import { EstudiosComponent } from './estudios/estudios.component';
 import { EstudioComponent } from './estudio/estudio.component';
@@ -22,7 +21,6 @@ import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
   declarations: [
-    PagesComponent,
     DispositivosComponent,
     EstudiosComponent,
     EstudioComponent,

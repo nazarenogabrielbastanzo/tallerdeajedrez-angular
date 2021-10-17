@@ -12,25 +12,20 @@ import { FotoComponent } from './foto/foto.component';
 import { FotosComponent } from './fotos/fotos.component';
 import { FrasesComponent } from './frases/frases.component';
 import { LiveComponent } from './live/live.component';
-// import { PagesComponent } from './pages.component';
 import { PartidaComponent } from './partida/partida.component';
 import { PartidasComponent } from './partidas/partidas.component';
 
 const routes: Routes = [
-  // { path: '', component: PagesComponent },
   { path: 'partidas', component: PartidasComponent },
   { path: 'estudios', component: EstudiosComponent },
   { path: 'fotos', component: FotosComponent },
   { path: 'frases', component: FrasesComponent },
   { path: 'dispositivos', component: DispositivosComponent },
-  { path: 'partidas-amistosas', component: PartidasAmistosasComponent },
-  { path: 'partida-tringov-fischer', component: PartidaTringovFischerComponent },
   { path: 'estudio/:nro', component: EstudioComponent },
   { path: 'partida/:id', component: PartidaComponent },
   { path: 'album/:id', component: FotoComponent },
   { path: 'buscar/:termino', component: BuscadorComponent },
   { path: 'buscar-album/:termino', component: BuscarAlbumComponent },
-  { path: 'ataques-directos-al-rey', component: AtaquesDirectosAlReyComponent },
   { path: 'live', component: LiveComponent },
   { path: '**', redirectTo: 'partidas', pathMatch: 'full' }
 ];
