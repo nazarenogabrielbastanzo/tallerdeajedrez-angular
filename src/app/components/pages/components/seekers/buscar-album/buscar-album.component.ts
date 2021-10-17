@@ -26,11 +26,11 @@ export class BuscarAlbumComponent implements OnInit {
   }
 
   verAlbum( numero: number ) {
-    this.router.navigate(['/album', numero]);
+    this.router.navigate(['pages/album', numero]);
   }
 
   goBack() {
-    this.router.navigate(['/fotos']);
+    this.router.navigate(['pages/fotos']);
   }
 
 }

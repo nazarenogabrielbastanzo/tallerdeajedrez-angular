@@ -83,11 +83,11 @@ export class BuscadorComponent implements OnInit {
   // }
 
   verPartida( numero: any ) {
-    this.router.navigate(['/partida', +numero]);
+    this.router.navigate(['pages/partida', +numero]);
   }
 
   goBack() {
-    this.router.navigate(['/partidas']);
+    this.router.navigate(['pages/partidas']);
   }
 
   setSrcImgPop(numero: any, tipo: string) {

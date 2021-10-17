@@ -37,12 +37,12 @@ export class FotosComponent implements OnInit {
   }
 
   verAlbum(numero: number) {
-    this.router.navigate(['/album', numero]);
+    this.router.navigate(['pages/album', numero]);
   }
 
   buscarAlbum( termino: string ) {
     if ( termino.trim().length ) {
-      this.router.navigate(['/buscar-album', termino.trim()]);
+      this.router.navigate(['pages/buscar-album', termino.trim()]);
     } else {
       this.info = true;
       setTimeout(() => {
