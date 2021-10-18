@@ -1,7 +1,7 @@
 [{
         "img": "assets/images/jorgeraulbastanzo.jpg",
         "titulo": "Partidas Amistosas",
-        "link": "partidas-amistosas",
+        "link": "articles/partidas-amistosas",
         "extracto": "Muchas son las ocasiones en las que se pueden jugar partidas amistosas de ajedrez: entre ronda y ronda de un torneo, antes o después de un torneo, en casa, en la plaza, en el tren, y un largo etcétera...",
         "autor": "Nazareno Gabriel Bastanzo",
         "twitter": "NazarenoGabrie2"
@@ -9,7 +9,7 @@
     {
         "img": "assets/images/Tringov_Fischer_Diagrama1.jpg",
         "titulo": "Partida Tringov vs. Fischer",
-        "link": "partida-tringov-fischer",
+        "link": "articles/partida-tringov-fischer",
         "extracto": "Tringov vs. Fischer, Capablanca Memorial (1965): Esta partida tiene una curiosa historia, se jugó por teletipo ya que las autoridades de Estados Unidos no le permitieron a Fischer viajar a La Habana a jugar el torneo...",
         "autor": "Taller de Ajedrez",
         "twitter": "TallerDeAjedre2"
@@ -17,7 +17,7 @@
     {
         "img": "assets/images/nuevas/estudios.jpg",
         "titulo": "Estudios",
-        "link": "estudios",
+        "link": "pages/estudios",
         "extracto": "En Taller de Ajedrez decidimos colocar estos estudios, que explica muy bien Michael Rahal en su canal de Youtube. Creemos que son una parte muy bonita del ajedrez, la parte artística.",
         "autor": "Jorge Raúl Bastanzo",
         "twitter": "jbastanzo"
@@ -25,7 +25,7 @@
     {
       "img": "assets/images/nuevas/ataques-directos-al-rey.jpg",
       "titulo": "Ataques Directos Al Rey",
-      "link": "ataques-directos-al-rey",
+      "link": "articles/ataques-directos-al-rey",
       "extracto": "",
       "autor": "Jorge Raúl Bastanzo",
       "twitter": "jbastanzo"
