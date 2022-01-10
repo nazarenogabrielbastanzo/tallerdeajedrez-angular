@@ -1042,5 +1042,14 @@
       "resultado": "1 - 0",
       "evento": "5+3 • Por puntos • Blitz",
       "fecha": "10/octubre/2021"
+    },
+    {
+      "numero": 117,
+      "id": "OvXnk9kZ",
+      "blancas": "Vassily Ivanchuk",
+      "negras": "Garry Kasparov",
+      "resultado":"1 - 0",
+      "evento": "Linares",
+      "fecha": "23/febrero/1991"
     }
 ]
