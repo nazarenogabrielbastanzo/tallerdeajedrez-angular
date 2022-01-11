@@ -16,13 +16,12 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 
 import { MessagingService } from './services/messaging.service';
 import { ScrollTopComponent } from './components/shared/scroll-top/scroll-top.component';
+import { SharedModule } from './components/shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FooterComponent,
-    ScrollTopComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +30,7 @@ import { ScrollTopComponent } from './components/shared/scroll-top/scroll-top.co
     BrowserAnimationsModule,
     NgMaterialModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    SharedModule
   ],
   providers: [
     AngularFirestore,
