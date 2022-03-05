@@ -1060,5 +1060,14 @@
       "resultado": "1 - 0",
       "evento": "US Chess Championship",
       "fecha": "18/abril/2016"
+    },
+    {
+      "numero": 119,
+      "id": "NYigEQuw",
+      "blancas": "Valentina Gunina (2501)",
+      "negras": "Marie Sebag (2476)",
+      "resultado": "1 - 0",
+      "evento": "Cairns Cup",
+      "fecha": "10/febrero/2019"
     }
 ]
