@@ -5,9 +5,9 @@ import { AtaquesDirectosAlReyComponent } from './ataques-directos-al-rey/ataques
 import { PartidaTringovFischerComponent } from './partida-tringov-fischer/partida-tringov-fischer.component';
 
 const routes: Routes = [
-  { path: 'partidas-amistosas', component: PartidasAmistosasComponent },
-  { path: 'ataques-directos-al-rey', component: AtaquesDirectosAlReyComponent },
-  { path: 'partida-tringov-fischer', component: PartidaTringovFischerComponent },
+  { path: 'partidas-amistosas', component: PartidasAmistosasComponent, data: {animation: 'PartidasAmistosasArticle'} },
+  { path: 'ataques-directos-al-rey', component: AtaquesDirectosAlReyComponent, data: {animation: 'AtaquesDirectosAlReyArticle'} },
+  { path: 'partida-tringov-fischer', component: PartidaTringovFischerComponent, data: {animation: 'PartidaTringovFischerArticle'} },
   { path: '**', redirectTo: 'partidas-amistosas', pathMatch: 'full' }
 ];
 

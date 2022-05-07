@@ -16,22 +16,62 @@ import { PartidaComponent } from './partida/partida.component';
 import { PartidasComponent } from './partidas/partidas.component';
 
 const routes: Routes = [
-  { path: 'partidas', component: PartidasComponent },
-  { path: 'estudios', component: EstudiosComponent },
-  { path: 'fotos', component: FotosComponent },
-  { path: 'frases', component: FrasesComponent },
-  { path: 'dispositivos', component: DispositivosComponent },
-  { path: 'estudio/:nro', component: EstudioComponent },
-  { path: 'partida/:id', component: PartidaComponent },
-  { path: 'album/:id', component: FotoComponent },
-  { path: 'buscar/:termino', component: BuscadorComponent },
-  { path: 'buscar-album/:termino', component: BuscarAlbumComponent },
-  { path: 'live', component: LiveComponent },
-  { path: '**', redirectTo: 'partidas', pathMatch: 'full' }
+  {
+    path: 'partidas',
+    component: PartidasComponent,
+    data: { animation: 'PartidasPage' },
+  },
+  {
+    path: 'estudios',
+    component: EstudiosComponent,
+    data: { animation: 'Estudiospage' },
+  },
+  {
+    path: 'fotos',
+    component: FotosComponent,
+    data: { animation: 'FotosPage' },
+  },
+  {
+    path: 'frases',
+    component: FrasesComponent,
+    data: { animation: 'FrasesPage' },
+  },
+  {
+    path: 'dispositivos',
+    component: DispositivosComponent,
+    data: { animation: 'DispositivosPage' },
+  },
+  {
+    path: 'estudio/:nro',
+    component: EstudioComponent,
+    data: { animation: 'EstudioPage' },
+  },
+  {
+    path: 'partida/:id',
+    component: PartidaComponent,
+    data: { animation: 'PartidaPage' },
+  },
+  {
+    path: 'album/:id',
+    component: FotoComponent,
+    data: { animation: 'AlbumPage' },
+  },
+  {
+    path: 'buscar/:termino',
+    component: BuscadorComponent,
+    data: { animation: 'BuscarPage' },
+  },
+  {
+    path: 'buscar-album/:termino',
+    component: BuscarAlbumComponent,
+    data: { animation: 'BuscarAlbumPage' },
+  },
+  { path: 'live', component: LiveComponent, data: { animation: 'LivePage' } },
+  { path: '**', redirectTo: 'partidas', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class PagesRoutingModule { }
+export class PagesRoutingModule {}
