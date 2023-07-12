@@ -46,6 +46,7 @@ src/environments/*
 pasos-para-subir-cambios-en-el-codigo.txt
 manifest.webmanifest
 .firebaserc
+firebase.json
 
 # System Files
 .DS_Store
