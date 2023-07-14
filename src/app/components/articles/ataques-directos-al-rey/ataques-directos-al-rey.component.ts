@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AtaquesDirectosAlReyComponent implements OnInit {
 
-  studyId: string = 'JajEF9iC';
-  capId: string = 'IvdQGNQ5';
+  studyId: string = 'Wztp9zbA';
+  capId: string = '76gvrbmB';
 
   constructor() { }
 
