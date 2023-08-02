@@ -53,5 +53,5 @@ firebase.json
 Thumbs.db
 
 #mine
-pasos.txt
+*.txt
 package-lock.json
