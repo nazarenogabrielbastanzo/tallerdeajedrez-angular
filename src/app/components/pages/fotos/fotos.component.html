@@ -11,7 +11,7 @@
           <input matInput placeholder="Por ejemplo: polgar" [maxlength]="maxlength" (keyup.enter)="buscarAlbum(buscarTexto.value)" type="text" #buscarTexto [(ngModel)]="terminoDeBusqueda" autocomplete="off">
           <mat-icon matSuffix>search</mat-icon>
           <mat-hint align="start">Máximo {{maxlength}} caracteres</mat-hint>
-          <mat-hint align="end">{{buscarTexto.value?.length || 0}}/{{maxlength}}</mat-hint>
+          <mat-hint align="end">{{buscarTexto.value.length || 0}}/{{maxlength}}</mat-hint>
       </mat-form-field>
 
       <ngb-alert *ngIf="info" type="danger" (close)="info = false" class="text-center animated fadeIn">{{ infoMessage }}</ngb-alert>

@@ -22,6 +22,7 @@ export class FotoComponent implements OnInit {
   laFoto: any;
   nroFoto: number = 0;
   cantFotos: number = 0;
+  nombreAlbum: string = '';
 
   /* celular = (screen.width < 800) ? true : false; */
 
@@ -35,8 +36,12 @@ export class FotoComponent implements OnInit {
     this.cargando = true;
 
     this.id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
+
     this.peticionesService.getAlbumes()
       .subscribe((data: any) => {
+
+        this.nombreAlbum = data[this.id - 1]['album'];
+        
         this.cantidadFotos = data[this.id - 1]['cantidadFotos'];
         for (let i = 1; i <= this.cantidadFotos; i++) {
           this.miArray.push(i);
@@ -48,6 +53,7 @@ export class FotoComponent implements OnInit {
           this.fotos.push(foto);
         }
       });
+
     this.cargando = false;
 
   }
