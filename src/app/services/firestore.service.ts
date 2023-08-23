@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +27,7 @@ export class FirestoreService {
     return this.ngFirestore.collection('partidas').doc(documentId).set(data);
   }
   // Elimina uno
-  public deletePartida( documentId: string ) {
+  public deletePartida(documentId: string) {
     return this.ngFirestore.collection('partidas').doc(documentId).delete();
   }
 }

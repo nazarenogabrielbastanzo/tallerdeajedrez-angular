@@ -19,12 +19,12 @@ export class ScrollTopComponent implements OnInit {
   // https://stackoverflow.com/questions/48048299/angular-5-scroll-to-top-on-every-route-click/48048822
   scrollTop(event: any) {
     const scrollToTop = window.setInterval(() => {
-        const pos = window.pageYOffset;
-        if (pos > 0) {
-            window.scrollTo(0, pos - 20); // how far to scroll on each step
-        } else {
-            window.clearInterval(scrollToTop);
-        }
+      const pos = window.pageYOffset;
+      if (pos > 0) {
+        window.scrollTo(0, pos - 20); // how far to scroll on each step
+      } else {
+        window.clearInterval(scrollToTop);
+      }
     }, 10);
   }
 

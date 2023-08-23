@@ -12,10 +12,9 @@ import { AngularFireAuth } from '@angular/fire/auth';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { FooterComponent } from './components/shared/footer/footer.component';
 
 import { MessagingService } from './services/messaging.service';
-import { ScrollTopComponent } from './components/shared/scroll-top/scroll-top.component';
+
 import { SharedModule } from './components/shared/shared.module';
 
 @NgModule({

@@ -21,11 +21,11 @@ export class BuscarAlbumComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: any) => {
       this.termino = params.termino;
-      this.albumes = this.peticionesService.buscarAlbumes( params.termino );
+      this.albumes = this.peticionesService.buscarAlbumes(params.termino);
     });
   }
 
-  verAlbum( numero: number ) {
+  verAlbum(numero: number) {
     this.router.navigate(['pages/album', numero]);
   }
 

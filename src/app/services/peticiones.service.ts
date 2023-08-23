@@ -56,48 +56,48 @@ export class PeticionesService {
     return this.httpClient.get(this.urlFrases);
   }
 
-  buscarPartidas( termino: string ): any[] {
+  buscarPartidas(termino: string): any[] {
     const partidasArr: any[] = [];
     termino = termino.toLowerCase();
     for (const partida of this.partidas) {
-        const blancas = partida.blancas.toLowerCase();
-        const negras = partida.negras.toLowerCase();
-        const resultado = partida.resultado;
-        const evento = partida.evento.toLowerCase();
-        const fecha = partida.fecha;
-        const numero = partida.numero.toString();
-        if (
-          blancas.indexOf( termino ) >= 0 ||
-          negras.indexOf( termino ) >= 0 ||
-          resultado.indexOf( termino ) >= 0 ||
-          evento.indexOf( termino ) >= 0 ||
-          fecha.indexOf( termino ) >= 0 ||
-          numero.indexOf( termino ) >= 0
-        ) { // lo encontro
-            partidasArr.push( partida );
-        }
+      const blancas = partida.blancas.toLowerCase();
+      const negras = partida.negras.toLowerCase();
+      const resultado = partida.resultado;
+      const evento = partida.evento.toLowerCase();
+      const fecha = partida.fecha;
+      const numero = partida.numero.toString();
+      if (
+        blancas.indexOf(termino) >= 0 ||
+        negras.indexOf(termino) >= 0 ||
+        resultado.indexOf(termino) >= 0 ||
+        evento.indexOf(termino) >= 0 ||
+        fecha.indexOf(termino) >= 0 ||
+        numero.indexOf(termino) >= 0
+      ) { // lo encontro
+        partidasArr.push(partida);
+      }
     }
     return partidasArr;
   }
 
-  buscarAlbumes( termino: string ): any[] {
+  buscarAlbumes(termino: string): any[] {
     const albumArr: any[] = [];
     termino = termino.toLowerCase();
     for (const albumFotos of this.albumes) {
-        const albumId = albumFotos.album_id.toString();
-        const album = albumFotos.album.toLowerCase();
-        const lugar = albumFotos.lugar.toLowerCase();
-        const fecha = albumFotos.fecha;
-        const cantidadFotos = albumFotos.cantidadFotos.toString();
-        if (
-          albumId.indexOf( termino ) >= 0 ||
-          album.indexOf( termino ) >= 0 ||
-          lugar.indexOf( termino ) >= 0 ||
-          fecha.indexOf( termino ) >= 0 ||
-          cantidadFotos.indexOf( termino ) >= 0
-        ) { // lo encontro
-            albumArr.push( albumFotos );
-        }
+      const albumId = albumFotos.album_id.toString();
+      const album = albumFotos.album.toLowerCase();
+      const lugar = albumFotos.lugar.toLowerCase();
+      const fecha = albumFotos.fecha;
+      const cantidadFotos = albumFotos.cantidadFotos.toString();
+      if (
+        albumId.indexOf(termino) >= 0 ||
+        album.indexOf(termino) >= 0 ||
+        lugar.indexOf(termino) >= 0 ||
+        fecha.indexOf(termino) >= 0 ||
+        cantidadFotos.indexOf(termino) >= 0
+      ) { // lo encontro
+        albumArr.push(albumFotos);
+      }
     }
     return albumArr;
   }

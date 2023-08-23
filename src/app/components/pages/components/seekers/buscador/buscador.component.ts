@@ -52,7 +52,7 @@ export class BuscadorComponent implements OnInit {
         // ...
         this.activatedRoute.params.subscribe((params: any) => {
           this.termino = params.termino;
-          this.partidas = this.peticionesService.buscarPartidas( params.termino );
+          this.partidas = this.peticionesService.buscarPartidas(params.termino);
         });
       } else {
         // User is signed out.
@@ -82,7 +82,7 @@ export class BuscadorComponent implements OnInit {
   //     });
   // }
 
-  verPartida( numero: any ) {
+  verPartida(numero: any) {
     this.router.navigate(['pages/partida', +numero]);
   }
 

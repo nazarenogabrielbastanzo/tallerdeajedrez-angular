@@ -123,8 +123,8 @@ export class PartidasComponent implements OnInit {
   //     });
   // }
 
-  buscarPartida( termino: string ) {
-    if ( termino.trim().length ) {
+  buscarPartida(termino: string) {
+    if (termino.trim().length) {
       this.router.navigate(['pages/buscar', termino.trim()]);
     } else {
       this.info = true;

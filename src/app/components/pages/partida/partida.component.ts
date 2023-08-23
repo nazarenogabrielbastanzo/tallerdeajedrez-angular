@@ -39,8 +39,8 @@ export class PartidaComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   getScreenSize(event?: any) {
-     this.screenHeight = window.innerHeight;
-     this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
+    this.screenWidth = window.innerWidth;
     //  console.log(this.screenWidth, this.screenHeight);
 
   }

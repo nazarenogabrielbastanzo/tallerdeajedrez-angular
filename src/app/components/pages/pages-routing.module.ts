@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AtaquesDirectosAlReyComponent } from '../articles/ataques-directos-al-rey/ataques-directos-al-rey.component';
-import { PartidaTringovFischerComponent } from '../articles/partida-tringov-fischer/partida-tringov-fischer.component';
-import { PartidasAmistosasComponent } from '../articles/partidas-amistosas/partidas-amistosas.component';
+
 import { BuscadorComponent } from './components/seekers/buscador/buscador.component';
 import { BuscarAlbumComponent } from './components/seekers/buscar-album/buscar-album.component';
 import { DispositivosComponent } from './dispositivos/dispositivos.component';
@@ -74,4 +72,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class PagesRoutingModule {}
+export class PagesRoutingModule { }

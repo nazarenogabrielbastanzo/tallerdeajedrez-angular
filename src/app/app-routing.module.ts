@@ -8,7 +8,7 @@ const routes: Routes = [
     path: 'pages',
     loadChildren: () =>
       import('./components/pages/pages.module').then((m) => m.PagesModule),
-      data: {animation: 'PagesModule'}
+    data: { animation: 'PagesModule' }
   },
   {
     path: 'articles',
@@ -16,7 +16,7 @@ const routes: Routes = [
       import('./components/articles/articles.module').then(
         (m) => m.ArticlesModule
       ),
-      data: {animation: 'ArticlesModule'}
+    data: { animation: 'ArticlesModule' }
   },
   { path: '**', pathMatch: 'full', redirectTo: '' },
 ];
@@ -30,4 +30,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

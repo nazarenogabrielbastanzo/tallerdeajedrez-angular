@@ -30,7 +30,7 @@ export class FotoComponent implements OnInit {
     private modalService: NgbModal,
     private activatedRoute: ActivatedRoute,
     private peticionesService: PeticionesService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.cargando = true;
@@ -41,7 +41,7 @@ export class FotoComponent implements OnInit {
       .subscribe((data: any) => {
 
         this.nombreAlbum = data[this.id - 1]['album'];
-        
+
         this.cantidadFotos = data[this.id - 1]['cantidadFotos'];
         for (let i = 1; i <= this.cantidadFotos; i++) {
           this.miArray.push(i);
@@ -85,15 +85,15 @@ export class FotoComponent implements OnInit {
 
   siguiente(nroFoto: number, cantFotos: number) {
     if (nroFoto < cantFotos) {
-      this.laFoto = this.fotos[nroFoto +1];
-      this.nroFoto = nroFoto +1;
+      this.laFoto = this.fotos[nroFoto + 1];
+      this.nroFoto = nroFoto + 1;
     }
   }
 
   anterior(nroFoto: number) {
     if (nroFoto > 0) {
-      this.laFoto = this.fotos[nroFoto -1];
-      this.nroFoto = nroFoto -1;
+      this.laFoto = this.fotos[nroFoto - 1];
+      this.nroFoto = nroFoto - 1;
     }
   }
 

@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  irAlLink( link: string ) {
+  irAlLink(link: string) {
     this.router.navigate([link]);
   }
 
