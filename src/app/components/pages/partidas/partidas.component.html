@@ -1,91 +1,110 @@
 <!-- <app-loading *ngIf="showLoading"></app-loading> -->
 
 <ng-template #content let-modal>
-  <div class="modal-header">
-      <h4 class="modal-title" *ngIf="jpg === true">Final de la Partida {{numero}}</h4>
-      <h4 class="modal-title" *ngIf="gif === true">Vista rápida de la Partida {{numero}}</h4>
-      <button type="button" class="close" aria-label="Close" (click)="cerrarModal1()">
-          <span aria-hidden="true">&times;</span>
-      </button>
-  </div>
-  <div class="modal-body text-center">
-      <img *ngIf="jpg === true && srcImgPop" [src]="srcImgPop" alt="Final de la partida {{numero}}" class="img-fluid" style="width: 100%;">
-      <img *ngIf="jpg === true && !srcImgPop" class="my-5" src="assets/images/loading1.gif">
-      <img *ngIf="gif === true && srcGIF" [src]="srcGIF" alt="GIF de la partida {{numero}}" class="img-fluid" style="width: 100%;">
-      <img *ngIf="gif === true && !srcGIF" class="my-5" src="assets/images/loading1.gif">
-  </div>
+    <div class="modal-header">
+        <h4 class="modal-title" *ngIf="jpg === true">Final de la Partida {{numero}}</h4>
+        <h4 class="modal-title" *ngIf="gif === true">Vista rápida de la Partida {{numero}}</h4>
+        <button type="button" class="close" aria-label="Close" (click)="cerrarModal1()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body text-center">
+        <img *ngIf="jpg === true && srcImgPop" [src]="srcImgPop" alt="Final de la partida {{numero}}" class="img-fluid"
+            style="width: 100%;">
+        <img *ngIf="jpg === true && !srcImgPop" class="my-5" src="assets/images/loading1.gif">
+        <img *ngIf="gif === true && srcGIF" [src]="srcGIF" alt="GIF de la partida {{numero}}" class="img-fluid"
+            style="width: 100%;">
+        <img *ngIf="gif === true && !srcGIF" class="my-5" src="assets/images/loading1.gif">
+    </div>
 </ng-template>
 
-<ng-template #content2 let-modal>
-  <div class="modal-header">
-      <h4 class="modal-title" *ngIf="verCompleta === true">Vista completa de la partida {{numero}}</h4>
-      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-      <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" [src]="id | domseguro:'https://lichess.org/embed/'" width="600" height="397" frameborder="0"></iframe>
-      </div>
-  </div>
-</ng-template>
+<!-- <ng-template #content2 let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" *ngIf="verCompleta === true">Vista completa de la partida {{numero}}</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" [src]="id | domseguro:'https://lichess.org/embed/'" width="600"
+                height="397" frameborder="0"></iframe>
+        </div>
+    </div>
+</ng-template> -->
 
 <div class="container-fluid animated fadeIn slow">
-  <h4 class="text-center display-4 my-5">Partidas</h4>
+    <h4 class="text-center display-4 my-5">Partidas</h4>
 
-  <mat-divider></mat-divider>
+    <mat-divider></mat-divider>
 
-  <div class="container card shadow my-5">
-      <mat-form-field appearance="outline" class="full-width my-3">
-          <mat-label>Buscar partida</mat-label>
-          <input matInput placeholder="Por ejemplo: kasparov" [maxlength]="maxlength" (keyup.enter)="buscarPartida(buscarTexto.value)" type="text" #buscarTexto [(ngModel)]="terminoDeBusqueda" autocomplete="off">
-          <mat-icon matSuffix>search</mat-icon>
-          <mat-hint align="start">Máximo {{maxlength}} caracteres</mat-hint>
-          <mat-hint align="end">{{buscarTexto.value?.length || 0}}/{{maxlength}}</mat-hint>
-      </mat-form-field>
+    <div class="container card shadow my-5">
+        <mat-form-field appearance="outline" class="full-width my-3">
+            <mat-label>Buscar partida</mat-label>
+            <input matInput placeholder="Por ejemplo: kasparov" [maxlength]="maxlength"
+                (keyup.enter)="buscarPartida(buscarTexto.value)" type="text" #buscarTexto
+                [(ngModel)]="terminoDeBusqueda" autocomplete="off">
+            <mat-icon matSuffix>search</mat-icon>
+            <mat-hint align="start">Máximo {{maxlength}} caracteres</mat-hint>
+            <mat-hint align="end">{{buscarTexto.value.length || 0}}/{{maxlength}}</mat-hint>
+        </mat-form-field>
 
-      <ngb-alert *ngIf="info" type="danger" (close)="info = false" class="text-center animated fadeIn" [dismissible]="false">{{ infoMessage }}</ngb-alert>
-  </div>
+        <ngb-alert *ngIf="info" type="danger" (close)="info = false" class="text-center animated fadeIn"
+            [dismissible]="false">{{ infoMessage }}</ngb-alert>
+    </div>
 
-  <div class="d-flex justify-content-center my-3">
-    <ngb-pagination [collectionSize]="partidas.length" [(page)]="pagina" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" size="lg"></ngb-pagination>
-  </div>
-  <!-- <app-pagination [size]="partidas.length" [pagina]="pagina"></app-pagination> -->
+    <div class="d-flex justify-content-center my-3">
+        <ngb-pagination [collectionSize]="partidas.length" [(page)]="pagina" [maxSize]="5" [rotate]="true"
+            [boundaryLinks]="true" size="lg"></ngb-pagination>
+    </div>
+    <!-- <app-pagination [size]="partidas.length" [pagina]="pagina"></app-pagination> -->
 
-  <div class="table-responsive mb-5">
-      <table class="table table-bordered table-striped table-sm" id="datatable">
-          <thead>
-              <tr class="table-primary">
-                  <th class="text-center">ID</th>
-                  <th class="text-center">Blancas</th>
-                  <th class="text-center">Resultado</th>
-                  <th class="text-center">Negras</th>
-                  <th class="text-center">Final</th>
-                  <th class="text-center">Vista rápida</th>
-                  <th class="text-center">Partida</th>
-                  <th class="text-center">Evento</th>
-                  <th class="text-center">Fecha</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr *ngFor="let partida of partidas | orderby:'numero':true | slice: (pagina-1) * rango : pagina * rango; let i = index">
-                  <td class="table-primary">{{ partida.numero }}</td>
-                  <td class="text-right">{{ partida.blancas }}</td>
-                  <td class="text-center">{{ partida.resultado }}</td>
-                  <td class="text-left">{{ partida.negras }}</td>
-                  <td><a mat-raised-button (click)="openLg(content, partida.numero, 'final')" matTooltip="Ver Final de la Partida"><i class="fas fa-fast-forward"></i></a></td>
-                  <td class="text-center"><a mat-raised-button (click)="openLg(content, partida.numero, 'rapida')" matTooltip="Vista Rápida de la Partida"><i class="fas fa-bolt"></i></a></td>
-                  <!-- <td><a mat-raised-button (click)="openLg2(content2, partida.id, true)" matTooltip="Vista Completa de la Partida"><i class="fas fa-eye"></i></a></td> -->
-                  <td><a mat-raised-button (click)="openTheGame( partida.numero )" matTooltip="Vista Completa de la Partida"><i class="fas fa-eye"></i></a></td>
-                  <td>{{partida.evento}}</td>
-                  <td>{{partida.fecha}}</td>
-              </tr>
-          </tbody>
-      </table>
-  </div>
+    <div class="table-responsive mb-5">
+        <table class="table table-bordered table-striped table-sm" id="datatable">
+            <thead>
+                <tr class="table-primary">
+                    <th class="text-center">ID</th>
+                    <th class="text-center">Blancas</th>
+                    <th class="text-center">Resultado</th>
+                    <th class="text-center">Negras</th>
+                    <th class="text-center">Final</th>
+                    <th class="text-center">Vista rápida</th>
+                    <th class="text-center">Partida</th>
+                    <th class="text-center">Evento</th>
+                    <th class="text-center">Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr
+                    *ngFor="let partida of partidas | orderby:'numero':true | slice: (pagina-1) * rango : pagina * rango; let i = index">
+                    <td class="table-primary">{{ partida.numero }}</td>
+                    <td class="text-right">{{ partida.blancas }}</td>
+                    <td class="text-center">{{ partida.resultado }}</td>
+                    <td class="text-left">{{ partida.negras }}</td>
 
-  <div class="d-flex justify-content-center my-3">
-    <ngb-pagination [collectionSize]="partidas.length" [(page)]="pagina" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" size="lg"></ngb-pagination>
-  </div>
+                    <!-- Visualizar final -->
+                    <td><a mat-raised-button (click)="openLg(content, partida.numero, 'final')"
+                            matTooltip="Ver Final de la Partida"><i class="fas fa-fast-forward"></i></a></td>
+
+                    <!-- Visualizar vista rápida -->
+                    <td class="text-center"><a mat-raised-button (click)="openLg(content, partida.numero, 'rapida')"
+                            matTooltip="Vista Rápida de la Partida"><i class="fas fa-bolt"></i></a></td>
+
+                    <!-- Visualizar partida completa -->
+                    <!-- <td><a mat-raised-button (click)="openLg2(content2, partida.id, true)" matTooltip="Vista Completa de la Partida"><i class="fas fa-eye"></i></a></td> -->
+                    <td><a mat-raised-button (click)="openTheGame( partida.numero )"
+                            matTooltip="Vista Completa de la Partida"><i class="fas fa-eye"></i></a></td>
+
+                    <td>{{partida.evento}}</td>
+                    <td>{{partida.fecha}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="d-flex justify-content-center my-3">
+        <ngb-pagination [collectionSize]="partidas.length" [(page)]="pagina" [maxSize]="5" [rotate]="true"
+            [boundaryLinks]="true" size="lg"></ngb-pagination>
+    </div>
 
 </div>
