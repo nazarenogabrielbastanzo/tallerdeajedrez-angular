@@ -60,6 +60,10 @@ mat-sidenav {
   margin-left: 16px;
 }
 
+.aLogo>img {
+  object-fit: cover;
+}
+
 .spacer {
   flex: 1 1 auto;
 }
