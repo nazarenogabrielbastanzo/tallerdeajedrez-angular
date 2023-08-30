@@ -6,6 +6,8 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from './components/shared/shared.module';
+import { PipesModule } from './pipes/pipes.module';
 
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -15,7 +17,6 @@ import { HomeComponent } from './components/home/home.component';
 
 import { MessagingService } from './services/messaging.service';
 
-import { SharedModule } from './components/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SharedModule } from './components/shared/shared.module';
     BrowserAnimationsModule,
     NgMaterialModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    SharedModule
+    SharedModule,
+    PipesModule
   ],
   providers: [
     AngularFirestore,

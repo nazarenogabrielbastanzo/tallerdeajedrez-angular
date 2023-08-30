@@ -71,6 +71,7 @@ span.brand {
 
 .aNav {
   color: white;
+  width: fit-content;
 }
 
 .menu {
@@ -120,4 +121,16 @@ span.brand {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
   stroke-width: 6;
+}
+
+/*  */
+.rounded-chip {
+  border-radius: 30px;
+  background-color: #FF4081;
+  color: white;
+  font-weight: bolder;
+  padding-left: 5px;
+  padding-right: 5px;
+  min-width: 30px;
+  text-align: center;
 }

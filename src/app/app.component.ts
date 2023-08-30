@@ -18,12 +18,12 @@ export class AppComponent implements OnInit, OnDestroy {
 
   fillerNav = [
     { name: 'Inicio', route: 'inicio' },
+    { name: 'Dispositivos', route: 'pages/dispositivos' },
     { name: 'Partidas', route: 'pages/partidas' },
     { name: 'Estudios', route: 'pages/estudios' },
     { name: 'Fotos', route: 'pages/fotos' },
     { name: 'Frases', route: 'pages/frases' },
-    { name: 'Dispositivos', route: 'pages/dispositivos' },
-    { name: 'Live', route: 'pages/live' },
+    // { name: 'Live', route: 'pages/live' },
   ];
 
   // tslint:disable-next-line: variable-name
@@ -86,8 +86,8 @@ export class AppComponent implements OnInit, OnDestroy {
         this.peticionesService.getEstudios().subscribe((estudios: any) => {
           this.estudios = estudios;
         });
-        this.peticionesService.getFrases().subscribe((data: any) => {
-          this.frases = data;
+        this.peticionesService.getFrases().subscribe((frases: any) => {
+          this.frases = frases;
         });
       } else {
         // User is signed out.

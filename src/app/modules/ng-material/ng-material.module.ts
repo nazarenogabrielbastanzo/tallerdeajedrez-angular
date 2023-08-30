@@ -16,6 +16,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatRippleModule } from '@angular/material/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   declarations: [],
@@ -37,7 +38,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatSidenavModule,
     MatListModule,
     MatRippleModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatChipsModule
   ]
 })
 export class NgMaterialModule { }

@@ -43,6 +43,7 @@ import { SharedModule } from '../shared/shared.module';
     FormsModule,
     PipesModule,
     SharedModule
-  ]
+  ],
+  exports: [PipesModule]
 })
 export class PagesModule { }

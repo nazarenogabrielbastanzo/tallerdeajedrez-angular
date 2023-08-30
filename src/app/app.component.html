@@ -50,33 +50,11 @@
           class="aNav"
         >
           {{ nav.name | uppercase }}&nbsp;&nbsp;
-          <span
-            *ngIf="nav.route === 'partidas' && partidas && partidas.length > 0"
-            [matBadge]="partidas.length"
-            matBadgeColor="accent"
-            >&nbsp;</span
-          >
-          <span
-            *ngIf="nav.route === 'estudios' && estudios && estudios.length > 0"
-            [matBadge]="estudios.length"
-            matBadgeColor="accent"
-            >&nbsp;</span
-          >
-          <span
-            *ngIf="nav.route === 'fotos'"
-            matBadge="99+"
-            matBadgeColor="accent"
-            >&nbsp;</span
-          >
-          <span
-            *ngIf="nav.route === 'frases' && frases && frases.length > 0"
-            [matBadge]="frases.length"
-            matBadgeColor="accent"
-            >&nbsp;</span
-          >
-          <span *ngIf="nav.route === 'live'" matBadge="1" matBadgeColor="accent"
-            >&nbsp;</span
-          >
+          <mat-chip class="rounded-chip" *ngIf="nav.name === 'Partidas'">{{ partidas?.length | formatoCantidad }}</mat-chip>
+          <mat-chip class="rounded-chip" *ngIf="nav.name === 'Estudios'">{{ estudios?.length | formatoCantidad }}</mat-chip>
+          <mat-chip class="rounded-chip" *ngIf="nav.name === 'Fotos'">{{ 1536 | formatoCantidad }}</mat-chip>
+          <mat-chip class="rounded-chip" *ngIf="nav.name === 'Frases'">{{ frases?.length | formatoCantidad }}</mat-chip>
+          <mat-chip class="rounded-chip" *ngIf="nav.name === 'Live'">{{ 1 | formatoCantidad }}</mat-chip>
         </a>
       </mat-nav-list>
     </mat-sidenav>
