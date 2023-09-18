@@ -55,3 +55,8 @@ Thumbs.db
 #mine
 *.txt
 package-lock.json
+
+#Docker
+Dockerfile
+.dockerignore
+nginx.conf
