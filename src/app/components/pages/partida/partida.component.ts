@@ -30,10 +30,10 @@ export class PartidaComponent implements OnInit {
     this.id = Number(this.activatedRoute.snapshot.paramMap.get('id')) - 1;
     this.peticionesService.getPartidas()
       .subscribe((data: any) => {
-        this.partidaId = data[this.id].id;
-        this.blancas = data[this.id].blancas;
-        this.negras = data[this.id].negras;
-        this.resultado = data[this.id].resultado;
+        this.partidaId = data[this.id]['id'];
+        this.blancas = data[this.id]['blancas'];
+        this.negras = data[this.id]['negras'];
+        this.resultado = data[this.id]['resultado'];
       });
   }
 
